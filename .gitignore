@@ -67,3 +67,22 @@ crashlytics-build.properties
 /_Build
 /Assets/StreamingAssets/PlayerLog
 /.vsconfig
+
+
+# Wwise
+.backup*
+.cache*
+*.akd
+*.prof
+*.validationcache
+*.wsettings
+AkWwiseProjectData.asset
+IncrementalSoundBankData.xml
+PluginInfo.xml
+SoundbanksInfo.xml
+
+# temp install files
+WwiseUnityIntegration_*_Src.zip
+
+# Mac stuff
+.DS_store

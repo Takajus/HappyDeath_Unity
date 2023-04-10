@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="wii_sports_intro_music_hdmp3converter" ID="{FD5E0295-39DC-4374-BC17-F04175875AB8}" ShortID="862385978">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-14</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="wii_sports_intro_music_hdmp3converter" ID="{0D376C48-6175-4AEF-9C40-98ACBC833C19}">
+							<Language>SFX</Language>
+							<AudioFile>wii_sports_intro_music_hdmp3converter.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="541577458"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="wii_sports_intro_music_hdmp3converter" ID="{0D376C48-6175-4AEF-9C40-98ACBC833C19}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

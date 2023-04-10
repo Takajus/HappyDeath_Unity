@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D901BAB3-A722-4A8C-A67C-7D2206AD7293}" SchemaVersion="110">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{D901BAB3-A722-4A8C-A67C-7D2206AD7293}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_wii_sports_intro_music_hdmp3converter" ID="{9F81933C-326B-4A2A-BA2B-DFFCEA1EA782}">
+					<ChildrenList>
+						<Action Name="" ID="{06872B3B-88D4-4DBA-9490-EA951D7B9777}" ShortID="414540905">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wii_sports_intro_music_hdmp3converter" ID="{FD5E0295-39DC-4374-BC17-F04175875AB8}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
