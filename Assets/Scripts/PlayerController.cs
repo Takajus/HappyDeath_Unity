@@ -55,7 +55,7 @@ namespace LFS.FirstPerson.Gameplay
             coll = GetComponent<Collider>();
 
             Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Confined;
+            //Cursor.lockState = CursorLockMode.Confined;
         }
 
         void FixedUpdate()

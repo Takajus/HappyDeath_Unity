@@ -25,6 +25,6 @@ public class FollowMousePosition : MonoBehaviour
 
     void Update()
     {
-        _rect.anchoredPosition = _mousePosition.action.ReadValue<Vector2>() / _canvas.scaleFactor;
+        _rect.anchoredPosition = (_mousePosition.action.ReadValue<Vector2>() - _canvas.pixelRect.size/2) / _canvas.scaleFactor;
     }
 }
