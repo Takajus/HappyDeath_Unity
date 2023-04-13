@@ -13,6 +13,10 @@ public class PlayerTransformation : MonoBehaviour
 
     void Start()
     {
+
+        LightingManager.Instance.isDay += IsDay;
+        LightingManager.Instance.isNight += IsNight;
+
         if (isDay)
         {
             playerDayModel.SetActive(true);
@@ -41,12 +45,30 @@ public class PlayerTransformation : MonoBehaviour
 
     }
 
+    private void IsDay()
+    {
+        if (isDay == true)
+            return;
+
+        isDay = true;
+        Transformation();
+    }
+
+    private void IsNight()
+    {
+        if (isDay == false)
+            return;
+
+        isDay = false;
+        Transformation();
+    }
+
     private void Transformation(/*bool timeIndex*/)
     {
         /*if (*//*timeIndex == *//*isDay)
             return;*/
 
-        StartCoroutine("TransformationStart");
+        StartCoroutine(TransformationStart());
     }
 
     private IEnumerator TransformationStart()
@@ -57,23 +79,18 @@ public class PlayerTransformation : MonoBehaviour
         ParticleSystem particule = transformationVFX;
         particule.Play();
 
-        Debug.Log("Transformation Start");
+        //Debug.Log("Transformation Start");
         yield return new WaitForSeconds(particule.main.duration / 2);
         SwitchModel();
         yield return new WaitForSeconds(particule.main.duration / 2);
-        Debug.Log("Transformation End");
+        //Debug.Log("Transformation End");
 
         PlayerController.Instance.EnablePlayer();
     }
 
-    private bool TransformationEnd()
-    {
-        return true;
-    }
-
     private void SwitchModel()
     {
-        if (/*isDay*/!playerDayModel.activeInHierarchy)
+        if (isDay/*!playerDayModel.activeInHierarchy*/)
         {
             playerDayModel.SetActive(true);
             playerNightModel.SetActive(false);

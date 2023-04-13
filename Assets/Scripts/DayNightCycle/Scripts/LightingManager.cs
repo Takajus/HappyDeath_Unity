@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 
 [ExecuteAlways]
 public class LightingManager : MonoBehaviour
@@ -14,6 +16,21 @@ public class LightingManager : MonoBehaviour
 
     [SerializeField]
     private float timeOfCycleInSecond = 60;
+
+    private static LightingManager instance;
+
+    public Action isDay, isNight;
+
+    public static LightingManager Instance
+    {
+        get
+        {
+            if (instance == null)
+                instance = FindObjectOfType<LightingManager>();
+
+            return instance;
+        }
+    }
 
     private void Update()
     {
@@ -30,6 +47,8 @@ public class LightingManager : MonoBehaviour
         {
             UpdateLighting(timeOfDay / 24f);
         }
+
+        IsDayTime();
     }
 
     private void UpdateLighting(float timePercent)
@@ -67,6 +86,19 @@ public class LightingManager : MonoBehaviour
                     return;
                 }
             }
+        }
+    }
+
+    private void IsDayTime()
+    {
+        if(timeOfCycleInSecond/4 == timeOfDay)
+        {
+            
+            isDay.Invoke();
+        }
+        else if(timeOfCycleInSecond / 4 * 3 == timeOfDay)
+        {
+            isNight.Invoke();
         }
     }
 }
