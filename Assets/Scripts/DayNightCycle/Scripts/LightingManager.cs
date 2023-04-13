@@ -19,7 +19,8 @@ public class LightingManager : MonoBehaviour
 
     private static LightingManager instance;
 
-    public Action isDay, isNight;
+    public Action _isDay, _isNight;
+    private bool bIsDay, bIsNight;
 
     public static LightingManager Instance
     {
@@ -29,6 +30,20 @@ public class LightingManager : MonoBehaviour
                 instance = FindObjectOfType<LightingManager>();
 
             return instance;
+        }
+    }
+
+    private void Start()
+    {
+        if (timeOfDay >= timeOfCycleInSecond / 4 && timeOfDay <= timeOfCycleInSecond / 4 * 3)
+        {
+            bIsDay = true;
+            bIsNight = false;
+        }
+        else if (timeOfDay <= timeOfCycleInSecond / 4 || timeOfDay >= timeOfCycleInSecond / 4 * 3)
+        {
+            bIsDay = false;
+            bIsNight = true;
         }
     }
 
@@ -42,13 +57,13 @@ public class LightingManager : MonoBehaviour
             timeOfDay += Time.deltaTime;
             timeOfDay %= timeOfCycleInSecond; //Clamb betweek 0-24
             UpdateLighting(timeOfDay/ timeOfCycleInSecond);
+            IsDayTime();
         }
         else
         {
             UpdateLighting(timeOfDay / 24f);
         }
 
-        IsDayTime();
     }
 
     private void UpdateLighting(float timePercent)
@@ -91,14 +106,26 @@ public class LightingManager : MonoBehaviour
 
     private void IsDayTime()
     {
-        if(timeOfCycleInSecond/4 == timeOfDay)
+        if (bIsDay)
         {
-            
-            isDay.Invoke();
+            if (timeOfDay <= timeOfCycleInSecond / 4 * 3)
+            {
+                if (timeOfDay >= timeOfCycleInSecond / 4)
+                {
+                    _isDay.Invoke();
+                    bIsDay = false;
+                    bIsNight = true;
+                }
+            }
         }
-        else if(timeOfCycleInSecond / 4 * 3 == timeOfDay)
+        else if(bIsNight)
         {
-            isNight.Invoke();
+            if(timeOfDay <= timeOfCycleInSecond / 4 || timeOfDay >= timeOfCycleInSecond / 4 * 3)
+            {
+                _isNight.Invoke();
+                bIsDay = true;
+                bIsNight = false;
+            }
         }
     }
 }

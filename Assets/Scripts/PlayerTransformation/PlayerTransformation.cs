@@ -6,16 +6,16 @@ using LFS.FirstPerson.Gameplay;
 
 public class PlayerTransformation : MonoBehaviour
 {
-    [SerializeField, Required] GameObject playerDayModel, playerNightModel;
+    [SerializeField, Required] private GameObject playerDayModel, playerNightModel;
     [SerializeField] private bool isDay = true;
 
-    [SerializeField] ParticleSystem transformationVFX;
+    [SerializeField] private ParticleSystem transformationVFX;
 
     void Start()
     {
 
-        LightingManager.Instance.isDay += IsDay;
-        LightingManager.Instance.isNight += IsNight;
+        LightingManager.Instance._isDay += IsDay;
+        LightingManager.Instance._isNight += IsNight;
 
         if (isDay)
         {
@@ -50,6 +50,8 @@ public class PlayerTransformation : MonoBehaviour
         if (isDay == true)
             return;
 
+        Debug.Log("Is Day");
+
         isDay = true;
         Transformation();
     }
@@ -58,6 +60,8 @@ public class PlayerTransformation : MonoBehaviour
     {
         if (isDay == false)
             return;
+
+        Debug.Log("Is Night");
 
         isDay = false;
         Transformation();
