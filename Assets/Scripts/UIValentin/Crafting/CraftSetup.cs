@@ -4,20 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-[System.Serializable]
-public struct SetupButton
-{
-    public Image my_image;
-    public Image middle_Image;
-    public TextMeshProUGUI textIngredientNeeded_1;
-    public TextMeshProUGUI textIngredientNeeded_2;
-    public TextMeshProUGUI textIngredientNeeded_3;
-    public TextMeshProUGUI textDescription;
-    public TextMeshProUGUI name;
-}
-
 public class CraftSetup : MonoBehaviour
 {
+    [System.Serializable]
+    public struct SetupButton
+    {
+        public Image my_image;
+        public Image middle_Image;
+        public TextMeshProUGUI textIngredientNeeded_1;
+        public TextMeshProUGUI textIngredientNeeded_2;
+        public TextMeshProUGUI textIngredientNeeded_3;
+        public TextMeshProUGUI textDescription;
+        public TextMeshProUGUI name;
+    }
+
     [SerializeField]
     ScriptableCraft ScriptableCraft;
 
