@@ -7,6 +7,7 @@ public class RandomMovement : MonoBehaviour
 {
     public NavMeshAgent agent;
     public float range;
+    public bool shouldMove;
 
     public Transform areaCenter;
 
@@ -16,13 +17,16 @@ public class RandomMovement : MonoBehaviour
     }
     void Update()
     {
-        if (agent.remainingDistance <= agent.stoppingDistance)
+        if (shouldMove)
         {
-            Vector3 point;
-            if (RandomPoint(areaCenter.position, range, out point))
+            if (agent.remainingDistance <= agent.stoppingDistance)
             {
-                Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
-                agent.SetDestination(point);
+                Vector3 point;
+                if (RandomPoint(areaCenter.position, range, out point))
+                {
+                    Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
+                    agent.SetDestination(point);
+                }
             }
         }
     }
