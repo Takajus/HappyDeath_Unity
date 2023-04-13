@@ -49,8 +49,8 @@ MonoBehaviour:
   mousePosition: {fileID: -2057929545544530715, guid: 0ac56734837cfea4ea5836dcab41a06e,
     type: 3}
   offset: {x: 0, y: 2, z: 0}
-  horizontalMultiplier: 10
-  verticalMultiplier: 10
+  horizontalMultiplier: 20
+  verticalMultiplier: 20
 --- !u!1 &4403977369509755873
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,6 +63,7 @@ GameObject:
   - component: {fileID: 1423928915}
   - component: {fileID: 1423928914}
   - component: {fileID: 1423928913}
+  - component: {fileID: 2074510864}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -143,6 +144,36 @@ MonoBehaviour:
     m_Bits: 1
   slideMat: {fileID: 0}
   stickMat: {fileID: 0}
+--- !u!114 &2074510864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4403977369509755873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d05a3ceb682eefc4aa0d40018f8eb3d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactAction: {fileID: 5362960638749042328, guid: 0ac56734837cfea4ea5836dcab41a06e,
+    type: 3}
+  mouseInteractAction: {fileID: 7612177513081541613, guid: 0ac56734837cfea4ea5836dcab41a06e,
+    type: 3}
+  cancelAction: {fileID: 2397066969695824413, guid: 0ac56734837cfea4ea5836dcab41a06e,
+    type: 3}
+  mousePosition: {fileID: -2057929545544530715, guid: 0ac56734837cfea4ea5836dcab41a06e,
+    type: 3}
+  playerCamera: {fileID: 0}
+  hitMe:
+    serializedVersion: 2
+    m_Bits: 1
+  isTargeting: 0
+  hitMeMouse:
+    serializedVersion: 2
+    m_Bits: 1
+  mouseIsTargeting: 0
+  updateHover: 0
 --- !u!1 &4403977370390327557
 GameObject:
   m_ObjectHideFlags: 0
