@@ -62,11 +62,6 @@ namespace LFS.FirstPerson.Gameplay
         {
             if (canMove)
                 Move();
-            else
-            {
-                UpdateMoveSpeed(0, 0);
-                rb.velocity = moveDir.normalized * currentSpeed;
-            }
         }
 
         void Move()

@@ -5,7 +5,18 @@ using UnityEngine;
 public class Tile : MonoBehaviour, IInteractable
 {
     MeshRenderer mr;
+    Collider coll;
 
+    [Header("Tile State")]
+    public bool isOccupied;
+    public bool isDug;
+
+    [Header("Tile Settings")]
+    public float x;
+    public float z;
+    public List<Tile> neighbors { get; private set; }
+
+    [Header("Other")]
     [SerializeField] Material baseMaterial;
     [SerializeField] Material hoverMaterial;
     [SerializeField] Material selectMaterial;
@@ -13,22 +24,31 @@ public class Tile : MonoBehaviour, IInteractable
     private void Start()
     {
         mr = GetComponent<MeshRenderer>();
+        coll = GetComponent<Collider>();
+
+        neighbors = GridManager.Instance.GetNeighbors(this);
     }
 
     public void Interact()
     {
         mr.material = selectMaterial;
-        Debug.Log("Enter select");
+
+        foreach (var item in neighbors)
+        {
+            item.Hover();
+        }
     }
 
     public void EndInteract()
     {
-        Debug.Log("Exit select");
+
     }
 
     public void Hover()
     {
         mr.material = hoverMaterial;
+
+        
     }
 
     public void UnHover()

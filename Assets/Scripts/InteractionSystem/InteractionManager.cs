@@ -13,7 +13,7 @@ public class InteractionManager : MonoBehaviour
     [SerializeField] InputActionReference mousePosition;
 
     [Header("References")]
-    [SerializeField] Camera playerCamera;
+    Camera playerCamera;
 
     [Header("InputHandle")]
     [SerializeField] LayerMask hitMe;
@@ -32,6 +32,12 @@ public class InteractionManager : MonoBehaviour
     [HideInInspector] public bool updateHover;
     public static GameObject currentInteractedObject;
     public static bool IsInteracting;
+
+    private void Start()
+    {
+        if (playerCamera == null)
+            playerCamera = Camera.main;
+    }
 
     void Update()
     {
