@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class CraftSetup : MonoBehaviour
 {
@@ -19,38 +20,36 @@ public class CraftSetup : MonoBehaviour
     }
 
     [SerializeField]
-    ScriptableCraft ScriptableCraft;
+    private ScriptableCraft scriptableCraft;
 
     public SetupButton setupButton;
 
-    private void Start()
-    {
-        Refresh();
-    }
+    public ScriptableCraft ScriptableCraft { get => scriptableCraft; set => scriptableCraft = value; }
 
     public void Refresh()
     {
-        if (ScriptableCraft == null)
+        if (scriptableCraft == null)
             return;
 
-        setupButton.my_image.sprite = ScriptableCraft.Sprite;
+        setupButton.my_image.sprite = scriptableCraft.Sprite;
     }
 
     public void UI_ClickedOnMe()
     {
+        CraftingManager.Instance.OnRecepieSelected.Invoke(this);
         DisplayInformations();
     }
 
     private void DisplayInformations()
     {
-        if (ScriptableCraft == null)
+        if (scriptableCraft == null)
             return;
 
-        setupButton.middle_Image.sprite = ScriptableCraft.Sprite;
-        setupButton.textIngredientNeeded_1.text = ScriptableCraft.IngredientAmount_1.ToString();
-        setupButton.textIngredientNeeded_2.text = ScriptableCraft.IngredientAmount_2.ToString();
-        setupButton.textIngredientNeeded_3.text = ScriptableCraft.IngredientAmount_3.ToString();
-        setupButton.textDescription.text = ScriptableCraft.Description;
-        setupButton.name.text = ScriptableCraft.Name;
+        setupButton.middle_Image.sprite = scriptableCraft.Sprite;
+        setupButton.textIngredientNeeded_1.text = scriptableCraft.ingredient1.IngredientAmount.ToString();
+        setupButton.textIngredientNeeded_2.text = scriptableCraft.ingredient2.IngredientAmount.ToString();
+        setupButton.textIngredientNeeded_3.text = scriptableCraft.ingredient3.IngredientAmount.ToString();
+        setupButton.textDescription.text = scriptableCraft.Description;
+        setupButton.name.text = scriptableCraft.Name;
     }
 }

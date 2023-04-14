@@ -57,9 +57,9 @@ public class DisplayRecipes : MonoBehaviour
             return;
 
         setupButton.item.sprite = ScriptableCraft.Sprite;
-        setupButton.textIngredientNeeded_1.text = ScriptableCraft.IngredientAmount_1.ToString();
-        setupButton.textIngredientNeeded_2.text = ScriptableCraft.IngredientAmount_2.ToString();
-        setupButton.textIngredientNeeded_3.text = ScriptableCraft.IngredientAmount_3.ToString();
+        setupButton.textIngredientNeeded_1.text = ScriptableCraft.ingredient1.IngredientAmount.ToString();
+        setupButton.textIngredientNeeded_2.text = ScriptableCraft.ingredient2.IngredientAmount.ToString();
+        setupButton.textIngredientNeeded_3.text = ScriptableCraft.ingredient3.IngredientAmount.ToString();
         setupButton.textDescription.text = ScriptableCraft.Description;
         setupButton.name.text = ScriptableCraft.Name;
     }
