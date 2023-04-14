@@ -11,6 +11,8 @@ public class PlayerTransformation : MonoBehaviour
 
     [SerializeField] private ParticleSystem transformationVFX;
 
+    [SerializeField] private GameObject book;
+
     void Start()
     {
 
@@ -33,7 +35,7 @@ public class PlayerTransformation : MonoBehaviour
     void Update()
     {
         // Test
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.N))
         {
             if (isDay)
                 isDay = false;
@@ -41,6 +43,14 @@ public class PlayerTransformation : MonoBehaviour
                 isDay = true;
 
             Transformation();
+        }
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            if (book.activeInHierarchy)
+                book.SetActive(false);
+            else
+                book.SetActive(true);
         }
 
     }
