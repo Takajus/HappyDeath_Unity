@@ -40,7 +40,7 @@ public class CraftSetup : MonoBehaviour
         DisplayInformations();
     }
 
-    private void DisplayInformations()
+    public void DisplayInformations()
     {
         if (scriptableCraft == null)
             return;

@@ -23,6 +23,7 @@ public class CraftingManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI ingredientAmountOwned_3;
 
     public Action<CraftSetup> OnRecepieSelected;
+    public Action<CraftSetup> OnItemCraft;
 
     private void Awake()
     {
@@ -46,7 +47,15 @@ public class CraftingManager : MonoBehaviour
     private void OnEnable()
     {
         RefreshRecepiesSlot();
-        RefreshIngredientsOwned();
+        GetRecepiesSlot();
+        Invoke(nameof(WaitForInstanceToFill), 0.01f);
+    }
+
+    //Temp
+    private void WaitForInstanceToFill()
+    {
+        RefreshIngredientsNeeded(inventorySlot[0].GetComponent<CraftSetup>());
+        inventorySlot[0].GetComponent<CraftSetup>().DisplayInformations();
     }
 
     private void GetRecepiesSlot()
@@ -77,20 +86,43 @@ public class CraftingManager : MonoBehaviour
     {
         selectedRecepie = newSelected;
 
-        ingredientAmountNeeded_1.text = selectedRecepie.setupButton.textIngredientNeeded_1.ToString();
-        ingredientAmountNeeded_2.text = selectedRecepie.setupButton.textIngredientNeeded_2.ToString();
-        ingredientAmountNeeded_3.text = selectedRecepie.setupButton.textIngredientNeeded_3.ToString();
+        ingredientAmountNeeded_1.text = selectedRecepie.ScriptableCraft.ingredient1.IngredientAmount.ToString();
+        ingredientAmountNeeded_2.text = selectedRecepie.ScriptableCraft.ingredient2.IngredientAmount.ToString();
+        ingredientAmountNeeded_3.text = selectedRecepie.ScriptableCraft.ingredient3.IngredientAmount.ToString();
 
         RefreshIngredientsOwned();
     }
 
     private void RefreshIngredientsOwned()
     {
-        if (selectedRecepie == null)
-            return;
-
         ingredientAmountOwned_1.text = InventoryManager.Instance.GetIngredientAmount(selectedRecepie.ScriptableCraft.ingredient1.ingredientType).ToString();
         ingredientAmountOwned_2.text = InventoryManager.Instance.GetIngredientAmount(selectedRecepie.ScriptableCraft.ingredient2.ingredientType).ToString();
         ingredientAmountOwned_3.text = InventoryManager.Instance.GetIngredientAmount(selectedRecepie.ScriptableCraft.ingredient3.ingredientType).ToString();
+    }
+
+    public void UI_Craft()
+    {
+        if (HaveEnoughtIngredients())
+        {
+            OnItemCraft.Invoke(selectedRecepie);
+        }
+    }
+
+    private bool HaveEnoughtIngredients()
+    {
+        bool check1 = InventoryManager.Instance.GetIngredientAmount(selectedRecepie.ScriptableCraft.ingredient1.ingredientType) >= selectedRecepie.ScriptableCraft.ingredient1.IngredientAmount;
+        bool check2 = InventoryManager.Instance.GetIngredientAmount(selectedRecepie.ScriptableCraft.ingredient2.ingredientType) >= selectedRecepie.ScriptableCraft.ingredient2.IngredientAmount;
+        bool check3 = InventoryManager.Instance.GetIngredientAmount(selectedRecepie.ScriptableCraft.ingredient3.ingredientType) >= selectedRecepie.ScriptableCraft.ingredient3.IngredientAmount;
+
+
+        if (check1 && check2 && check3)
+        {
+            return true;
+        }
+        else
+        {
+            Debug.Log("You need more Resources");
+            return false;
+        }
     }
 }

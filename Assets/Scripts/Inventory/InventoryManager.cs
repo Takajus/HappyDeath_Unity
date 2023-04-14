@@ -7,7 +7,8 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
 
-    [SerializeField] List<Item> inventory;
+    [SerializeField] List<Item> inventory = new List<Item>();
+    [SerializeField] List<int> itemAmount = new List<int>();
 
     public List<Item> Inventory { get => inventory; set => inventory = value; }
 
@@ -26,6 +27,54 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        CraftingManager.Instance.OnItemCraft += ItemCreated;
+    }
+
+    private void ItemCreated(CraftSetup selectedRecepie)
+    {
+        Item itemToCreate = selectedRecepie.ScriptableCraft.item;
+        Debug.Log(selectedRecepie.ScriptableCraft.item + "have been create");
+
+        PayForCraft(selectedRecepie);
+        AddItem(itemToCreate);
+    }
+
+    private void PayForCraft(CraftSetup selectedRecepie)
+    {
+        bool havePayIngredient1 = false;
+        bool havePayIngredient2 = false;
+        bool havePayIngredient3 = false;
+
+        for (int i = 0; i < inventory.Count; i++)
+        {
+            if (!havePayIngredient1 && inventory[i] == selectedRecepie.ScriptableCraft.ingredient1.ingredientType)
+            {
+                inventory[i].Amount -= selectedRecepie.ScriptableCraft.ingredient1.IngredientAmount;
+                CheckRemainingAmount(inventory[i]);
+                havePayIngredient1 = true;
+            }
+            else if (!havePayIngredient2 && inventory[i] == selectedRecepie.ScriptableCraft.ingredient2.ingredientType)
+            {
+                inventory[i].Amount -= selectedRecepie.ScriptableCraft.ingredient2.IngredientAmount;
+                CheckRemainingAmount(inventory[i]);
+                havePayIngredient2 = true;
+            }
+            else if (!havePayIngredient3 && inventory[i] == selectedRecepie.ScriptableCraft.ingredient3.ingredientType)
+            {
+                inventory[i].Amount -= selectedRecepie.ScriptableCraft.ingredient3.IngredientAmount;
+                CheckRemainingAmount(inventory[i]);
+                havePayIngredient3 = true;
+            }
+
+            if (havePayIngredient1 && havePayIngredient2 && havePayIngredient3)
+            {
+                return;
+            }
+        }
+    }
+
     public void AddItem(Item itemToAdd)
     {
         for (int i = 0; i < inventory.Count; i++)
@@ -33,22 +82,23 @@ public class InventoryManager : MonoBehaviour
             if (inventory[i] == itemToAdd)
             {
                 inventory[i].Amount++;
+                RefreshItemAmount();
                 return;
             }           
         }
 
         OnItemAdded?.Invoke();
         inventory.Add(itemToAdd);
+        itemAmount.Add(0);
+        RefreshItemAmount();
     }
 
-    public void RemoveItem(Item itemToRemove)
+    public void CheckRemainingAmount(Item itemToRemove)
     {
         for (int i = 0; i < inventory.Count; i++)
         {
             if (inventory[i] == itemToRemove)
             {
-                inventory[i].Amount--;
-
                 if (inventory[i].Amount == 0)
                 {
                     OnItemRemoved.Invoke();
@@ -71,6 +121,32 @@ public class InventoryManager : MonoBehaviour
         }
 
         return 0;
+    }
+
+    private void RefreshItemAmount()
+    {
+        for (int i = 0; i < inventory.Count; i++)
+        {
+            itemAmount[i] = inventory[i].Amount;
+        }
+    }
+
+    public void UICheat_AddItem(Item itemToAdd)
+    {
+        for (int i = 0; i < inventory.Count; i++)
+        {
+            if (inventory[i] == itemToAdd)
+            {
+                inventory[i].Amount += 100;
+                RefreshItemAmount();
+                return;
+            }
+        }
+
+        OnItemAdded?.Invoke();
+        inventory.Add(itemToAdd);
+        itemAmount.Add(0);
+        RefreshItemAmount();
     }
 
 }

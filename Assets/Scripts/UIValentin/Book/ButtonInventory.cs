@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class DisplayInventory : MonoBehaviour
+public class ButtonInventory : MonoBehaviour
 {
     [System.Serializable]
     public struct SetupButton
@@ -13,6 +13,7 @@ public class DisplayInventory : MonoBehaviour
         public Image item;
         public TextMeshProUGUI name;
         public TextMeshProUGUI textDescription;
+        public TextMeshProUGUI textAmount;
     }
 
     public SetupButton setupButton;
@@ -29,6 +30,7 @@ public class DisplayInventory : MonoBehaviour
             return;
 
         setupButton.buttonImage.sprite = item.Sprite;
+        setupButton.textAmount.text = InventoryManager.Instance.GetIngredientAmount(item).ToString();
     }
     public void UI_ClickedOnMe()
     {
@@ -43,6 +45,7 @@ public class DisplayInventory : MonoBehaviour
         setupButton.item.sprite = item.Sprite;
         setupButton.textDescription.text = item.Description;
         setupButton.name.text = item.Name;
+        setupButton.textAmount.text = InventoryManager.Instance.GetIngredientAmount(item).ToString();
     }
 }
 
