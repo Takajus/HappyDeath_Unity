@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7033233876948191728}
   - component: {fileID: 7033233876948191729}
   - component: {fileID: 7033233877151958487}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,6 +110,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95bc1640c8a7eda49b50703ee2d62d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOccupied: 0
+  isDug: 0
+  x: 0
+  z: 0
   baseMaterial: {fileID: 2100000, guid: acb23ab644aa1034491f5214ce887862, type: 2}
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}

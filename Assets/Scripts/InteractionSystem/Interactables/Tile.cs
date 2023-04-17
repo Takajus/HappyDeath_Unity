@@ -47,8 +47,6 @@ public class Tile : MonoBehaviour, IInteractable
     public void Hover()
     {
         mr.material = hoverMaterial;
-
-        
     }
 
     public void UnHover()
