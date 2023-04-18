@@ -11,8 +11,14 @@ public class InteractionManager : MonoBehaviour
     public enum InteractionMode { Interact, Cut, Dig, Place };
     public static InteractionMode interactionMode { get; private set; }
 
-    [SerializeField] BaseHandler interactHandler;
-    [SerializeField] PlacementHandler placementHandler;
+    public BaseHandler interactHandler { get; private set; }
+    public PlacementHandler placementHandler { get; private set; }
+
+    private void Awake()
+    {
+        interactHandler = GetComponent<BaseHandler>();
+        placementHandler = GetComponent<PlacementHandler>();
+    }
 
     void Update()
     {
@@ -42,7 +48,7 @@ public class InteractionManager : MonoBehaviour
     {
         InteractionMode temp = InteractionMode.Interact;
 
-        if (placementHandler.IsPlacing)
+        if (placementHandler.IsInteracting)
         {
             temp = InteractionMode.Place;
         }

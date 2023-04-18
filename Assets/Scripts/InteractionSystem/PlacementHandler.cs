@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class PlacementHandler : BaseHandler
 {
-    public bool IsPlacing { get => objectToPlace != null; }
-    [SerializeField] GameObject objectToPlace;
+    public override bool IsInteracting { get => objectToPlace != null; }
+    GameObject objectToPlace;
+    int rotation;
 
     [SerializeField] GameObject tempPrefab;
+    [SerializeField] Transform buildsParent;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (IsPlacing)
+            if (IsInteracting)
                 ClearHandler();
             else
                 GiveObject(tempPrefab);
         }
+
+        RotateTarget();
     }
 
     protected override bool HasWantedType(GameObject obj)
@@ -32,13 +36,18 @@ public class PlacementHandler : BaseHandler
     {
         if (objectToPlace)
             Destroy(objectToPlace);
+
+        rotation = 0;
     }
 
     public void GiveObject(GameObject ob)
     {
-        objectToPlace = Instantiate(tempPrefab);
+        if (buildsParent)
+            objectToPlace = Instantiate(tempPrefab, buildsParent);
+        else
+            objectToPlace = Instantiate(tempPrefab);
     }
-
+    
     protected override void HoverTarget(GameObject target)
     {
         if (target)
@@ -52,9 +61,24 @@ public class PlacementHandler : BaseHandler
 
     protected override void SelectTarget(GameObject target)
     {
-        objectToPlace = null;
+        if (target)
+            objectToPlace = null;
     }
 
     protected override void UnHoverTarget(GameObject target) { }
     protected override void UnSelectTarget(GameObject target) { }
+
+    void RotateTarget()
+    {
+        if (Input.GetKeyDown(KeyCode.R) && IsInteracting)
+        {
+            rotation += 90;
+
+            if (rotation == 360)
+                rotation = 0;
+
+            //objectToPlace.transform.Rotate(new Vector3(0, 1, 0), rotation, Space.World);
+            objectToPlace.transform.eulerAngles = new Vector3(0, rotation, 0);
+        }
+    }
 }

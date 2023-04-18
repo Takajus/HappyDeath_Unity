@@ -26,8 +26,8 @@ public class BaseHandler : MonoBehaviour
     private GameObject mouseTarget;
     private RaycastHit2D hit2D;
 
-    public static GameObject currentInteractedObject;
-    public static bool IsInteracting;
+    public GameObject currentInteractedObject;
+    public virtual bool IsInteracting { get => currentInteractedObject != null; }
 
     private void Start()
     {
@@ -61,7 +61,6 @@ public class BaseHandler : MonoBehaviour
                 UnSelectTarget(currentInteractedObject);
                 UnHoverTarget(currentInteractedObject);
                 currentInteractedObject = null;
-                IsInteracting = false;
             }
         }
 
@@ -86,33 +85,35 @@ public class BaseHandler : MonoBehaviour
     {
         if (IsInteracting)
         {
+            GameObject previousInteractedObject = currentInteractedObject;
             UnSelectTarget(currentInteractedObject);
 
-            if (currentInteractedObject == target)
+            if (previousInteractedObject == target)
             {
-                HoverTarget(currentInteractedObject);
+                HoverTarget(previousInteractedObject);
             }
             else if (target != null)
             {
-                UnHoverTarget(currentInteractedObject);
+                UnHoverTarget(previousInteractedObject);
 
-                SelectTarget(currentInteractedObject);
+                SelectTarget(target);
 
             }
             else
             {
-                UnHoverTarget(currentInteractedObject);
+                UnHoverTarget(previousInteractedObject);
             }
         }
         else if (target != null)
         {
-            SelectTarget(currentInteractedObject);
+            SelectTarget(target);
         }
     }
 
     public virtual void ClearHandler()
     {
-        UnSelectTarget(mouseTarget);
+        if (IsInteracting)
+            Select(null);
 
         UnHoverTarget(mouseTarget);
     }
@@ -133,6 +134,9 @@ public class BaseHandler : MonoBehaviour
     protected virtual void UnHoverTarget(GameObject target)
     {
         target?.GetComponent<IInteractable>()?.UnHover();
+
+        if (target == null)
+            Debug.LogWarning("Target is null");
     }
 
     protected virtual void SelectTarget(GameObject target)

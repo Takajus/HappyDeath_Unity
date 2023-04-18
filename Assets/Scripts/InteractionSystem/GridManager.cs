@@ -59,7 +59,7 @@ public class GridManager : MonoBehaviour
             {
                 positionToPlaceTile = bottomLeftCorner.transform.position + new Vector3(tileSize * k, 0, tileSize * j);
                 newTile = Instantiate(gridTile, positionToPlaceTile, Quaternion.identity, gridParent).GetComponent<Tile>();
-                newTile.transform.localScale = new Vector3(tileSize, 1, tileSize);
+                newTile.transform.localScale = new Vector3(tileSize, newTile.transform.localScale.y, tileSize);
                 newTile.x = tileSize * k;
                 newTile.z = tileSize * j;
                 tiles.Add(new Tiles(tileSize * k + ";" + tileSize * j, newTile));
