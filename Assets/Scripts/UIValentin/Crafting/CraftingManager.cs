@@ -7,7 +7,8 @@ using TMPro;
 
 public class CraftingManager : MonoBehaviour
 {
-    public static CraftingManager Instance;
+    private static CraftingManager instance;
+    public static CraftingManager Instance { get { if (instance == null) instance = FindObjectOfType<CraftingManager>(); return instance; } }
 
     [SerializeField] private List<GameObject> inventorySlot;
     [SerializeField] GameObject verticalBox;
@@ -24,18 +25,6 @@ public class CraftingManager : MonoBehaviour
 
     public Action<CraftSetup> OnRecepieSelected;
     public Action<CraftSetup> OnItemCraft;
-
-    private void Awake()
-    {
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            Instance = this;
-        }
-    }
 
     private void Start()
     {

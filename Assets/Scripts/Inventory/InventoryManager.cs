@@ -5,31 +5,22 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    public static InventoryManager Instance;
+    private static InventoryManager instance;
+    public static InventoryManager Instance { get { if (instance == null) instance = FindObjectOfType<InventoryManager>(); return instance; } }
 
     [SerializeField] List<Item> inventory = new List<Item>();
     [SerializeField] List<int> itemAmount = new List<int>();
+
+    [SerializeField] CraftingManager craftingManager;
 
     public List<Item> Inventory { get => inventory; set => inventory = value; }
 
     public event Action OnItemAdded;
     public event Action OnItemRemoved;
 
-    public void Awake()
-    {
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            Instance = this;
-        }
-    }
-
     private void Start()
     {
-        CraftingManager.Instance.OnItemCraft += ItemCreated;
+        craftingManager.OnItemCraft += ItemCreated;
     }
 
     private void ItemCreated(CraftSetup selectedRecepie)
