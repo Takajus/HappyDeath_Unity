@@ -14,14 +14,23 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] CraftingManager craftingManager;
     public BookActivationManager bookActivationManager;
 
+    [SerializeField] BookDisplayInventory bookDisplayInventory;
+
+    [SerializeField] List<Item> itemToReset;
+
     public List<Item> Inventory { get => inventory; set => inventory = value; }
 
     public event Action OnItemAdded;
     public event Action OnItemRemoved;
 
-    private void Start()
+    private void OnEnable()
     {
         craftingManager.OnItemCraft += ItemCreated;
+    }
+
+    private void OnDisable()
+    {
+        craftingManager.OnItemCraft -= ItemCreated;
     }
 
     private void ItemCreated(CraftSetup selectedRecepie)
@@ -71,20 +80,23 @@ public class InventoryManager : MonoBehaviour
 
     }
 
-    public void AddItem(Item itemToAdd)
+    public void AddItem(Item itemToAdd, int amount = 1)
     {
         for (int i = 0; i < inventory.Count; i++)
         {
             if (inventory[i] == itemToAdd)
             {
-                inventory[i].Amount++;
+                inventory[i].Amount += amount;
                 RefreshItemAmount();
                 return;
-            }           
+            }
         }
+
+
 
         OnItemAdded?.Invoke();
         inventory.Add(itemToAdd);
+        inventory[inventory.Count - 1].Amount = amount;
         itemAmount.Add(0);
         RefreshItemAmount();
     }
@@ -101,6 +113,7 @@ public class InventoryManager : MonoBehaviour
                     inventory.Remove(itemToAdd);
 
                 RefreshItemAmount();
+                bookDisplayInventory.RefreshInventorySlot();
                 return;
             }
         }
@@ -163,6 +176,14 @@ public class InventoryManager : MonoBehaviour
         inventory.Add(itemToAdd);
         itemAmount.Add(0);
         RefreshItemAmount();
+    }
+
+    public void ResetIngredients()
+    {
+        foreach (var item in itemToReset)
+        {
+            item.Amount = 0;
+        }
     }
 
 }

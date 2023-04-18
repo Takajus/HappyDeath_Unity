@@ -10,7 +10,7 @@ public class PickUpItem : MonoBehaviour, IInteractable
 
     private void PickUp()
     {
-        InventoryManager.Instance.AddItem(resourceToPick);
+        InventoryManager.Instance.AddItem(resourceToPick, 50);
         Destroy(gameObject);
     }
 

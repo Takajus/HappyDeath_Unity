@@ -13,6 +13,7 @@ public class PlacementHandler : BaseHandler
 
     void Update()
     {
+#if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (IsInteracting)
@@ -20,7 +21,7 @@ public class PlacementHandler : BaseHandler
             else
                 GiveObject(tempPrefab);
         }
-
+#endif
         RotateTarget();
     }
 

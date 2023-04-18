@@ -72,7 +72,7 @@ public class Build : MonoBehaviour
     {
         realObject.SetActive(true);
         gameObject.SetActive(false);
-        //InventoryManager.Instance.RemoveItem(item);
+        InventoryManager.Instance.RemoveItem(item);
 
         foreach (var tile in GetOverlappedTiles())
         {
