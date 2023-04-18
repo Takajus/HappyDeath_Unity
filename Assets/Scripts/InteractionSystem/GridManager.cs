@@ -1,8 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class GridManager : MonoBehaviour
 {
@@ -98,6 +101,7 @@ public class GridManager : MonoBehaviour
     }
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(GridManager))]
 public class GridManagerEditor : Editor
 {
@@ -119,3 +123,4 @@ public class GridManagerEditor : Editor
             source.ClearGrid();
     }
 }
+#endif
