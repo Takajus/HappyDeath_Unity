@@ -79,7 +79,7 @@ Transform:
   m_GameObject: {fileID: 2994289764064657544}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.000000045835, y: 0, z: 0.00000009167}
-  m_LocalScale: {x: 3, y: 0.3, z: 3}
+  m_LocalScale: {x: 5, y: 0.3, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4403977369509755902}
@@ -100,7 +100,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2994289764064657544}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4403977369509755873}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b250c00fa09f54341a768452bf7581bb, type: 3}
   m_Name: 
@@ -276,8 +276,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d05a3ceb682eefc4aa0d40018f8eb3d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactHandler: {fileID: 4403977370250483120}
-  placementHandler: {fileID: 4403977370250483126}
 --- !u!114 &4403977370250483120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,6 +304,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 129
   mouseIsTargeting: 0
+  currentInteractedObject: {fileID: 0}
 --- !u!114 &4403977370250483126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,9 +333,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   mouseIsTargeting: 0
-  objectToPlace: {fileID: 0}
-  tempPrefab: {fileID: 919132149155446097, guid: 0bb3c8f0779744c4a8aa582539f2fab0,
-    type: 3}
+  currentInteractedObject: {fileID: 0}
+  tempPrefab: {fileID: 0}
+  buildsParent: {fileID: 0}
 --- !u!1001 &660955058418266101
 PrefabInstance:
   m_ObjectHideFlags: 0
