@@ -23,6 +23,13 @@ public class InventoryManager : MonoBehaviour
     public event Action OnItemAdded;
     public event Action OnItemRemoved;
 
+#if !UNITY_EDITOR
+    private void Start()
+    {
+        ResetIngredients();
+    }
+#endif
+
     private void OnEnable()
     {
         craftingManager.OnItemCraft += ItemCreated;
