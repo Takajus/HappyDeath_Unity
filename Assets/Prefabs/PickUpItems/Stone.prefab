@@ -60,6 +60,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ebda759af6fde43a5fae46821c5909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  E_Input: {fileID: 4314751714359385817}
+  resourceToPick: {fileID: 11400000, guid: 7fa2e0cee1d20424cbf4266b35fbfc03, type: 2}
 --- !u!212 &769548029622802100
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -128,7 +130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1819264503413025113
 Transform:
   m_ObjectHideFlags: 0

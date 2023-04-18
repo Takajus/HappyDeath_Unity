@@ -23,6 +23,8 @@ public class CraftingManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI ingredientAmountOwned_2;
     [SerializeField] TextMeshProUGUI ingredientAmountOwned_3;
 
+    [SerializeField] InventoryManager inventoryMananger;
+
     public Action<CraftSetup> OnRecepieSelected;
     public Action<CraftSetup> OnItemCraft;
 
@@ -31,6 +33,7 @@ public class CraftingManager : MonoBehaviour
         OnRecepieSelected += RefreshIngredientsNeeded;
         GetRecepiesSlot();
         RefreshRecepiesSlot();
+        
     }
 
     private void OnEnable()
@@ -82,11 +85,11 @@ public class CraftingManager : MonoBehaviour
         RefreshIngredientsOwned();
     }
 
-    private void RefreshIngredientsOwned()
+    public void RefreshIngredientsOwned()
     {
-        ingredientAmountOwned_1.text = InventoryManager.Instance.GetIngredientAmount(selectedRecepie.ScriptableCraft.ingredient1.ingredientType).ToString();
-        ingredientAmountOwned_2.text = InventoryManager.Instance.GetIngredientAmount(selectedRecepie.ScriptableCraft.ingredient2.ingredientType).ToString();
-        ingredientAmountOwned_3.text = InventoryManager.Instance.GetIngredientAmount(selectedRecepie.ScriptableCraft.ingredient3.ingredientType).ToString();
+        ingredientAmountOwned_1.text = inventoryMananger.GetIngredientAmount(selectedRecepie.ScriptableCraft.ingredient1.ingredientType).ToString();
+        ingredientAmountOwned_2.text = inventoryMananger.GetIngredientAmount(selectedRecepie.ScriptableCraft.ingredient2.ingredientType).ToString();
+        ingredientAmountOwned_3.text = inventoryMananger.GetIngredientAmount(selectedRecepie.ScriptableCraft.ingredient3.ingredientType).ToString();
     }
 
     public void UI_Craft()

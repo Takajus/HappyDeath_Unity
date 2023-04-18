@@ -3024,6 +3024,7 @@ GameObject:
   - component: {fileID: 6676992019977992582}
   - component: {fileID: 7860215240247905348}
   - component: {fileID: 5197840241759777271}
+  - component: {fileID: 7976029686312668792}
   m_Layer: 5
   m_Name: PanelRecepies
   m_TagString: Untagged
@@ -3093,6 +3094,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7976029686312668792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3090142939974161116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63cece64ea6f4aa4fb65c23679f14c82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryMananger: {fileID: 0}
+  ingredientOwned_1: {fileID: 7570965954716781696}
+  ingredientOwned_2: {fileID: 3113111522793966071}
+  ingredientOwned_3: {fileID: 4841052082571728352}
+  Stone: {fileID: 11400000, guid: 7fa2e0cee1d20424cbf4266b35fbfc03, type: 2}
+  Wood: {fileID: 11400000, guid: f68116be4e14f3a48ab64c152f692af5, type: 2}
+  Flower: {fileID: 11400000, guid: 54234a186689e9e45acdd37f7d9b5798, type: 2}
 --- !u!1 &3131633081696633087
 GameObject:
   m_ObjectHideFlags: 0
