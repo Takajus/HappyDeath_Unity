@@ -61,9 +61,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   E_Input: {fileID: 4314751714359385817}
-  pickUpAction: {fileID: 5362960638749042328, guid: 0ac56734837cfea4ea5836dcab41a06e,
-    type: 3}
   resourceToPick: {fileID: 11400000, guid: 7fa2e0cee1d20424cbf4266b35fbfc03, type: 2}
+  amountToGive: 50
 --- !u!212 &769548029622802100
 SpriteRenderer:
   m_ObjectHideFlags: 0

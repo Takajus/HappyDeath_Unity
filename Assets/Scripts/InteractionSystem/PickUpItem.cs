@@ -7,10 +7,11 @@ public class PickUpItem : MonoBehaviour, IInteractable
 {
     [SerializeField] GameObject E_Input;
     [SerializeField] Item resourceToPick;
+    [SerializeField] int amountToGive = 1;
 
     private void PickUp()
     {
-        InventoryManager.Instance.AddItem(resourceToPick, 50);
+        InventoryManager.Instance.AddItem(resourceToPick, amountToGive);
         Destroy(gameObject);
     }
 
