@@ -3,42 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PickUpItem : MonoBehaviour
+public class PickUpItem : MonoBehaviour, IInteractable
 {
-    bool canPickUp = false;
     [SerializeField] GameObject E_Input;
-    [SerializeField] InputActionReference pickUpAction;
     [SerializeField] Item resourceToPick;
 
-    private void OnEnable()
+    private void PickUp()
     {
-        pickUpAction.action.performed += PickUp;
+        InventoryManager.Instance.AddItem(resourceToPick);
+        Destroy(gameObject);
     }
 
-    private void OnDisable()
+    public void Hover()
     {
-        pickUpAction.action.performed -= PickUp;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        canPickUp = true;
         E_Input.SetActive(true);
     }
 
-    private void OnTriggerExit(Collider other)
+    public void UnHover()
     {
-        canPickUp = false;
         E_Input.SetActive(false);
     }
 
-    private void PickUp(InputAction.CallbackContext context)
+    public void Interact()
     {
-        if (!canPickUp)
-            return;
+        PickUp();
+    }
 
-        gameObject.SetActive(false);
-        InventoryManager.Instance.AddItem(resourceToPick);
-        Destroy(gameObject);
+    public void EndInteract()
+    {
+        
+    }
+
+    public InteractMode GetInteractMode()
+    {
+        throw new System.NotImplementedException();
     }
 }

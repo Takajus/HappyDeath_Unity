@@ -47,6 +47,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b0abbc7ad91d0e845a5ce831f077f063,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0abbc7ad91d0e845a5ce831f077f063,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0abbc7ad91d0e845a5ce831f077f063,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0abbc7ad91d0e845a5ce831f077f063,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -94,6 +109,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0abbc7ad91d0e845a5ce831f077f063,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b0abbc7ad91d0e845a5ce831f077f063,
         type: 3}
@@ -147,6 +167,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b0abbc7ad91d0e845a5ce831f077f063,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0abbc7ad91d0e845a5ce831f077f063,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0abbc7ad91d0e845a5ce831f077f063,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0abbc7ad91d0e845a5ce831f077f063,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -195,10 +230,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b0abbc7ad91d0e845a5ce831f077f063,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b0abbc7ad91d0e845a5ce831f077f063,
         type: 3}
       propertyPath: m_Name
       value: celtic_cross - Placement
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b0abbc7ad91d0e845a5ce831f077f063,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0abbc7ad91d0e845a5ce831f077f063, type: 3}
@@ -229,13 +274,19 @@ MonoBehaviour:
   validMat: {fileID: 2100000, guid: 8482db92fd981464c8a648e660b9bfdf, type: 2}
   invalidMat: {fileID: 2100000, guid: beafd94792bcfa74d9829c4b02ae8b8e, type: 2}
   realObject: {fileID: 950315955116041225}
-  realMesh: {fileID: 3729416152756913068}
+  notRealMesh: {fileID: 3729416152756913068}
   tileDetectionList:
   - x: 0
     z: 0
   - x: 1
     z: 0
+  - x: 0
+    z: 1
   - x: 1
+    z: 1
+  - x: -1
+    z: 0
+  - x: -1
     z: 1
 --- !u!23 &3729416152756913068 stripped
 MeshRenderer:

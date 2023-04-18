@@ -32,11 +32,6 @@ public class Tile : MonoBehaviour, IInteractable
     public void Interact()
     {
         mr.material = selectMaterial;
-
-        foreach (var item in neighbors)
-        {
-            item.Hover();
-        }
     }
 
     public void EndInteract()

@@ -13,6 +13,7 @@ public class InteractionManager : MonoBehaviour
 
     public BaseHandler interactHandler { get; private set; }
     public PlacementHandler placementHandler { get; private set; }
+    public static bool UIOpen { get => CraftActivationManager.IsOpen || BookActivationManager.IsOpen; }
 
     private void Awake()
     {
@@ -23,8 +24,6 @@ public class InteractionManager : MonoBehaviour
     void Update()
     {
         DetermineInteractionMode();
-
-        Debug.Log(interactionMode);
 
         switch (interactionMode)
         {
@@ -52,8 +51,6 @@ public class InteractionManager : MonoBehaviour
         {
             temp = InteractionMode.Place;
         }
-
-
 
         if (interactionMode != temp)
             ChangeInteractionMode(temp);

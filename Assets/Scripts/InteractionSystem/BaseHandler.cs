@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +14,7 @@ public class BaseHandler : MonoBehaviour
 
     [Header("References")]
     Camera playerCamera;
+    GameObject interactSphere;
 
     [Header("InputHandle")]
     [SerializeField] LayerMask hitMe;
@@ -33,6 +35,9 @@ public class BaseHandler : MonoBehaviour
     {
         if (playerCamera == null)
             playerCamera = Camera.main;
+
+        if (interactSphere == null)
+            interactSphere = PlayerController.Instance.InteractSphere;
     }
 
     protected virtual GameObject GetMouseTarget()
@@ -49,20 +54,50 @@ public class BaseHandler : MonoBehaviour
         }
     }
 
+    protected virtual GameObject GetSphereTarget()
+    {
+        List<Collider> items = Physics.OverlapSphere(interactSphere.transform.position, 1.5f, hitMe)
+                                      .OrderBy(e => Vector3.Distance(e.transform.position, interactSphere.transform.position))
+                                      .ToList();
+
+        items.RemoveAll(e => HasWantedType(e.gameObject) == false);
+
+        if (items.Count > 0)
+        {
+            isTargeting = true;
+            return items[0].gameObject;
+        }
+        else
+        {
+            isTargeting = false;
+            return null;
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (Application.isPlaying)
+        Gizmos.DrawSphere(interactSphere.transform.position, 1.5f);
+    }
+
     public virtual void HandleInteractable()
     {
         if (mouseTarget != GetMouseTarget() && mouseIsTargeting)
             UpdateMouseTarget();
 
+        if (target != GetSphereTarget() && isTargeting)
+            UpdateSphereTarget();
+
         if (IsInteracting)
-        {
             if (cancelAction.action.triggered)
             {
-                UnSelectTarget(currentInteractedObject);
-                UnHoverTarget(currentInteractedObject);
-                currentInteractedObject = null;
+                Select(null);
+                HoverTarget(mouseTarget);
+                HoverTarget(target);
             }
-        }
+
+        if (InteractionManager.UIOpen)
+            return;
 
         if (mouseInteractAction.action.triggered)
             Select(mouseTarget);
@@ -79,6 +114,17 @@ public class BaseHandler : MonoBehaviour
 
         if (mouseTarget != currentInteractedObject)
             HoverTarget(mouseTarget);
+    }
+
+    protected virtual void UpdateSphereTarget()
+    {
+        if (target != currentInteractedObject)
+            UnHoverTarget(target);
+
+        target = GetSphereTarget();
+
+        if (target != currentInteractedObject)
+            HoverTarget(target);
     }
 
     protected virtual void Select(GameObject target)

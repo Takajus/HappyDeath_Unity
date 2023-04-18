@@ -8,7 +8,7 @@ public class Build : MonoBehaviour
     public Material invalidMat;
 
     [SerializeField] GameObject realObject;
-    [SerializeField] MeshRenderer realMesh;
+    [SerializeField] MeshRenderer notRealMesh;
 
     [System.Serializable]
     public struct TileDetection
@@ -27,56 +27,63 @@ public class Build : MonoBehaviour
 
     private void Start()
     {
-        realMesh = GetComponent<MeshRenderer>();
+        notRealMesh = GetComponent<MeshRenderer>();
     }
 
-    void Update()
+    public void CheckPlaceability()
     {
         if (IsPlaceable())
-            realMesh.material = validMat;
+            notRealMesh.material = validMat;
         else
-            realMesh.material = invalidMat;
+            notRealMesh.material = invalidMat;
     }
 
     public bool IsPlaceable()
     {
-        foreach (var tileDetection in tileDetectionList)
-        {
-            bool hasValidTile = false;
+        if (GetOverlappedTiles().Count < tileDetectionList.Count)
+            return false;
 
-            Collider[] hitColliders = Physics.OverlapBox(transform.parent.transform.position + transform.parent.TransformDirection(new Vector3(tileDetection.x, 0, tileDetection.z)), Vector3.one / 3, Quaternion.identity, ~7);
-
-            Debug.Log(hitColliders.Length);
-
-            foreach (var hit in hitColliders)
-            {
-                if (hit.GetComponent<Tile>())
-                {
-                    hasValidTile = true;
-
-                    if (hit.GetComponent<Tile>().isOccupied)
-                        hasValidTile = false;
-                }
-            }
-
-            if (!hasValidTile)
+        foreach (var tile in GetOverlappedTiles())
+            if (tile.isOccupied)
                 return false;
-        }
 
         return true;
+    }
+
+    private HashSet<Tile> GetOverlappedTiles()
+    {
+        HashSet<Tile> tiles = new HashSet<Tile>();
+
+        foreach (var tileDetection in tileDetectionList)
+        {
+            Vector3 relativePosition = transform.parent.TransformDirection(new Vector3(tileDetection.x, 0, tileDetection.z));
+            Collider[] hitColliders = Physics.OverlapBox(transform.parent.position + relativePosition, Vector3.one / 3, Quaternion.identity, ~7);
+
+            foreach (var hit in hitColliders)
+                if (hit.GetComponent<Tile>())
+                    tiles.Add(hit.GetComponent<Tile>());
+        }
+
+        return tiles;
     }
 
     public void Innit()
     {
         realObject.SetActive(true);
         gameObject.SetActive(false);
+
+        foreach (var tile in GetOverlappedTiles())
+        {
+            tile.isOccupied = true;
+        }
     }
 
     private void OnDrawGizmos()
     {
         foreach (var tileDetection in tileDetectionList)
         {
-            Gizmos.DrawWireCube(transform.parent.transform.position + transform.parent.TransformDirection(new Vector3(tileDetection.x, 0, tileDetection.z)), Vector3.one / 3);
+            Vector3 relativePosition = transform.parent.TransformDirection(new Vector3(tileDetection.x, 0, tileDetection.z));
+            Gizmos.DrawWireCube(transform.parent.position + relativePosition, Vector3.one / 3);
         }
     }
 }

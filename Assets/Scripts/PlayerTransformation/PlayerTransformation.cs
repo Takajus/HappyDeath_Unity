@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
-using LFS.FirstPerson.Gameplay;
 
 public class PlayerTransformation : MonoBehaviour
 {

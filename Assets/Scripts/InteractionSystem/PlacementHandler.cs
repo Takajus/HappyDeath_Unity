@@ -6,7 +6,7 @@ public class PlacementHandler : BaseHandler
 {
     public override bool IsInteracting { get => objectToPlace != null; }
     GameObject objectToPlace;
-    int rotation;
+    int rotation = 180;
 
     [SerializeField] GameObject tempPrefab;
     [SerializeField] Transform buildsParent;
@@ -37,7 +37,7 @@ public class PlacementHandler : BaseHandler
         if (objectToPlace)
             Destroy(objectToPlace);
 
-        rotation = 0;
+        rotation = 180;
     }
 
     public void GiveObject(GameObject ob)
@@ -46,23 +46,30 @@ public class PlacementHandler : BaseHandler
             objectToPlace = Instantiate(tempPrefab, buildsParent);
         else
             objectToPlace = Instantiate(tempPrefab);
+
+        objectToPlace.transform.eulerAngles = new Vector3(0, rotation, 0);
+        objectToPlace.SetActive(false);
     }
     
     protected override void HoverTarget(GameObject target)
     {
         if (target)
         {
-            target.SetActive(true);
+            objectToPlace.SetActive(true);
             objectToPlace.transform.position = target.transform.position;
+            objectToPlace.GetComponentInChildren<Build>().CheckPlaceability();
         }
         else
-            target.SetActive(false);
+            objectToPlace.SetActive(false);
     }
 
     protected override void SelectTarget(GameObject target)
     {
-        if (target)
+        if (target && objectToPlace.GetComponentInChildren<Build>().IsPlaceable())
+        {
+            objectToPlace.GetComponentInChildren<Build>().Innit();
             objectToPlace = null;
+        }
     }
 
     protected override void UnHoverTarget(GameObject target) { }
