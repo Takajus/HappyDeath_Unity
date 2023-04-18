@@ -29,6 +29,7 @@ public class InventoryManager : MonoBehaviour
         Debug.Log(selectedRecepie.ScriptableCraft.item + "have been create");
 
         PayForCraft(selectedRecepie);
+
         AddItem(itemToCreate);
     }
 
@@ -61,9 +62,12 @@ public class InventoryManager : MonoBehaviour
 
             if (havePayIngredient1 && havePayIngredient2 && havePayIngredient3)
             {
+                craftingManager.RefreshIngredientsOwned();
                 return;
             }
         }
+
+
     }
 
     public void AddItem(Item itemToAdd)
