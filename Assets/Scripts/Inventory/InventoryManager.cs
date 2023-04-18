@@ -12,6 +12,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] List<int> itemAmount = new List<int>();
 
     [SerializeField] CraftingManager craftingManager;
+    public BookActivationManager bookActivationManager;
 
     public List<Item> Inventory { get => inventory; set => inventory = value; }
 
@@ -85,6 +86,26 @@ public class InventoryManager : MonoBehaviour
         OnItemAdded?.Invoke();
         inventory.Add(itemToAdd);
         itemAmount.Add(0);
+        RefreshItemAmount();
+    }
+
+    public void RemoveItem(Item itemToAdd)
+    {
+        for (int i = 0; i < inventory.Count; i++)
+        {
+            if (inventory[i] == itemToAdd)
+            {
+                inventory[i].Amount--;
+
+                if (inventory[i].Amount <= 0)
+                    inventory.Remove(itemToAdd);
+
+                RefreshItemAmount();
+                return;
+            }
+        }
+
+        OnItemRemoved?.Invoke();
         RefreshItemAmount();
     }
 

@@ -9,6 +9,7 @@ public class Build : MonoBehaviour
 
     [SerializeField] GameObject realObject;
     [SerializeField] MeshRenderer notRealMesh;
+    [SerializeField] Item item;
 
     [System.Serializable]
     public struct TileDetection
@@ -71,6 +72,7 @@ public class Build : MonoBehaviour
     {
         realObject.SetActive(true);
         gameObject.SetActive(false);
+        //InventoryManager.Instance.RemoveItem(item);
 
         foreach (var tile in GetOverlappedTiles())
         {

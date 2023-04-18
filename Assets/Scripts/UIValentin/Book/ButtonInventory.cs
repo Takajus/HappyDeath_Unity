@@ -32,9 +32,22 @@ public class ButtonInventory : MonoBehaviour
         setupButton.buttonImage.sprite = item.Sprite;
         setupButton.textAmount.text = InventoryManager.Instance.GetIngredientAmount(item).ToString();
     }
+
     public void UI_ClickedOnMe()
     {
         DisplayInformations();
+
+        PlaceItem();
+    }
+
+    private void PlaceItem()
+    {
+        if (item)
+            if (item.Placeable)
+            {
+                InteractionManager.Instance.placementHandler.GiveObject(item.Prefab);
+                InventoryManager.Instance.bookActivationManager.OpenCloseBook();
+            }
     }
 
     private void DisplayInformations()

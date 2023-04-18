@@ -17,7 +17,7 @@ public class BookActivationManager : MonoBehaviour
         }
     }
 
-    private void OpenCloseBook()
+    public void OpenCloseBook()
     {
         if (CraftActivationManager.IsOpen)
             return;

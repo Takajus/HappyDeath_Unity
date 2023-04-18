@@ -7,8 +7,10 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "Item", menuName = "Scriptables/Item", order = 3)]
 public class Item : ScriptableObject
 {
+    public GameObject Prefab;
     public Sprite Sprite;
     public string Name;
     public string Description;
     public int Amount;
+    public bool Placeable;
 }
