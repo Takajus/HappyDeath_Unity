@@ -11,7 +11,7 @@ public class PlayerTransformation : MonoBehaviour
 
     [SerializeField] private ParticleSystem transformationVFX;
 
-    [SerializeField] private GameObject book;
+    [SerializeField] private GameObject book, craft;
 
     void Start()
     {
@@ -51,6 +51,14 @@ public class PlayerTransformation : MonoBehaviour
                 book.SetActive(false);
             else
                 book.SetActive(true);
+        }
+        
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            if (craft.activeInHierarchy)
+                craft.SetActive(false);
+            else
+                craft.SetActive(true);
         }
 
     }
