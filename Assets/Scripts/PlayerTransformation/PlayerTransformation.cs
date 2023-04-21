@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using NaughtyAttributes;
 
 public class PlayerTransformation : MonoBehaviour
@@ -11,6 +12,8 @@ public class PlayerTransformation : MonoBehaviour
     [SerializeField] private ParticleSystem transformationVFX;
 
     [SerializeField] private GameObject book, craft;
+
+    [SerializeField] private GameObject Missy, Alix, Albert;
 
     void Start()
     {
@@ -33,6 +36,8 @@ public class PlayerTransformation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+#if UNITY_EDITOR
         // Test
         if (Input.GetKeyDown(KeyCode.N))
         {
@@ -60,6 +65,8 @@ public class PlayerTransformation : MonoBehaviour
                 craft.SetActive(true);
         }
 
+#endif
+
     }
 
     private void IsDay()
@@ -82,6 +89,10 @@ public class PlayerTransformation : MonoBehaviour
 
         isDay = false;
         Transformation();
+
+        Albert.SetActive(true);
+        Alix.SetActive(true);
+        Missy.SetActive(false);
     }
 
     private void Transformation(/*bool timeIndex*/)

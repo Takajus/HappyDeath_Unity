@@ -16,9 +16,11 @@ public class QuestSystem : MonoBehaviour
 
     [Header("Dev variable")]
     [SerializeField] private GameObject QuestPanel;
-    private int DemoTaskStat = 0;
+    [SerializeField] public bool isTutorial;
+    public int DemoTaskStat = 0;
+    [SerializeField] private GameObject wood = null, stone = null, flower = null;
 
-    public static QuestSystem instance { get; private set; }
+    public static QuestSystem instance;
     public static QuestSystem Instance { get { if (instance == null) instance = FindObjectOfType<QuestSystem>(); return instance; } }
 
 
@@ -30,19 +32,31 @@ public class QuestSystem : MonoBehaviour
         if(QuestPanel.activeInHierarchy)
             QuestPanel.SetActive(false);
 
+        isTutorial = false;
+
         DemoTaskStat = 0;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
-            NextDemoTask();
+        /*if (Input.GetKeyDown(KeyCode.G))
+            NextDemoTask();*/
+
+        if (QuestPanel.activeInHierarchy)
+            isTutorial = true;
+        else
+            isTutorial = false;
+
+        if(DemoTaskStat == 1)
+            GetPickUp();
     }
 
     private void TaskDisplayer()
     {
         if(DemoTaskStat != 0 && DemoTaskStat < taskText.Length)
+        {
             ToDoTextUI.text = taskText[DemoTaskStat];
+        }
         else
             ToDoTextUI.text = "Demo Quest index error ! Please contact a programmer";
 
@@ -51,15 +65,10 @@ public class QuestSystem : MonoBehaviour
         else
             QuestPanel.SetActive(false);
 
-        /*switch (DemoTaskStat)
+        if(DemoTaskStat == 4)
         {
-            case 0:
-                QuestPanel.SetActive(false);
-                break;
-            default:
-                ToDoTextUI.text = "Demo Quest index error ! Please contact a programmer";
-                break;
-        }*/
+            LightingManager.Instance.SetTime(1800 / 4 * 3.5f);
+        }
     }
 
     public void NextDemoTask()
@@ -72,5 +81,13 @@ public class QuestSystem : MonoBehaviour
     {
         DemoTaskStat = taskIndex;
         TaskDisplayer();
+    }
+
+    private void GetPickUp()
+    {
+        if (wood == null)
+            if (stone == null)
+                if (flower == null)
+                    GetDemoTask(2);
     }
 }

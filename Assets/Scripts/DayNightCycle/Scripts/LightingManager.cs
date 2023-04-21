@@ -128,4 +128,9 @@ public class LightingManager : MonoBehaviour
             }
         }
     }
+
+    public void SetTime(float time)
+    {
+        timeOfDay = time;
+    }
 }

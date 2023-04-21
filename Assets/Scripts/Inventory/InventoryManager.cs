@@ -23,12 +23,12 @@ public class InventoryManager : MonoBehaviour
     public event Action OnItemAdded;
     public event Action OnItemRemoved;
 
-#if !UNITY_EDITOR
+//#if !UNITY_EDITOR
     private void Start()
     {
         ResetIngredients();
     }
-#endif
+//#endif
 
     private void OnEnable()
     {
