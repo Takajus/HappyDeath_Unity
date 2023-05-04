@@ -18,8 +18,8 @@ public class PlayerTransformation : MonoBehaviour
     void Start()
     {
 
-        LightingManager.Instance._isDay += IsDay;
-        LightingManager.Instance._isNight += IsNight;
+        DayCycleEvents.OnDayStart += IsDay;
+        DayCycleEvents.OnNightStart += IsNight;
 
         if (isDay)
         {
