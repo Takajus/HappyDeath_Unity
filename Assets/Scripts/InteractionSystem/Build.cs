@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 public class Build : MonoBehaviour
 {
     public Material validMat;
@@ -10,17 +14,20 @@ public class Build : MonoBehaviour
     [SerializeField] GameObject realObject;
     [SerializeField] MeshRenderer notRealMesh;
     [SerializeField] Item item;
+    HashSet<Tile> tiles = new HashSet<Tile>();
 
     [System.Serializable]
     public struct TileDetection
     {
         public int x;
         public int z;
+        public bool needDugTile;
 
-        public TileDetection(int x, int z)
+        public TileDetection(int x, int z, bool needDug = false)
         {
             this.x = x;
             this.z = z;
+            this.needDugTile = needDug;
         }
     }
 
@@ -41,17 +48,19 @@ public class Build : MonoBehaviour
 
     public bool IsPlaceable()
     {
-        if (GetOverlappedTiles().Count < tileDetectionList.Count)
+        GetOverlappedTiles();
+
+        if (tiles.Count < tileDetectionList.Count)
             return false;
 
-        foreach (var tile in GetOverlappedTiles())
+        foreach (var tile in tiles)
             if (tile.isOccupied)
                 return false;
 
         return true;
     }
 
-    private HashSet<Tile> GetOverlappedTiles()
+    private void GetOverlappedTiles()
     {
         HashSet<Tile> tiles = new HashSet<Tile>();
 
@@ -61,11 +70,12 @@ public class Build : MonoBehaviour
             Collider[] hitColliders = Physics.OverlapBox(transform.parent.position + relativePosition, Vector3.one / 3, Quaternion.identity, ~7);
 
             foreach (var hit in hitColliders)
-                if (hit.GetComponent<Tile>())
-                    tiles.Add(hit.GetComponent<Tile>());
+                if (hit.TryGetComponent(out Tile tile))
+                    if (tile.IsDug == tileDetection.needDugTile)
+                        tiles.Add(tile);
         }
 
-        return tiles;
+        this.tiles = tiles;
     }
 
     public void Innit()
@@ -74,7 +84,7 @@ public class Build : MonoBehaviour
         gameObject.SetActive(false);
         InventoryManager.Instance.RemoveItem(item);
 
-        foreach (var tile in GetOverlappedTiles())
+        foreach (var tile in tiles)
         {
             tile.isOccupied = true;
         }
@@ -89,3 +99,21 @@ public class Build : MonoBehaviour
         }
     }
 }
+
+#if UNITY_EDITOR
+[CustomEditor(typeof(Build))]
+public class BuildEditor : Editor
+{
+    Build source;
+
+    private void OnEnable()
+    {
+        source = target as Build;
+    }
+
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+    }
+}
+#endif

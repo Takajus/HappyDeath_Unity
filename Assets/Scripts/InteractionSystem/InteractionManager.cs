@@ -13,12 +13,16 @@ public class InteractionManager : MonoBehaviour
 
     public BaseHandler interactHandler { get; private set; }
     public PlacementHandler placementHandler { get; private set; }
+    public ShovelHandler shovelHandler { get; private set; }
+    public AxeHandler axeHandler { get; private set; }
     public static bool UIOpen { get => CraftActivationManager.IsOpen || BookActivationManager.IsOpen; }
 
     private void Awake()
     {
         interactHandler = GetComponent<BaseHandler>();
         placementHandler = GetComponent<PlacementHandler>();
+        shovelHandler = GetComponent<ShovelHandler>();
+        axeHandler = GetComponent<AxeHandler>();
     }
 
     void Update()
@@ -31,8 +35,10 @@ public class InteractionManager : MonoBehaviour
                 interactHandler.HandleInteractable();
                 break;
             case InteractionMode.Cut:
+                axeHandler.HandleInteractable();
                 break;
             case InteractionMode.Dig:
+                shovelHandler.HandleInteractable();
                 break;
             case InteractionMode.Place:
                 placementHandler.HandleInteractable();
@@ -51,6 +57,14 @@ public class InteractionManager : MonoBehaviour
         {
             temp = InteractionMode.Place;
         }
+        else if (axeHandler.axeIsEquiped)
+        {
+            temp = InteractionMode.Cut;
+        }
+        else if (shovelHandler.shovelIsEquiped)
+        {
+            temp = InteractionMode.Dig;
+        }
 
         if (interactionMode != temp)
             ChangeInteractionMode(temp);
@@ -64,8 +78,10 @@ public class InteractionManager : MonoBehaviour
                 interactHandler.ClearHandler();
                 break;
             case InteractionMode.Cut:
+                axeHandler.ClearHandler();
                 break;
             case InteractionMode.Dig:
+                shovelHandler.ClearHandler();
                 break;
             case InteractionMode.Place:
                 placementHandler.ClearHandler();

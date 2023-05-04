@@ -67,6 +67,9 @@ GameObject:
   - component: {fileID: 2074510864}
   - component: {fileID: 4403977370250483120}
   - component: {fileID: 4403977370250483126}
+  - component: {fileID: 4403977370250483129}
+  - component: {fileID: 4403977370250483128}
+  - component: {fileID: 4403977370250483127}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -167,6 +170,9 @@ MonoBehaviour:
   transformationVFX: {fileID: 1389388095736820}
   book: {fileID: 0}
   craft: {fileID: 0}
+  Missy: {fileID: 0}
+  Alix: {fileID: 0}
+  Albert: {fileID: 0}
 --- !u!114 &2074510864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,17 +194,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4403977369509755873}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88520c4386a085a4c9af1746c1ed2c67, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ece1f9aca314a2418c1d6393471bc07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactAction: {fileID: 5362960638749042328, guid: 0ac56734837cfea4ea5836dcab41a06e,
-    type: 3}
-  mouseInteractAction: {fileID: 7612177513081541613, guid: 0ac56734837cfea4ea5836dcab41a06e,
-    type: 3}
-  cancelAction: {fileID: 2397066969695824413, guid: 0ac56734837cfea4ea5836dcab41a06e,
-    type: 3}
-  mousePosition: {fileID: -2057929545544530715, guid: 0ac56734837cfea4ea5836dcab41a06e,
-    type: 3}
   hitMe:
     serializedVersion: 2
     m_Bits: 1
@@ -220,14 +218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9a63791181caed4da0b46f7fe2b94e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactAction: {fileID: 5362960638749042328, guid: 0ac56734837cfea4ea5836dcab41a06e,
-    type: 3}
-  mouseInteractAction: {fileID: 7612177513081541613, guid: 0ac56734837cfea4ea5836dcab41a06e,
-    type: 3}
-  cancelAction: {fileID: 2397066969695824413, guid: 0ac56734837cfea4ea5836dcab41a06e,
-    type: 3}
-  mousePosition: {fileID: -2057929545544530715, guid: 0ac56734837cfea4ea5836dcab41a06e,
-    type: 3}
   hitMe:
     serializedVersion: 2
     m_Bits: 0
@@ -240,6 +230,76 @@ MonoBehaviour:
   tempPrefab: {fileID: 4753215879862940257, guid: 1569239cb11ce504389481bd88652d26,
     type: 3}
   buildsParent: {fileID: 0}
+--- !u!114 &4403977370250483129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4403977369509755873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c73271d30e8b24ca34333a36ff5902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitMe:
+    serializedVersion: 2
+    m_Bits: 128
+  isTargeting: 0
+  hitMeMouse:
+    serializedVersion: 2
+    m_Bits: 128
+  mouseIsTargeting: 0
+  currentInteractedObject: {fileID: 0}
+--- !u!114 &4403977370250483128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4403977369509755873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5138c2f17bf2e534484385162a7396ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitMe:
+    serializedVersion: 2
+    m_Bits: 1
+  isTargeting: 0
+  hitMeMouse:
+    serializedVersion: 2
+    m_Bits: 1
+  mouseIsTargeting: 0
+  currentInteractedObject: {fileID: 0}
+--- !u!114 &4403977370250483127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4403977369509755873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 781d16e99de5a9c4ab0b491d9676c066, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameInteractAction: {fileID: 5362960638749042328, guid: 0ac56734837cfea4ea5836dcab41a06e,
+    type: 3}
+  gameMouseInteractAction: {fileID: 7612177513081541613, guid: 0ac56734837cfea4ea5836dcab41a06e,
+    type: 3}
+  gameCancelAction: {fileID: 2397066969695824413, guid: 0ac56734837cfea4ea5836dcab41a06e,
+    type: 3}
+  gameMousePosition: {fileID: -2057929545544530715, guid: 0ac56734837cfea4ea5836dcab41a06e,
+    type: 3}
+  uiInteractAction: {fileID: 0}
+  uiMouseInteractAction: {fileID: 0}
+  uiCancelAction: {fileID: 0}
+  uiMousePosition: {fileID: 0}
+  editorInteractAction: {fileID: 0}
+  editorMouseInteractAction: {fileID: 0}
+  editorCancelAction: {fileID: 0}
+  editorMousePosition: {fileID: 0}
 --- !u!1001 &660955058418266101
 PrefabInstance:
   m_ObjectHideFlags: 0
