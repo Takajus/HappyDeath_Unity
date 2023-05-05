@@ -235,6 +235,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0abbc7ad91d0e845a5ce831f077f063,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b0abbc7ad91d0e845a5ce831f077f063,
         type: 3}
       propertyPath: m_Name
@@ -274,24 +279,25 @@ MonoBehaviour:
   validMat: {fileID: 2100000, guid: 8482db92fd981464c8a648e660b9bfdf, type: 2}
   invalidMat: {fileID: 2100000, guid: beafd94792bcfa74d9829c4b02ae8b8e, type: 2}
   realObject: {fileID: 950315955116041225}
-  notRealMesh: {fileID: 3729416152756913068}
   item: {fileID: 11400000, guid: 645b90f830528bd4cbd41ce4e4435438, type: 2}
+  xRange: 2
+  zRange: 2
   tileDetectionList:
-  - x: 0
-    z: 0
-  - x: 1
-    z: 0
-  - x: 0
-    z: 1
-  - x: 1
-    z: 1
   - x: -1
     z: 0
+    needDugTile: 0
   - x: -1
     z: 1
---- !u!23 &3729416152756913068 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: b0abbc7ad91d0e845a5ce831f077f063,
-    type: 3}
-  m_PrefabInstance: {fileID: 2594101537232690984}
-  m_PrefabAsset: {fileID: 0}
+    needDugTile: 0
+  - x: 0
+    z: 1
+    needDugTile: 0
+  - x: 0
+    z: 0
+    needDugTile: 0
+  - x: 1
+    z: 1
+    needDugTile: 0
+  - x: 1
+    z: 0
+    needDugTile: 0

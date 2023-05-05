@@ -66,6 +66,19 @@ public class InteractionManager : MonoBehaviour
             temp = InteractionMode.Dig;
         }
 
+        /*if (InventoryManager.HeldItem.itemType == Item.ItemType.BUILD)
+        {
+            temp = InteractionMode.Place;
+        }
+        else if (InventoryManager.HeldItem.itemType == Item.ItemType.TOOL && InventoryManager.HeldItem.Name == "Axe")
+        {
+            temp = InteractionMode.Cut;
+        }
+        else if (InventoryManager.HeldItem.itemType == Item.ItemType.TOOL && InventoryManager.HeldItem.Name == "Shovel")
+        {
+            temp = InteractionMode.Dig;
+        }*/
+
         if (interactionMode != temp)
             ChangeInteractionMode(temp);
     }

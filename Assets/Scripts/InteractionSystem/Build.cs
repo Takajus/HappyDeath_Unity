@@ -2,19 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
-
 public class Build : MonoBehaviour
 {
     public Material validMat;
     public Material invalidMat;
+    public GameObject realObject;
+    public Item item;
 
-    [SerializeField] GameObject realObject;
-    [SerializeField] MeshRenderer notRealMesh;
-    [SerializeField] Item item;
+    public int xRange = 2;
+    public int zRange = 2;
+    private MeshRenderer notRealMesh;
     HashSet<Tile> tiles = new HashSet<Tile>();
+    public List<TileDetection> tileDetectionList = new List<TileDetection>();
 
     [System.Serializable]
     public struct TileDetection
@@ -31,7 +30,6 @@ public class Build : MonoBehaviour
         }
     }
 
-    [SerializeField] List<TileDetection> tileDetectionList = new List<TileDetection>();
 
     private void Start()
     {
@@ -94,26 +92,13 @@ public class Build : MonoBehaviour
     {
         foreach (var tileDetection in tileDetectionList)
         {
+            if (tileDetection.needDugTile)
+                Gizmos.color = Color.yellow;
+            else
+                Gizmos.color = Color.green;
+
             Vector3 relativePosition = transform.parent.TransformDirection(new Vector3(tileDetection.x, 0, tileDetection.z));
             Gizmos.DrawWireCube(transform.parent.position + relativePosition, Vector3.one / 3);
         }
     }
 }
-
-#if UNITY_EDITOR
-[CustomEditor(typeof(Build))]
-public class BuildEditor : Editor
-{
-    Build source;
-
-    private void OnEnable()
-    {
-        source = target as Build;
-    }
-
-    public override void OnInspectorGUI()
-    {
-        base.OnInspectorGUI();
-    }
-}
-#endif
