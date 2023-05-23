@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PanelRecepies : MonoBehaviour
+public class BookDisplayRecipes : MonoBehaviour
 {
     [SerializeField] InventoryManager inventoryMananger;
 

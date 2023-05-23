@@ -39,7 +39,7 @@ public class PlayerTransformation : MonoBehaviour
 
 #if UNITY_EDITOR
         // Test
-        if (Input.GetKeyDown(KeyCode.N))
+        /*if (Input.GetKeyDown(KeyCode.N))
         {
             if (isDay)
                 isDay = false;
@@ -63,7 +63,7 @@ public class PlayerTransformation : MonoBehaviour
                 craft.SetActive(false);
             else
                 craft.SetActive(true);
-        }
+        }*/
 
 #endif
 

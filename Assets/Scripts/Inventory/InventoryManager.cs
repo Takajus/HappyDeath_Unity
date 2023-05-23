@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -14,7 +15,6 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] List<int> itemAmount = new List<int>();
 
     [SerializeField] CraftingManager craftingManager;
-    public BookActivationManager bookActivationManager;
 
     [SerializeField] BookDisplayInventory bookDisplayInventory;
 
@@ -30,7 +30,7 @@ public class InventoryManager : MonoBehaviour
     {
         ResetIngredients();
     }
-//#endif
+    //#endif
 
     private void OnEnable()
     {

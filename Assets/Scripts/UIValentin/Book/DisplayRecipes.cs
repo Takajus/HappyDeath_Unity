@@ -32,7 +32,7 @@ public class DisplayRecipes : MonoBehaviour
     public SetupButton setupButton;
 
     [SerializeField]
-    ScriptableCraft ScriptableCraft;
+    Recipe ScriptableCraft;
 
     private void Start()
     {

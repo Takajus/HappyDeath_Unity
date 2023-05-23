@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEditor.VersionControl;
 
 [CustomEditor(typeof(Item))]
 public class ItemEditor : Editor
@@ -19,8 +20,6 @@ public class ItemEditor : Editor
     //Update
     public override void OnInspectorGUI()
     {
-
-
         //base.OnInspectorGUI();
 
         style = new GUIStyle()
@@ -55,9 +54,6 @@ public class ItemEditor : Editor
 
     public void ShowToolUI()
     {
-
-
-
         GUILayout.BeginHorizontal("box");
         //EditorGUILayout.LabelField("Prefab");
         source.Prefab = (GameObject)EditorGUILayout.ObjectField("Prefab", source.Prefab, typeof(GameObject), false);
@@ -97,9 +93,14 @@ public class ItemEditor : Editor
         source.Amount = 1;
         source.Placeable = false;
 
+        /*string assetPath = AssetDatabase.GetAssetPath(source.GetInstanceID());
+        AssetDatabase.RenameAsset(assetPath, source.Name);
+        AssetDatabase.SaveAssets();*/
+
         textTitleColor = new Color(0.9f,0f,0f);
 
     }
+
     public void ShowResourceUI()
     {
 

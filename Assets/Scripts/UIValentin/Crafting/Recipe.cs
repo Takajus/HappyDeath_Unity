@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-[CreateAssetMenu(fileName = "Craft", menuName = "Scriptables/Craft", order = 2)]
-public class ScriptableCraft : ScriptableObject
+//[CreateAssetMenu(fileName = "Craft", menuName = "Scriptables/Craft", order = 2)]
+public class Recipe : ScriptableObject
 {
     [System.Serializable]
     public struct Ingredient

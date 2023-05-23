@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-[CreateAssetMenu(fileName = "Item", menuName = "Scriptables/Item", order = 3)]
+//[CreateAssetMenu(fileName = "Item", menuName = "Scriptables/Item", order = 3)]
 public class Item : ScriptableObject
 {
     public enum ItemType 

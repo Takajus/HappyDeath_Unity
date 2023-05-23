@@ -13,10 +13,9 @@ public class InputManager : MonoBehaviour
     public InputActionReference gameMousePosition;
 
     [Header("UI")]
-    public InputActionReference uiInteractAction;
-    public InputActionReference uiMouseInteractAction;
     public InputActionReference uiCancelAction;
-    public InputActionReference uiMousePosition;
+    public InputActionReference uiInventoryAction;
+
 
     [Header("Editor")]
     public InputActionReference editorInteractAction;
