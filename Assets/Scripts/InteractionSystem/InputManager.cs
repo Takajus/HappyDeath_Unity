@@ -22,4 +22,5 @@ public class InputManager : MonoBehaviour
     public InputActionReference editorMouseInteractAction;
     public InputActionReference editorCancelAction;
     public InputActionReference editorMousePosition;
+    public InputActionReference editorMultiplicatorValue;
 }

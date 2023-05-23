@@ -60,13 +60,13 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Inventory",
-                    "type": "Button",
-                    "id": "e17aa564-a615-41ff-9d5f-46af28a479c2",
-                    "expectedControlType": "Button",
+                    "name": "Multiplicator",
+                    "type": "Value",
+                    "id": "c7555377-1429-401c-98c6-c53d5ac449c5",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -225,15 +225,37 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "3fce186f-7ad5-4123-a6ec-42ce911ed423",
-                    "path": "<Keyboard>/i",
+                    "name": "FastSlowTime",
+                    "id": "e02fadfa-6b0d-4bf2-909b-0605af40d297",
+                    "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Inventory",
-                    "isComposite": false,
+                    "groups": "",
+                    "action": "Multiplicator",
+                    "isComposite": true,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "e2e982e1-2260-4349-aaed-3be421c63977",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Multiplicator",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "2b411bfd-7e6b-45cf-a4d4-03e1f7b2da09",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Multiplicator",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },
@@ -327,15 +349,6 @@
                     "type": "PassThrough",
                     "id": "731db390-61e2-4c7d-93e2-82f256e40a9e",
                     "expectedControlType": "Quaternion",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "inventory",
-                    "type": "Button",
-                    "id": "565fbaa5-e4eb-48e4-ba24-0b6b5a8cc443",
-                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -759,17 +772,6 @@
                     "action": "TrackedDeviceOrientation",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0794b00c-5017-4f70-ae10-86b8e50fc2be",
-                    "path": "<Keyboard>/i",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "inventory",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         },
@@ -778,66 +780,46 @@
             "id": "e1086929-aaa3-440d-b350-ae07b061526f",
             "actions": [
                 {
-                    "name": "TimeMultiplicator",
+                    "name": "Multiplicator",
                     "type": "Value",
-                    "id": "75e503e5-df23-4c17-a147-501a09a79be2",
-                    "expectedControlType": "Button",
+                    "id": "e2dc297b-f769-44b8-b40e-5b8167b5b333",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "Multi",
-                    "type": "PassThrough",
-                    "id": "e2dc297b-f769-44b8-b40e-5b8167b5b333",
-                    "expectedControlType": "Integer",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "55b62a13-f2e1-45e9-b7fd-e5dac9f80a27",
-                    "path": "<Keyboard>/numpadPlus",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "TimeMultiplicator",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "1D Axis",
-                    "id": "ecba6857-ba8d-4e8c-8178-48c98eb0b407",
+                    "name": "FastSlowTime",
+                    "id": "c3023fb1-d10f-4f0a-a322-d35f180b9fac",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Multi",
+                    "action": "Multiplicator",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "negative",
-                    "id": "f594cba9-bc81-4d12-9f82-96e44c29e16a",
+                    "id": "6860f36d-84c6-4ea9-88e6-8feb6768df5e",
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Multi",
+                    "groups": "",
+                    "action": "Multiplicator",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "positive",
-                    "id": "99658634-a094-45c5-a981-dde6b0aa82a5",
+                    "id": "575e7d8c-d4b0-42dc-8fed-fa10dce9fca0",
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Multi",
+                    "groups": "",
+                    "action": "Multiplicator",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }

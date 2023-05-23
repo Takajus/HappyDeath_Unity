@@ -29,9 +29,7 @@ public class LightingManager : MonoBehaviour
 
     private DayCycleState _cycleState = DayCycleState.Day;
 
-    [SerializeField, Range(0f, 10f)] private float timeMultiplicator = 1f;
-
-    [Header("Inputs")] [SerializeField] private InputActionReference multiplicatorAction;
+    [SerializeField, Range(0f, 100f)] private float timeMultiplicator = 1f;
 
     public static LightingManager Instance
     {
@@ -42,16 +40,6 @@ public class LightingManager : MonoBehaviour
 
             return instance;
         }
-    }
-
-    private void OnEnable()
-    {
-        multiplicatorAction.action.performed += Multiplicator;
-    }
-
-    private void OnDisable()
-    {
-        multiplicatorAction.action.performed -= Multiplicator;
     }
 
     private void Start()
@@ -82,6 +70,9 @@ public class LightingManager : MonoBehaviour
         {
             UpdateLighting(timeOfDay / 24f);
         }
+        
+        if(InputManager.Instance.editorMultiplicatorValue.action.triggered)
+            Multiplicator();
     }
 
     private void UpdateLighting(float timePercent)
@@ -151,6 +142,12 @@ public class LightingManager : MonoBehaviour
 
     private IEnumerator _CoroutineDayBegin()
     {
+        if (!UIDayCycleManager.Instance)
+        {
+            DayCycleEvents.OnNightStart.Invoke();
+            yield break;
+        }
+            
         UIDayCycleManager.Instance.StartDayTransition();
         while (UIDayCycleManager.Instance.IsTransitionRunning)
         {
@@ -162,6 +159,12 @@ public class LightingManager : MonoBehaviour
 
     private IEnumerator _CoroutineNightBegin()
     {
+        if (!UIDayCycleManager.Instance)
+        {
+            DayCycleEvents.OnDayStart.Invoke();
+            yield break;
+        }
+        
         UIDayCycleManager.Instance.StartNightTransition();
         while (UIDayCycleManager.Instance.IsTransitionRunning)
         {
@@ -178,10 +181,12 @@ public class LightingManager : MonoBehaviour
 
 #if UNITY_EDITOR
 
-    private void Multiplicator(InputAction.CallbackContext context)
+    private void Multiplicator()
     {
-        Debug.Log("teteststststs");
-        timeMultiplicator += context.ReadValue<int>();
+        timeMultiplicator += InputManager.Instance.editorMultiplicatorValue.action.ReadValue<float>();
+
+        if (timeMultiplicator >= 100) timeMultiplicator = 100;
+        if (timeMultiplicator <= 0) timeMultiplicator = 0;
     }
 
 #endif

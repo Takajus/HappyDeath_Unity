@@ -4,10 +4,10 @@ using UnityEngine.Playables;
 
 public class UIDayCycleManager : MonoBehaviour
 {
-    [Header(("Day Transition"))]
+    [Header("Day Transition")]
     [SerializeField] private PlayableDirector _dayTransitionTimeline = null;
     
-    [Header(("Night Transition"))]
+    [Header("Night Transition")]
     [SerializeField] private PlayableDirector _nightTransitionTimeline = null;
     
     public bool IsTransitionRunning { get; private set; }
