@@ -73,9 +73,14 @@ public class Dialog : MonoBehaviour, IInteractable
         {
             QuestSystem.Instance.GetDemoTask(nextQuestIndex);
             DialogPanel.SetActive(false);
+            DialogueTarget.Instance.SwitchTarget(true);
         }
         else
+        {
             DialogPanel.SetActive(false);
+            DialogueTarget.Instance.SwitchTarget(true);
+        }
+            
     }
 
     public void NextDemoTask()
@@ -98,6 +103,7 @@ public class Dialog : MonoBehaviour, IInteractable
     {
         E_Input.SetActive(false);
         NextDemoTask();
+        DialogueTarget.Instance.SwitchTarget(false);
     }
 
     public void EndInteract()
