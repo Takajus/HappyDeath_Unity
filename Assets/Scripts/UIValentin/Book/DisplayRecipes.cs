@@ -31,20 +31,24 @@ public class DisplayRecipes : MonoBehaviour
 
     public SetupButton setupButton;
 
-    [SerializeField]
-    Recipe ScriptableCraft;
+    //[HideInInspector]
+    public Recipe scriptableRecipe;
 
     private void Start()
     {
         Refresh();
     }
+    public void SetScriptableRecipe(Recipe givenRecipe)
+    {
+        scriptableRecipe = givenRecipe;
+    }
 
     public void Refresh()
     {
-        if (ScriptableCraft == null)
+        if (scriptableRecipe == null)
             return;
 
-        setupButton.buttonImage.sprite = ScriptableCraft.Sprite;
+        setupButton.buttonImage.sprite = scriptableRecipe.Sprite;
     }
     public void UI_ClickedOnMe()
     {
@@ -53,14 +57,14 @@ public class DisplayRecipes : MonoBehaviour
 
     private void DisplayInformations()
     {
-        if (ScriptableCraft == null)
+        if (scriptableRecipe == null)
             return;
 
-        setupButton.item.sprite = ScriptableCraft.Sprite;
-        setupButton.textIngredientNeeded_1.text = ScriptableCraft.ingredient1.IngredientAmount.ToString();
-        setupButton.textIngredientNeeded_2.text = ScriptableCraft.ingredient2.IngredientAmount.ToString();
-        setupButton.textIngredientNeeded_3.text = ScriptableCraft.ingredient3.IngredientAmount.ToString();
-        setupButton.textDescription.text = ScriptableCraft.Description;
-        setupButton.name.text = ScriptableCraft.Name;
+        setupButton.item.sprite = scriptableRecipe.Sprite;
+        setupButton.textIngredientNeeded_1.text = scriptableRecipe.ingredient1.IngredientAmount.ToString();
+        setupButton.textIngredientNeeded_2.text = scriptableRecipe.ingredient2.IngredientAmount.ToString();
+        setupButton.textIngredientNeeded_3.text = scriptableRecipe.ingredient3.IngredientAmount.ToString();
+        setupButton.textDescription.text = scriptableRecipe.Description;
+        setupButton.name.text = scriptableRecipe.Name;
     }
 }

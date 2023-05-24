@@ -17,7 +17,6 @@ public class HUDManager : MonoBehaviour
     [SerializeField] GameObject pannelRecipies;
     [SerializeField] GameObject pannelResidents;
 
-
     public static bool IsOpen = isInventoryOpen || isBookOpen || isCraftOpen;
 
     public static bool isInventoryOpen = false;

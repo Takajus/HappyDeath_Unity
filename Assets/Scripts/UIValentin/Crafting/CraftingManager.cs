@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.UIElements;
 
 public class CraftingManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class CraftingManager : MonoBehaviour
     public static CraftingManager Instance { get { if (instance == null) instance = FindObjectOfType<CraftingManager>(); return instance; } }
 
     [SerializeField] private List<GameObject> craftingSlot;
+    [SerializeField] private List<GameObject> bookCraftingSlot; // Il faut le fill
     [SerializeField] GameObject verticalBox;
 
     [SerializeField] CraftSetup selectedRecipe;
@@ -32,8 +34,8 @@ public class CraftingManager : MonoBehaviour
     {
         OnRecipeSelected += RefreshIngredientsNeeded;
         GetRecipesSlot();
+        AssignRecipes();
         RefreshRecipesSlot();
-        
     }
 
     private void OnEnable()
@@ -48,6 +50,19 @@ public class CraftingManager : MonoBehaviour
     {
         RefreshIngredientsNeeded(craftingSlot[0].GetComponent<CraftSetup>());
         craftingSlot[0].GetComponent<CraftSetup>().DisplayInformations();
+    }
+
+    private void AssignRecipes()
+    {
+        for (int i = 0; i < craftingSlot.Count; i++)
+        {
+            if (inventoryMananger.inventoryDatabase.allRecipes.Count <= i)
+            {
+                break;
+            }
+            craftingSlot[i].GetComponent<CraftSetup>().SetScriptableRecipe(inventoryMananger.inventoryDatabase.allRecipes[i]);
+            bookCraftingSlot[i].GetComponent<DisplayRecipes>().SetScriptableRecipe(inventoryMananger.inventoryDatabase.allRecipes[i]);
+        }
     }
 
     private void GetRecipesSlot()
@@ -78,18 +93,18 @@ public class CraftingManager : MonoBehaviour
     {
         selectedRecipe = newSelected;
 
-        ingredientAmountNeeded_1.text = selectedRecipe.ScriptableCraft.ingredient1.IngredientAmount.ToString();
-        ingredientAmountNeeded_2.text = selectedRecipe.ScriptableCraft.ingredient2.IngredientAmount.ToString();
-        ingredientAmountNeeded_3.text = selectedRecipe.ScriptableCraft.ingredient3.IngredientAmount.ToString();
+        ingredientAmountNeeded_1.text = selectedRecipe.ScriptableRecipe.ingredient1.IngredientAmount.ToString();
+        ingredientAmountNeeded_2.text = selectedRecipe.ScriptableRecipe.ingredient2.IngredientAmount.ToString();
+        ingredientAmountNeeded_3.text = selectedRecipe.ScriptableRecipe.ingredient3.IngredientAmount.ToString();
 
         RefreshIngredientsOwned();
     }
 
     public void RefreshIngredientsOwned()
     {
-        ingredientAmountOwned_1.text = inventoryMananger.GetIngredientAmount(selectedRecipe.ScriptableCraft.ingredient1.ingredientType).ToString();
-        ingredientAmountOwned_2.text = inventoryMananger.GetIngredientAmount(selectedRecipe.ScriptableCraft.ingredient2.ingredientType).ToString();
-        ingredientAmountOwned_3.text = inventoryMananger.GetIngredientAmount(selectedRecipe.ScriptableCraft.ingredient3.ingredientType).ToString();
+        ingredientAmountOwned_1.text = inventoryMananger.GetIngredientAmount(selectedRecipe.ScriptableRecipe.ingredient1.ingredientType).ToString();
+        ingredientAmountOwned_2.text = inventoryMananger.GetIngredientAmount(selectedRecipe.ScriptableRecipe.ingredient2.ingredientType).ToString();
+        ingredientAmountOwned_3.text = inventoryMananger.GetIngredientAmount(selectedRecipe.ScriptableRecipe.ingredient3.ingredientType).ToString();
     }
 
     public void UI_Craft()
@@ -102,9 +117,9 @@ public class CraftingManager : MonoBehaviour
 
     private bool HaveEnoughtIngredients()
     {
-        bool check1 = InventoryManager.Instance.GetIngredientAmount(selectedRecipe.ScriptableCraft.ingredient1.ingredientType) >= selectedRecipe.ScriptableCraft.ingredient1.IngredientAmount;
-        bool check2 = InventoryManager.Instance.GetIngredientAmount(selectedRecipe.ScriptableCraft.ingredient2.ingredientType) >= selectedRecipe.ScriptableCraft.ingredient2.IngredientAmount;
-        bool check3 = InventoryManager.Instance.GetIngredientAmount(selectedRecipe.ScriptableCraft.ingredient3.ingredientType) >= selectedRecipe.ScriptableCraft.ingredient3.IngredientAmount;
+        bool check1 = InventoryManager.Instance.GetIngredientAmount(selectedRecipe.ScriptableRecipe.ingredient1.ingredientType) >= selectedRecipe.ScriptableRecipe.ingredient1.IngredientAmount;
+        bool check2 = InventoryManager.Instance.GetIngredientAmount(selectedRecipe.ScriptableRecipe.ingredient2.ingredientType) >= selectedRecipe.ScriptableRecipe.ingredient2.IngredientAmount;
+        bool check3 = InventoryManager.Instance.GetIngredientAmount(selectedRecipe.ScriptableRecipe.ingredient3.ingredientType) >= selectedRecipe.ScriptableRecipe.ingredient3.IngredientAmount;
 
 
         if (check1 && check2 && check3)
