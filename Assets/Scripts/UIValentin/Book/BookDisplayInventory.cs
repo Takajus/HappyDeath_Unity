@@ -20,6 +20,7 @@ public class BookDisplayInventory : MonoBehaviour
         }
 
         RefreshInventorySlot();
+        inventorySlot[0].DisplayInformations();
         inventorySlot[0].UI_ClickedOnMe();
     }
 

@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PickUpItem : MonoBehaviour, IInteractable
 {
+
     [SerializeField] GameObject E_Input;
     [SerializeField] Item resourceToPick;
     [SerializeField] int amountToGive = 1;

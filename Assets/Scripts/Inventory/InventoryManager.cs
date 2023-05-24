@@ -2,17 +2,19 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InventoryManager : MonoBehaviour
 {
     private static InventoryManager instance;
     public static InventoryManager Instance { get { if (instance == null) instance = FindObjectOfType<InventoryManager>(); return instance; } }
 
+    public static Item HeldItem { get; private set; }
+
     [SerializeField] List<Item> inventory = new List<Item>();
     [SerializeField] List<int> itemAmount = new List<int>();
 
     [SerializeField] CraftingManager craftingManager;
-    public BookActivationManager bookActivationManager;
 
     [SerializeField] BookDisplayInventory bookDisplayInventory;
 
@@ -28,7 +30,7 @@ public class InventoryManager : MonoBehaviour
     {
         ResetIngredients();
     }
-//#endif
+    //#endif
 
     private void OnEnable()
     {

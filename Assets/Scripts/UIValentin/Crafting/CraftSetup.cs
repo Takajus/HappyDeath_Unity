@@ -20,11 +20,11 @@ public class CraftSetup : MonoBehaviour
     }
 
     [SerializeField]
-    private ScriptableCraft scriptableCraft;
+    private Recipe scriptableCraft;
 
     public SetupButton setupButton;
 
-    public ScriptableCraft ScriptableCraft { get => scriptableCraft; set => scriptableCraft = value; }
+    public Recipe ScriptableCraft { get => scriptableCraft; set => scriptableCraft = value; }
 
     public void Refresh()
     {
@@ -36,7 +36,7 @@ public class CraftSetup : MonoBehaviour
 
     public void UI_ClickedOnMe()
     {
-        CraftingManager.Instance.OnRecepieSelected.Invoke(this);
+        CraftingManager.Instance.OnRecipeSelected.Invoke(this);
         DisplayInformations();
     }
 

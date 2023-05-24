@@ -1,12 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using NaughtyAttributes;
 
 public class PlayerTransformation : MonoBehaviour
 {
-    [SerializeField, Required] private GameObject playerDayModel, playerNightModel;
+    [SerializeField] private GameObject playerDayModel, playerNightModel;
     [SerializeField] private bool isDay = true;
 
     [SerializeField] private ParticleSystem transformationVFX;
@@ -18,8 +15,8 @@ public class PlayerTransformation : MonoBehaviour
     void Start()
     {
 
-        LightingManager.Instance._isDay += IsDay;
-        LightingManager.Instance._isNight += IsNight;
+        DayCycleEvents.OnDayStart += IsDay;
+        DayCycleEvents.OnNightStart += IsNight;
 
         if (isDay)
         {
@@ -39,7 +36,7 @@ public class PlayerTransformation : MonoBehaviour
 
 #if UNITY_EDITOR
         // Test
-        if (Input.GetKeyDown(KeyCode.N))
+        /*if (Input.GetKeyDown(KeyCode.N))
         {
             if (isDay)
                 isDay = false;
@@ -63,7 +60,7 @@ public class PlayerTransformation : MonoBehaviour
                 craft.SetActive(false);
             else
                 craft.SetActive(true);
-        }
+        }*/
 
 #endif
 
@@ -71,10 +68,10 @@ public class PlayerTransformation : MonoBehaviour
 
     private void IsDay()
     {
-        if (isDay == true)
+        if (isDay)
             return;
 
-        Debug.Log("Is Day");
+        //Debug.Log("Is Day");
 
         isDay = true;
         Transformation();
@@ -85,7 +82,7 @@ public class PlayerTransformation : MonoBehaviour
         if (isDay == false)
             return;
 
-        Debug.Log("Is Night");
+        //Debug.Log("Is Night");
 
         isDay = false;
         Transformation();
