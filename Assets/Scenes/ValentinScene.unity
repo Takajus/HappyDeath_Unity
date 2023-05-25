@@ -1839,6 +1839,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2585714625332011249, guid: 0d1dfde93ed857a408d2a0a010bfb9a1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2868498343068558561, guid: 0d1dfde93ed857a408d2a0a010bfb9a1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2868498344090411273, guid: 0d1dfde93ed857a408d2a0a010bfb9a1,
         type: 3}
       propertyPath: m_Name
@@ -6413,10 +6423,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1782241319, guid: 8907cb3aaf137cf41984722b83b2ab6d, type: 3}
-      propertyPath: canvas
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1782241319, guid: 8907cb3aaf137cf41984722b83b2ab6d, type: 3}
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 1279133922}
@@ -6490,18 +6496,6 @@ PrefabInstance:
       propertyPath: buildsParent
       value: 
       objectReference: {fileID: 136679661}
-    - target: {fileID: 4403977370250483127, guid: 8907cb3aaf137cf41984722b83b2ab6d,
-        type: 3}
-      propertyPath: uiCancelAction
-      value: 
-      objectReference: {fileID: -7845850841015735756, guid: 0ac56734837cfea4ea5836dcab41a06e,
-        type: 3}
-    - target: {fileID: 4403977370250483127, guid: 8907cb3aaf137cf41984722b83b2ab6d,
-        type: 3}
-      propertyPath: uiInventoryAction
-      value: 
-      objectReference: {fileID: -6927779641007245064, guid: 0ac56734837cfea4ea5836dcab41a06e,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8907cb3aaf137cf41984722b83b2ab6d, type: 3}
 --- !u!1001 &7501993802018664214

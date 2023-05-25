@@ -65,7 +65,6 @@ public class CraftingManager : MonoBehaviour
                 break;
             }
             craftingSlot[i].GetComponent<CraftSetup>().SetScriptableRecipe(inventoryMananger.inventoryDatabase.allRecipes[i]);
-            bookCraftingSlot[i].GetComponent<DisplayRecipes>().SetScriptableRecipe(inventoryMananger.inventoryDatabase.allRecipes[i]);
         }
     }
 

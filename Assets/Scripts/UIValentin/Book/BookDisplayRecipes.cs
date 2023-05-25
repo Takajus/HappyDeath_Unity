@@ -25,6 +25,7 @@ public class BookDisplayRecipes : MonoBehaviour
     private void Start()
     {
         SetRecipesSlot();
+        AssignRecipes();
     }
 
     private void SetRecipesSlot()
@@ -37,6 +38,18 @@ public class BookDisplayRecipes : MonoBehaviour
             {
                 recipesSlot.Add(verticalBox.transform.GetChild(i).transform.GetChild(j).gameObject);
             }
+        }
+    }
+
+    private void AssignRecipes()
+    {
+        for (int i = 0; i < recipesSlot.Count; i++)
+        {
+            if (inventoryMananger.inventoryDatabase.allRecipes.Count <= i)
+            {
+                break;
+            }
+            recipesSlot[i].GetComponent<DisplayRecipes>().SetScriptableRecipe(inventoryMananger.inventoryDatabase.allRecipes[i]);
         }
     }
 
