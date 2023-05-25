@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 
 public class NPCManager : MonoBehaviour
 {
-    public NPCQuest npcData;
+    //public NPCQuest npcData;
     public LightingManager.DayCycleState dayCycleState;
 
     private QuestManager questManager;
@@ -43,7 +43,7 @@ public class NPCManager : MonoBehaviour
         {
             if (otherNPC != this)
             {
-                questManager.CheckNPCProximity(npcData, otherNPC.npcData);
+                //questManager.CheckNPCProximity(npcData, otherNPC.npcData);
             }
         }
 

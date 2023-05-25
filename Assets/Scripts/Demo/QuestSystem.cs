@@ -128,7 +128,7 @@ public class QuestSystem : MonoBehaviour
     private void AcceptQuest()
     {
         // Call the AcceptQuest method in your QuestManager or wherever your quest logic is
-       //QuestManager.AcceptQuest(quest);
+      // QuestManager.AcceptNextQuest();
 
      // Perform any UI updates or transitions after accepting the quest
     }
@@ -136,7 +136,7 @@ public class QuestSystem : MonoBehaviour
     private void RefuseQuest()
     {
         // Call the RefuseQuest method in your QuestManager or wherever your quest logic is
-       //QuestManager.RefuseQuest(quest);
+     //  QuestManager.RefuseQuest();
 
      // Perform any UI updates or transitions after refusing the quest
     }
