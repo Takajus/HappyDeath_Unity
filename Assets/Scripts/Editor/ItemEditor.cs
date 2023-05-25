@@ -50,7 +50,9 @@ public class ItemEditor : Editor
             default:
                 break;
         }
+        EditorUtility.SetDirty(source);
     }
+
 
     public void ShowToolUI()
     {
@@ -146,7 +148,6 @@ public class ItemEditor : Editor
         source.Placeable = false;
 
         textTitleColor = new Color(0f, 0.9f, 0f);
-
 
     }
     public void ShowBuildUI()
