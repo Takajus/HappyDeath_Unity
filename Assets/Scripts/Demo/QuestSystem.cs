@@ -9,6 +9,8 @@ public class QuestSystem : MonoBehaviour
     [Header("UI")]
     [SerializeField] private TMP_Text ToDoTextUI;
 
+    [SerializeField] private Text questTitleText;
+    [SerializeField] private Text questDescriptionText;
 
     [Header("Demo Text (WIP)")]
     [Multiline(3), SerializeField] private string[] taskText;
@@ -89,5 +91,11 @@ public class QuestSystem : MonoBehaviour
             if (stone == null)
                 if (flower == null)
                     GetDemoTask(2);
+    }
+
+    public void UpdateQuestUI(string title, string description)
+    {
+        questTitleText.text = title;
+        questDescriptionText.text = description;
     }
 }

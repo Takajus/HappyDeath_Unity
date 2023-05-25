@@ -87,9 +87,9 @@ public class PlayerTransformation : MonoBehaviour
         isDay = false;
         Transformation();
 
-        Albert.SetActive(true);
+        /*Albert.SetActive(true);
         Alix.SetActive(true);
-        Missy.SetActive(false);
+        Missy.SetActive(false);*/
     }
 
     private void Transformation(/*bool timeIndex*/)
