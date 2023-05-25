@@ -25,8 +25,6 @@ public class CraftingManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI ingredientAmountOwned_2;
     [SerializeField] TextMeshProUGUI ingredientAmountOwned_3;
 
-    [SerializeField] InventoryManager inventoryMananger;
-
     public Action<CraftSetup> OnRecipeSelected;
     public Action<CraftSetup> OnItemCraft;
 
@@ -60,11 +58,11 @@ public class CraftingManager : MonoBehaviour
     {
         for (int i = 0; i < craftingSlot.Count; i++)
         {
-            if (inventoryMananger.inventoryDatabase.allRecipes.Count <= i)
+            if (HUDManager.GetInventoryManager().inventoryDatabase.allRecipes.Count <= i)
             {
                 break;
             }
-            craftingSlot[i].GetComponent<CraftSetup>().SetScriptableRecipe(inventoryMananger.inventoryDatabase.allRecipes[i]);
+            craftingSlot[i].GetComponent<CraftSetup>().SetScriptableRecipe(HUDManager.GetInventoryManager().inventoryDatabase.allRecipes[i]);
         }
     }
 
@@ -105,9 +103,9 @@ public class CraftingManager : MonoBehaviour
 
     public void RefreshIngredientsOwned()
     {
-        ingredientAmountOwned_1.text = inventoryMananger.GetIngredientAmount(selectedRecipe.ScriptableRecipe.ingredient1.ingredientType).ToString();
-        ingredientAmountOwned_2.text = inventoryMananger.GetIngredientAmount(selectedRecipe.ScriptableRecipe.ingredient2.ingredientType).ToString();
-        ingredientAmountOwned_3.text = inventoryMananger.GetIngredientAmount(selectedRecipe.ScriptableRecipe.ingredient3.ingredientType).ToString();
+        ingredientAmountOwned_1.text = HUDManager.GetInventoryManager().GetIngredientAmount(selectedRecipe.ScriptableRecipe.ingredient1.ingredientType).ToString();
+        ingredientAmountOwned_2.text = HUDManager.GetInventoryManager().GetIngredientAmount(selectedRecipe.ScriptableRecipe.ingredient2.ingredientType).ToString();
+        ingredientAmountOwned_3.text = HUDManager.GetInventoryManager().GetIngredientAmount(selectedRecipe.ScriptableRecipe.ingredient3.ingredientType).ToString();
     }
 
     public void UI_Craft()

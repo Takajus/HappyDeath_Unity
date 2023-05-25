@@ -36,6 +36,11 @@ public class HUDManager : MonoBehaviour
         }
     }
 
+    public static InventoryManager GetInventoryManager()
+    {
+        return Instance.inventoryManager;
+    }
+
     public void ToggleInventory(InputAction.CallbackContext context)
     {
         ToggleInventory(!isInventoryOpen);
