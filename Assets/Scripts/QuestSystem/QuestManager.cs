@@ -6,20 +6,34 @@ using System.Linq;
 public class QuestManager : MonoBehaviour
 {
     public QuestSystem questUI;
-    public Quest activeQuest;
     public List<Quest> activeQuests = new List<Quest>();
+    private int currentQuestIndex = 0;
+
+
+    public void UpdateQuestUI()
+    {
+        if (currentQuestIndex < activeQuests.Count)
+        {
+            Quest currentQuest = activeQuests[currentQuestIndex];
+            questUI.InitializeQuestUI(currentQuest);
+        }
+        else
+        {
+            // No more quests remaining
+            questUI.ClearQuestUI();
+        }
+    }
+
+
+
+
 
     public void AddQuest(Quest quest)
     {
         activeQuests.Add(quest);
     }
-    public void UpdateQuestUI(Quest quest)
-    {
-        if (activeQuest != null)
-        {
-            questUI.UpdateQuestUI(activeQuest.questTitle, activeQuest.questDescription);
-        }
-    }
+   
+
 
     public void CheckNPCProximity(NPCQuest npc1, NPCQuest npc2)
     {
@@ -30,14 +44,66 @@ public class QuestManager : MonoBehaviour
         if (distance <= proximityThreshold)
         {
             // NPCs are close to each other, update quest progress or mark as completed
-            activeQuest.isCompleted = true;
+            if (currentQuestIndex < activeQuests.Count)
+            {
+                Quest currentQuest = activeQuests[currentQuestIndex];
+                currentQuest.isCompleted = true;
 
-            // Update the quest UI with the completed quest information
-            UpdateQuestUI(activeQuest);
+                // Update the quest UI with the completed quest information
+                UpdateQuestUI();
+
+                // Check if player wants to accept the next quest
+                AskPlayerForNextQuest();
+            }
         }
     }
 
-   
+    private void AskPlayerForQuestResponse(Quest quest)
+    {
+        // Display a dialogue or UI prompting the player to accept or refuse the quest
+        // You can use buttons or any other interaction method to handle the player's response
+        // For simplicity, let's assume the player accepts the quest
+        AcceptQuest(quest);
+    }
+    private void AskPlayerForNextQuest()
+    {
+        // Display a dialogue or UI prompting the player to accept the next quest
+        // You can use buttons or any other interaction method to handle the player's response
+
+        // For simplicity, let's assume the player accepts the next quest automatically
+        AcceptNextQuest();
+    }
+    private void AcceptNextQuest()
+    {
+        currentQuestIndex++;
+
+        // Perform any other necessary actions when accepting the next quest
+
+        // Update the quest UI with the new quest
+        UpdateQuestUI();
+    }
+
+    public void AcceptQuest(Quest quest)
+    {
+        // Handle accepting the quest
+        // You can update the quest status, add it to the player's quest log, etc.
+
+        // Move to the next quest
+        currentQuestIndex++;
+        UpdateQuestUI();
+    }
+
+    public void RefuseQuest(Quest quest)
+    {
+        // Handle refusing the quest
+        // You can update the quest status, remove it from the player's quest log, etc.
+
+        // Move to the next quest
+        currentQuestIndex++;
+        UpdateQuestUI();
+    }
+
+
 
 
 }
