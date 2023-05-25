@@ -17,9 +17,8 @@ public class HUDManager : MonoBehaviour
     [SerializeField] GameObject pannelRecipies;
     [SerializeField] GameObject pannelResidents;
 
-    public static bool IsOpen = isInventoryOpen || isBookOpen || isCraftOpen;
+    public static bool IsOpen { get => (isBookOpen || isCraftOpen); }
 
-    public static bool isInventoryOpen = false;
     public static bool isBookOpen = false;
     public static bool isCraftOpen = false;
 
@@ -43,27 +42,15 @@ public class HUDManager : MonoBehaviour
 
     public void ToggleInventory(InputAction.CallbackContext context)
     {
-        ToggleInventory(!isInventoryOpen);
+        ToggleInventory(!isBookOpen);
     }
 
     public void ToggleInventory(bool state)
     {
-        isInventoryOpen = state;
-        ToggleBook(state);
-        DesActivatePanel();
-        pannelInventory.SetActive(state);
-    }
-
-    private void ToggleBook(InputAction.CallbackContext context)
-    {
-        ToggleBook(!isBookOpen);
-    }
-
-    public void ToggleBook(bool state)
-    {
         isBookOpen = state;
 
         DesActivatePanel();
+        pannelInventory.SetActive(state);
         switchBookPanel.gameObject.SetActive(state);
     }
 

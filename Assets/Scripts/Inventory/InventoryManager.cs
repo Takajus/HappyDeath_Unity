@@ -8,7 +8,7 @@ public class InventoryManager : MonoBehaviour
 {
     private static InventoryManager instance;
     public static InventoryManager Instance { get { if (instance == null) instance = FindObjectOfType<InventoryManager>(); return instance; } }
-    public static Item HeldItem { get; private set; }
+    public static Item HeldItem { get; set; }
     [SerializeField] List<Item> inventory = new List<Item>();
     [SerializeField] List<int> itemAmount = new List<int>();
     [SerializeField] CraftingManager craftingManager;
