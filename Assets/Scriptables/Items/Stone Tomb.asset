@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f1f27c407c1e64ea2a8ffd83e0dfb4, type: 3}
   m_Name: Stone Tomb
   m_EditorClassIdentifier: 
+  itemType: 2
+  Prefab: {fileID: 0}
   Sprite: {fileID: 21300000, guid: 98680ac1b5e8eff4d825035692ac1783, type: 3}
   Name: Steel Tomb
   Description: A great Tomb
   Amount: 1
+  Placeable: 1

@@ -44,6 +44,11 @@ public abstract class BaseHandler : MonoBehaviour
         else
         {
             mouseIsTargeting = false;
+
+            if (mouseTarget)
+                UnHoverTarget(mouseTarget);
+            mouseTarget = null;
+
             return null;
         }
     }
@@ -64,6 +69,11 @@ public abstract class BaseHandler : MonoBehaviour
         else
         {
             isTargeting = false;
+
+            if (target)
+                UnHoverTarget(target);
+            target = null;
+
             return null;
         }
     }
@@ -76,12 +86,6 @@ public abstract class BaseHandler : MonoBehaviour
 
     public virtual void HandleInteractable()
     {
-        if (mouseTarget != GetMouseTarget() && mouseIsTargeting)
-            UpdateMouseTarget();
-
-        if (target != GetSphereTarget() && isTargeting)
-            UpdateSphereTarget();
-
         if (IsInteracting)
             if (InputManager.Instance.gameCancelAction.action.triggered)
             {
@@ -90,8 +94,17 @@ public abstract class BaseHandler : MonoBehaviour
                 HoverTarget(target);
             }
 
-        if (InteractionManager.UIOpen)
+        if (HUDManager.IsOpen)
             return;
+
+        if (mouseTarget != GetMouseTarget() && mouseIsTargeting)
+            UpdateMouseTarget();
+
+        if (target != GetSphereTarget() && isTargeting)
+            UpdateSphereTarget();
+
+        if (!target && !mouseTarget)
+            Select(null);
 
         if (InputManager.Instance.gameMouseInteractAction.action.triggered)
             Select(mouseTarget);

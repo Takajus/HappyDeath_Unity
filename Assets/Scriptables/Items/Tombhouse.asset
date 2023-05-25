@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f1f27c407c1e64ea2a8ffd83e0dfb4, type: 3}
   m_Name: Tombhouse
   m_EditorClassIdentifier: 
+  itemType: 2
+  Prefab: {fileID: 0}
   Sprite: {fileID: 21300000, guid: 8c4c4175b67322440b6651ff84323203, type: 3}
   Name: Golden Tomb
   Description: What a shiny Tomb !
   Amount: 1
+  Placeable: 1

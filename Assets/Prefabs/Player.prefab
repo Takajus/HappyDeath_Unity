@@ -251,6 +251,7 @@ MonoBehaviour:
     m_Bits: 128
   mouseIsTargeting: 0
   currentInteractedObject: {fileID: 0}
+  shovelIsEquiped: 0
 --- !u!114 &4403977370250483128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,6 +273,7 @@ MonoBehaviour:
     m_Bits: 1
   mouseIsTargeting: 0
   currentInteractedObject: {fileID: 0}
+  axeIsEquiped: 0
 --- !u!114 &4403977370250483127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,14 +294,16 @@ MonoBehaviour:
     type: 3}
   gameMousePosition: {fileID: -2057929545544530715, guid: 0ac56734837cfea4ea5836dcab41a06e,
     type: 3}
-  uiInteractAction: {fileID: 0}
-  uiMouseInteractAction: {fileID: 0}
-  uiCancelAction: {fileID: 0}
-  uiMousePosition: {fileID: 0}
+  uiCancelAction: {fileID: 2397066969695824413, guid: 0ac56734837cfea4ea5836dcab41a06e,
+    type: 3}
+  uiInventoryAction: {fileID: -6927779641007245064, guid: 0ac56734837cfea4ea5836dcab41a06e,
+    type: 3}
   editorInteractAction: {fileID: 0}
   editorMouseInteractAction: {fileID: 0}
   editorCancelAction: {fileID: 0}
   editorMousePosition: {fileID: 0}
+  editorMultiplicatorValue: {fileID: -6139957634266676123, guid: 0ac56734837cfea4ea5836dcab41a06e,
+    type: 3}
 --- !u!1001 &660955058418266101
 PrefabInstance:
   m_ObjectHideFlags: 0

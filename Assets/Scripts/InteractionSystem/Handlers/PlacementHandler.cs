@@ -58,7 +58,7 @@ public class PlacementHandler : BaseHandler
         {
             objectToPlace.SetActive(true);
             objectToPlace.transform.position = target.transform.position;
-            objectToPlace.GetComponentInChildren<Build>().CheckPlaceability();
+            objectToPlace.GetComponent<Build>().CheckPlaceability();
         }
         else
             objectToPlace.SetActive(false);
@@ -83,6 +83,8 @@ public class PlacementHandler : BaseHandler
                 rotation = 0;
 
             objectToPlace.transform.eulerAngles = new Vector3(0, rotation, 0);
+
+            objectToPlace.GetComponent<Build>().CheckPlaceability();
         }
     }
 }

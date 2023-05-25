@@ -41,12 +41,14 @@ public class ButtonInventory : MonoBehaviour
     private void PlaceItem()
     {
         if (item)
-            if (item.Placeable)
+        {
+            InventoryManager.HeldItem = item;
+            if (item.itemType == Item.ItemType.BUILD)
             {
                 InteractionManager.Instance.placementHandler.GiveObject(item.Prefab);
-                //InventoryManager.Instance.bookActivationManager.OpenCloseBook();
-                HUDManager.Instance.ToggleBook(false);
+                HUDManager.Instance.ToggleInventory(false);
             }
+        }
     }
 
     public void DisplayInformations()

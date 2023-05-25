@@ -12,7 +12,7 @@ public class Build : MonoBehaviour
 
     public int xRange = 2;
     public int zRange = 2;
-    private MeshRenderer notRealMesh;
+    private MeshRenderer previewMesh;
     HashSet<Tile> tiles = new HashSet<Tile>();
     public List<TileDetection> tileDetectionList = new List<TileDetection>();
 
@@ -34,15 +34,15 @@ public class Build : MonoBehaviour
 
     private void Start()
     {
-        notRealMesh = GetComponent<MeshRenderer>();
+        previewMesh = previewObject.GetComponent<MeshRenderer>();
     }
 
     public void CheckPlaceability()
     {
         if (IsPlaceable())
-            notRealMesh.material = validMat;
+            previewMesh.material = validMat;
         else
-            notRealMesh.material = invalidMat;
+            previewMesh.material = invalidMat;
     }
 
     public bool IsPlaceable()
@@ -65,8 +65,8 @@ public class Build : MonoBehaviour
 
         foreach (var tileDetection in tileDetectionList)
         {
-            Vector3 relativePosition = transform.parent.TransformDirection(new Vector3(tileDetection.x, 0, tileDetection.z));
-            Collider[] hitColliders = Physics.OverlapBox(transform.parent.position + relativePosition, Vector3.one / 3, Quaternion.identity, ~7);
+            Vector3 relativePosition = transform.TransformDirection(new Vector3(tileDetection.x, 0, tileDetection.z));
+            Collider[] hitColliders = Physics.OverlapBox(transform.position + relativePosition, Vector3.one / 3, Quaternion.identity, ~7);
 
             foreach (var hit in hitColliders)
                 if (hit.TryGetComponent(out Tile tile))
