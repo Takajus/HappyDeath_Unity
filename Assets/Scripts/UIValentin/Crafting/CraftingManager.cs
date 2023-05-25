@@ -12,7 +12,7 @@ public class CraftingManager : MonoBehaviour
     public static CraftingManager Instance { get { if (instance == null) instance = FindObjectOfType<CraftingManager>(); return instance; } }
 
     [SerializeField] private List<GameObject> craftingSlot;
-    [SerializeField] private List<GameObject> bookCraftingSlot; // Il faut le fill
+    [SerializeField] private List<GameObject> bookCraftingSlot;
     [SerializeField] GameObject verticalBox;
 
     [SerializeField] CraftSetup selectedRecipe;
@@ -30,12 +30,16 @@ public class CraftingManager : MonoBehaviour
     public Action<CraftSetup> OnRecipeSelected;
     public Action<CraftSetup> OnItemCraft;
 
-    private void Start()
+    private void Awake()
     {
-        OnRecipeSelected += RefreshIngredientsNeeded;
         GetRecipesSlot();
         AssignRecipes();
         RefreshRecipesSlot();
+    }
+
+    private void Start()
+    {
+        OnRecipeSelected += RefreshIngredientsNeeded;
     }
 
     private void OnEnable()

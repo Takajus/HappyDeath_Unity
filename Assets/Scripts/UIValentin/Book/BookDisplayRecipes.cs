@@ -6,7 +6,9 @@ using TMPro;
 public class BookDisplayRecipes : MonoBehaviour
 {
     [SerializeField] InventoryManager inventoryMananger;
+    [SerializeField] List<GameObject> recipesSlot;
 
+    [SerializeField] GameObject verticalBox;
     [SerializeField] TextMeshProUGUI ingredientOwned_1;
     [SerializeField] TextMeshProUGUI ingredientOwned_2;
     [SerializeField] TextMeshProUGUI ingredientOwned_3;
@@ -18,6 +20,24 @@ public class BookDisplayRecipes : MonoBehaviour
     private void OnEnable()
     {
         RefreshIngredientsOwned();
+    }
+
+    private void Start()
+    {
+        SetRecipesSlot();
+    }
+
+    private void SetRecipesSlot()
+    {
+        recipesSlot.Clear();
+
+        for (int i = 0; i < verticalBox.transform.childCount; i++)
+        {
+            for (int j = 0; j < verticalBox.transform.GetChild(i).transform.childCount; j++)
+            {
+                recipesSlot.Add(verticalBox.transform.GetChild(i).transform.GetChild(j).gameObject);
+            }
+        }
     }
 
     public void RefreshIngredientsOwned()

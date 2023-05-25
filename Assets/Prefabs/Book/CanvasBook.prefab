@@ -4949,6 +4949,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7976029686312668792, guid: 171a8091c994bb540bbd33a1ca82d3ae,
+        type: 3}
+      propertyPath: verticalBox
+      value: 
+      objectReference: {fileID: 5589229148754910546}
     - target: {fileID: 8730847232149620990, guid: 171a8091c994bb540bbd33a1ca82d3ae,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -4986,6 +4991,12 @@ MonoBehaviour:
 --- !u!224 &2405065037062359283 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6676992019977992582, guid: 171a8091c994bb540bbd33a1ca82d3ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 9064040935888236917}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5589229148754910546 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3483850391550700583, guid: 171a8091c994bb540bbd33a1ca82d3ae,
     type: 3}
   m_PrefabInstance: {fileID: 9064040935888236917}
   m_PrefabAsset: {fileID: 0}
