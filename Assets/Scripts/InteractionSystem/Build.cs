@@ -6,7 +6,8 @@ public class Build : MonoBehaviour
 {
     public Material validMat;
     public Material invalidMat;
-    public GameObject realObject;
+    public GameObject actualObject;
+    public GameObject previewObject;
     public Item item;
 
     public int xRange = 2;
@@ -78,8 +79,8 @@ public class Build : MonoBehaviour
 
     public void Innit()
     {
-        realObject.SetActive(true);
-        gameObject.SetActive(false);
+        actualObject.SetActive(true);
+        previewObject.SetActive(false);
         InventoryManager.Instance.RemoveItem(item);
 
         foreach (var tile in tiles)
@@ -97,8 +98,8 @@ public class Build : MonoBehaviour
             else
                 Gizmos.color = Color.green;
 
-            Vector3 relativePosition = transform.parent.TransformDirection(new Vector3(tileDetection.x, 0, tileDetection.z));
-            Gizmos.DrawWireCube(transform.parent.position + relativePosition, Vector3.one / 3);
+            Vector3 relativePosition = transform.TransformDirection(new Vector3(tileDetection.x, 0, tileDetection.z));
+            Gizmos.DrawWireCube(transform.position + relativePosition, Vector3.one / 3);
         }
     }
 }

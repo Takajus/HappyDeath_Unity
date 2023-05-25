@@ -66,15 +66,10 @@ public class PlacementHandler : BaseHandler
 
     protected override void SelectTarget(GameObject target)
     {
-        if (target && objectToPlace.GetComponentInChildren<Build>().IsPlaceable())
+        if (target && objectToPlace.GetComponent<Build>().IsPlaceable())
         {
-            objectToPlace.GetComponentInChildren<Build>().Innit();
+            objectToPlace.GetComponent<Build>().Innit();
             objectToPlace = null;
-
-            /*if (QuestSystem.instance.isTutorial && QuestSystem.instance.DemoTaskStat == 3)
-            {
-                QuestSystem.instance.GetDemoTask(4);
-            }*/
         }
     }
 

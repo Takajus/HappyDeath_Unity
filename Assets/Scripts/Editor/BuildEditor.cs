@@ -9,11 +9,6 @@ public class BuildEditor : Editor
     private void OnEnable()
     {
         source = target as Build;
-
-        /*string[] paths = new string[2];
-        paths[0] = "Assets/Scriptables/Items/";
-        paths[1] = "Assets/Scriptables/Recipes/";
-        Debug.Log(AssetDatabase.FindAssets("", paths).Length);*/
     }
 
     public override void OnInspectorGUI()
@@ -21,22 +16,66 @@ public class BuildEditor : Editor
         source.validMat = (Material)EditorGUILayout.ObjectField("Valid Material", source.validMat, typeof(Material), false);
         source.invalidMat = (Material)EditorGUILayout.ObjectField("Invalid Material", source.invalidMat, typeof(Material), false);
 
-        source.realObject = (GameObject)EditorGUILayout.ObjectField("Real Object", source.realObject, typeof(GameObject), true);
+        source.actualObject = (GameObject)EditorGUILayout.ObjectField("Actual Object", source.actualObject, typeof(GameObject), true);
+        source.previewObject = (GameObject)EditorGUILayout.ObjectField("Preview Object", source.previewObject, typeof(GameObject), true);
+        //Need to set dirty
 
         source.item = (Item)EditorGUILayout.ObjectField("Item", source.item, typeof(Item), true);
+        EditorGUILayout.Space();
 
+
+        var style = new GUIStyle("window");
+        style.padding = new RectOffset();
+        EditorGUILayout.BeginVertical(style);
+        EditorGUI.indentLevel++;
+        EditorGUILayout.Space();
+        GUILayout.Label("Grid setup", new GUIStyle(EditorStyles.boldLabel) { alignment = TextAnchor.MiddleCenter, fontSize = 20 });
+        EditorGUILayout.Space();
+        GUILayout.BeginHorizontal();
         source.xRange = EditorGUILayout.IntField("X", source.xRange);
-        source.zRange = EditorGUILayout.IntField("Z", source.zRange);
+        if (GUILayout.Button("-"))
+        {
+            source.xRange--;
+            if (source.xRange < 0)
+                source.xRange = 0;
+            EditorUtility.SetDirty(source);
+        }
+        if (GUILayout.Button("+"))
+        {
+            source.xRange++;
+            EditorUtility.SetDirty(source);
+        }
+        GUILayout.EndHorizontal();
         
+        GUILayout.BeginHorizontal();
+        source.zRange = EditorGUILayout.IntField("Y", source.zRange);
+        if (GUILayout.Button("-"))
+        {
+            source.zRange--;
+            if (source.zRange < 0)
+                source.zRange = 0;
+            EditorUtility.SetDirty(source);
+        }
+        if (GUILayout.Button("+"))
+        {
+            source.zRange++;
+            EditorUtility.SetDirty(source);
+        }
+        GUILayout.EndHorizontal();
         for (int z = source.zRange; z > - (source.zRange + 1); z--)
         {
             GUILayout.BeginHorizontal();
+            GUILayout.FlexibleSpace();
             for (int x = -source.xRange; x < source.xRange + 1; x++)
             {
                 ShowButton(x, z);
             }
+            GUILayout.FlexibleSpace();
             GUILayout.EndHorizontal();
         }
+        EditorGUI.indentLevel--;
+        EditorGUILayout.Space();
+        GUILayout.EndVertical();
     }
 
     void ShowButton(int x, int z)
