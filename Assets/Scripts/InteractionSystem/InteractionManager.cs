@@ -15,7 +15,7 @@ public class InteractionManager : MonoBehaviour
     public PlacementHandler placementHandler { get; private set; }
     public ShovelHandler shovelHandler { get; private set; }
     public AxeHandler axeHandler { get; private set; }
-    public static bool UIOpen { get => CraftActivationManager.IsOpen || BookActivationManager.IsOpen; }
+    public static bool UIOpen { get => HUDManager.IsOpen || HUDManager.IsOpen; }
 
     private void Awake()
     {
@@ -65,6 +65,19 @@ public class InteractionManager : MonoBehaviour
         {
             temp = InteractionMode.Dig;
         }
+
+        /*if (InventoryManager.HeldItem.itemType == Item.ItemType.BUILD)
+        {
+            temp = InteractionMode.Place;
+        }
+        else if (InventoryManager.HeldItem.itemType == Item.ItemType.TOOL && InventoryManager.HeldItem.Name == "Axe")
+        {
+            temp = InteractionMode.Cut;
+        }
+        else if (InventoryManager.HeldItem.itemType == Item.ItemType.TOOL && InventoryManager.HeldItem.Name == "Shovel")
+        {
+            temp = InteractionMode.Dig;
+        }*/
 
         if (interactionMode != temp)
             ChangeInteractionMode(temp);

@@ -71,10 +71,10 @@ public class PlacementHandler : BaseHandler
             objectToPlace.GetComponentInChildren<Build>().Innit();
             objectToPlace = null;
 
-            if (QuestSystem.instance.isTutorial && QuestSystem.instance.DemoTaskStat == 3)
+            /*if (QuestSystem.instance.isTutorial && QuestSystem.instance.DemoTaskStat == 3)
             {
                 QuestSystem.instance.GetDemoTask(4);
-            }
+            }*/
         }
     }
 

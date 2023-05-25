@@ -12,6 +12,11 @@ public class SwitchBookPanel : MonoBehaviour
     GameObject[] bookMarks;
 
     [SerializeField]
+    BookDisplayInventory bookDisplayInventory;
+    [SerializeField]
+    BookDisplayRecipes bookDisplayRecipes;
+
+    [SerializeField]
     Color32 selectedColor;
     [SerializeField]
     Color32 baseColor;

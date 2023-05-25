@@ -2,23 +2,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InventoryManager : MonoBehaviour
 {
     private static InventoryManager instance;
     public static InventoryManager Instance { get { if (instance == null) instance = FindObjectOfType<InventoryManager>(); return instance; } }
-
     public static Item HeldItem { get; private set; }
-
     [SerializeField] List<Item> inventory = new List<Item>();
     [SerializeField] List<int> itemAmount = new List<int>();
-
     [SerializeField] CraftingManager craftingManager;
-    public BookActivationManager bookActivationManager;
-
     [SerializeField] BookDisplayInventory bookDisplayInventory;
-
     [SerializeField] List<Item> itemToReset;
+
+    public InventoryDatabase inventoryDatabase;
 
     public List<Item> Inventory { get => inventory; set => inventory = value; }
 
@@ -30,7 +27,7 @@ public class InventoryManager : MonoBehaviour
     {
         ResetIngredients();
     }
-//#endif
+    //#endif
 
     private void OnEnable()
     {
@@ -44,8 +41,8 @@ public class InventoryManager : MonoBehaviour
 
     private void ItemCreated(CraftSetup selectedRecepie)
     {
-        Item itemToCreate = selectedRecepie.ScriptableCraft.item;
-        Debug.Log(selectedRecepie.ScriptableCraft.item + "have been create");
+        Item itemToCreate = selectedRecepie.ScriptableRecipe.item;
+        Debug.Log(selectedRecepie.ScriptableRecipe.item + "have been create");
 
         PayForCraft(selectedRecepie);
 
@@ -60,21 +57,21 @@ public class InventoryManager : MonoBehaviour
 
         for (int i = 0; i < inventory.Count; i++)
         {
-            if (!havePayIngredient1 && inventory[i] == selectedRecepie.ScriptableCraft.ingredient1.ingredientType)
+            if (!havePayIngredient1 && inventory[i] == selectedRecepie.ScriptableRecipe.ingredient1.ingredientType)
             {
-                inventory[i].Amount -= selectedRecepie.ScriptableCraft.ingredient1.IngredientAmount;
+                inventory[i].Amount -= selectedRecepie.ScriptableRecipe.ingredient1.IngredientAmount;
                 CheckRemainingAmount(inventory[i]);
                 havePayIngredient1 = true;
             }
-            else if (!havePayIngredient2 && inventory[i] == selectedRecepie.ScriptableCraft.ingredient2.ingredientType)
+            else if (!havePayIngredient2 && inventory[i] == selectedRecepie.ScriptableRecipe.ingredient2.ingredientType)
             {
-                inventory[i].Amount -= selectedRecepie.ScriptableCraft.ingredient2.IngredientAmount;
+                inventory[i].Amount -= selectedRecepie.ScriptableRecipe.ingredient2.IngredientAmount;
                 CheckRemainingAmount(inventory[i]);
                 havePayIngredient2 = true;
             }
-            else if (!havePayIngredient3 && inventory[i] == selectedRecepie.ScriptableCraft.ingredient3.ingredientType)
+            else if (!havePayIngredient3 && inventory[i] == selectedRecepie.ScriptableRecipe.ingredient3.ingredientType)
             {
-                inventory[i].Amount -= selectedRecepie.ScriptableCraft.ingredient3.IngredientAmount;
+                inventory[i].Amount -= selectedRecepie.ScriptableRecipe.ingredient3.IngredientAmount;
                 CheckRemainingAmount(inventory[i]);
                 havePayIngredient3 = true;
             }
