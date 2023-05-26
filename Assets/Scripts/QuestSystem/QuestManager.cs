@@ -90,7 +90,7 @@ public class QuestManager : MonoBehaviour
     public void RefuseQuest( )
     {
 
-        if (currentQuestIndex < quests.Count)
+        /*if (currentQuestIndex < quests.Count)
         {
             Quest quest = quests[currentQuestIndex];
             // Handle refusing the quest
@@ -98,7 +98,7 @@ public class QuestManager : MonoBehaviour
 
             // Move to the next quest
           
-        }
+        }*/
 
         // Handle refusing the quest
         // You can update the quest status, remove it from the player's quest log, etc.
