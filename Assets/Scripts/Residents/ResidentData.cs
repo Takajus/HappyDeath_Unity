@@ -15,6 +15,11 @@ public class ResidentData : MonoBehaviour
     private int residentAmount = 0;
     float negativeMood = 0f, positiveMood = 0f;
 
+    private void Awake()
+    {
+        // TODO: Modifier la list pour utiliser celle de la DataBase
+        MoodManager.residentList.Add(this);
+    }
 
     private void OnDrawGizmos()
     {
