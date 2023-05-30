@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785398499269020635}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.011001587, y: 0.589, z: 0.016000748}
+  m_LocalPosition: {x: -0.0070014, y: 0.16199994, z: 0.016000748}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -135,12 +135,12 @@ PrefabInstance:
     - target: {fileID: 6189399527668958130, guid: 6748f3f7c975aee41a8924ddfb798ff6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.011
+      value: -0.007
       objectReference: {fileID: 0}
     - target: {fileID: 6189399527668958130, guid: 6748f3f7c975aee41a8924ddfb798ff6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.589
+      value: 0.162
       objectReference: {fileID: 0}
     - target: {fileID: 6189399527668958130, guid: 6748f3f7c975aee41a8924ddfb798ff6,
         type: 3}
@@ -254,7 +254,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b30a87d1e3333c34ebf5e19b4c448e49,
         type: 3}
       propertyPath: m_Name
-      value: fbx_candle1 Variant
+      value: pf_candle1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b30a87d1e3333c34ebf5e19b4c448e49, type: 3}
