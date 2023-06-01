@@ -175,6 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5711374598893215497}
+  - component: {fileID: 1736528728920353345}
   m_Layer: 0
   m_Name: pf_tb12_1
   m_TagString: Untagged
@@ -206,6 +207,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1736528728920353345
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4902502843623687603}
+  m_Mesh: {fileID: 0}
 --- !u!1 &5874891996756375754
 GameObject:
   m_ObjectHideFlags: 0

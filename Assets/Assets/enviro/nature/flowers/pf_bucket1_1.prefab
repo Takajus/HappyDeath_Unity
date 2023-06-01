@@ -14,6 +14,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ca36e412a1b51094ca853f05e1cd3b8d,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ca36e412a1b51094ca853f05e1cd3b8d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ca36e412a1b51094ca853f05e1cd3b8d,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ca36e412a1b51094ca853f05e1cd3b8d,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -120.09695
       objectReference: {fileID: 0}
@@ -62,10 +77,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ca36e412a1b51094ca853f05e1cd3b8d,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ca36e412a1b51094ca853f05e1cd3b8d,
         type: 3}
       propertyPath: m_Name
-      value: fbx_bucket1
+      value: pf_bucket1_1
       objectReference: {fileID: 0}
     - target: {fileID: 7071182760956848314, guid: ca36e412a1b51094ca853f05e1cd3b8d,
         type: 3}

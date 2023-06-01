@@ -90,7 +90,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 127978ec9b94f064cae11cdf35f91b77,
         type: 3}
       propertyPath: m_Name
-      value: pf_bucket1_3_bouquet
+      value: pf_bucket1_3_bouquet 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127978ec9b94f064cae11cdf35f91b77, type: 3}
@@ -107,6 +107,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3359278999155617441}
     m_Modifications:
+    - target: {fileID: 363723350377526479, guid: 7b91bb48f6fc8dd43bd45d3d148d0409,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c0f5027fa1a25c2488b7c86d5003a04e, type: 2}
+    - target: {fileID: 2376946520836015136, guid: 7b91bb48f6fc8dd43bd45d3d148d0409,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b7b92342a76e3047812fb1a6c6d78dc, type: 2}
     - target: {fileID: 6256315245435910268, guid: 7b91bb48f6fc8dd43bd45d3d148d0409,
         type: 3}
       propertyPath: m_RootOrder
@@ -167,5 +177,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pf_bouquet2
       objectReference: {fileID: 0}
+    - target: {fileID: 8338240176493667020, guid: 7b91bb48f6fc8dd43bd45d3d148d0409,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 891280cc4b9a165429324ddc7e95ed0e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b91bb48f6fc8dd43bd45d3d148d0409, type: 3}
