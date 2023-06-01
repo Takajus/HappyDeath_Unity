@@ -9,4 +9,6 @@ public class indications_nomenclature : MonoBehaviour
     //catégorie de la tombe: 1) tombe croix, 2) tombe sablier, 3) "classique"
 
     //stade de la tombe: 1) en bois, 2) avancée
+    
+    //numéro du prefab : le 0 est la tombe sans décoration, les autres les variantes
 }
