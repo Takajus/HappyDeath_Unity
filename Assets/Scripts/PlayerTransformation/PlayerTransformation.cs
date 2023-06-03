@@ -1,21 +1,22 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using NaughtyAttributes;
-using LFS.FirstPerson.Gameplay;
 
 public class PlayerTransformation : MonoBehaviour
 {
-    [SerializeField, Required] GameObject playerDayModel, playerNightModel;
+    [SerializeField] private GameObject playerDayModel, playerNightModel;
     [SerializeField] private bool isDay = true;
 
-    [SerializeField] ParticleSystem transformationVFX;
+    [SerializeField] private ParticleSystem transformationVFX;
+
+    [SerializeField] private GameObject book, craft;
+
+    [SerializeField] private GameObject Missy, Alix, Albert;
 
     void Start()
     {
 
-        LightingManager.Instance.isDay += IsDay;
-        LightingManager.Instance.isNight += IsNight;
+        DayCycleEvents.OnDayStart += IsDay;
+        DayCycleEvents.OnNightStart += IsNight;
 
         if (isDay)
         {
@@ -32,8 +33,10 @@ public class PlayerTransformation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+#if UNITY_EDITOR
         // Test
-        if (Input.GetKeyDown(KeyCode.F))
+        /*if (Input.GetKeyDown(KeyCode.N))
         {
             if (isDay)
                 isDay = false;
@@ -43,12 +46,32 @@ public class PlayerTransformation : MonoBehaviour
             Transformation();
         }
 
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            if (book.activeInHierarchy)
+                book.SetActive(false);
+            else
+                book.SetActive(true);
+        }
+        
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            if (craft.activeInHierarchy)
+                craft.SetActive(false);
+            else
+                craft.SetActive(true);
+        }*/
+
+#endif
+
     }
 
     private void IsDay()
     {
-        if (isDay == true)
+        if (isDay)
             return;
+
+        //Debug.Log("Is Day");
 
         isDay = true;
         Transformation();
@@ -59,8 +82,14 @@ public class PlayerTransformation : MonoBehaviour
         if (isDay == false)
             return;
 
+        //Debug.Log("Is Night");
+
         isDay = false;
         Transformation();
+
+        /*Albert.SetActive(true);
+        Alix.SetActive(true);
+        Missy.SetActive(false);*/
     }
 
     private void Transformation(/*bool timeIndex*/)

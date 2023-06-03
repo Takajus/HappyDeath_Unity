@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class CraftSetup : MonoBehaviour
 {
@@ -19,38 +20,41 @@ public class CraftSetup : MonoBehaviour
     }
 
     [SerializeField]
-    ScriptableCraft ScriptableCraft;
+    private Recipe scriptableRecipe;
 
     public SetupButton setupButton;
 
-    private void Start()
+    public Recipe ScriptableRecipe { get => scriptableRecipe; set => scriptableRecipe = value; }
+
+    public void SetScriptableRecipe(Recipe givenRecipe)
     {
-        Refresh();
+        scriptableRecipe = givenRecipe;
     }
 
     public void Refresh()
     {
-        if (ScriptableCraft == null)
+        if (scriptableRecipe == null)
             return;
 
-        setupButton.my_image.sprite = ScriptableCraft.Sprite;
+        setupButton.my_image.sprite = scriptableRecipe.Sprite;
     }
 
     public void UI_ClickedOnMe()
     {
+        CraftingManager.Instance.OnRecipeSelected.Invoke(this);
         DisplayInformations();
     }
 
-    private void DisplayInformations()
+    public void DisplayInformations()
     {
-        if (ScriptableCraft == null)
+        if (scriptableRecipe == null)
             return;
 
-        setupButton.middle_Image.sprite = ScriptableCraft.Sprite;
-        setupButton.textIngredientNeeded_1.text = ScriptableCraft.IngredientAmount_1.ToString();
-        setupButton.textIngredientNeeded_2.text = ScriptableCraft.IngredientAmount_2.ToString();
-        setupButton.textIngredientNeeded_3.text = ScriptableCraft.IngredientAmount_3.ToString();
-        setupButton.textDescription.text = ScriptableCraft.Description;
-        setupButton.name.text = ScriptableCraft.Name;
+        setupButton.middle_Image.sprite = scriptableRecipe.Sprite;
+        setupButton.textIngredientNeeded_1.text = scriptableRecipe.ingredient1.IngredientAmount.ToString();
+        setupButton.textIngredientNeeded_2.text = scriptableRecipe.ingredient2.IngredientAmount.ToString();
+        setupButton.textIngredientNeeded_3.text = scriptableRecipe.ingredient3.IngredientAmount.ToString();
+        setupButton.textDescription.text = scriptableRecipe.Description;
+        setupButton.name.text = scriptableRecipe.Name;
     }
 }

@@ -57,15 +57,15 @@ public class DialogueManager : MonoBehaviour
             {
                 StartConversation();
             }
-          /*  else if(Input.GetKeyDown(KeyCode.E) && isTalking == true)
+            else if (Input.GetKeyDown(KeyCode.E) && isTalking == true)
             {
-                EndDialogue(); 
+                EndDialogue();
             }
-*/
-          
-            
 
-            if(curResponseTracker == 0 && npc.playerDialogue.Length >= 0)
+
+
+
+            if (curResponseTracker == 0 && npc.playerDialogue.Length >= 0)
             {
                 playerResponse.text = npc.playerDialogue[0];
                 

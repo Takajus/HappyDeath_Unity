@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85f9ff19cbb61e4c8f5c0f45557a422, type: 3}
+  m_Name: Faolan
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 919132149155446097, guid: 08f3fed613c9c7e45be3ac781736166c, type: 3}
+  residentName: 
+  description: 'The youngest guest of the cemetary.
+
+'
+  race: 0
+  role: 1
+  elementList:
+  - preferenceType: 1
+    "\u3059\u304D": 3
+    objectLike: 5
+    amount: 1
+    likeDislike: 0
+  - preferenceType: 2
+    "\u3059\u304D": 4
+    objectLike: 4
+    amount: 0
+    likeDislike: 1
+  "\u30B7\u30FC\u30AF\u30EC\u30C3\u30C8": Allergic to flower
+  mood: 1
