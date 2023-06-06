@@ -13,7 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID PLAY_WII_SPORTS_INTRO_MUSIC_HDMP3CONVERTER = 756615725U;
+        static const AkUniqueID WIISPORT_THEME = 1970021662U;
     } // namespace EVENTS
 
     namespace BANKS
