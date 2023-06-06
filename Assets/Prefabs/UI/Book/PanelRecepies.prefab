@@ -31,7 +31,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7440645465463300878}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -107,7 +107,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7440645465463300878}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -242,7 +242,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7440645465463300878}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -374,7 +374,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6620501706086812173}
   - {fileID: 459909835}
   - {fileID: 1401563960}
   - {fileID: 6058974136034463059}
@@ -382,7 +381,7 @@ RectTransform:
   - {fileID: 2211103775789597337}
   - {fileID: 1789532916}
   m_Father: {fileID: 6676992019977992582}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -884,7 +883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setupButton:
     buttonImage: {fileID: 5381399507413560525}
-    background: {fileID: 3108833245257018051}
+    background: {fileID: 0}
     item: {fileID: 459909836}
     name: {fileID: 1401563961}
     imageIngredients_1: {fileID: 3986456462883084580}
@@ -897,7 +896,7 @@ MonoBehaviour:
     textActualOwnIngredient_3: {fileID: 4841052082571728352}
     textIngredientNeeded_3: {fileID: 6448097113137891230}
     textDescription: {fileID: 1789532917}
-  ScriptableCraft: {fileID: 0}
+  scriptableRecipe: {fileID: 0}
 --- !u!1 &518749165390930698
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,7 +1586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setupButton:
     buttonImage: {fileID: 6490738258650823533}
-    background: {fileID: 3108833245257018051}
+    background: {fileID: 0}
     item: {fileID: 459909836}
     name: {fileID: 1401563961}
     imageIngredients_1: {fileID: 3986456462883084580}
@@ -1600,7 +1599,7 @@ MonoBehaviour:
     textActualOwnIngredient_3: {fileID: 4841052082571728352}
     textIngredientNeeded_3: {fileID: 6448097113137891230}
     textDescription: {fileID: 1789532917}
-  ScriptableCraft: {fileID: 0}
+  scriptableRecipe: {fileID: 0}
 --- !u!1 &1305648304579540673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,7 +2019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setupButton:
     buttonImage: {fileID: 3396094910861250844}
-    background: {fileID: 3108833245257018051}
+    background: {fileID: 0}
     item: {fileID: 459909836}
     name: {fileID: 1401563961}
     imageIngredients_1: {fileID: 3986456462883084580}
@@ -2033,7 +2032,7 @@ MonoBehaviour:
     textActualOwnIngredient_3: {fileID: 4841052082571728352}
     textIngredientNeeded_3: {fileID: 6448097113137891230}
     textDescription: {fileID: 1789532917}
-  ScriptableCraft: {fileID: 0}
+  scriptableRecipe: {fileID: 0}
 --- !u!1 &1876538870245972019
 GameObject:
   m_ObjectHideFlags: 0
@@ -2183,7 +2182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setupButton:
     buttonImage: {fileID: 3068045022101328081}
-    background: {fileID: 3108833245257018051}
+    background: {fileID: 0}
     item: {fileID: 459909836}
     name: {fileID: 1401563961}
     imageIngredients_1: {fileID: 3986456462883084580}
@@ -2196,7 +2195,7 @@ MonoBehaviour:
     textActualOwnIngredient_3: {fileID: 4841052082571728352}
     textIngredientNeeded_3: {fileID: 6448097113137891230}
     textDescription: {fileID: 1789532917}
-  ScriptableCraft: {fileID: 0}
+  scriptableRecipe: {fileID: 0}
 --- !u!1 &2059074463826029446
 GameObject:
   m_ObjectHideFlags: 0
@@ -2481,7 +2480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setupButton:
     buttonImage: {fileID: 1562889775645275275}
-    background: {fileID: 3108833245257018051}
+    background: {fileID: 0}
     item: {fileID: 459909836}
     name: {fileID: 1401563961}
     imageIngredients_1: {fileID: 3986456462883084580}
@@ -2494,83 +2493,7 @@ MonoBehaviour:
     textActualOwnIngredient_3: {fileID: 4841052082571728352}
     textIngredientNeeded_3: {fileID: 6448097113137891230}
     textDescription: {fileID: 1789532917}
-  ScriptableCraft: {fileID: 0}
---- !u!1 &2294376401894532779
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7974261019927453972}
-  - component: {fileID: 3486523212474851183}
-  - component: {fileID: 7677566693418027371}
-  m_Layer: 5
-  m_Name: MiddleSide
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &7974261019927453972
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2294376401894532779}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6676992019977992582}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 750}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &3486523212474851183
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2294376401894532779}
-  m_CullTransparentMesh: 1
---- !u!114 &7677566693418027371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2294376401894532779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.26415092, g: 0.25044498, b: 0.25044498, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  scriptableRecipe: {fileID: 0}
 --- !u!1 &2796182015603453470
 GameObject:
   m_ObjectHideFlags: 0
@@ -3045,8 +2968,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6203115201874104320}
-  - {fileID: 7974261019927453972}
-  - {fileID: 1421140530044262480}
   - {fileID: 7440645465463300878}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -3107,6 +3028,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryMananger: {fileID: 0}
+  recipesSlot: []
+  verticalBox: {fileID: 0}
   ingredientOwned_1: {fileID: 7570965954716781696}
   ingredientOwned_2: {fileID: 3113111522793966071}
   ingredientOwned_3: {fileID: 4841052082571728352}
@@ -3262,7 +3185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setupButton:
     buttonImage: {fileID: 7393209712462061647}
-    background: {fileID: 3108833245257018051}
+    background: {fileID: 0}
     item: {fileID: 459909836}
     name: {fileID: 1401563961}
     imageIngredients_1: {fileID: 3986456462883084580}
@@ -3275,7 +3198,7 @@ MonoBehaviour:
     textActualOwnIngredient_3: {fileID: 4841052082571728352}
     textIngredientNeeded_3: {fileID: 6448097113137891230}
     textDescription: {fileID: 1789532917}
-  ScriptableCraft: {fileID: 11400000, guid: 7525359260fa58d46af6ef6297de71fb, type: 2}
+  scriptableRecipe: {fileID: 0}
 --- !u!1 &3435353978539758405
 GameObject:
   m_ObjectHideFlags: 0
@@ -3560,7 +3483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setupButton:
     buttonImage: {fileID: 2367489819741755381}
-    background: {fileID: 3108833245257018051}
+    background: {fileID: 0}
     item: {fileID: 459909836}
     name: {fileID: 1401563961}
     imageIngredients_1: {fileID: 3986456462883084580}
@@ -3573,7 +3496,7 @@ MonoBehaviour:
     textActualOwnIngredient_3: {fileID: 4841052082571728352}
     textIngredientNeeded_3: {fileID: 6448097113137891230}
     textDescription: {fileID: 1789532917}
-  ScriptableCraft: {fileID: 0}
+  scriptableRecipe: {fileID: 0}
 --- !u!1 &3483850391550700583
 GameObject:
   m_ObjectHideFlags: 0
@@ -3641,82 +3564,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!1 &3617547830763346894
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1421140530044262480}
-  - component: {fileID: 4466701518463714194}
-  - component: {fileID: 2550212492691073585}
-  m_Layer: 5
-  m_Name: MiddleSide (Temporaire)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1421140530044262480
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3617547830763346894}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6676992019977992582}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 52, y: 0}
-  m_SizeDelta: {x: 50, y: 750}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &4466701518463714194
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3617547830763346894}
-  m_CullTransparentMesh: 1
---- !u!114 &2550212492691073585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3617547830763346894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.26415092, g: 0.25044498, b: 0.25044498, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &3804328622842774035
 GameObject:
   m_ObjectHideFlags: 0
@@ -3887,7 +3734,7 @@ RectTransform:
   - {fileID: 3825646621689088753}
   - {fileID: 142340853939985936}
   m_Father: {fileID: 7440645465463300878}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4242,7 +4089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setupButton:
     buttonImage: {fileID: 722591238750983886}
-    background: {fileID: 3108833245257018051}
+    background: {fileID: 0}
     item: {fileID: 459909836}
     name: {fileID: 1401563961}
     imageIngredients_1: {fileID: 3986456462883084580}
@@ -4255,7 +4102,7 @@ MonoBehaviour:
     textActualOwnIngredient_3: {fileID: 4841052082571728352}
     textIngredientNeeded_3: {fileID: 6448097113137891230}
     textDescription: {fileID: 1789532917}
-  ScriptableCraft: {fileID: 0}
+  scriptableRecipe: {fileID: 0}
 --- !u!1 &4326434304594354581
 GameObject:
   m_ObjectHideFlags: 0
@@ -4945,7 +4792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setupButton:
     buttonImage: {fileID: 2354142258505930746}
-    background: {fileID: 3108833245257018051}
+    background: {fileID: 0}
     item: {fileID: 459909836}
     name: {fileID: 1401563961}
     imageIngredients_1: {fileID: 3986456462883084580}
@@ -4958,7 +4805,7 @@ MonoBehaviour:
     textActualOwnIngredient_3: {fileID: 4841052082571728352}
     textIngredientNeeded_3: {fileID: 6448097113137891230}
     textDescription: {fileID: 1789532917}
-  ScriptableCraft: {fileID: 0}
+  scriptableRecipe: {fileID: 0}
 --- !u!1 &5324663743543572565
 GameObject:
   m_ObjectHideFlags: 0
@@ -5108,7 +4955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setupButton:
     buttonImage: {fileID: 8711561781946024786}
-    background: {fileID: 3108833245257018051}
+    background: {fileID: 0}
     item: {fileID: 459909836}
     name: {fileID: 1401563961}
     imageIngredients_1: {fileID: 3986456462883084580}
@@ -5121,7 +4968,7 @@ MonoBehaviour:
     textActualOwnIngredient_3: {fileID: 4841052082571728352}
     textIngredientNeeded_3: {fileID: 6448097113137891230}
     textDescription: {fileID: 1789532917}
-  ScriptableCraft: {fileID: 0}
+  scriptableRecipe: {fileID: 0}
 --- !u!1 &5388626715433211740
 GameObject:
   m_ObjectHideFlags: 0
@@ -5225,7 +5072,7 @@ RectTransform:
   - {fileID: 6443020646898564805}
   - {fileID: 1852578740687744956}
   m_Father: {fileID: 7440645465463300878}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5445,7 +5292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setupButton:
     buttonImage: {fileID: 5992402749133551360}
-    background: {fileID: 3108833245257018051}
+    background: {fileID: 0}
     item: {fileID: 459909836}
     name: {fileID: 1401563961}
     imageIngredients_1: {fileID: 3986456462883084580}
@@ -5458,7 +5305,7 @@ MonoBehaviour:
     textActualOwnIngredient_3: {fileID: 4841052082571728352}
     textIngredientNeeded_3: {fileID: 6448097113137891230}
     textDescription: {fileID: 1789532917}
-  ScriptableCraft: {fileID: 0}
+  scriptableRecipe: {fileID: 0}
 --- !u!1 &5696481982000895416
 GameObject:
   m_ObjectHideFlags: 0
@@ -5945,7 +5792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setupButton:
     buttonImage: {fileID: 7217203112871479996}
-    background: {fileID: 3108833245257018051}
+    background: {fileID: 0}
     item: {fileID: 459909836}
     name: {fileID: 1401563961}
     imageIngredients_1: {fileID: 3986456462883084580}
@@ -5958,7 +5805,7 @@ MonoBehaviour:
     textActualOwnIngredient_3: {fileID: 4841052082571728352}
     textIngredientNeeded_3: {fileID: 6448097113137891230}
     textDescription: {fileID: 1789532917}
-  ScriptableCraft: {fileID: 0}
+  scriptableRecipe: {fileID: 0}
 --- !u!1 &7205140036007696667
 GameObject:
   m_ObjectHideFlags: 0
@@ -6108,7 +5955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setupButton:
     buttonImage: {fileID: 1533721808009530454}
-    background: {fileID: 3108833245257018051}
+    background: {fileID: 0}
     item: {fileID: 459909836}
     name: {fileID: 1401563961}
     imageIngredients_1: {fileID: 3986456462883084580}
@@ -6121,7 +5968,7 @@ MonoBehaviour:
     textActualOwnIngredient_3: {fileID: 4841052082571728352}
     textIngredientNeeded_3: {fileID: 6448097113137891230}
     textDescription: {fileID: 1789532917}
-  ScriptableCraft: {fileID: 0}
+  scriptableRecipe: {fileID: 0}
 --- !u!1 &7819164806025953114
 GameObject:
   m_ObjectHideFlags: 0
@@ -6271,7 +6118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setupButton:
     buttonImage: {fileID: 4517604238784633958}
-    background: {fileID: 3108833245257018051}
+    background: {fileID: 0}
     item: {fileID: 459909836}
     name: {fileID: 1401563961}
     imageIngredients_1: {fileID: 3986456462883084580}
@@ -6284,7 +6131,7 @@ MonoBehaviour:
     textActualOwnIngredient_3: {fileID: 4841052082571728352}
     textIngredientNeeded_3: {fileID: 6448097113137891230}
     textDescription: {fileID: 1789532917}
-  ScriptableCraft: {fileID: 0}
+  scriptableRecipe: {fileID: 0}
 --- !u!1 &7835282861503158743
 GameObject:
   m_ObjectHideFlags: 0
@@ -6321,7 +6168,7 @@ RectTransform:
   - {fileID: 618956964804287411}
   - {fileID: 324836849251723312}
   m_Father: {fileID: 7440645465463300878}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6752,7 +6599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setupButton:
     buttonImage: {fileID: 9075123815249695683}
-    background: {fileID: 3108833245257018051}
+    background: {fileID: 0}
     item: {fileID: 459909836}
     name: {fileID: 1401563961}
     imageIngredients_1: {fileID: 3986456462883084580}
@@ -6765,7 +6612,7 @@ MonoBehaviour:
     textActualOwnIngredient_3: {fileID: 4841052082571728352}
     textIngredientNeeded_3: {fileID: 6448097113137891230}
     textDescription: {fileID: 1789532917}
-  ScriptableCraft: {fileID: 0}
+  scriptableRecipe: {fileID: 0}
 --- !u!1 &8295538690337869934
 GameObject:
   m_ObjectHideFlags: 0
@@ -7382,82 +7229,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &8801456196541681352
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6620501706086812173}
-  - component: {fileID: 2502095046072859508}
-  - component: {fileID: 3108833245257018051}
-  m_Layer: 5
-  m_Name: Background
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &6620501706086812173
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8801456196541681352}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7440645465463300878}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 600, y: 700}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &2502095046072859508
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8801456196541681352}
-  m_CullTransparentMesh: 1
---- !u!114 &3108833245257018051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8801456196541681352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.254717, g: 0.254717, b: 0.254717, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &9171373732435474601
 GameObject:
   m_ObjectHideFlags: 0
@@ -7607,7 +7378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setupButton:
     buttonImage: {fileID: 3509926926419757836}
-    background: {fileID: 3108833245257018051}
+    background: {fileID: 0}
     item: {fileID: 459909836}
     name: {fileID: 1401563961}
     imageIngredients_1: {fileID: 3986456462883084580}
@@ -7620,4 +7391,4 @@ MonoBehaviour:
     textActualOwnIngredient_3: {fileID: 4841052082571728352}
     textIngredientNeeded_3: {fileID: 6448097113137891230}
     textDescription: {fileID: 1789532917}
-  ScriptableCraft: {fileID: 0}
+  scriptableRecipe: {fileID: 0}
