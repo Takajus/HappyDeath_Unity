@@ -20,12 +20,22 @@ public class BookDisplayRecipes : MonoBehaviour
     private void OnEnable()
     {
         RefreshIngredientsOwned();
+        if (recipesSlot.Count <= 0)
+        {
+            SetRecipesSlot();
+            AssignRecipes();
+        }
+        recipesSlot[0].GetComponent<DisplayRecipes>().DisplayInformations();
+        recipesSlot[0].GetComponent<DisplayRecipes>().UI_ClickedOnMe();
     }
 
     private void Start()
     {
-        SetRecipesSlot();
-        AssignRecipes();
+        if (recipesSlot.Count <= 0)
+        {
+            SetRecipesSlot();
+            AssignRecipes();
+        }
     }
 
     private void SetRecipesSlot()

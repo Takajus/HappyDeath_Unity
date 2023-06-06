@@ -107,16 +107,16 @@ public class InventoryManager : MonoBehaviour
         RefreshItemAmount();
     }
 
-    public void RemoveItem(Item itemToAdd)
+    public void RemoveItem(Item itemToRemove)
     {
         for (int i = 0; i < inventory.Count; i++)
         {
-            if (inventory[i] == itemToAdd)
+            if (inventory[i] == itemToRemove)
             {
                 inventory[i].Amount--;
 
                 if (inventory[i].Amount <= 0)
-                    inventory.Remove(itemToAdd);
+                    inventory.Remove(itemToRemove);
 
                 RefreshItemAmount();
                 bookDisplayInventory.RefreshInventorySlot();
