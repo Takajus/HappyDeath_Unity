@@ -31,7 +31,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6080004083422664924}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 34.398, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -202,7 +202,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6080004083422664924}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 44, y: -143.999, z: 0.003}
 --- !u!212 &2116332423
 SpriteRenderer:
@@ -369,8 +369,14 @@ PrefabInstance:
       propertyPath: playerResponse
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7726711172920235478, guid: a8ecca33a997f494caf1e52de28fba39,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7471945652588123955, guid: a8ecca33a997f494caf1e52de28fba39, type: 3}
+    - {fileID: 7471945652588123957, guid: a8ecca33a997f494caf1e52de28fba39, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a8ecca33a997f494caf1e52de28fba39, type: 3}
 --- !u!1 &6080004083422664896 stripped
 GameObject:
@@ -390,42 +396,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5737b47433d13f742867d162d3893f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questManager: {fileID: 0}
+  questManager: {fileID: 6810465566371686159}
   availableQuests:
   - {fileID: 11400000, guid: 9e6cfa5130d96f442aa839aa4c818656, type: 2}
---- !u!114 &1874024182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6080004083422664896}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b008f9c1158491a49aaf05bc2b633949, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DialogNameTextUI: {fileID: 0}
-  DialogTextUI: {fileID: 0}
-  nameText:
-  - Granny
-  - Missy
-  - Missy
-  - Missy
-  dialogText:
-  - Well hello Missy, seems my first soul has arrived !
-  - "That\u2019s right mam\u2019 !"
-  - Albert the wood cutter is here. This good man needs a good rest !
-  - "I hope he will finaly have some company\u2026 \r"
-  DialogPanel: {fileID: 0}
-  nextQuestIndex: 1
-  E_Input: {fileID: 2116332421}
+  - {fileID: 11400000, guid: 9e6cfa5130d96f442aa839aa4c818656, type: 2}
+  - {fileID: 11400000, guid: 9e6cfa5130d96f442aa839aa4c818656, type: 2}
 --- !u!4 &6080004083422664924 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7471945652588123954, guid: a8ecca33a997f494caf1e52de28fba39,
     type: 3}
   m_PrefabInstance: {fileID: 3733815574700953582}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6810465566371686159 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7877516078379837665, guid: a8ecca33a997f494caf1e52de28fba39,
+    type: 3}
+  m_PrefabInstance: {fileID: 3733815574700953582}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c896b57d7f44d499661bf4b4d9b268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3733815574964691888
 PrefabInstance:
   m_ObjectHideFlags: 0

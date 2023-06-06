@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 public class WaveSpawner : MonoBehaviour
 {
     public enum SpawnState { SPAWNING, WAITING, COUNTING };
+    public QuestManager QM;
 
     [Serializable]
     public class Wave
@@ -149,7 +150,7 @@ public class WaveSpawner : MonoBehaviour
 
         for(int i = 0; i < _wave.count; i++)
         {
-
+            _wave.npc.GetComponent<MissyQuest>().questManager = QM;
             SpawnNpc(_wave.npc);
             yield return new WaitForSeconds(1f / _wave.rate);
         }
@@ -172,7 +173,7 @@ public class WaveSpawner : MonoBehaviour
         if (missy == null)
         {
             missy = Instantiate(_npc, _sp.position, _sp.rotation);
-           
+            
         }
         else
         {
