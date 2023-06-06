@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6073622867804477301
 Transform:
   m_ObjectHideFlags: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   E_Input: {fileID: 1928099244655810642}
   resourceToPick: {fileID: 11400000, guid: 54234a186689e9e45acdd37f7d9b5798, type: 2}
-  amountToGive: 50
+  amountToGive: 500
 --- !u!212 &7501993802154752815
 SpriteRenderer:
   m_ObjectHideFlags: 0

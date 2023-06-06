@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1738099238658729985}
   - component: {fileID: 1738099238658729986}
   - component: {fileID: 1738099238658729987}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   E_Input: {fileID: 4959450078797247349}
   resourceToPick: {fileID: 11400000, guid: f68116be4e14f3a48ab64c152f692af5, type: 2}
-  amountToGive: 50
+  amountToGive: 500
 --- !u!212 &1738099238658729987
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -125,7 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2428912623175354445}
   - component: {fileID: 3950654217294996256}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: E Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}

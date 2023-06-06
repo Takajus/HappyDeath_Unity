@@ -23,16 +23,16 @@ public class GridManager : MonoBehaviour
 
         public Tiles(string name, Tile tile)
         {
-            this.name = name; 
+            this.name = name;
             this.tile = tile;
         }
     }
     public List<Tiles> tiles = new List<Tiles>();
 
-    [SerializeField] Transform topRightCorner;
-    [SerializeField] Transform bottomLeftCorner;
+    public float tileSize;
+    public Vector3 topRightCorner;
+    public Vector3 bottomLeftCorner;
     [SerializeField] Transform gridParent;
-    [SerializeField] float tileSize = 1;
     Vector3 positionToPlaceTile;
     int rowNumber;
     int columnNumber;
@@ -51,8 +51,8 @@ public class GridManager : MonoBehaviour
         for (int i = gridParent.transform.childCount - 1; i > 0; i--)
             DestroyImmediate(gridParent.GetChild(i).gameObject);
 
-        rowNumber = Mathf.RoundToInt(Mathf.Abs(bottomLeftCorner.transform.position.z - topRightCorner.transform.position.z) / tileSize);
-        columnNumber = Mathf.RoundToInt(Mathf.Abs(bottomLeftCorner.transform.position.x - topRightCorner.transform.position.x) / tileSize);
+        rowNumber = Mathf.RoundToInt(Mathf.Abs(bottomLeftCorner.z - topRightCorner.z) / tileSize);
+        columnNumber = Mathf.RoundToInt(Mathf.Abs(bottomLeftCorner.x - topRightCorner.x) / tileSize);
 
         Tile newTile;
 
@@ -60,7 +60,7 @@ public class GridManager : MonoBehaviour
         {
             for (int k = 0; k < columnNumber; k++)
             {
-                positionToPlaceTile = bottomLeftCorner.transform.position + new Vector3(tileSize * k, 0, tileSize * j);
+                positionToPlaceTile = bottomLeftCorner + new Vector3(tileSize * k + tileSize/2, 0, tileSize * j + tileSize / 2);
                 newTile = Instantiate(gridTile, positionToPlaceTile, Quaternion.identity, gridParent).GetComponent<Tile>();
                 newTile.transform.localScale = new Vector3(tileSize, newTile.transform.localScale.y, tileSize);
                 newTile.x = tileSize * k;
@@ -106,7 +106,7 @@ public class GridManager : MonoBehaviour
 public class GridManagerEditor : Editor
 {
     GridManager source;
-
+    bool test;
     private void OnEnable()
     {
         source = target as GridManager;
@@ -121,6 +121,32 @@ public class GridManagerEditor : Editor
 
         if (GUILayout.Button("Clear Grid"))
             source.ClearGrid();
+    }
+
+    private void OnSceneGUI()
+    {
+        GizmoTest(GizmoType.Selected);
+    }
+
+    // Custom Gizmos, Create as many as you'd like
+    [DrawGizmo(GizmoType.NotInSelectionHierarchy | GizmoType.Selected)]
+    //TODO: Replace first argument with the type you are editing
+    void GizmoTest(GizmoType aGizmoType)
+    {
+        source.bottomLeftCorner = Handles.PositionHandle(source.bottomLeftCorner, Quaternion.identity);
+        source.topRightCorner = Handles.PositionHandle(source.topRightCorner, Quaternion.identity);
+
+        if (source.topRightCorner.x < source.bottomLeftCorner.x + source.tileSize)
+            source.topRightCorner.x = source.bottomLeftCorner.x + source.tileSize;
+
+        if (source.topRightCorner.z < source.bottomLeftCorner.z + source.tileSize)
+            source.topRightCorner.z = source.bottomLeftCorner.z + source.tileSize;
+
+        source.bottomLeftCorner.x = Mathf.Round(source.bottomLeftCorner.x / source.tileSize) * source.tileSize;
+        source.bottomLeftCorner.z = Mathf.Round(source.bottomLeftCorner.z / source.tileSize) * source.tileSize;
+
+        source.topRightCorner.x = Mathf.Round(source.topRightCorner.x / source.tileSize) * source.tileSize;
+        source.topRightCorner.z = Mathf.Round(source.topRightCorner.z / source.tileSize) * source.tileSize;
     }
 }
 #endif

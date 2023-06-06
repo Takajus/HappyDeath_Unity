@@ -5,11 +5,10 @@ using UnityEngine.InputSystem;
 
 public class CraftStation : MonoBehaviour, IInteractable
 {
-    [SerializeField] CraftActivationManager craftActivationManager;
     [SerializeField] GameObject E_Input;
     public void EndInteract()
     {
-        craftActivationManager.CloseCraftingTable();
+        HUDManager.Instance.ToggleCraft(false);
     }
 
     public InteractMode GetInteractMode()
@@ -24,11 +23,11 @@ public class CraftStation : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        craftActivationManager.OpenCraftingTable();
-        if (QuestSystem.instance.isTutorial && QuestSystem.instance.DemoTaskStat == 2)
+        HUDManager.Instance.ToggleCraft(true);
+        /*if (QuestSystem.instance.isTutorial && QuestSystem.instance.DemoTaskStat == 2)
         {
             QuestSystem.instance.GetDemoTask(3);
-        }
+        }*/
     }
 
     public void UnHover()

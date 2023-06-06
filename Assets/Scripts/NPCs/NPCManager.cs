@@ -1,45 +1,64 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using NaughtyAttributes;
+using UnityEngine.Rendering;
 
 public class NPCManager : MonoBehaviour
 {
-    [SerializeField] NPCs[] NPC;
+    //public NPCQuest npcData;
+    public LightingManager.DayCycleState dayCycleState;
 
-    [SerializeField] private bool isDay = true;
+    private QuestManager questManager;
+    private bool Isday;
 
-    void Start()
+
+
+    private void Start()
     {
-        LightingManager.Instance._isDay += IsDay;
-        LightingManager.Instance._isNight += IsNight;
+        questManager = FindObjectOfType<QuestManager>();
+        DayCycleEvents.OnDayStart += CalleChack;
+        DayCycleEvents.OnNightStart += CheckNight;
+        
     }
 
-    private void IsDay()
+    void Update()
     {
-        if (isDay == true)
-            return;
-
-        isDay = true;
-    }
-
-    private void IsNight()
-    {
-        if (isDay == false)
-            return;
-
-        isDay = false;
-    }
-
-    private void GetNPCInfos()
-    {
-        NPCs n = Array.Find(NPCs, NPCs => NPC.Name == name);
-        if (n == null)
-        {
-            Debug.LogWarning("Sound: " + name + " not found!");
-            return;
+        if (Input.GetKeyDown(KeyCode.S)){
+            print("NPC Spawned!");  
         }
-        Debug.Log("");
+
+      
     }
+    
+    private void CalleChack()
+    {
+        if(Isday == true)
+        {
+            Isday = false;
+        }
+
+        NPCManager[] npcs = FindObjectsOfType<NPCManager>();
+
+        foreach (NPCManager otherNPC in npcs)
+        {
+            if (otherNPC != this)
+            {
+                //questManager.CheckNPCProximity(npcData, otherNPC.npcData);
+            }
+        }
+
+
+    }
+
+    private void CheckNight()
+    {
+      
+
+        if (Isday == false)
+        {
+            Isday = true;
+        }
+    }
+
+   
 }

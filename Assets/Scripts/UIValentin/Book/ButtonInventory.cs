@@ -35,22 +35,23 @@ public class ButtonInventory : MonoBehaviour
 
     public void UI_ClickedOnMe()
     {
-        DisplayInformations();
-
         PlaceItem();
     }
 
     private void PlaceItem()
     {
         if (item)
-            if (item.Placeable)
+        {
+            InventoryManager.HeldItem = item;
+            if (item.itemType == Item.ItemType.BUILD)
             {
                 InteractionManager.Instance.placementHandler.GiveObject(item.Prefab);
-                InventoryManager.Instance.bookActivationManager.OpenCloseBook();
+                HUDManager.Instance.ToggleInventory(false);
             }
+        }
     }
 
-    private void DisplayInformations()
+    public void DisplayInformations()
     {
         if (item == null)
             return;
@@ -59,6 +60,11 @@ public class ButtonInventory : MonoBehaviour
         setupButton.textDescription.text = item.Description;
         setupButton.name.text = item.Name;
         setupButton.textAmount.text = InventoryManager.Instance.GetIngredientAmount(item).ToString();
+    }
+
+    public void UI_Hover()
+    {
+        DisplayInformations();
     }
 }
 

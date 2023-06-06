@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f1eb41c1a5cde149befba44f6613672, type: 3}
+  m_Name: InventoryDatabase
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 11400000, guid: 54234a186689e9e45acdd37f7d9b5798, type: 2}
+  - {fileID: 11400000, guid: 4c2cc2f8cb7ab804dac65a82443a314f, type: 2}
+  - {fileID: 11400000, guid: 3201638a0fa4b5145a040712d184210e, type: 2}
+  - {fileID: 11400000, guid: 7fa2e0cee1d20424cbf4266b35fbfc03, type: 2}
+  - {fileID: 11400000, guid: 645b90f830528bd4cbd41ce4e4435438, type: 2}
+  - {fileID: 11400000, guid: d79a0814e596463448d27095c024ed87, type: 2}
+  - {fileID: 11400000, guid: 4fa378393c5aa4f409b2b25a93f75b4d, type: 2}
+  - {fileID: 11400000, guid: f68116be4e14f3a48ab64c152f692af5, type: 2}
+  unlockedRecipes: []
+  allRecipes:
+  - {fileID: 11400000, guid: 7525359260fa58d46af6ef6297de71fb, type: 2}
+  - {fileID: 11400000, guid: c69c82ba2c024b8459b5ae9d4eeae174, type: 2}
+  - {fileID: 11400000, guid: 87f97b6108f8ef34fa7ba87637355172, type: 2}
+  unlockedResidents: []
+  allResidents: []
