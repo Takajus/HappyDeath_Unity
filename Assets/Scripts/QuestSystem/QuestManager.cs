@@ -31,22 +31,25 @@ public class QuestManager :  MonoBehaviour
         }
     }
 
+    public void ReceiveNewQuest(Quest quest)
+    {
+        currentQuest = quest;
+        UpdateQuestUI();
+    }
+
     public void CompleteQuest(Quest quest)
     {
         // Marquer la quête comme complétée
         quest.isCompleted = true;
 
-        // Mettre à jour l'interface utilisateur de quête
+        currentQuest = null;
         UpdateQuestUI();
     } 
 
     // Method to update the quest UI
     private void UpdateQuestUI()
     {
-        if (questUI != null)
-        {
-            questUI.UpdateQuestUI();
-        }
+        questUI.UpdateQuestUI(currentQuest);
     }
 }
 

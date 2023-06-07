@@ -99,8 +99,22 @@ public class QuestSystem : MonoBehaviour
                     GetDemoTask(2);
     }
 
-    public void UpdateQuestUI()
+    public void UpdateQuestUI(Quest quest)
     {
+
+        if (quest != null)
+        {
+            questTitleText.text = quest.questTitle;
+            questDescriptionText.text = quest.questDescription;
+            gameObject.SetActive(true);
+        }
+        else
+        {
+            questTitleText.text = string.Empty;
+            questDescriptionText.text = string.Empty;
+            gameObject.SetActive(false);
+        }
+
         //if (questManager.currentQuest != null)
         //{
         //    questTitleText.text = questManager.currentQuest.questTitle;

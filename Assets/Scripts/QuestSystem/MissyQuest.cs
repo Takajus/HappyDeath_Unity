@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class MissyQuest : MonoBehaviour//, IInteractable
+public class MissyQuest : MonoBehaviour, IInteractable
 {
     public QuestManager questManager;
     public List<Quest> availableQuests = new List<Quest>();
@@ -46,20 +46,20 @@ public class MissyQuest : MonoBehaviour//, IInteractable
             Debug.Log("NO Quest available");
         }
 
-        if (Input.GetKeyDown(KeyCode.E)) {
+        //if (Input.GetKeyDown(KeyCode.E)) {
           
-            if(currentQuestIndex > 0 ) 
-            {
-                if (!availableQuests[currentQuestIndex - 1].isCompleted)
-                {
-                    Debug.Log("Last Quest not finished yet");
-                    return;
-                }
-            }
+        //    if(currentQuestIndex > 0 ) 
+        //    {
+        //        if (!availableQuests[currentQuestIndex - 1].isCompleted)
+        //        {
+        //            Debug.Log("Last Quest not finished yet");
+        //            return;
+        //        }
+        //    }
            
-            GiveQuest();
-            Debug.Log("Got Quest " + currentQuestIndex);
-        }
+        //    GiveQuest();
+        //    Debug.Log("Got Quest " + currentQuestIndex);
+        //}
     }
 
     public void Hover()
@@ -69,13 +69,18 @@ public class MissyQuest : MonoBehaviour//, IInteractable
 
     public void Interact()
     {
-        if (!availableQuests[currentQuestIndex - 1].isCompleted)
+        if (currentQuestIndex > 0)
         {
-            Debug.Log("Last Quest not finished yet");
-            return;
+            if (!availableQuests[currentQuestIndex - 1].isCompleted)
+            {
+                Debug.Log("Last Quest not finished yet");
+                return;
+            }
         }
+
         GiveQuest();
-    
+        Debug.Log("Got Quest " + currentQuestIndex);
+
     }
 
     public void UnHover()
