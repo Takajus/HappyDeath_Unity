@@ -13,7 +13,14 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID WIISPORT_THEME = 1970021662U;
+        static const AkUniqueID CRAFT = 2863552425U;
+        static const AkUniqueID DIG = 445985471U;
+        static const AkUniqueID METALGATE_CLOSE = 1860438862U;
+        static const AkUniqueID METALGATE_OPEN = 921440522U;
+        static const AkUniqueID PLACE_TOMBSTONE = 269164602U;
+        static const AkUniqueID TAKE_FLOWER = 572867318U;
+        static const AkUniqueID TAKE_ROCK = 3680743520U;
+        static const AkUniqueID TAKE_TREEBRANCH = 3585906227U;
     } // namespace EVENTS
 
     namespace BANKS

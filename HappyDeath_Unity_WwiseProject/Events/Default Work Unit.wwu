@@ -3,12 +3,123 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{D901BAB3-A722-4A8C-A67C-7D2206AD7293}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="wiisport_theme" ID="{9F81933C-326B-4A2A-BA2B-DFFCEA1EA782}">
+				<Event Name="Take_Flower" ID="{A690AAD1-6E62-4417-88AD-5DA0862348AA}">
 					<ChildrenList>
-						<Action Name="" ID="{06872B3B-88D4-4DBA-9490-EA951D7B9777}" ShortID="414540905">
+						<Action Name="" ID="{E88D1A86-2EE1-48D9-BF50-A99E0535FC8F}" ShortID="928056332">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="50"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="wii_sports_intro_music_hdmp3converter" ID="{FD5E0295-39DC-4374-BC17-F04175875AB8}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+									<ObjectRef Name="SFX_Take_Flower_01" ID="{953138A1-8848-44CD-B7CF-05A2C1F857A8}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{18F26347-0958-425F-8A01-3024B4ED00AB}" ShortID="286394248">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="50"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Take_Flower_02" ID="{B53DD603-4123-40A0-98CC-D6ED27B3205E}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Craft" ID="{D666DE74-C1D2-4C4D-8FB1-3F99BB7C21E8}">
+					<ChildrenList>
+						<Action Name="" ID="{698BFCC4-82E5-4BBD-8FBA-2465A564AAB5}" ShortID="752004373">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Craft_01" ID="{BF3019D1-0CDB-40AE-80D2-21FA97D5AA05}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Dig" ID="{01668CB5-7BC3-45AE-AF9E-F37A205AF263}">
+					<ChildrenList>
+						<Action Name="" ID="{55FCD55B-00AD-4291-9B92-8AE22CD09D88}" ShortID="932381069">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Dig_01" ID="{7175882E-1A47-428E-AA29-8DB58CD2694D}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MetalGate_Close" ID="{D7415C9D-D6DD-4883-8C90-8AD03D028BBE}">
+					<ChildrenList>
+						<Action Name="" ID="{A05629C8-3F94-46A8-920D-B99E9276F92F}" ShortID="1019315423">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_MetalGate_Close_01" ID="{4E98FD77-ABE5-4C6B-A637-07ACBAD32AD4}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Metalgate_Open" ID="{D457EF24-A44D-4DDB-8583-4144241D3209}">
+					<ChildrenList>
+						<Action Name="" ID="{252AC611-B568-4D4F-9407-C5C4B41B7746}" ShortID="257825271">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_MetalGate_Open_01" ID="{EB6A7A0A-6B6E-4122-8577-80DE1229FE88}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Place_Tombstone" ID="{7E21D146-1612-47AC-BB2E-39A989E8249A}">
+					<ChildrenList>
+						<Action Name="" ID="{095ACC1C-EFCA-48B2-B632-33817DC00872}" ShortID="843092962">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Place_Tombstone_01" ID="{B4C49EFD-4171-423C-A49A-06CECA765800}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Take_Rock" ID="{63ABC83C-58DA-452D-95A5-28CE3B12DC55}">
+					<ChildrenList>
+						<Action Name="" ID="{C3B00387-1E56-4ECD-ABA1-362E1F37CBD5}" ShortID="762279895">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Take_Rock_02" ID="{C8067125-0D86-41AD-AE66-6503E85C8ABF}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E411E717-E776-4AF2-BB0D-81945AE28B17}" ShortID="571769060">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Take_Rock_01" ID="{7C89E2D0-F995-41F2-A5FE-9D88BB7D16D8}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Take_TreeBranch" ID="{DCEE63C9-40EF-471A-B35E-534EF86012D3}">
+					<ChildrenList>
+						<Action Name="" ID="{06DB9558-73E5-45E1-AE9E-BBA968BA9EB0}" ShortID="197078218">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Take_TreeBranch_01" ID="{B234D35C-8F93-4026-8662-F77559C0D933}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{99C71F2B-C480-4B74-A39B-9591A26E23A6}" ShortID="681693468">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Take_TreeBranch_02" ID="{44843E34-4BF3-4C91-A338-F851CD90F129}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{884068D6-4C71-4094-B75F-41C95CE71B87}" ShortID="6505622">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Take_TreeBranch_03" ID="{212B9681-F9F5-4254-8C88-F69517B15FE2}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

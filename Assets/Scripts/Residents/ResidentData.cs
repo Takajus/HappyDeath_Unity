@@ -23,7 +23,8 @@ public class ResidentData : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawSphere(transform.position, detectionRadius);
+        Gizmos.color = Color.yellow;    
+        Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }
 
     private void OnEnable()
@@ -97,12 +98,11 @@ public class ResidentData : MonoBehaviour
                         // TODO: Build otherItem = col.gameObject.GetComponent<Build>();
                         continue;
                     case Category.Place:
-                        continue;
                         // TODO: Detect specifics place
-                        GameObject otherPlace = col.gameObject.GetComponent<GameObject>();
+                        GameObject otherPlace = col.gameObject.transform.parent.gameObject.layer == LayerMask.NameToLayer("Zone") ? col.gameObject : null;
                         if(!otherPlace) break;
-                        
-                        if (elementPreference.objectLike.ToString() == otherPlace.gameObject.name)
+
+                        if (elementPreference.objectLike.ToString() == LayerMask.LayerToName(otherPlace.layer))
                         {
                             if (elementPreference.likeDislike == LikeDislike.Like)
                             {
@@ -115,6 +115,7 @@ public class ResidentData : MonoBehaviour
                                 Debug.LogWarning("I HATE this Place");
                             }
                         }
+                        
                         continue;
                 }
             }

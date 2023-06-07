@@ -369,8 +369,14 @@ PrefabInstance:
       propertyPath: playerResponse
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7726711172920235478, guid: a8ecca33a997f494caf1e52de28fba39,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7471945652588123955, guid: a8ecca33a997f494caf1e52de28fba39, type: 3}
+    - {fileID: 7471945652588123957, guid: a8ecca33a997f494caf1e52de28fba39, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a8ecca33a997f494caf1e52de28fba39, type: 3}
 --- !u!1 &6080004083422664896 stripped
 GameObject:
@@ -393,33 +399,6 @@ MonoBehaviour:
   questManager: {fileID: 0}
   availableQuests:
   - {fileID: 11400000, guid: 9e6cfa5130d96f442aa839aa4c818656, type: 2}
---- !u!114 &1874024182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6080004083422664896}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b008f9c1158491a49aaf05bc2b633949, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DialogNameTextUI: {fileID: 0}
-  DialogTextUI: {fileID: 0}
-  nameText:
-  - Granny
-  - Missy
-  - Missy
-  - Missy
-  dialogText:
-  - Well hello Missy, seems my first soul has arrived !
-  - "That\u2019s right mam\u2019 !"
-  - Albert the wood cutter is here. This good man needs a good rest !
-  - "I hope he will finaly have some company\u2026 \r"
-  DialogPanel: {fileID: 0}
-  nextQuestIndex: 1
-  E_Input: {fileID: 2116332421}
 --- !u!4 &6080004083422664924 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7471945652588123954, guid: a8ecca33a997f494caf1e52de28fba39,

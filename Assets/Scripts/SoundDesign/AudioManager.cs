@@ -3,6 +3,8 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
+    public AK.Wwise.Event Flower;
+
 
     void Awake()
     {
@@ -19,22 +21,25 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void Start()
+    public void Update()
     {
-        PlaySound("wiisport_theme");
+        if (Input.GetKeyUp(KeyCode.X))
+        {
+            PlaySound(Flower);
+        }
     }
 
-    public void PlaySound(string name)
+    public void PlaySound(AK.Wwise.Event wwise_event)
     {
-        AkSoundEngine.PostEvent(name, gameObject);
+        wwise_event.Post(gameObject);
         //How to play sound in scripts:
-        //FindObjectOfType<AudioManager>().PlaySingleSound("name of the sound");
+        //FindObjectOfType<AudioManager>().PlaySound("name of the sound");
     }
 
     public void StopSound(string name)
     {
         //How to stop sound in scripts:
-        //FindObjectOfType<AudioManager>().StopSingleSound("name of the sound");
+        //FindObjectOfType<AudioManager>().StopSound("name of the sound");
     }
  
     //How to play sound in scripts:
