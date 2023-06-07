@@ -55,7 +55,7 @@ public class ResidentSample : ScriptableObject
     
     public string residentName;
     [TextArea] public string description;
-    //public Sprite sprite;
+    public Sprite sprite;
 
     public Race race;
     public Role role;

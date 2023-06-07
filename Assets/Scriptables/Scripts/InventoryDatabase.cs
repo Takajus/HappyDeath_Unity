@@ -14,5 +14,5 @@ public class InventoryDatabase : ScriptableObject
     public List<Recipe> allRecipes;
     [Header("Residents")]
     public List<Item> unlockedResidents;
-    public List<Item> allResidents;
+    public List<ResidentSample> allResidents;
 }

@@ -55,7 +55,7 @@ public class DisplayRecipes : MonoBehaviour
         DisplayInformations();
     }
 
-    private void DisplayInformations()
+    public void DisplayInformations()
     {
         if (scriptableRecipe == null)
             return;

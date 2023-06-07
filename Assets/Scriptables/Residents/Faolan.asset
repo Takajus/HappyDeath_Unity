@@ -12,23 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85f9ff19cbb61e4c8f5c0f45557a422, type: 3}
   m_Name: Faolan
   m_EditorClassIdentifier: 
-  prefab: {fileID: 919132149155446097, guid: 08f3fed613c9c7e45be3ac781736166c, type: 3}
-  residentName: 
+  prefab: {fileID: 919132149155446097, guid: 9385f582831af6d439262251b9aed59a, type: 3}
+  residentName: Faolen
   description: 'The youngest guest of the cemetary.
 
 '
   race: 0
   role: 1
   elementList:
-  - preferenceType: 1
-    "\u3059\u304D": 3
-    objectLike: 5
-    amount: 1
-    likeDislike: 0
   - preferenceType: 2
     "\u3059\u304D": 4
-    objectLike: 4
-    amount: 0
+    objectLike: 0
+    amount: 3
+    likeDislike: 1
+  - preferenceType: 1
+    "\u3059\u304D": 4
+    objectLike: 0
+    amount: 3
     likeDislike: 1
   "\u30B7\u30FC\u30AF\u30EC\u30C3\u30C8": Allergic to flower
-  mood: 1
+  mood: -1
