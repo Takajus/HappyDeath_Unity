@@ -7,6 +7,6 @@ public class Quest : ScriptableObject
 {
     public string questTitle;
     public string questDescription;
-    public bool isCompleted;
     public ResidentSample NewDeadNPC;
+    public bool isCompleted { get; set; }
 }
