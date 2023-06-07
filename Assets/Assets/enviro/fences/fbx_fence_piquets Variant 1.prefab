@@ -231,7 +231,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 45f4d903daddaec42b381a2f2b4a08f2,
         type: 3}
       propertyPath: m_Name
-      value: fbx_fence_piquets
+      value: fbx_fence_piquets Variant 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45f4d903daddaec42b381a2f2b4a08f2, type: 3}
@@ -241,3 +241,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8129368405128241265}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8939707587419364640 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 45f4d903daddaec42b381a2f2b4a08f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 8129368405128241265}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1426040139418614784
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8939707587419364640}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.011267778, y: 0.00036869897, z: 0.007090867}
+  m_Center: {x: -0.00008122718, y: 0.00014698725, z: 0.003417927}
