@@ -15,6 +15,7 @@ public class InputManager : MonoBehaviour
     [Header("UI")]
     public InputActionReference uiCancelAction;
     public InputActionReference uiInventoryAction;
+    public InputActionReference uiWheelShortcutAction;
 
 
     [Header("Editor")]

@@ -76,6 +76,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "WheelShortcut",
+                    "type": "Button",
+                    "id": "a175b355-47c8-45fa-9e4e-e9e45b4cb42b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -274,6 +283,17 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "OpenInventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "15d92b15-d33c-4bc4-9262-f2fca5b46577",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "WheelShortcut",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
