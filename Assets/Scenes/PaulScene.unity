@@ -41566,7 +41566,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279133917}
   m_LocalRotation: {x: 0.3420201, y: 0, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: 0, y: 10.115598, z: -11.652518}
+  m_LocalPosition: {x: 0, y: 10.115597, z: -11.652517}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49807,7 +49807,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504708304}
   m_LocalRotation: {x: 0.3420201, y: -0, z: -0, w: 0.9396927}
-  m_LocalPosition: {x: 0, y: 10.115598, z: -11.652518}
+  m_LocalPosition: {x: 0, y: 10.115597, z: -11.652517}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -73164,6 +73164,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Flower.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 963b061193b0eac4dab7110e817c6780,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: uiClick.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 963b061193b0eac4dab7110e817c6780,
+        type: 2}
     - target: {fileID: 8031455160181792341, guid: b616bc82e4a45a742b128b7cdefad30d,
         type: 3}
       propertyPath: m_Name
