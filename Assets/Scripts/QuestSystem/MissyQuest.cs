@@ -1,3 +1,4 @@
+using Fungus;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -7,13 +8,24 @@ public class MissyQuest : MonoBehaviour, IInteractable
 {
     public QuestManager questManager;
     public List<Quest> availableQuests = new List<Quest>();
+    public List<GameObject> dialogList  = new List<GameObject>();
     private int currentQuestIndex = 0;
 
     public void EndInteract()
     {
-        throw new System.NotImplementedException();
-    }
+        if (currentQuestIndex > 0)
+        {
+            if (!availableQuests[currentQuestIndex - 1].isCompleted)
+            {
+                Debug.Log("Last Quest not finished yet");
+                return;
+            }
+        }
 
+        GiveQuest();
+        Debug.Log("Got Quest " + currentQuestIndex);
+    }
+    
     public InteractMode GetInteractMode()
     {
         throw new System.NotImplementedException();
@@ -69,7 +81,8 @@ public class MissyQuest : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (currentQuestIndex > 0)
+
+         if (currentQuestIndex > 0)
         {
             if (!availableQuests[currentQuestIndex - 1].isCompleted)
             {
@@ -77,11 +90,10 @@ public class MissyQuest : MonoBehaviour, IInteractable
                 return;
             }
         }
-
-        GiveQuest();
-        Debug.Log("Got Quest " + currentQuestIndex);
+        dialogList[currentQuestIndex].gameObject.SetActive(true);
 
     }
+
 
     public void UnHover()
     {
@@ -90,6 +102,11 @@ public class MissyQuest : MonoBehaviour, IInteractable
 
     private void Start()
     {
+        if(availableQuests.Count != dialogList.Count)
+        {
+            Debug.LogWarning("Le n de dialog ne correspond pas au n de quest");
+        }
+
       if(availableQuests.Count <= 0)
         {
             Debug.Log("NO Quest available");

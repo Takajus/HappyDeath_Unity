@@ -1,3 +1,4 @@
+using Fungus;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -172,7 +173,7 @@ public class WaveSpawner : MonoBehaviour
 
         if (missy == null)
         {
-            missy = Instantiate(_npc, _sp.position, _sp.rotation);
+         gameObject.SetActive(true);
             
         }
         else
