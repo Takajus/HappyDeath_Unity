@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 4512579953639489802, guid: 0f50697a5ee5a1842b13b5f99a0565cb,
         type: 3}
       propertyPath: m_Name
-      value: tb_celtic_cross_1
+      value: pf_tb1_12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f50697a5ee5a1842b13b5f99a0565cb, type: 3}
@@ -82,6 +82,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6841527082234257518}
     m_Modifications:
+    - target: {fileID: 2492138298909279343, guid: fe38eaefebea0af47b8427f99dcbf335,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2692368344739125312, guid: fe38eaefebea0af47b8427f99dcbf335,
         type: 3}
       propertyPath: m_RootOrder
