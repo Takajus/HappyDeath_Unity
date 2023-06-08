@@ -58,20 +58,6 @@ public class MissyQuest : MonoBehaviour, IInteractable
             Debug.Log("NO Quest available");
         }
 
-        //if (Input.GetKeyDown(KeyCode.E)) {
-          
-        //    if(currentQuestIndex > 0 ) 
-        //    {
-        //        if (!availableQuests[currentQuestIndex - 1].isCompleted)
-        //        {
-        //            Debug.Log("Last Quest not finished yet");
-        //            return;
-        //        }
-        //    }
-           
-        //    GiveQuest();
-        //    Debug.Log("Got Quest " + currentQuestIndex);
-        //}
     }
 
     public void Hover()
@@ -82,7 +68,9 @@ public class MissyQuest : MonoBehaviour, IInteractable
     public void Interact()
     {
 
-         if (currentQuestIndex > 0)
+       
+
+        if (currentQuestIndex > 0)
         {
             if (!availableQuests[currentQuestIndex - 1].isCompleted)
             {
@@ -91,7 +79,10 @@ public class MissyQuest : MonoBehaviour, IInteractable
             }
         }
         dialogList[currentQuestIndex].gameObject.SetActive(true);
+        Debug.Log("Try lunching the message");
+        EndInteract();
 
+      
     }
 
 
@@ -119,28 +110,4 @@ public class MissyQuest : MonoBehaviour, IInteractable
 
 
 
-    //// Call this method to check if MissyQuest has available quests
-    //public bool HasAvailableQuests()
-    //{
-    //    return currentQuestIndex < availableQuests.Count;
-    //}
-    //public void IncrementQuestIndex()
-    //{
-    //    currentQuestIndex++;
-    //}
-    //// Call this method to get the next available quest from MissyQuest
-    //public Quest GetNextQuest()
-    //{
-    //    if (availableQuests.Count > 0)
-    //    {
-    //        return availableQuests[0];
-    //    }
-
-    //    return null;
-    //}
-
-    //private void OnEnable()
-    //{
-    //    questManager = GameObject.FindAnyObjectByType<QuestManager>();
-    //}
 }

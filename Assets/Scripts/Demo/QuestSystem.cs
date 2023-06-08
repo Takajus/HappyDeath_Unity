@@ -115,34 +115,6 @@ public class QuestSystem : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        //if (questManager.currentQuest != null)
-        //{
-        //    questTitleText.text = questManager.currentQuest.questTitle;
-        //    questDescriptionText.text = questManager.currentQuest.questDescription;
-        //}
-        //else
-        //{
-        //    // No active quest, clear the UI
-        //    questTitleText.text = string.Empty;
-        //    questDescriptionText.text = string.Empty;
-        //}
+
     }
-
-    ////QuestUI for Accepte or refuse the Quest 
-    //public void InitializeQuestUI(Quest quest)
-    //{
-
-    //    questTitleText.text = quest.questTitle;
-    //    questDescriptionText.text = quest.questDescription;
-
-    //}
-    //public void ClearQuestUI()
-    //{
-    //    // Clear the quest UI elements
-    //    questTitleText.text = string.Empty;
-    //    questDescriptionText.text = string.Empty;
-
-
-    //}
-
 }

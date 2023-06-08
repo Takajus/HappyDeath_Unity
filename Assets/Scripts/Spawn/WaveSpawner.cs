@@ -24,7 +24,7 @@ public class WaveSpawner : MonoBehaviour
     private int nextWave = 0;
 
     public Transform[] spawnPoints;
-
+    public GameObject npcTest;
 
     public float timeBetweenWaves = 3f;
     private float waveCountdown;
@@ -34,6 +34,7 @@ public class WaveSpawner : MonoBehaviour
     private bool isDay = false;
     private SpawnState state = SpawnState.COUNTING;
     private GameObject missy = null;
+    
 
     private void Start()
     {
@@ -51,8 +52,8 @@ public class WaveSpawner : MonoBehaviour
             SpawnUpdat();
         }
         else
-        {
-            if (missy)
+        { //Condition a modifier a l'avenir
+            if (missy != null && missy.activeInHierarchy)
             {
                 missy.SetActive(false);
                
@@ -173,7 +174,8 @@ public class WaveSpawner : MonoBehaviour
 
         if (missy == null)
         {
-         gameObject.SetActive(true);
+            missy = npcTest;
+         missy.SetActive(true);
             
         }
         else
