@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85f9ff19cbb61e4c8f5c0f45557a422, type: 3}
   m_Name: Vuk
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6644647664097140350, guid: 336a990ebc0f88a4fb2f3e26059d51d0, type: 3}
+  prefab: {fileID: 7756704730780308823, guid: 2d2e501c7533358449ca28ff3f3b4a04, type: 3}
   residentName: 
   description: They lack empathy due to other person hate and has been struggling
     to find a place with accepting people.
@@ -21,15 +21,15 @@ MonoBehaviour:
   role: 1
   elementList:
   - preferenceType: 1
-    "\u3059\u304D": 3
+    race: 0
     objectLike: 5
     amount: 2
     likeDislike: 0
   - preferenceType: 0
-    "\u3059\u304D": 4
+    race: 0
     objectLike: 1
     amount: 0
     likeDislike: 1
-  "\u30B7\u30FC\u30AF\u30EC\u30C3\u30C8": Wants to be beside Faolan.
+  secret: 
   isAssign: 0
   mood: 0

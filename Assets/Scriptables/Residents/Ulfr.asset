@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85f9ff19cbb61e4c8f5c0f45557a422, type: 3}
   m_Name: Ulfr
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7171558825709858575, guid: 4bb9d02cba4786b4a8cef91e58dcf721, type: 3}
+  prefab: {fileID: 7622630875818985802, guid: ab387e9d3bb5e624f8803a1c82abc6c7, type: 3}
   residentName: Ulfr
   description: He used to be a lumberjack in its past life and died alone in it's
     norvegian forest. He hate the industrialisation and prefer nature over stone.
@@ -21,16 +21,15 @@ MonoBehaviour:
   role: 1
   elementList:
   - preferenceType: 0
-    "\u3059\u304D": 4
+    race: 0
     objectLike: 0
     amount: 1
     likeDislike: 0
   - preferenceType: 0
-    "\u3059\u304D": 4
+    race: 0
     objectLike: 0
     amount: 1
     likeDislike: 0
-  "\u30B7\u30FC\u30AF\u30EC\u30C3\u30C8": Would love to have a beautifully decorated
-    tombstone.
+  secret: 
   isAssign: 0
   mood: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85f9ff19cbb61e4c8f5c0f45557a422, type: 3}
   m_Name: Faolan
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5587373356321919299, guid: ed8e520606586ed4fbb635d603fc0c5b, type: 3}
+  prefab: {fileID: 6203976725271138726, guid: 0d7054d7256ca054aa71b9d5ef042dd2, type: 3}
   residentName: Faolen
   description: 'A small energic pup who has lost the right to go the realm of the
     dead because he was "too energic". He is a bit cheeky and its friendly attitude
@@ -24,15 +24,15 @@ MonoBehaviour:
   role: 1
   elementList:
   - preferenceType: 1
-    "\u3059\u304D": 3
+    race: 0
     objectLike: 5
     amount: 1
     likeDislike: 0
   - preferenceType: 2
-    "\u3059\u304D": 4
+    race: 0
     objectLike: 4
     amount: 1
     likeDislike: 1
-  "\u30B7\u30FC\u30AF\u30EC\u30C3\u30C8": Would love a draugr friend to play with.
+  secret: 
   isAssign: 0
   mood: -1
