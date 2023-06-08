@@ -43,7 +43,7 @@ public enum Role
 public class ElementPreference
 {
     public Category preferenceType;
-    public Race すき;
+    public Race race;
     public ObjectType objectLike;
     public int amount;
     public LikeDislike likeDislike;
@@ -64,7 +64,7 @@ public class ResidentData : ScriptableObject
     public List<ElementPreference> elementList;
     
     [Header("Secret")]
-    public string シークレット;
+    public string secret;
 
     [HideInInspector]
     public bool isAssign;
