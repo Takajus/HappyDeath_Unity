@@ -30,7 +30,7 @@ public class fire_candles : MonoBehaviour
 		currentFire = Instantiate(fires[0], transform.position + offSet, Quaternion.identity, transform);
 			return;
 		}
-		int nombreChoisi = Random.Range(0, fires.Count);
+		int nombreChoisi = Random.Range(1, fires.Count);
 		currentFire = Instantiate(fires[nombreChoisi], transform.position + offSet, Quaternion.identity, transform);
 
 	}
