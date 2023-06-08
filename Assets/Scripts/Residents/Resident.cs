@@ -64,12 +64,12 @@ public class Resident : MonoBehaviour
                         ResidentData otherResident = col.gameObject.GetComponent<Resident>()?.ResidentData;
                         if (!otherResident) break;
 
-                        if (elementPreference.すき == Race.General)
+                        if (elementPreference.race == Race.General)
                         {
                             AmountCalcul(elementPreference);
                         }
 
-                        if (elementPreference.すき == otherResident.race)
+                        if (elementPreference.race == otherResident.race)
                         {
                             if (elementPreference.likeDislike == LikeDislike.Like)
                             {

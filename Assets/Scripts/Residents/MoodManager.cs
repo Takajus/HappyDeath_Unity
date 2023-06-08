@@ -7,7 +7,8 @@ public class MoodManager : MonoBehaviour
 {
     // TODO: Supprimer ici
     public static List<Resident> residentList = new List<Resident>();
-    public Image batImage;
+    public Image posBar;
+    public Image negBar;
 
     public float moodAverage;
 
@@ -40,6 +41,9 @@ public class MoodManager : MonoBehaviour
         moodAverage = totalMood / residentList.Count;
         Debug.Log(moodAverage);
 
-        batImage.fillAmount = moodAverage;
+        if (moodAverage > 0)
+            posBar.fillAmount = moodAverage;
+        else
+            negBar.fillAmount = -moodAverage;
     }
 }
