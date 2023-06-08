@@ -17,6 +17,7 @@ MonoBehaviour:
   description: 'The youngest guest of the cemetary.
 
 '
+  sprite: {fileID: 0}
   race: 0
   role: 1
   elementList:
@@ -25,10 +26,20 @@ MonoBehaviour:
     objectLike: 0
     amount: 3
     likeDislike: 1
-  - preferenceType: 1
+  - preferenceType: 0
     "\u3059\u304D": 4
     objectLike: 0
     amount: 3
     likeDislike: 1
+  - preferenceType: 1
+    "\u3059\u304D": 3
+    objectLike: 5
+    amount: 0
+    likeDislike: 1
+  - preferenceType: 0
+    "\u3059\u304D": 4
+    objectLike: 5
+    amount: 4
+    likeDislike: 0
   "\u30B7\u30FC\u30AF\u30EC\u30C3\u30C8": Allergic to flower
-  mood: -1
+  mood: NaN

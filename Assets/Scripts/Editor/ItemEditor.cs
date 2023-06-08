@@ -7,7 +7,7 @@ using UnityEditor.VersionControl;
 [CustomEditor(typeof(Item))]
 public class ItemEditor : Editor
 {
-    //Variable reset à chaque fois que l'inspector se réouvre (exple : on clique sur un autre item)
+    //Variable reset ï¿½ chaque fois que l'inspector se rï¿½ouvre (exple : on clique sur un autre item)
     Item source;
     GUIStyle style;
     Color32 textTitleColor = Color.white;
@@ -191,6 +191,8 @@ public class ItemEditor : Editor
         source.Amount = EditorGUILayout.IntField("Amount", source.Amount);
         source.Placeable = EditorGUILayout.Toggle("Placeable", source.Placeable);
 
+        source.recipe = (Recipe)EditorGUILayout.ObjectField("Recipe", source.recipe, typeof(Recipe), false); 
+        
         textTitleColor = new Color(0f, 0f, 0.9f);
     }
 

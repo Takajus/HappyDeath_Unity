@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MoodManager : MonoBehaviour
 {
     // TODO: Supprimer ici
-    public static List<ResidentData> residentList = new List<ResidentData>();
+    public static List<Resident> residentList = new List<Resident>();
     public Image batImage;
 
     public float moodAverage;
@@ -35,7 +35,7 @@ public class MoodManager : MonoBehaviour
         float totalMood = 0f;
         foreach (var resident in residentList)
         {
-            totalMood += resident.Resident.mood;
+            totalMood += resident.ResidentData.mood;
         }
         moodAverage = totalMood / residentList.Count;
         print(moodAverage);
