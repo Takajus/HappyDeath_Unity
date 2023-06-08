@@ -38,8 +38,8 @@ public class MoodManager : MonoBehaviour
             totalMood += resident.ResidentData.mood;
         }
         moodAverage = totalMood / residentList.Count;
-        print(moodAverage);
+        Debug.Log(moodAverage);
 
-        //batImage.fillAmount = moodAverage;
+        batImage.fillAmount = moodAverage;
     }
 }

@@ -42,9 +42,12 @@ public class Resident : MonoBehaviour
         positiveMood = 0f;
         residentAmount = 0;
         placeIsCheck = false;
+        ResidentData.mood = 0;
 
         if (detectionRadius < 1f)
+        {
             return;
+        }
         
         Collider[] colliders = Physics.OverlapSphere(transform.position, detectionRadius);
         
@@ -101,19 +104,7 @@ public class Resident : MonoBehaviour
                         Build otherBuild = col.gameObject.GetComponent<Build>();
                         if(!otherBuild) break;
 
-                        if (RecipeConstitution(elementPreference, otherBuild))
-                        {
-                            if (elementPreference.likeDislike == LikeDislike.Like)
-                            {
-                                ++positiveMood;
-                                // Debug.Log("I LIKE this Object");
-                            }
-                            else
-                            {
-                                ++negativeMood;
-                                // Debug.LogWarning("I HATE this Object");
-                            }
-                        }
+                        RecipeConstitution(elementPreference, otherBuild);
                         continue;
                     case Category.Place:
                         if(placeIsCheck) continue;
@@ -144,10 +135,14 @@ public class Resident : MonoBehaviour
         }
 
         float nbBonus = positiveMood + negativeMood;
+        float average = (positiveMood/nbBonus) - (negativeMood/nbBonus);
+        if (float.IsNaN(average))
+            ResidentData.mood = 0;
+        else
+            ResidentData.mood = average;
         
-        ResidentData.mood = (positiveMood/nbBonus) - (negativeMood/nbBonus);
 
-        // Debug.Log(Resident.name + " - Humeur : " + Resident.mood);
+        Debug.Log(ResidentData.name + " - Humeur : " + ResidentData.mood);
     }
 
     private void OnDisable()
@@ -192,14 +187,25 @@ public class Resident : MonoBehaviour
         }
     }
 
-    private bool RecipeConstitution(ElementPreference elementPreference, Build otherBuild)
+    private void RecipeConstitution(ElementPreference elementPreference, Build otherBuild)
     {
-        if (elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient1.ingredientType.Name &&
-            elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient2.ingredientType.Name &&
-            elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient3.ingredientType.Name)
+        if (elementPreference.likeDislike == LikeDislike.Like)
         {
-            
+            if (elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient1.ingredientType.Name
+                || elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient2.ingredientType.Name
+                || elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient3.ingredientType.Name)
+            {
+                ++positiveMood;
+            }
         }
-        return true;
+        else
+        {
+            if (elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient1.ingredientType.Name
+                || elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient2.ingredientType.Name
+                || elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient3.ingredientType.Name)
+            {
+                ++negativeMood;
+            }
+        }
     }
 }
