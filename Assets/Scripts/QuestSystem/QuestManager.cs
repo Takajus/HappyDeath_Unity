@@ -9,7 +9,8 @@ public class QuestManager :  MonoBehaviour
     public QuestSystem questUI;
     public List<Quest> activeQuests = new List<Quest>();
     private int currentQuestIndex = 0;
-    
+
+    private static QuestManager instance;
 
     // Method to accept a quest
     public void AcceptQuest(Quest quest)
@@ -51,5 +52,16 @@ public class QuestManager :  MonoBehaviour
     {
         questUI.UpdateQuestUI(currentQuest);
     }
+    public static QuestManager Instance
+    {
+        get
+        {
+            if (instance == null)
+                instance = FindObjectOfType<QuestManager>();
+
+            return instance;
+        }
+    }
+
 }
 

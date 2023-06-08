@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 3878785805749803952, guid: 0f50697a5ee5a1842b13b5f99a0565cb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -125.083
+      value: -125.446
       objectReference: {fileID: 0}
     - target: {fileID: 3878785805749803952, guid: 0f50697a5ee5a1842b13b5f99a0565cb,
         type: 3}
@@ -25,7 +25,7 @@ PrefabInstance:
     - target: {fileID: 3878785805749803952, guid: 0f50697a5ee5a1842b13b5f99a0565cb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -183.27016
+      value: -183.498
       objectReference: {fileID: 0}
     - target: {fileID: 3878785805749803952, guid: 0f50697a5ee5a1842b13b5f99a0565cb,
         type: 3}
@@ -65,10 +65,39 @@ PrefabInstance:
     - target: {fileID: 4512579953639489802, guid: 0f50697a5ee5a1842b13b5f99a0565cb,
         type: 3}
       propertyPath: m_Name
-      value: tb_celtic_cross_1
+      value: pf_tb1_12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f50697a5ee5a1842b13b5f99a0565cb, type: 3}
+--- !u!1 &6177298280678554324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4512579953639489802, guid: 0f50697a5ee5a1842b13b5f99a0565cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 7720800893762993118}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5088777934878250051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6177298280678554324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 330076f8b818e4740914a43f0cb53ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  validMat: {fileID: 0}
+  invalidMat: {fileID: 0}
+  actualObject: {fileID: 0}
+  previewObject: {fileID: 0}
+  item: {fileID: 0}
+  xRange: 2
+  zRange: 2
+  tileDetectionList:
+  - x: 0
+    z: 0
+    needDugTile: 1
 --- !u!4 &6841527082234257518 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3878785805749803952, guid: 0f50697a5ee5a1842b13b5f99a0565cb,

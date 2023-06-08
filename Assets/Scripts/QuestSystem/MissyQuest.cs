@@ -1,3 +1,4 @@
+using Fungus;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -7,13 +8,24 @@ public class MissyQuest : MonoBehaviour, IInteractable
 {
     public QuestManager questManager;
     public List<Quest> availableQuests = new List<Quest>();
+    public List<GameObject> dialogList  = new List<GameObject>();
     private int currentQuestIndex = 0;
 
     public void EndInteract()
     {
-        throw new System.NotImplementedException();
-    }
+        if (currentQuestIndex > 0)
+        {
+            if (!availableQuests[currentQuestIndex - 1].isCompleted)
+            {
+                Debug.Log("Last Quest not finished yet");
+                return;
+            }
+        }
 
+        GiveQuest();
+        Debug.Log("Got Quest " + currentQuestIndex);
+    }
+    
     public InteractMode GetInteractMode()
     {
         throw new System.NotImplementedException();
@@ -46,20 +58,6 @@ public class MissyQuest : MonoBehaviour, IInteractable
             Debug.Log("NO Quest available");
         }
 
-        //if (Input.GetKeyDown(KeyCode.E)) {
-          
-        //    if(currentQuestIndex > 0 ) 
-        //    {
-        //        if (!availableQuests[currentQuestIndex - 1].isCompleted)
-        //        {
-        //            Debug.Log("Last Quest not finished yet");
-        //            return;
-        //        }
-        //    }
-           
-        //    GiveQuest();
-        //    Debug.Log("Got Quest " + currentQuestIndex);
-        //}
     }
 
     public void Hover()
@@ -69,6 +67,9 @@ public class MissyQuest : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+
+       
+
         if (currentQuestIndex > 0)
         {
             if (!availableQuests[currentQuestIndex - 1].isCompleted)
@@ -77,11 +78,13 @@ public class MissyQuest : MonoBehaviour, IInteractable
                 return;
             }
         }
+        dialogList[currentQuestIndex].gameObject.SetActive(true);
+        Debug.Log("Try lunching the message");
+        EndInteract();
 
-        GiveQuest();
-        Debug.Log("Got Quest " + currentQuestIndex);
-
+      
     }
+
 
     public void UnHover()
     {
@@ -90,6 +93,11 @@ public class MissyQuest : MonoBehaviour, IInteractable
 
     private void Start()
     {
+        if(availableQuests.Count != dialogList.Count)
+        {
+            Debug.LogWarning("Le n de dialog ne correspond pas au n de quest");
+        }
+
       if(availableQuests.Count <= 0)
         {
             Debug.Log("NO Quest available");
@@ -102,28 +110,4 @@ public class MissyQuest : MonoBehaviour, IInteractable
 
 
 
-    //// Call this method to check if MissyQuest has available quests
-    //public bool HasAvailableQuests()
-    //{
-    //    return currentQuestIndex < availableQuests.Count;
-    //}
-    //public void IncrementQuestIndex()
-    //{
-    //    currentQuestIndex++;
-    //}
-    //// Call this method to get the next available quest from MissyQuest
-    //public Quest GetNextQuest()
-    //{
-    //    if (availableQuests.Count > 0)
-    //    {
-    //        return availableQuests[0];
-    //    }
-
-    //    return null;
-    //}
-
-    //private void OnEnable()
-    //{
-    //    questManager = GameObject.FindAnyObjectByType<QuestManager>();
-    //}
 }

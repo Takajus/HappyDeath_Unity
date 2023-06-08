@@ -17,14 +17,14 @@ public class DisplayResidents : MonoBehaviour
     }
 
     public SetupButton setupButton;
-    public ResidentSample scriptableResident;
+    public ResidentData scriptableResident;
 
     private void Start()
     {
         Refresh();
     }
 
-    public void SetScriptableRecipe(ResidentSample givenResident)
+    public void SetScriptableRecipe(ResidentData givenResident)
     {
         scriptableResident = givenResident;
     }

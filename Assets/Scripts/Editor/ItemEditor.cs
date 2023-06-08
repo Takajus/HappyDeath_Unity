@@ -188,6 +188,8 @@ public class ItemEditor : Editor
         source.Amount = EditorGUILayout.IntField("Amount", source.Amount);
         source.Placeable = EditorGUILayout.Toggle("Placeable", source.Placeable);
 
+        source.recipe = (Recipe)EditorGUILayout.ObjectField("Recipe", source.recipe, typeof(Recipe), false);
+
         textTitleColor = new Color(0f, 0f, 0.9f);
     }
 
