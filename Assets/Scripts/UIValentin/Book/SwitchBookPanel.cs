@@ -39,10 +39,8 @@ public class SwitchBookPanel : MonoBehaviour
         {
             Vector3 vector3Reset = new Vector3(-100, bookmark.transform.localPosition.y, bookmark.transform.localPosition.z);
             bookmark.GetComponent<RectTransform>().localPosition = vector3Reset;
-            Debug.Log("Reset " + targetedBookmark + " " + vector3Reset);
         }
         Vector3 vector3Apply = new Vector3(-50, bookMarks[targetedBookmark].transform.localPosition.y, bookMarks[targetedBookmark].transform.localPosition.z);
         bookMarks[targetedBookmark].GetComponent<RectTransform>().localPosition = vector3Apply;
-        Debug.Log("Selected =  " + targetedBookmark + " : " + vector3Apply);
     }
 }

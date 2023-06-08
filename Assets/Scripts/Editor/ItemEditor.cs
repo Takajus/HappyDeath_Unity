@@ -100,14 +100,10 @@ public class ItemEditor : Editor
         AssetDatabase.SaveAssets();*/
 
         textTitleColor = new Color(0.9f,0f,0f);
-
     }
 
     public void ShowResourceUI()
     {
-
-
-
         GUILayout.BeginHorizontal("box");
         //EditorGUILayout.LabelField("Prefab");
         source.Prefab = (GameObject)EditorGUILayout.ObjectField("Prefab", source.Prefab, typeof(GameObject), false);
@@ -154,6 +150,7 @@ public class ItemEditor : Editor
     {
         GUILayout.BeginHorizontal("box");
         //EditorGUILayout.LabelField("Prefab");
+        source.Prefab = (GameObject)EditorGUILayout.ObjectField("Prefab",source.Prefab, typeof(GameObject), false);
         source.Prefab = (GameObject)EditorGUILayout.ObjectField("Prefab",source.Prefab, typeof(GameObject), false);
         GUILayout.EndHorizontal();
 

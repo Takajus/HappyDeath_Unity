@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class ShortcutWheel : MonoBehaviour
 {
@@ -16,6 +17,22 @@ public class ShortcutWheel : MonoBehaviour
     {
         InputManager.Instance.uiWheelShortcutAction.action.performed += DisplayWheel;
         InputManager.Instance.uiWheelShortcutAction.action.canceled += CloseWheel;
+        InventoryManager.Instance.OnItemAdded += OnItemAdded;
+    }
+
+    public void OnItemAdded(Item item)
+    {
+        if (item.itemType == Item.ItemType.TOOL)
+        {
+            GameObject tempToolWheel = Instantiate(toolWheelPrefab, wheelParent.transform);
+            tempToolWheel.GetComponent<ToolWheel>().item = item;
+            tempToolWheel.GetComponent<Image>().sprite = item.Sprite;
+            nbrElement.Add(tempToolWheel);
+            tempToolWheel.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                InventoryManager.HeldItem = item;
+            });
+        }
     }
 
     public void AddToolWheel()
