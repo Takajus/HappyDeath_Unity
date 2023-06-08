@@ -10,18 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c85f9ff19cbb61e4c8f5c0f45557a422, type: 3}
-  m_Name: ResidentSample
+  m_Name: Vuk
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   residentName: 
-  description: 
+  description: They lack empathy due to other person hate and has been struggling
+    to find a place with accepting people.
+  sprite: {fileID: 0}
   race: 0
-  role: 0
+  role: 1
   elementList:
-  - preferenceType: 2
-    "\u3059\u304D": 0
-    objectLike: 0
-    amount: 0
+  - preferenceType: 1
+    "\u3059\u304D": 3
+    objectLike: 5
+    amount: 2
     likeDislike: 0
-  "\u30B7\u30FC\u30AF\u30EC\u30C3\u30C8": 
+  - preferenceType: 0
+    "\u3059\u304D": 4
+    objectLike: 1
+    amount: 0
+    likeDislike: 1
+  "\u30B7\u30FC\u30AF\u30EC\u30C3\u30C8": Wants to be beside Faolan.
   mood: 0

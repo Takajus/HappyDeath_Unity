@@ -14,23 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 919132149155446097, guid: 9385f582831af6d439262251b9aed59a, type: 3}
   residentName: Faolen
-  description: 'The youngest guest of the cemetary.
+  description: 'A small energic pup who has lost the right to go the realm of the
+    dead because he was "too energic". He is a bit cheeky and its friendly attitude
+    makes him a good companion.
 
 '
   sprite: {fileID: 0}
   race: 0
   role: 1
   elementList:
+<<<<<<< Updated upstream
   - preferenceType: 2
     "\u3059\u304D": 4
     objectLike: 0
     amount: 3
     likeDislike: 1
   - preferenceType: 0
+=======
+  - preferenceType: 1
+    "\u3059\u304D": 3
+    objectLike: 5
+    amount: 1
+    likeDislike: 0
+  - preferenceType: 2
+>>>>>>> Stashed changes
     "\u3059\u304D": 4
-    objectLike: 0
-    amount: 3
+    objectLike: 4
+    amount: 1
     likeDislike: 1
+<<<<<<< Updated upstream
   - preferenceType: 1
     "\u3059\u304D": 3
     objectLike: 5
@@ -43,3 +55,7 @@ MonoBehaviour:
     likeDislike: 0
   "\u30B7\u30FC\u30AF\u30EC\u30C3\u30C8": Allergic to flower
   mood: NaN
+=======
+  "\u30B7\u30FC\u30AF\u30EC\u30C3\u30C8": Would love a draugr friend to play with.
+  mood: -1
+>>>>>>> Stashed changes
