@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,9 @@ public class ShortcutWheel : MonoBehaviour
     public GameObject wheelParent;
     public List<GameObject> nbrElement = new List<GameObject>();
     public GameObject toolWheelPrefab;
+    public GameObject toolSelected;
+
+    //public Action onToolCreated;
 
     private void Start()
     {
@@ -31,6 +35,7 @@ public class ShortcutWheel : MonoBehaviour
             tempToolWheel.GetComponent<Button>().onClick.AddListener(() =>
             {
                 InventoryManager.HeldItem = item;
+                tempToolWheel.transform.parent.gameObject.SetActive(false);
             });
         }
     }
