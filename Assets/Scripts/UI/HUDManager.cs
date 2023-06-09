@@ -5,19 +5,20 @@ using UnityEngine.InputSystem;
 
 public class HUDManager : MonoBehaviour
 {
-    public static HUDManager instance { get; private set; }
+    private static HUDManager instance;
     public static HUDManager Instance { get { if (instance == null) instance = FindObjectOfType<HUDManager>(); return instance; } }
 
     public InventoryManager inventoryManager;
     public CraftingManager craftingManager;
     public SwitchBookPanel switchBookPanel;
     public QuestSystem questSystem;
+    public DisplayResidentStock displayResidentStock;
 
     [SerializeField] GameObject pannelInventory;
     [SerializeField] GameObject pannelRecipies;
     [SerializeField] GameObject pannelResidents;
 
-    public static bool IsOpen { get => (isBookOpen || isCraftOpen); }
+    public static bool IsOpen { get => (isBookOpen || isCraftOpen || DisplayResidentStock.IsOpen); }
 
     public static bool isBookOpen = false;
     public static bool isCraftOpen = false;

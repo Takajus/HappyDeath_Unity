@@ -8,17 +8,19 @@ public class InteractionManager : MonoBehaviour
 {
     public static InteractionManager instance { get; private set; }
     public static InteractionManager Instance { get { if (instance == null) instance = FindObjectOfType<InteractionManager>(); return instance; } }
-    public enum InteractionMode { Interact, Cut, Dig, Place };
+    public enum InteractionMode { Interact, Cut, Dig, Mine, Place };
     public static InteractionMode interactionMode { get; private set; }
+    public static ResidentData transportedSoul;
 
-    public BaseHandler interactHandler { get; private set; }
+    public InteractHandler interactHandler { get; private set; }
     public PlacementHandler placementHandler { get; private set; }
     public ShovelHandler shovelHandler { get; private set; }
     public AxeHandler axeHandler { get; private set; }
 
+
     private void Awake()
     {
-        interactHandler = GetComponent<BaseHandler>();
+        interactHandler = GetComponent<InteractHandler>();
         placementHandler = GetComponent<PlacementHandler>();
         shovelHandler = GetComponent<ShovelHandler>();
         axeHandler = GetComponent<AxeHandler>();
@@ -52,7 +54,7 @@ public class InteractionManager : MonoBehaviour
     {
         InteractionMode temp = InteractionMode.Interact;
 
-        if (placementHandler.IsInteracting)
+        /*if (placementHandler.IsInteracting)
         {
             temp = InteractionMode.Place;
         }
@@ -63,9 +65,9 @@ public class InteractionManager : MonoBehaviour
         else if (shovelHandler.shovelIsEquiped)
         {
             temp = InteractionMode.Dig;
-        }
+        }*/
 
-        /*if (InventoryManager.HeldItem)
+        if (InventoryManager.HeldItem)
         {
             if (InventoryManager.HeldItem.itemType == Item.ItemType.BUILD)
             {
@@ -79,7 +81,7 @@ public class InteractionManager : MonoBehaviour
             {
                 temp = InteractionMode.Dig;
             }
-        }*/
+        }
 
         if (interactionMode != temp)
             ChangeInteractionMode(temp);
@@ -97,6 +99,8 @@ public class InteractionManager : MonoBehaviour
                 break;
             case InteractionMode.Dig:
                 shovelHandler.ClearHandler();
+                break;
+            case InteractionMode.Mine:
                 break;
             case InteractionMode.Place:
                 placementHandler.ClearHandler();

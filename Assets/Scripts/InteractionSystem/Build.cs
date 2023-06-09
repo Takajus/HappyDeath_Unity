@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Build : MonoBehaviour
+public class Build : MonoBehaviour, IInteractable
 {
     public Material validMat;
     public Material invalidMat;
@@ -30,7 +30,6 @@ public class Build : MonoBehaviour
             this.needDugTile = needDug;
         }
     }
-
 
     private void Start()
     {
@@ -101,5 +100,30 @@ public class Build : MonoBehaviour
             Vector3 relativePosition = transform.TransformDirection(new Vector3(tileDetection.x, 0, tileDetection.z));
             Gizmos.DrawWireCube(transform.position + relativePosition, Vector3.one / 3);
         }
+    }
+
+    public void Hover()
+    {
+
+    }
+
+    public void UnHover()
+    {
+
+    }
+
+    public void Interact()
+    {
+        
+    }
+
+    public void EndInteract()
+    {
+        
+    }
+
+    public InteractMode GetInteractMode()
+    {
+        throw new System.NotImplementedException();
     }
 }
