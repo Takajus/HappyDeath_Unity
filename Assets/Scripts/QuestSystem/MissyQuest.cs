@@ -53,16 +53,12 @@ public class MissyQuest : MonoBehaviour, IInteractable
 
     private void Update()
     {
-        if(availableQuests.Count <= 0)
-        {
-            Debug.Log("NO Quest available");
-        }
 
     }
 
     public void Hover()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public void Interact()
@@ -88,7 +84,7 @@ public class MissyQuest : MonoBehaviour, IInteractable
 
     public void UnHover()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     private void Start()

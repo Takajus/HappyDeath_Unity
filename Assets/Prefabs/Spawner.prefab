@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4694489848689793791
+--- !u!1 &58396861472935957
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,30 +8,30 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4694489848689793790}
+  - component: {fileID: 58396861472935962}
   m_Layer: 0
-  m_Name: Model
+  m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4694489848689793790
+--- !u!4 &58396861472935962
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4694489848689793791}
+  m_GameObject: {fileID: 58396861472935957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: -2.16, y: -0.217, z: 2.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4694489848926609846}
+  m_Father: {fileID: 58396861581398312}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4694489848926609841
+--- !u!1 &58396861581398314
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,57 +39,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4694489848926609846}
-  - component: {fileID: 4694489848926609847}
-  - component: {fileID: 4694489848926609840}
+  - component: {fileID: 58396861581398312}
+  - component: {fileID: 58396861581398315}
   m_Layer: 0
-  m_Name: ResidentSampleObject
+  m_Name: Spawner
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4694489848926609846
+--- !u!4 &58396861581398312
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4694489848926609841}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: 0}
+  m_GameObject: {fileID: 58396861581398314}
+  m_LocalRotation: {x: -0, y: 0.9996672, z: -0, w: -0.025797114}
+  m_LocalPosition: {x: 2.934, y: 0.965, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4694489848689793790}
+  - {fileID: 58396861472935962}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &4694489848926609847
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4694489848926609841}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &4694489848926609840
+  m_LocalEulerAnglesHint: {x: 0, y: 182.956, z: 0}
+--- !u!114 &58396861581398315
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4694489848926609841}
+  m_GameObject: {fileID: 58396861581398314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31f35adde9f1b61478072fac73b3f6ab, type: 3}
+  m_Script: {fileID: 11500000, guid: ff7cc82edbc5e194aaa7832059004a04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResidentData: {fileID: 0}
-  detectionRadius: 3
+  QM: {fileID: 0}
+  waves:
+  - name: Loup
+    npc: {fileID: 0}
+    count: 1
+    rate: 1
+  spawnPoints:
+  - {fileID: 58396861472935962}
+  npcTest: {fileID: 0}
+  timeBetweenWaves: 0

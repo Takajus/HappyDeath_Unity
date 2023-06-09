@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Fungus;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -19,7 +20,11 @@ public class Resident : MonoBehaviour
     private void Awake()
     {
         // TODO: Modifier la list pour utiliser celle de la DataBase
-        MoodManager.residentList.Add(this);
+        //MoodManager.residentList.Add(this);
+        transform.GetComponent<Collider>().enabled = false;
+
+        DayCycleEvents.OnNightStart += Day;
+        DayCycleEvents.OnDayStart += Night;
     }
 
     private void OnDrawGizmos()
@@ -28,8 +33,13 @@ public class Resident : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }
 
-    private void OnEnable()
+    private void Night()
     {
+        if (ResidentData == null || !ResidentData.isAssign)
+            return;
+        
+        transform.GetComponent<Collider>().enabled = true;
+
         if(!modelSlot)
             modelSlot = transform.Find("Model").gameObject;
 
@@ -131,7 +141,6 @@ public class Resident : MonoBehaviour
                         continue;
                 }
             }
-            
         }
 
         float nbBonus = positiveMood + negativeMood;
@@ -145,10 +154,16 @@ public class Resident : MonoBehaviour
         Debug.Log(ResidentData.name + " - Humeur : " + ResidentData.mood);
     }
 
-    private void OnDisable()
+    private void Day()
     {
-        if (!model.activeInHierarchy)
+        if (model == null)
+            return;
+        
+        if (model.activeInHierarchy)
+        {
             model.SetActive(false);
+            transform.GetComponent<Collider>().enabled = false;
+        }
     }
 
     private void AmountCalcul(ElementPreference elementPreference)
