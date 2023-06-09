@@ -70,9 +70,11 @@ public class LightingManager : MonoBehaviour
         {
             UpdateLighting(timeOfDay / 24f);
         }
-        
+
+#if UNITY_EDITOR
         if(InputManager.Instance.editorMultiplicatorValue.action.triggered)
             Multiplicator();
+#endif
     }
 
     private void UpdateLighting(float timePercent)
@@ -180,8 +182,6 @@ public class LightingManager : MonoBehaviour
         timeOfDay = time;
     }
 
-#if UNITY_EDITOR
-
     private void Multiplicator()
     {
         timeMultiplicator += InputManager.Instance.editorMultiplicatorValue.action.ReadValue<float>();
@@ -189,6 +189,4 @@ public class LightingManager : MonoBehaviour
         if (timeMultiplicator >= 100) timeMultiplicator = 100;
         if (timeMultiplicator <= 0) timeMultiplicator = 0;
     }
-
-#endif
 }

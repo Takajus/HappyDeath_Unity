@@ -38,6 +38,9 @@ public abstract class BaseHandler : MonoBehaviour
     {
         if ((Physics.Raycast(Camera.main.ScreenPointToRay(new Vector3(1, 1, 0) * InputManager.Instance.gameMousePosition.action.ReadValue<Vector2>()), out hit, Mathf.Infinity, hitMeMouse) && HasWantedType(hit.collider.gameObject)))
         {
+            if (Vector3.Distance(PlayerController.Instance.transform.position, hit.transform.position) > 5)
+                return null;
+
              mouseIsTargeting = true;
              return hit.collider.gameObject;
         }
