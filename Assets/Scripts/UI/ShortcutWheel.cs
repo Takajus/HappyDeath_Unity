@@ -9,11 +9,14 @@ public class ShortcutWheel : MonoBehaviour
 {
     float degree;
     int offset = 90;
-    public int distance = 0;
+    public int distance = 180;
+    public int distanceLine = 125;
     public GameObject wheelParent;
     public List<GameObject> nbrElement = new List<GameObject>();
+    public List<GameObject> lineNbrElement = new List<GameObject>();
     public GameObject toolWheelPrefab;
     public GameObject toolSelected;
+    public GameObject linePrefab;
 
     //public Action onToolCreated;
 
@@ -26,12 +29,14 @@ public class ShortcutWheel : MonoBehaviour
 
     public void OnItemAdded(Item item)
     {
-        if (item.itemType == Item.ItemType.TOOL)
+        if (item.itemType == Item.ItemType.TOOL || item.itemType == Item.ItemType.BUILD)
         {
             GameObject tempToolWheel = Instantiate(toolWheelPrefab, wheelParent.transform);
+            GameObject line = Instantiate(linePrefab, wheelParent.transform);
             tempToolWheel.GetComponent<ToolWheel>().item = item;
             tempToolWheel.GetComponent<Image>().sprite = item.Sprite;
-            nbrElement.Add(tempToolWheel);
+            nbrElement.Insert(nbrElement.Count -1,tempToolWheel);
+            lineNbrElement.Add(line);
             tempToolWheel.GetComponent<Button>().onClick.AddListener(() =>
             {
                 InventoryManager.HeldItem = item;
@@ -55,6 +60,9 @@ public class ShortcutWheel : MonoBehaviour
         {
             Vector2 position = new Vector2(Mathf.Cos((degree * i + offset) * Mathf.Deg2Rad),Mathf.Sin((degree * i +offset) * Mathf.Deg2Rad));
             nbrElement[i].GetComponent<RectTransform>().localPosition = position * distance;
+            Vector2 linePosition = new Vector2(Mathf.Cos((degree * i + offset + degree / 2) * Mathf.Deg2Rad),Mathf.Sin((degree * i + offset + degree / 2) * Mathf.Deg2Rad));
+            lineNbrElement[i].GetComponent<RectTransform>().localPosition = linePosition * distanceLine;
+            lineNbrElement[i].GetComponent<RectTransform>().localEulerAngles = new Vector3(0, 0, degree * i + offset + degree / 2);
         }
     }
 

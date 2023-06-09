@@ -1278,12 +1278,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7777195bb5708a744b2554b770d8eebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 200
+  distance: 195
+  distanceLine: 195
   wheelParent: {fileID: 1151348280}
-  nbrElement: []
+  nbrElement:
+  - {fileID: 0}
+  - {fileID: 0}
+  lineNbrElement: []
   toolWheelPrefab: {fileID: 4020696009770036523, guid: 08b725ca4edbd6e4c97af8110d7a2816,
     type: 3}
   toolSelected: {fileID: 0}
+  linePrefab: {fileID: 0}
 --- !u!1 &1151348280 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2052333757100302414, guid: e69ca4f2c9bb051469bf2fcee820cd23,
