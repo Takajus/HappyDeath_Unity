@@ -12,7 +12,6 @@ public class ToolWheel : MonoBehaviour
     {
         shortcutWheel =  GameObject.Find("shortcutWheel").GetComponent<ShortcutWheel>();
         shortcutWheel.onToolCreated += AssignToolSelected;
-        shortcutWheel.onToolCreated += AssignToolSelected;
     }
 
     private void AssignToolSelected()
