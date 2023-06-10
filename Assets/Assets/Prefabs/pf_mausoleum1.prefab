@@ -15,17 +15,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5ace8b6479f8853498924c33eb7bd6e0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5ace8b6479f8853498924c33eb7bd6e0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5ace8b6479f8853498924c33eb7bd6e0,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5ace8b6479f8853498924c33eb7bd6e0,
         type: 3}
@@ -110,6 +110,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3960276286173789708}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &8197138130386019454
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4194209824885932893}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.2983283, z: 1}
+  m_Center: {x: 0, y: 0.59818906, z: 0}
 --- !u!114 &195447405078304854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,16 +149,3 @@ MonoBehaviour:
   - x: 0
     z: 1
     needDugTile: 1
---- !u!65 &8197138130386019454
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4194209824885932893}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.2983283, z: 1}
-  m_Center: {x: 0, y: 0.59818906, z: 0}
