@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlacementHandler : BaseHandler
 {
     public override bool IsInteracting { get => objectToPlace != null; }
-    GameObject objectToPlace;
+    GameObject objectToPlace = InventoryManager.HeldItem?.Prefab;
     int rotation = 180;
 
     [SerializeField] GameObject tempPrefab;
@@ -14,13 +14,13 @@ public class PlacementHandler : BaseHandler
     void Update()
     {
 #if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.Tab))
+        /*if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (IsInteracting)
                 ClearHandler();
             else
                 GiveObject(tempPrefab);
-        }
+        }*/
 #endif
         RotateTarget();
     }
@@ -70,6 +70,7 @@ public class PlacementHandler : BaseHandler
         {
             objectToPlace.GetComponent<Build>().Innit();
             objectToPlace = null;
+            InventoryManager.HeldItem = null;
         }
     }
 

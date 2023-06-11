@@ -1,16 +1,22 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using Fungus;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
 using UnityEngine.UI;
 
 public class MoodManager : MonoBehaviour
 {
     // TODO: Supprimer ici
-    public static List<ResidentData> residentList = new List<ResidentData>();
-    public Image batImage;
+    [SerializeField]
+    private static List<ResidentData> residentList = new List<ResidentData>();
+    public Image posBar;
+    public Image negBar;
 
     public float moodAverage;
-
+    
     private static MoodManager instance;
 
     public static MoodManager Instance
@@ -26,6 +32,8 @@ public class MoodManager : MonoBehaviour
 
     public void CalculateAverageMood()
     {
+        residentList = InventoryManager.Instance.inventoryDatabase.allResidents.FindAll(resid => resid.isAssign == true).ToList(); 
+
         if (residentList.Count < 1)
         {
             Debug.LogError("No Residents here !!!!");
@@ -35,11 +43,18 @@ public class MoodManager : MonoBehaviour
         float totalMood = 0f;
         foreach (var resident in residentList)
         {
-            totalMood += resident.Resident.mood;
+            totalMood += resident.mood;
         }
         moodAverage = totalMood / residentList.Count;
-        print(moodAverage);
+        Debug.Log(moodAverage);
 
-        //batImage.fillAmount = moodAverage;
+        if (moodAverage > 0)
+            posBar.fillAmount = moodAverage;
+        else
+            negBar.fillAmount = -moodAverage;
+    }
+
+    private void Update()
+    {
     }
 }

@@ -19,7 +19,7 @@ public class InventoryManager : MonoBehaviour
 
     public List<Item> Inventory { get => inventory; set => inventory = value; }
 
-    public event Action OnItemAdded;
+    public event Action<Item> OnItemAdded;
     public event Action OnItemRemoved;
 
 //#if !UNITY_EDITOR
@@ -100,23 +100,44 @@ public class InventoryManager : MonoBehaviour
 
 
 
-        OnItemAdded?.Invoke();
+        OnItemAdded?.Invoke(itemToAdd);
         inventory.Add(itemToAdd);
         inventory[inventory.Count - 1].Amount = amount;
         itemAmount.Add(0);
         RefreshItemAmount();
     }
-
-    public void RemoveItem(Item itemToAdd)
+    
+    public void UI_AddItem(Item itemToAdd)
     {
         for (int i = 0; i < inventory.Count; i++)
         {
             if (inventory[i] == itemToAdd)
             {
+                inventory[i].Amount += 1;
+                RefreshItemAmount();
+                return;
+            }
+        }
+
+
+
+        OnItemAdded?.Invoke(itemToAdd);
+        inventory.Add(itemToAdd);
+        inventory[inventory.Count - 1].Amount = 1;
+        itemAmount.Add(0);
+        RefreshItemAmount();
+    }
+
+    public void RemoveItem(Item itemToRemove)
+    {
+        for (int i = 0; i < inventory.Count; i++)
+        {
+            if (inventory[i] == itemToRemove)
+            {
                 inventory[i].Amount--;
 
                 if (inventory[i].Amount <= 0)
-                    inventory.Remove(itemToAdd);
+                    inventory.Remove(itemToRemove);
 
                 RefreshItemAmount();
                 bookDisplayInventory.RefreshInventorySlot();
@@ -178,7 +199,7 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        OnItemAdded?.Invoke();
+        OnItemAdded?.Invoke(itemToAdd);
         inventory.Add(itemToAdd);
         itemAmount.Add(0);
         RefreshItemAmount();

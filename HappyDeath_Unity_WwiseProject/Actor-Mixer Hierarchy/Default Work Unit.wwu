@@ -3,14 +3,7 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="wii_sports_intro_music_hdmp3converter" ID="{FD5E0295-39DC-4374-BC17-F04175875AB8}" ShortID="862385978">
-					<PropertyList>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-14</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
+				<Sound Name="SFX_Craft_01" ID="{BF3019D1-0CDB-40AE-80D2-21FA97D5AA05}" ShortID="779683849">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
@@ -20,16 +13,258 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="wii_sports_intro_music_hdmp3converter" ID="{0D376C48-6175-4AEF-9C40-98ACBC833C19}">
+						<AudioFileSource Name="SFX_Craft_01" ID="{A752C2E6-B5FC-4D62-A938-ADD76DD8E789}">
 							<Language>SFX</Language>
-							<AudioFile>wii_sports_intro_music_hdmp3converter.wav</AudioFile>
+							<AudioFile>SFX_Craft_01.wav</AudioFile>
 							<MediaIDList>
-								<MediaID ID="541577458"/>
+								<MediaID ID="968652939"/>
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="wii_sports_intro_music_hdmp3converter" ID="{0D376C48-6175-4AEF-9C40-98ACBC833C19}" Platform="Linked"/>
+						<ActiveSource Name="SFX_Craft_01" ID="{A752C2E6-B5FC-4D62-A938-ADD76DD8E789}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SFX_Dig_01" ID="{7175882E-1A47-428E-AA29-8DB58CD2694D}" ShortID="51383980">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Dig_01" ID="{12B16950-8106-4C77-B745-66A15B528786}">
+							<Language>SFX</Language>
+							<AudioFile>SFX_Dig_01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="650867035"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Dig_01" ID="{12B16950-8106-4C77-B745-66A15B528786}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SFX_MetalGate_Close_01" ID="{4E98FD77-ABE5-4C6B-A637-07ACBAD32AD4}" ShortID="13615948">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_MetalGate_Close_01" ID="{126F3CD6-0364-41A2-8DEC-E8DCB9323904}">
+							<Language>SFX</Language>
+							<AudioFile>SFX_MetalGate_Close_01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="60444278"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_MetalGate_Close_01" ID="{126F3CD6-0364-41A2-8DEC-E8DCB9323904}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SFX_MetalGate_Open_01" ID="{EB6A7A0A-6B6E-4122-8577-80DE1229FE88}" ShortID="841547887">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_MetalGate_Open_01" ID="{5B035F5D-DFC8-4BE7-9B5F-3859B944B9B9}">
+							<Language>SFX</Language>
+							<AudioFile>SFX_MetalGate_Open_01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="468467988"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_MetalGate_Open_01" ID="{5B035F5D-DFC8-4BE7-9B5F-3859B944B9B9}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SFX_Place_Tombstone_01" ID="{B4C49EFD-4171-423C-A49A-06CECA765800}" ShortID="479317414">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Place_Tombstone_01" ID="{828638F5-D3A3-4F81-AB71-7E3E67089EDA}">
+							<Language>SFX</Language>
+							<AudioFile>SFX_Place_Tombstone_01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="170175819"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Place_Tombstone_01" ID="{828638F5-D3A3-4F81-AB71-7E3E67089EDA}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SFX_Take_Flower_01" ID="{953138A1-8848-44CD-B7CF-05A2C1F857A8}" ShortID="552567807">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Take_Flower_01" ID="{A50DD5B0-E13D-4779-895F-91AA73C17BC5}">
+							<Language>SFX</Language>
+							<AudioFile>SFX_Take_Flower_01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="296223605"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Take_Flower_01" ID="{A50DD5B0-E13D-4779-895F-91AA73C17BC5}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SFX_Take_Flower_02" ID="{B53DD603-4123-40A0-98CC-D6ED27B3205E}" ShortID="208124368">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Take_Flower_02" ID="{A1CEEE56-B8AA-4BD3-B391-09E620B471B1}">
+							<Language>SFX</Language>
+							<AudioFile>SFX_Take_Flower_02.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="577966438"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Take_Flower_02" ID="{A1CEEE56-B8AA-4BD3-B391-09E620B471B1}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SFX_Take_Rock_01" ID="{7C89E2D0-F995-41F2-A5FE-9D88BB7D16D8}" ShortID="539495788">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Take_Rock_01" ID="{541CA9D7-6621-40D0-ADC2-12D424EB37A6}">
+							<Language>SFX</Language>
+							<AudioFile>SFX_Take_Rock_01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="475972662"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Take_Rock_01" ID="{541CA9D7-6621-40D0-ADC2-12D424EB37A6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SFX_Take_Rock_02" ID="{C8067125-0D86-41AD-AE66-6503E85C8ABF}" ShortID="717099093">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Take_Rock_02" ID="{52A970A8-D666-49FB-8E3D-68AE15D3C697}">
+							<Language>SFX</Language>
+							<AudioFile>SFX_Take_Rock_02.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="893426108"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Take_Rock_02" ID="{52A970A8-D666-49FB-8E3D-68AE15D3C697}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SFX_Take_TreeBranch_01" ID="{B234D35C-8F93-4026-8662-F77559C0D933}" ShortID="525639010">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Take_TreeBranch_01" ID="{0DE7A507-BC29-427C-BD69-E42D10342BB1}">
+							<Language>SFX</Language>
+							<AudioFile>SFX_Take_TreeBranch_01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="806987047"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Take_TreeBranch_01" ID="{0DE7A507-BC29-427C-BD69-E42D10342BB1}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SFX_Take_TreeBranch_02" ID="{44843E34-4BF3-4C91-A338-F851CD90F129}" ShortID="349112787">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Take_TreeBranch_02" ID="{F9C9B619-E1F4-475A-96FF-68B8860615BF}">
+							<Language>SFX</Language>
+							<AudioFile>SFX_Take_TreeBranch_02.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="50355985"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Take_TreeBranch_02" ID="{F9C9B619-E1F4-475A-96FF-68B8860615BF}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SFX_Take_TreeBranch_03" ID="{212B9681-F9F5-4254-8C88-F69517B15FE2}" ShortID="848597982">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Take_TreeBranch_03" ID="{4B79BAFF-A937-4C21-8598-64FBFB8D0D7D}">
+							<Language>SFX</Language>
+							<AudioFile>SFX_Take_TreeBranch_03.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="693878794"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Take_TreeBranch_03" ID="{4B79BAFF-A937-4C21-8598-64FBFB8D0D7D}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

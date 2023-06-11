@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public static PlayerController Instance { get { if (instance == null) instance = FindObjectOfType<PlayerController>(); return instance; } }
     public Rigidbody rb { get; private set; }
     public Collider coll { get; private set; }
+    public Animator animator { get; private set; }
     public GameObject InteractSphere { get => interactSphere; }
 
     [Header("Player state")]
@@ -46,6 +47,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
+        animator = GetComponentInChildren<Animator>();
 
         Cursor.visible = false;
         //Cursor.lockState = CursorLockMode.Confined;

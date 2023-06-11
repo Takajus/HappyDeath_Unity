@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InteractHandler : BaseHandler
 {
+    public static ResidentData transportedResident;
+
     protected override bool HasWantedType(GameObject obj)
     {
         if (obj.GetComponent<IInteractable>() != null)
@@ -19,6 +21,12 @@ public class InteractHandler : BaseHandler
 
         UnHoverTarget(mouseTarget);
         UnHoverTarget(target);
+
+        if (transportedResident != null)
+        {
+            //Do something to clear the fact that i am transporting a soul
+            transportedResident = null;
+        }
     }
 
     protected override void HoverTarget(GameObject target)

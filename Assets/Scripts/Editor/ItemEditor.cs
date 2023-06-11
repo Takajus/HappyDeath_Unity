@@ -100,14 +100,10 @@ public class ItemEditor : Editor
         AssetDatabase.SaveAssets();*/
 
         textTitleColor = new Color(0.9f,0f,0f);
-
     }
 
     public void ShowResourceUI()
     {
-
-
-
         GUILayout.BeginHorizontal("box");
         //EditorGUILayout.LabelField("Prefab");
         source.Prefab = (GameObject)EditorGUILayout.ObjectField("Prefab", source.Prefab, typeof(GameObject), false);
@@ -155,6 +151,7 @@ public class ItemEditor : Editor
         GUILayout.BeginHorizontal("box");
         //EditorGUILayout.LabelField("Prefab");
         source.Prefab = (GameObject)EditorGUILayout.ObjectField("Prefab",source.Prefab, typeof(GameObject), false);
+        source.Prefab = (GameObject)EditorGUILayout.ObjectField("Prefab",source.Prefab, typeof(GameObject), false);
         GUILayout.EndHorizontal();
 
         //EditorGUILayout.Space(20f);
@@ -190,6 +187,8 @@ public class ItemEditor : Editor
         source.Description = EditorGUILayout.TextField("Description", source.Description);
         source.Amount = EditorGUILayout.IntField("Amount", source.Amount);
         source.Placeable = EditorGUILayout.Toggle("Placeable", source.Placeable);
+
+        source.recipe = (Recipe)EditorGUILayout.ObjectField("Recipe", source.recipe, typeof(Recipe), false);
 
         textTitleColor = new Color(0f, 0f, 0.9f);
     }

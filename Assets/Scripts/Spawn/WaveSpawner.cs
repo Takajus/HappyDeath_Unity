@@ -1,3 +1,4 @@
+using Fungus;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using Random = UnityEngine.Random;
 public class WaveSpawner : MonoBehaviour
 {
     public enum SpawnState { SPAWNING, WAITING, COUNTING };
+    public QuestManager QM;
 
     [Serializable]
     public class Wave
@@ -22,7 +24,7 @@ public class WaveSpawner : MonoBehaviour
     private int nextWave = 0;
 
     public Transform[] spawnPoints;
-
+    public GameObject npcTest;
 
     public float timeBetweenWaves = 3f;
     private float waveCountdown;
@@ -32,6 +34,7 @@ public class WaveSpawner : MonoBehaviour
     private bool isDay = false;
     private SpawnState state = SpawnState.COUNTING;
     private GameObject missy = null;
+    
 
     private void Start()
     {
@@ -49,8 +52,8 @@ public class WaveSpawner : MonoBehaviour
             SpawnUpdat();
         }
         else
-        {
-            if (missy)
+        { //Condition a modifier a l'avenir
+            if (missy != null && missy.activeInHierarchy)
             {
                 missy.SetActive(false);
                
@@ -149,7 +152,7 @@ public class WaveSpawner : MonoBehaviour
 
         for(int i = 0; i < _wave.count; i++)
         {
-
+            _wave.npc.GetComponent<MissyQuest>().questManager = QM;
             SpawnNpc(_wave.npc);
             yield return new WaitForSeconds(1f / _wave.rate);
         }
@@ -171,8 +174,9 @@ public class WaveSpawner : MonoBehaviour
 
         if (missy == null)
         {
-            missy = Instantiate(_npc, _sp.position, _sp.rotation);
-           
+            missy = npcTest;
+         missy.SetActive(true);
+            
         }
         else
         {

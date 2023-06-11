@@ -14,6 +14,7 @@ public class DisplayRecipes : MonoBehaviour
         public Image buttonImage;
         public Image background;
         public Image item;
+        public Image icon;
         public TextMeshProUGUI name;
         [Header("Ingredients")]
         public Image imageIngredients_1;
@@ -48,14 +49,14 @@ public class DisplayRecipes : MonoBehaviour
         if (scriptableRecipe == null)
             return;
 
-        setupButton.buttonImage.sprite = scriptableRecipe.Sprite;
+        setupButton.icon.sprite = scriptableRecipe.Sprite;
     }
     public void UI_ClickedOnMe()
     {
         DisplayInformations();
     }
 
-    private void DisplayInformations()
+    public void DisplayInformations()
     {
         if (scriptableRecipe == null)
             return;

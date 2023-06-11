@@ -21,4 +21,6 @@ public class Item : ScriptableObject
     public string Description;
     public int Amount;
     public bool Placeable;
+
+    public Recipe recipe;
 }

@@ -13,18 +13,32 @@ MonoBehaviour:
   m_Name: InventoryDatabase
   m_EditorClassIdentifier: 
   items:
+  - {fileID: 11400000, guid: cf5f8d4ed0c2e0e4d9bed8fda8b186e8, type: 2}
   - {fileID: 11400000, guid: 54234a186689e9e45acdd37f7d9b5798, type: 2}
-  - {fileID: 11400000, guid: 4c2cc2f8cb7ab804dac65a82443a314f, type: 2}
   - {fileID: 11400000, guid: 3201638a0fa4b5145a040712d184210e, type: 2}
-  - {fileID: 11400000, guid: 7fa2e0cee1d20424cbf4266b35fbfc03, type: 2}
-  - {fileID: 11400000, guid: 645b90f830528bd4cbd41ce4e4435438, type: 2}
   - {fileID: 11400000, guid: d79a0814e596463448d27095c024ed87, type: 2}
+  - {fileID: 11400000, guid: 7fa2e0cee1d20424cbf4266b35fbfc03, type: 2}
   - {fileID: 11400000, guid: 4fa378393c5aa4f409b2b25a93f75b4d, type: 2}
+  - {fileID: 11400000, guid: 645b90f830528bd4cbd41ce4e4435438, type: 2}
   - {fileID: 11400000, guid: f68116be4e14f3a48ab64c152f692af5, type: 2}
   unlockedRecipes: []
   allRecipes:
   - {fileID: 11400000, guid: 7525359260fa58d46af6ef6297de71fb, type: 2}
   - {fileID: 11400000, guid: c69c82ba2c024b8459b5ae9d4eeae174, type: 2}
   - {fileID: 11400000, guid: 87f97b6108f8ef34fa7ba87637355172, type: 2}
+  - {fileID: 11400000, guid: 4d25f8fee056139429ffa51c0d916bee, type: 2}
   unlockedResidents: []
-  allResidents: []
+  allResidents:
+  - {fileID: 11400000, guid: 2c960dc54edd94d4ba261ac58e4bf337, type: 2}
+  - {fileID: 11400000, guid: a5f502e921bfe7e449965a4b20ea2a4b, type: 2}
+  - {fileID: 11400000, guid: 44ee3ecf5dbc14b4da3e40bee5c673f0, type: 2}
+  - {fileID: 11400000, guid: 65a7778fddf97db45bbc7695ee1e4225, type: 2}
+  - {fileID: 11400000, guid: 50eab7d7d3e02e24a9935d19926f6ff4, type: 2}
+  startingItems: []
+  startingRecipes: []
+  startingResidents:
+  - {fileID: 11400000, guid: 2c960dc54edd94d4ba261ac58e4bf337, type: 2}
+  - {fileID: 11400000, guid: a5f502e921bfe7e449965a4b20ea2a4b, type: 2}
+  - {fileID: 11400000, guid: 44ee3ecf5dbc14b4da3e40bee5c673f0, type: 2}
+  - {fileID: 11400000, guid: 65a7778fddf97db45bbc7695ee1e4225, type: 2}
+  - {fileID: 11400000, guid: 50eab7d7d3e02e24a9935d19926f6ff4, type: 2}

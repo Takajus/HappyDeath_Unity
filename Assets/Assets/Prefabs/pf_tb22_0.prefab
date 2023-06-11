@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4b21a569211625c48bebfb0c2506ad87,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -125.795044
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4b21a569211625c48bebfb0c2506ad87,
         type: 3}
@@ -25,7 +25,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4b21a569211625c48bebfb0c2506ad87,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -183.61813
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4b21a569211625c48bebfb0c2506ad87,
         type: 3}
@@ -40,12 +40,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4b21a569211625c48bebfb0c2506ad87,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4b21a569211625c48bebfb0c2506ad87,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4b21a569211625c48bebfb0c2506ad87,
         type: 3}
@@ -70,7 +70,36 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4b21a569211625c48bebfb0c2506ad87,
         type: 3}
       propertyPath: m_Name
-      value: fbx_tombstone_hourglass
+      value: pf_tb22_0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b21a569211625c48bebfb0c2506ad87, type: 3}
+--- !u!1 &7973063819054704940 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4b21a569211625c48bebfb0c2506ad87,
+    type: 3}
+  m_PrefabInstance: {fileID: 7090753360966145149}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5216683056970642825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7973063819054704940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 330076f8b818e4740914a43f0cb53ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  validMat: {fileID: 0}
+  invalidMat: {fileID: 0}
+  actualObject: {fileID: 0}
+  previewObject: {fileID: 0}
+  item: {fileID: 0}
+  xRange: 2
+  zRange: 2
+  tileDetectionList:
+  - x: 0
+    z: 0
+    needDugTile: 1

@@ -23,6 +23,10 @@ public class Tile : MonoBehaviour, IInteractable, IDiggable
     [SerializeField] Material hoverMaterial;
     [SerializeField] Material selectMaterial;
     [SerializeField] GameObject digDecal;
+    [SerializeField] GameObject digDecalUp;
+    [SerializeField] GameObject digDecalDown;
+    [SerializeField] GameObject digDecalLeft;
+    [SerializeField] GameObject digDecalRight;
 
     private void Start()
     {
@@ -65,12 +69,14 @@ public class Tile : MonoBehaviour, IInteractable, IDiggable
     {
         digDecal.SetActive(true);
         IsDug = true;
+        UpdateDigDecal(true);
     }
 
     public void Fill()
     {
         digDecal.SetActive(false);
         IsDug = false;
+        UpdateDigDecal(true);
     }
 
     public void DigHover()
@@ -81,5 +87,61 @@ public class Tile : MonoBehaviour, IInteractable, IDiggable
     public void DigUnHover()
     {
         UnHover();
+    }
+
+    public void UpdateDigDecal(bool propagate, Tile target = null)
+    {
+        if (!isDug)
+        {
+            digDecal.SetActive(false);
+            digDecalLeft.SetActive(false);
+            digDecalRight.SetActive(false);
+            digDecalUp.SetActive(false);
+            digDecalDown.SetActive(false);
+
+            foreach (var neighbor in neighbors)
+            {
+                if (propagate)
+                    neighbor.UpdateDigDecal(false);
+            }
+
+            return;
+        }
+
+        digDecal.SetActive(true);
+        foreach (var neighbor in neighbors)
+        {
+            if (propagate)
+                neighbor.UpdateDigDecal(false);
+
+            if (neighbor.x == x - 1)
+            {
+                if (neighbor.isDug)
+                    digDecalLeft.SetActive(true);
+                else
+                    digDecalLeft.SetActive(false);
+            }
+            else if (neighbor.x == x + 1)
+            {
+                if (neighbor.isDug)
+                    digDecalRight.SetActive(true);
+                else
+                    digDecalRight.SetActive(false);
+            }
+            else if (neighbor.z == z - 1)
+            {
+                if (neighbor.isDug)
+                    digDecalDown.SetActive(true);
+                else
+                    digDecalDown.SetActive(false);
+            }
+            else if (neighbor.z == z + 1)
+            {
+                if (neighbor.isDug)
+                    digDecalUp.SetActive(true);
+                else
+                    digDecalUp.SetActive(false);
+            }
+        }
     }
 }
