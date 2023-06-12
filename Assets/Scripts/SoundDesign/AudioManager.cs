@@ -35,14 +35,6 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.X))
-        {
-            PlaySound(Flower);
-        }
-    }
-
     public void PlaySound(AK.Wwise.Event wwise_event)
     {
         wwise_event.Post(gameObject);
