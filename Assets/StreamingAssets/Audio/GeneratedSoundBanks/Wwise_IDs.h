@@ -14,7 +14,14 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID CRAFT = 2863552425U;
+        static const AkUniqueID DAY_MUSIC = 3703337933U;
         static const AkUniqueID DIG = 445985471U;
+        static const AkUniqueID FOOTSTEPS_DIRT = 1565032450U;
+        static const AkUniqueID FOOTSTEPS_GHOST = 1578778902U;
+        static const AkUniqueID FOOTSTEPS_GRASS = 7365553U;
+        static const AkUniqueID FOOTSTEPS_STONE = 307640020U;
+        static const AkUniqueID FOOTSTEPS_WOOD = 1732241522U;
+        static const AkUniqueID MENU_MUSIC = 4055567060U;
         static const AkUniqueID METALGATE_CLOSE = 1860438862U;
         static const AkUniqueID METALGATE_OPEN = 921440522U;
         static const AkUniqueID PLACE_TOMBSTONE = 269164602U;
