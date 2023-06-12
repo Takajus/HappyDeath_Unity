@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{40BD4E17-C8D9-4B5F-847F-240587C11A9D}" SchemaVersion="110" RootDocumentID="{D901BAB3-A722-4A8C-A67C-7D2206AD7293}" ParentDocumentID="{D901BAB3-A722-4A8C-A67C-7D2206AD7293}">
+	<Events>
+		<WorkUnit Name="WOLF" ID="{40BD4E17-C8D9-4B5F-847F-240587C11A9D}" OwnerID="{0BE8E306-86C8-49CC-A040-945B9667BFCF}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Play_VOX_Wolf" ID="{11717FED-3EA5-4313-B854-A73E5A245651}">
+					<ChildrenList>
+						<Action Name="" ID="{2E40934C-B503-4836-A299-8E05C0560782}" ShortID="172131830">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOX_Wolf" ID="{E0928A5E-2C70-4276-BBD3-6F14ECC9390D}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_VOX_Wolf" ID="{9CEB9013-A1CF-4199-B9CE-FDF7A306B270}">
+					<ChildrenList>
+						<Action Name="" ID="{EA59849C-FD19-4544-9D27-FD031F7B1D27}" ShortID="246700375">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VOX_Wolf" ID="{E0928A5E-2C70-4276-BBD3-6F14ECC9390D}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
