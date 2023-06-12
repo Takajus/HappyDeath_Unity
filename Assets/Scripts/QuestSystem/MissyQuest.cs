@@ -4,26 +4,44 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+
+[System.Serializable]
+public class QuestData
+{
+    public GameObject npc;
+    public List<Quest> availableQuests = new List<Quest>();
+    public List<GameObject> dialogList = new List<GameObject>();
+}
 public class MissyQuest : MonoBehaviour, IInteractable
 {
     public QuestManager questManager;
-    public List<Quest> availableQuests = new List<Quest>();
-    public List<GameObject> dialogList  = new List<GameObject>();
+
+    public List<QuestData> questDataList = new List<QuestData>();
     private int currentQuestIndex = 0;
+
+
+    private void Start()
+    {
+        questManager = QuestManager.Instance;
+        if (questDataList.Count <= 0)
+        {
+            Debug.Log("NO Quest available");
+        }
+    }
 
     public void EndInteract()
     {
         if (currentQuestIndex > 0)
         {
-            if (!availableQuests[currentQuestIndex - 1].isCompleted)
+            if (!questDataList[currentQuestIndex - 1].availableQuests[currentQuestIndex - 1].isCompleted)
             {
                 Debug.Log("Last Quest not finished yet");
                 return;
             }
         }
-
-        GiveQuest();
         Debug.Log("Got Quest " + currentQuestIndex);
+        GiveQuest();
+        
     }
     
     public InteractMode GetInteractMode()
@@ -35,25 +53,20 @@ public class MissyQuest : MonoBehaviour, IInteractable
     public void GiveQuest()
     {
        
-        if (currentQuestIndex < availableQuests.Count && questManager.currentQuest == null)
+        if (currentQuestIndex < questDataList.Count && questManager.currentQuest == null)
         {
-            Quest quest = availableQuests[currentQuestIndex];
+            Quest quest = questDataList[currentQuestIndex].availableQuests[currentQuestIndex];
 
             // Remove the quest from the available quests list
-            availableQuests.RemoveAt(currentQuestIndex);
+            questDataList.RemoveAt(currentQuestIndex);
 
             // Send the quest to the QuestManager to accept
             questManager.AcceptQuest(quest);
 
             
         }
-
+        currentQuestIndex++;
      
-    }
-
-    private void Update()
-    {
-
     }
 
     public void Hover()
@@ -68,13 +81,13 @@ public class MissyQuest : MonoBehaviour, IInteractable
 
         if (currentQuestIndex > 0)
         {
-            if (!availableQuests[currentQuestIndex - 1].isCompleted)
+            if (!questDataList[currentQuestIndex - 1].availableQuests[currentQuestIndex - 1].isCompleted)
             {
                 Debug.Log("Last Quest not finished yet");
                 return;
             }
         }
-        dialogList[currentQuestIndex].gameObject.SetActive(true);
+        questDataList[currentQuestIndex].dialogList[currentQuestIndex].SetActive(true);
         Debug.Log("Try lunching the message");
         EndInteract();
 
@@ -87,18 +100,7 @@ public class MissyQuest : MonoBehaviour, IInteractable
         
     }
 
-    private void Start()
-    {
-        if(availableQuests.Count != dialogList.Count)
-        {
-            Debug.LogWarning("Le n de dialog ne correspond pas au n de quest");
-        }
-
-      if(availableQuests.Count <= 0)
-        {
-            Debug.Log("NO Quest available");
-        }
-    }
+   
 
 
 
