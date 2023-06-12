@@ -1119,6 +1119,220 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+				<RandomSequenceContainer Name="VOX_Wolf" ID="{E0928A5E-2C70-4276-BBD3-6F14ECC9390D}" ShortID="548173769">
+					<PropertyList>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="VOX_Wolf_Ono_01" ID="{EA4C627A-CB91-408B-877E-8530944D167B}" ShortID="147836087">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOX_Wolf_Ono_01" ID="{78576D3F-B5E8-4BE3-832B-53E88F646BBF}">
+									<Language>SFX</Language>
+									<AudioFile>VOX_Wolf_Ono_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="815467319"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOX_Wolf_Ono_01" ID="{78576D3F-B5E8-4BE3-832B-53E88F646BBF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOX_Wolf_Ono_02" ID="{B502D5DA-B71C-4F05-B2DB-E130AC3677AC}" ShortID="550537702">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOX_Wolf_Ono_02" ID="{2A986E3D-0B0A-4134-B3FE-906ED2DD5F53}">
+									<Language>SFX</Language>
+									<AudioFile>VOX_Wolf_Ono_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="776076101"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOX_Wolf_Ono_02" ID="{2A986E3D-0B0A-4134-B3FE-906ED2DD5F53}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOX_Wolf_Ono_03" ID="{10997490-33E5-4E4D-92BA-0C94A246E2DB}" ShortID="564536943">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOX_Wolf_Ono_03" ID="{657B42FE-C01C-496A-9A8C-F04318C522C0}">
+									<Language>SFX</Language>
+									<AudioFile>VOX_Wolf_Ono_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="575975576"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOX_Wolf_Ono_03" ID="{657B42FE-C01C-496A-9A8C-F04318C522C0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOX_Wolf_Ono_04" ID="{9AD86E5F-5DEE-44A3-B156-455DB6C84C06}" ShortID="14601822">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOX_Wolf_Ono_04" ID="{B30B902E-2208-411D-B1B3-05D44E74B52A}">
+									<Language>SFX</Language>
+									<AudioFile>VOX_Wolf_Ono_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="57643163"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOX_Wolf_Ono_04" ID="{B30B902E-2208-411D-B1B3-05D44E74B52A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOX_Wolf_Ono_05" ID="{1B66AB5E-86AF-4874-ACEB-483B44075873}" ShortID="896286403">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOX_Wolf_Ono_05" ID="{2D337957-46BE-4B93-9105-3F077B106412}">
+									<Language>SFX</Language>
+									<AudioFile>VOX_Wolf_Ono_05.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="526742874"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOX_Wolf_Ono_05" ID="{2D337957-46BE-4B93-9105-3F077B106412}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOX_Wolf_Ono_07" ID="{20E8BECB-0B20-4E25-907E-AD20355D2ECD}" ShortID="286171044">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOX_Wolf_Ono_07" ID="{C53BB6C0-B86E-4275-BCE6-8B1F03D0876B}">
+									<Language>SFX</Language>
+									<AudioFile>VOX_Wolf_Ono_07.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="322850258"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOX_Wolf_Ono_07" ID="{C53BB6C0-B86E-4275-BCE6-8B1F03D0876B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOX_Wolf_Ono_08" ID="{C5A47EA1-82C4-4A66-8E8D-6CD6348C9122}" ShortID="583885474">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOX_Wolf_Ono_08" ID="{B50BEFA0-BE49-4A92-AC5E-68F473B62068}">
+									<Language>SFX</Language>
+									<AudioFile>VOX_Wolf_Ono_08.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="533958594"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOX_Wolf_Ono_08" ID="{B50BEFA0-BE49-4A92-AC5E-68F473B62068}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOX_Wolf_Ono_09" ID="{AC69E889-4E91-4EC9-A136-4866A0DAD67C}" ShortID="867785446">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOX_Wolf_Ono_09" ID="{4799CBA9-85CF-464A-A51C-35641F06CAF1}">
+									<Language>SFX</Language>
+									<AudioFile>VOX_Wolf_Ono_09.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="614046872"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOX_Wolf_Ono_09" ID="{4799CBA9-85CF-464A-A51C-35641F06CAF1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VOX_Wolf_Ono_10" ID="{AE92A1EC-6F2E-4C6E-BE10-92DD2F40D79A}" ShortID="983878047">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1C24D609-BBB6-4068-BBC2-CC15AA680CC0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1FDF459F-5BC8-4DFC-88F9-79BC7E00D37B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VOX_Wolf_Ono_10" ID="{75BC3780-8244-45A7-BB05-44F0642882E8}">
+									<Language>SFX</Language>
+									<AudioFile>VOX_Wolf_Ono_10.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="869304097"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VOX_Wolf_Ono_10" ID="{75BC3780-8244-45A7-BB05-44F0642882E8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

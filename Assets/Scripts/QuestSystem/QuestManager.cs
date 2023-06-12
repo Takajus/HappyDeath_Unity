@@ -15,12 +15,22 @@ public class QuestManager :  MonoBehaviour
     // Method to accept a quest
     public void AcceptQuest(Quest quest)
     {
-        if (currentQuest == null)
+        // Vérifier si le joueur n'a pas déjà une quête en cours
+        if (currentQuest != null)
         {
-            currentQuest = quest;
-            currentQuestIndex++;
-            UpdateQuestUI();
+            Debug.Log("Vous avez déjà une quête en cours.");
+            return;
         }
+
+        // Assigner la nouvelle quête en cours
+        currentQuest = quest;
+        currentQuestIndex++;
+
+        // Ajouter la quête à la liste des quêtes actives
+        activeQuests.Add(currentQuest);
+
+        // Mettre à jour l'interface utilisateur
+        UpdateQuestUI();
     }
 
     public void CheckQuestProgress(Quest quest)
@@ -42,6 +52,9 @@ public class QuestManager :  MonoBehaviour
     {
         // Marquer la quête comme complétée
         quest.isCompleted = true;
+
+        // Supprimer la quête terminée de la liste des quêtes actives
+        activeQuests.Remove(quest);
 
         currentQuest = null;
         UpdateQuestUI();
