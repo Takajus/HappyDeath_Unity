@@ -3,7 +3,21 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
-    public AK.Wwise.Event Flower;
+    public AK.Wwise.Event Craft;
+    public AK.Wwise.Event Day_Music;
+    public AK.Wwise.Event Dig;
+    public AK.Wwise.Event Footsteps_Dirt;
+    public AK.Wwise.Event Footsteps_Ghost;
+    public AK.Wwise.Event Footsteps_Grass;
+    public AK.Wwise.Event Footsteps_Stone;
+    public AK.Wwise.Event Footsteps_Wood;
+    public AK.Wwise.Event Menu_Music;
+    public AK.Wwise.Event MetalGate_Close;
+    public AK.Wwise.Event MetalGate_Open;
+    public AK.Wwise.Event Place_Tombstone;
+    public AK.Wwise.Event Take_Flower;
+    public AK.Wwise.Event Take_Rock;
+    public AK.Wwise.Event Take_TreeBranch;
 
 
     void Awake()
