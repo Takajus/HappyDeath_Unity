@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 
-public class Resident : MonoBehaviour
+public class Resident : MonoBehaviour, IInteractable
 {
     public ResidentData ResidentData;
 
@@ -17,11 +17,15 @@ public class Resident : MonoBehaviour
     private int residentAmount = 0;
     float negativeMood = 0f, positiveMood = 0f;
 
+    private Dialogue _dialogue;
+
     private void Awake()
     {
         // TODO: Modifier la list pour utiliser celle de la DataBase
         //MoodManager.residentList.Add(this);
         transform.GetComponent<Collider>().enabled = false;
+        _dialogue = transform.GetComponent<Dialogue>();
+        _dialogue.dialog = ResidentData.dialogueData;
 
         DayCycleEvents.OnNightStart += Day;
         DayCycleEvents.OnDayStart += Night;
@@ -94,22 +98,6 @@ public class Resident : MonoBehaviour
                         }
                         continue;
                     case Category.Object:
-                        /*PickUpItem otherItem = col.gameObject.GetComponent<PickUpItem>();
-                        if(!otherItem) break;
-                        
-                        if (elementPreference.objectLike.ToString() == otherItem.gameObject.name)
-                        {
-                            if (elementPreference.likeDislike == LikeDislike.Like)
-                            {
-                                ++positiveMood;
-                                // Debug.Log("I LIKE this Object");
-                            }
-                            else
-                            {
-                                ++negativeMood;
-                                // Debug.LogWarning("I HATE this Object");
-                            }
-                        }*/
                         
                         Build otherBuild = col.gameObject.GetComponent<Build>();
                         if(!otherBuild) break;
@@ -222,5 +210,30 @@ public class Resident : MonoBehaviour
                 ++negativeMood;
             }
         }
+    }
+
+    public void Hover()
+    {
+        
+    }
+
+    public void UnHover()
+    {
+        
+    }
+
+    public void Interact()
+    {
+        _dialogue.NextDialog();
+    }
+
+    public void EndInteract()
+    {
+        
+    }
+
+    public InteractMode GetInteractMode()
+    {
+        throw new NotImplementedException();
     }
 }

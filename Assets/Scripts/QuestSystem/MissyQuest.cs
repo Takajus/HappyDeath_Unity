@@ -10,18 +10,12 @@ public class MissyQuest : MonoBehaviour, IInteractable
     public List<Quest> availableQuests = new List<Quest>();
     public List<GameObject> dialogList  = new List<GameObject>();
     private int currentQuestIndex = 0;
+    [SerializeField] private GameObject E_Input;
+
+    private bool temp = false;
 
     public void EndInteract()
     {
-        if (currentQuestIndex > 0)
-        {
-            if (!availableQuests[currentQuestIndex - 1].isCompleted)
-            {
-                Debug.Log("Last Quest not finished yet");
-                return;
-            }
-        }
-
         GiveQuest();
         Debug.Log("Got Quest " + currentQuestIndex);
     }
@@ -45,27 +39,20 @@ public class MissyQuest : MonoBehaviour, IInteractable
             // Send the quest to the QuestManager to accept
             questManager.AcceptQuest(quest);
 
-            
+            currentQuestIndex++;
         }
 
      
     }
 
-    private void Update()
-    {
-
-    }
-
     public void Hover()
     {
-        
+        E_Input.SetActive(true);
     }
 
     public void Interact()
     {
-
-       
-
+        
         if (currentQuestIndex > 0)
         {
             if (!availableQuests[currentQuestIndex - 1].isCompleted)
@@ -76,15 +63,19 @@ public class MissyQuest : MonoBehaviour, IInteractable
         }
         dialogList[currentQuestIndex].gameObject.SetActive(true);
         Debug.Log("Try lunching the message");
-        EndInteract();
-
+        /*if (!temp)
+        {
+            temp = true;
+            QuestSystem.Instance.GetDemoTask(1);
+        }*/
+        
       
     }
 
 
     public void UnHover()
     {
-        
+        E_Input.SetActive(false);
     }
 
     private void Start()
@@ -94,16 +85,10 @@ public class MissyQuest : MonoBehaviour, IInteractable
             Debug.LogWarning("Le n de dialog ne correspond pas au n de quest");
         }
 
-      if(availableQuests.Count <= 0)
+        if(availableQuests.Count <= 0)
         {
             Debug.Log("NO Quest available");
         }
     }
-
-
-
-
-
-
-
+    
 }

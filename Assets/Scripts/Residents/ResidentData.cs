@@ -66,6 +66,9 @@ public class ResidentData : ScriptableObject
     [Header("Secret")]
     public string secret;
 
+    [Header("Dialog")] 
+    public DialogueData dialogueData;
+
     [HideInInspector]
     public bool isAssign;
 

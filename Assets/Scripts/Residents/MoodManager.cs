@@ -32,7 +32,7 @@ public class MoodManager : MonoBehaviour
 
     public void CalculateAverageMood()
     {
-        residentList = InventoryManager.Instance.inventoryDatabase.allResidents.FindAll(resid => resid.isAssign == true).ToList(); 
+        residentList = InventoryManager.Instance.inventoryDatabase.allResidents.FindAll(resid => resid.isAssign == true); 
 
         if (residentList.Count < 1)
         {
@@ -52,9 +52,5 @@ public class MoodManager : MonoBehaviour
             posBar.fillAmount = moodAverage;
         else
             negBar.fillAmount = -moodAverage;
-    }
-
-    private void Update()
-    {
     }
 }
