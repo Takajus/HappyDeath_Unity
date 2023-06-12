@@ -342,6 +342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6896312695502071701}
   - component: {fileID: 7766678889844581226}
+  - component: {fileID: 3880718036275593016}
   m_Layer: 0
   m_Name: pf_tb12_3
   m_TagString: Untagged
@@ -393,6 +394,19 @@ MonoBehaviour:
   - x: 0
     z: 0
     needDugTile: 1
+--- !u!65 &3880718036275593016
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6124701391334849839}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6708708, y: 1.1769118, z: 0.37385494}
+  m_Center: {x: -0.010439694, y: 0.5880368, z: 0.009265155}
 --- !u!1001 &2989240282800854236
 PrefabInstance:
   m_ObjectHideFlags: 0
