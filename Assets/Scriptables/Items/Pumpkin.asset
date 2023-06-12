@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f1f27c407c1e64ea2a8ffd83e0dfb4, type: 3}
+  m_Name: Pumpkin
+  m_EditorClassIdentifier: 
+  itemType: 0
+  Prefab: {fileID: 4699904037784363325, guid: ba7c7ebe3c570674ea5bd56698c2aa8b, type: 3}
+  Sprite: {fileID: 21300000, guid: 05ccd53483a554ca9b31f685fa76154a, type: 3}
+  Name: Pumpkin
+  Description: A lovely little pumpkin to decorate the tomb
+  Amount: 1
+  Placeable: 0
+  recipe: {fileID: 0}

@@ -92,6 +92,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1575293225287859714}
+  - component: {fileID: 3717777291610915474}
+  - component: {fileID: 4915647394707439465}
   m_Layer: 0
   m_Name: pf_mausoleum2
   m_TagString: Untagged
@@ -116,6 +118,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3717777291610915474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7435163825840828614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 330076f8b818e4740914a43f0cb53ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  validMat: {fileID: 0}
+  invalidMat: {fileID: 0}
+  actualObject: {fileID: 0}
+  previewObject: {fileID: 0}
+  item: {fileID: 0}
+  xRange: 2
+  zRange: 2
+  tileDetectionList:
+  - x: 0
+    z: 1
+    needDugTile: 1
+  - x: 0
+    z: 0
+    needDugTile: 1
+--- !u!65 &4915647394707439465
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7435163825840828614}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.73413765, y: 1.4642527, z: 1}
+  m_Center: {x: 0.13293117, y: 0.23212647, z: 0}
 --- !u!1 &8885700857692842822
 GameObject:
   m_ObjectHideFlags: 0
