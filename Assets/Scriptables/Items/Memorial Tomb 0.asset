@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35f1f27c407c1e64ea2a8ffd83e0dfb4, type: 3}
-  m_Name: Tombhouse
+  m_Name: Memorial Tomb 0
   m_EditorClassIdentifier: 
   itemType: 2
-  Prefab: {fileID: 4753215879862940257, guid: 1569239cb11ce504389481bd88652d26, type: 3}
-  Sprite: {fileID: 21300000, guid: 8c4c4175b67322440b6651ff84323203, type: 3}
-  Name: Golden Tomb
-  Description: What a shiny Tomb !
+  Prefab: {fileID: 292531919109643474, guid: f8bb8473997688b4ba3be28ebe5b7556, type: 3}
+  Sprite: {fileID: 21300000, guid: 0e206bb1b263f0c4bac103cfd69ebb6d, type: 3}
+  Name: Memorial Tomb
+  Description: A tombstone that looks like a heroic memorial.
   Amount: 0
   Placeable: 1
-  recipe: {fileID: 0}
+  recipe: {fileID: 11400000, guid: 4633e59d9b6226e43ac9b7a00e7e86db, type: 2}

@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ae8096f8d0e74444b152887f682e222, type: 3}
-  m_Name: Tombe3
+  m_Name: Classic Stone Tomb 5
   m_EditorClassIdentifier: 
-  Sprite: {fileID: 21300000, guid: 8c4c4175b67322440b6651ff84323203, type: 3}
+  Sprite: {fileID: 0}
   ingredient1:
-    ingredientType: {fileID: 11400000, guid: f68116be4e14f3a48ab64c152f692af5, type: 2}
-    IngredientAmount: 20
-  ingredient2:
     ingredientType: {fileID: 11400000, guid: 7fa2e0cee1d20424cbf4266b35fbfc03, type: 2}
-    IngredientAmount: 20
-  ingredient3:
+    IngredientAmount: 6
+  ingredient2:
     ingredientType: {fileID: 11400000, guid: 54234a186689e9e45acdd37f7d9b5798, type: 2}
-    IngredientAmount: 30
-  item: {fileID: 11400000, guid: 4fa378393c5aa4f409b2b25a93f75b4d, type: 2}
-  Name: Tomb House
-  Description: I want family to be able to live together so I though of this house.
+    IngredientAmount: 3
+  ingredient3:
+    ingredientType: {fileID: 0}
+    IngredientAmount: 0
+  item: {fileID: 11400000, guid: 3bc5e33339c7b68419b460f643110ca6, type: 2}
+  Name: Pumpkin Flower Ivy Classic Crossed Stone Tomb
+  Description: A Classic Crossed Stone Tomb with a wooden base and a stone cross
+    on top decorated with climbing ivy.
