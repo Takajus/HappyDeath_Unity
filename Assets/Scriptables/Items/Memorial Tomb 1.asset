@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f1f27c407c1e64ea2a8ffd83e0dfb4, type: 3}
+  m_Name: Memorial Tomb 1
+  m_EditorClassIdentifier: 
+  itemType: 2
+  Prefab: {fileID: 5184989054980762422, guid: 62f6068af059ef14ca31a7f73ceb48a9, type: 3}
+  Sprite: {fileID: 21300000, guid: 0e206bb1b263f0c4bac103cfd69ebb6d, type: 3}
+  Name: Floral Memorial Tomb
+  Description: A tombstone that looks like a heroic memorial decorated with flowers.
+  Amount: 0
+  Placeable: 1
+  recipe: {fileID: 11400000, guid: e371e446061ce2a4da28db4bfe86a103, type: 2}
