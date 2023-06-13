@@ -20,7 +20,7 @@ public class InventoryManager : MonoBehaviour
     public List<Item> Inventory { get => inventory; set => inventory = value; }
 
     public event Action<Item> OnItemAdded;
-    public event Action OnItemRemoved;
+    public event Action<Item> OnItemRemoved;
 
 //#if !UNITY_EDITOR
     private void Start()
@@ -145,7 +145,7 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        OnItemRemoved?.Invoke();
+        OnItemRemoved?.Invoke(itemToRemove);
         RefreshItemAmount();
     }
 
@@ -157,7 +157,7 @@ public class InventoryManager : MonoBehaviour
             {
                 if (inventory[i].Amount == 0)
                 {
-                    OnItemRemoved.Invoke();
+                    OnItemRemoved?.Invoke(itemToRemove);
                     inventory.Remove(itemToRemove);
                 }
 
