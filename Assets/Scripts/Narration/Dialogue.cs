@@ -20,6 +20,9 @@ public class Dialogue : MonoBehaviour
 
     public void NextDialog()
     {
+        if(dialog is null)
+            return;
+        
         if (dialog.index == 0)
         {
             DialogUI.instance.SetActive(true);
