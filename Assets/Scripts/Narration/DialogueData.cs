@@ -20,7 +20,7 @@ public class DialogueData : ScriptableObject
     public List<DialogueStruct> diagStructs = new List<DialogueStruct>();
     public DialogueStruct loopDiag;
     public bool isLooping = false;
-    [HideInInspector] public bool isDisplay;
+    [HideInInspector] public bool isDisplay = false;
     public int index;
     [SerializeField] private int startIndex = 0;
 

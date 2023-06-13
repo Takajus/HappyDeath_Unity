@@ -17,18 +17,10 @@ public class MoodManager : MonoBehaviour
 
     public float moodAverage;
     
-    private static MoodManager instance;
+    public static MoodManager instance;
 
-    public static MoodManager Instance
-    {
-        get
-        {
-            if (instance == null)
-                instance = FindObjectOfType<MoodManager>();
+    void Awake() { if (instance == null) { instance = this; DontDestroyOnLoad(gameObject); } else Destroy(gameObject); }
 
-            return instance;
-        } 
-    }
 
     public void CalculateAverageMood()
     {

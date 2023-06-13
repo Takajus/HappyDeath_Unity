@@ -43299,7 +43299,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questManager: {fileID: 660314475}
-  questDataList: []
+  questDataList:
+  - npc: {fileID: 0}
+    availableQuests: []
+    dialogList: []
   E_Input: {fileID: 2116332421}
 --- !u!114 &1874024187
 MonoBehaviour:
@@ -43313,7 +43316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57a75bdd243aff64d8e658c0b8b5acdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog: {fileID: 11400000, guid: d8280eeeb840e244ca222b40e21e3045, type: 2}
+  dialog: {fileID: 11400000, guid: 0e15c36d2478d314c95e40f372bda881, type: 2}
 --- !u!1 &1876013156
 GameObject:
   m_ObjectHideFlags: 0
@@ -48581,6 +48584,12 @@ PrefabInstance:
       objectReference: {fileID: 136679661}
     - target: {fileID: 4403977370250483127, guid: 8907cb3aaf137cf41984722b83b2ab6d,
         type: 3}
+      propertyPath: uiDialogAction
+      value: 
+      objectReference: {fileID: 2900648720791444003, guid: 0ac56734837cfea4ea5836dcab41a06e,
+        type: 3}
+    - target: {fileID: 4403977370250483127, guid: 8907cb3aaf137cf41984722b83b2ab6d,
+        type: 3}
       propertyPath: editorMultiplicatorValue
       value: 
       objectReference: {fileID: -6139957634266676123, guid: 0ac56734837cfea4ea5836dcab41a06e,
@@ -48619,7 +48628,7 @@ PrefabInstance:
     - target: {fileID: 4694489848926609841, guid: ed8a9a88ee684d94fa42061d71e84fde,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4694489848926609846, guid: ed8a9a88ee684d94fa42061d71e84fde,
         type: 3}

@@ -136,6 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79a06bc54b0e744690851bcb6250d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorDay: {fileID: 0}
+  animatorNight: {fileID: 0}
   canMove: 1
   isMoving: 0
   moveInput: {fileID: -888215069444558471, guid: 0ac56734837cfea4ea5836dcab41a06e,
@@ -167,7 +169,7 @@ MonoBehaviour:
   playerDayModel: {fileID: 3372458715222354080}
   playerNightModel: {fileID: 2626480119542600826}
   isDay: 0
-  transformationVFX: {fileID: 1389388095736820}
+  transformationVFX: {fileID: 2767618855800300711}
   book: {fileID: 0}
   craft: {fileID: 0}
   Missy: {fileID: 0}
@@ -327,6 +329,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1890893785315571764, guid: 308c118e4adffe74e81df29f4485e4e3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2744062662534144309, guid: 308c118e4adffe74e81df29f4485e4e3,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -435,12 +442,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1735810119669036074, guid: 308c118e4adffe74e81df29f4485e4e3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 308c118e4adffe74e81df29f4485e4e3, type: 3}
---- !u!198 &1389388095736820 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 659989257793987585, guid: 308c118e4adffe74e81df29f4485e4e3,
-    type: 3}
-  m_PrefabInstance: {fileID: 660955058418266101}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2351430628004409213 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2994289764064657544, guid: 308c118e4adffe74e81df29f4485e4e3,
@@ -450,6 +451,12 @@ GameObject:
 --- !u!1 &2626480119542600826 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3269348207237462927, guid: 308c118e4adffe74e81df29f4485e4e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 660955058418266101}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2767618855800300711 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3406024996427058002, guid: 308c118e4adffe74e81df29f4485e4e3,
     type: 3}
   m_PrefabInstance: {fileID: 660955058418266101}
   m_PrefabAsset: {fileID: 0}
