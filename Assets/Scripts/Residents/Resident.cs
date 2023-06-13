@@ -22,7 +22,7 @@ public class Resident : MonoBehaviour, IInteractable
     private void Awake()
     {
         // TODO: Modifier la list pour utiliser celle de la DataBase
-        //MoodManager.residentList.Add(this);
+        MoodManager.residentList.Add(ResidentData);
         transform.GetComponent<Collider>().enabled = false;
         _dialogue = transform.GetComponent<Dialogue>();
         _dialogue.dialog = ResidentData.dialogueData;
@@ -39,7 +39,7 @@ public class Resident : MonoBehaviour, IInteractable
 
     private void Night()
     {
-        if (ResidentData == null || !ResidentData.isAssign)
+        if (ResidentData == null /*|| !ResidentData.isAssign*/)
             return;
         
         transform.GetComponent<Collider>().enabled = true;
@@ -224,7 +224,9 @@ public class Resident : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+
         _dialogue.NextDialog();
+    
     }
 
     public void EndInteract()
