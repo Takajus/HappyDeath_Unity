@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlacementHandler : BaseHandler
 {
     public override bool IsInteracting { get => objectToPlace != null; }
-    GameObject objectToPlace = InventoryManager.HeldItem?.Prefab;
+    GameObject objectToPlace;
     int rotation = 180;
 
     [SerializeField] GameObject tempPrefab;
@@ -41,12 +41,17 @@ public class PlacementHandler : BaseHandler
         rotation = 180;
     }
 
+    public override void InitializeHandler()
+    {
+        GiveObject(InventoryManager.HeldItem?.Prefab);
+    }
+
     public void GiveObject(GameObject ob)
     {
         if (buildsParent)
-            objectToPlace = Instantiate(tempPrefab, buildsParent);
+            objectToPlace = Instantiate(ob, buildsParent);
         else
-            objectToPlace = Instantiate(tempPrefab);
+            objectToPlace = Instantiate(ob);
 
         objectToPlace.transform.eulerAngles = new Vector3(0, rotation, 0);
         objectToPlace.SetActive(false);

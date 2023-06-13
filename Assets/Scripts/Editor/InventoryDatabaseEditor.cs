@@ -9,6 +9,7 @@ public class InventoryDatabaseEditor : Editor
 {
     static string pathItem = "Assets/Scriptables/Items/";
     static string pathRecipe = "Assets/Scriptables/Recipes/";
+    static string pathResident = "Assets/Scriptables/Residents/";
     static string pathDatabase = "Assets/Scriptables/InventoryDatabase.asset";
     InventoryDatabase source;
 
@@ -51,13 +52,14 @@ public class InventoryDatabaseEditor : Editor
     {
         source = target as InventoryDatabase;
 
-        string[] paths = new string[2];
+        string[] paths = new string[3];
         paths[0] = pathItem;
         paths[1] = pathRecipe;
-
+        paths[2] = pathResident;
 
         source.items.Clear();
         source.allRecipes.Clear();
+        source.allResidents.Clear();
         foreach (var GUID in AssetDatabase.FindAssets("", paths))
         {
             foreach (var assetFind in AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GUIDToAssetPath(GUID)))
@@ -70,6 +72,10 @@ public class InventoryDatabaseEditor : Editor
                 else if (assetFind as Recipe)
                 {
                     source.allRecipes.Add((Recipe)assetFind);
+                }
+                else if (assetFind as ResidentData)
+                {
+                    source.allResidents.Add((ResidentData)assetFind);
                 }
             }
 
