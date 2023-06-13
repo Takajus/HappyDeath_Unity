@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FD54A367-568D-4AD9-9985-CD91D0E344D8}" SchemaVersion="110" RootDocumentID="{D901BAB3-A722-4A8C-A67C-7D2206AD7293}" ParentDocumentID="{D901BAB3-A722-4A8C-A67C-7D2206AD7293}">
+	<Events>
+		<WorkUnit Name="MUSIC" ID="{FD54A367-568D-4AD9-9985-CD91D0E344D8}" OwnerID="{D901BAB3-A722-4A8C-A67C-7D2206AD7293}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="15"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Event Name="Set_Music_Night" ID="{25D800F6-31AE-4526-A4E5-74A0F62FF69C}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="23"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{127718A2-D8D9-498F-930E-55F3845C18F2}" ShortID="978138051">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Night" ID="{0D22F4BF-94F7-49B9-A486-E529BBD8DCC5}" WorkUnitID="{760FC1D8-3DC3-4B8C-A830-B25AACA43227}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Set_Music_Day" ID="{6ED6286F-1E9E-4173-B809-BE7AC741A228}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="17"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{5A48201D-812E-4407-9645-01A362FC07BE}" ShortID="897428218">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Day" ID="{416270DC-C904-4BDA-95AB-D9EB6DC8FA9F}" WorkUnitID="{760FC1D8-3DC3-4B8C-A830-B25AACA43227}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Music_Switch_Container" ID="{40442730-4DDF-4A04-8E59-C3EBC7AB41DA}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="15"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{F17D0B90-2129-4A24-B569-843E6764513D}" ShortID="162799270">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Switch_Container" ID="{1F157996-66D1-4ED9-A5B4-9A6FA3E54718}" WorkUnitID="{9AC2A986-E7F2-42BD-8655-18F8B76AB0A6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Set_Music_Menu" ID="{8D81557C-5A03-4F0A-B29D-C052A456BF7E}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="21"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{F8E11D6A-F070-4FD4-B1CB-72E5968DC66D}" ShortID="801565213">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu" ID="{4951DD7E-6423-4364-AD1C-70ECD5334A03}" WorkUnitID="{760FC1D8-3DC3-4B8C-A830-B25AACA43227}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
