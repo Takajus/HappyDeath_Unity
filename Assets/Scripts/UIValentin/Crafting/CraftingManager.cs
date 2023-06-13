@@ -93,10 +93,22 @@ public class CraftingManager : MonoBehaviour
     private void RefreshIngredientsNeeded(CraftSetup newSelected)
     {
         selectedRecipe = newSelected;
+        
+        if (selectedRecipe.ScriptableRecipe.ingredient1.IngredientAmount > 0)
+            ingredientAmountNeeded_1.text = selectedRecipe.ScriptableRecipe.ingredient1.IngredientAmount.ToString();
+        else
+            ingredientAmountNeeded_1.text = "none";
 
-        ingredientAmountNeeded_1.text = selectedRecipe.ScriptableRecipe.ingredient1.IngredientAmount.ToString();
-        ingredientAmountNeeded_2.text = selectedRecipe.ScriptableRecipe.ingredient2.IngredientAmount.ToString();
-        ingredientAmountNeeded_3.text = selectedRecipe.ScriptableRecipe.ingredient3.IngredientAmount.ToString();
+
+        if (selectedRecipe.ScriptableRecipe.ingredient2.IngredientAmount > 0)
+            ingredientAmountNeeded_2.text = selectedRecipe.ScriptableRecipe.ingredient2.IngredientAmount.ToString();
+        else
+            ingredientAmountNeeded_2.text = "none";
+
+        if (selectedRecipe.ScriptableRecipe.ingredient3.IngredientAmount > 0)
+            ingredientAmountNeeded_3.text = selectedRecipe.ScriptableRecipe.ingredient3.IngredientAmount.ToString();
+        else
+            ingredientAmountNeeded_3.text = "none";
 
         RefreshIngredientsOwned();
     }

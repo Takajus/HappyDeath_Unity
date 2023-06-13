@@ -102,6 +102,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 005dc4eaa9bab1048a68db404233a259, type: 2}
+    - target: {fileID: 6056390267848042348, guid: 5ace8b6479f8853498924c33eb7bd6e0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ace8b6479f8853498924c33eb7bd6e0, type: 3}
 --- !u!1 &4194209824885932893 stripped
@@ -123,29 +128,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.2983283, z: 1}
   m_Center: {x: 0, y: 0.59818906, z: 0}
---- !u!114 &195447405078304854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4194209824885932893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 330076f8b818e4740914a43f0cb53ee0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  validMat: {fileID: 0}
-  invalidMat: {fileID: 0}
-  actualObject: {fileID: 0}
-  previewObject: {fileID: 0}
-  item: {fileID: 0}
-  xRange: 2
-  zRange: 2
-  tileDetectionList:
-  - x: 0
-    z: 0
-    needDugTile: 1
-  - x: 0
-    z: 1
-    needDugTile: 1
