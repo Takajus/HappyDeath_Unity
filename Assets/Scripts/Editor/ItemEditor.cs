@@ -151,7 +151,6 @@ public class ItemEditor : Editor
         GUILayout.BeginHorizontal("box");
         //EditorGUILayout.LabelField("Prefab");
         source.Prefab = (GameObject)EditorGUILayout.ObjectField("Prefab",source.Prefab, typeof(GameObject), false);
-        source.Prefab = (GameObject)EditorGUILayout.ObjectField("Prefab",source.Prefab, typeof(GameObject), false);
         GUILayout.EndHorizontal();
 
         //EditorGUILayout.Space(20f);

@@ -18,12 +18,14 @@ public class PickUpItem : MonoBehaviour, IInteractable
 
     public void Hover()
     {
-        E_Input.SetActive(true);
+        if (E_Input != null)
+            E_Input.SetActive(true);
     }
 
     public void UnHover()
     {
-        E_Input.SetActive(false);
+        if (E_Input != null)
+            E_Input.SetActive(false);
     }
 
     public void Interact()

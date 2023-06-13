@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85f9ff19cbb61e4c8f5c0f45557a422, type: 3}
+  m_Name: Sigfried
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4789098171402727913, guid: 85e584e4e5fda2648b752ef323e81c1b, type: 3}
+  residentName: 
+  description: This hero has experienced big wars and has yet to recover from the
+    "stupidity of humans".
+  sprite: {fileID: 21300000, guid: 03bc547cc0049594bae51f00903eedef, type: 3}
+  race: 2
+  role: 1
+  elementList:
+  - preferenceType: 0
+    race: 4
+    objectLike: 3
+    amount: 1
+    likeDislike: 1
+  - preferenceType: 1
+    race: 2
+    objectLike: 5
+    amount: 1
+    likeDislike: 1
+  - preferenceType: 1
+    race: 1
+    objectLike: 5
+    amount: 1
+    likeDislike: 0
+  secret: 
+  isAssign: 0
+  mood: 0

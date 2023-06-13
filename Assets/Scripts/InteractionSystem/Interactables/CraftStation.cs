@@ -18,7 +18,8 @@ public class CraftStation : MonoBehaviour, IInteractable
 
     public void Hover()
     {
-        E_Input.SetActive(true);
+        if (E_Input != null)
+            E_Input.SetActive(true);
     }
 
     public void Interact()
@@ -32,6 +33,7 @@ public class CraftStation : MonoBehaviour, IInteractable
 
     public void UnHover()
     {
-        E_Input.SetActive(false);
+        if (E_Input != null)
+            E_Input.SetActive(false);
     }
 }
