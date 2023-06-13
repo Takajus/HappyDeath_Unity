@@ -49,6 +49,7 @@ public class DisplayRecipes : MonoBehaviour
         if (scriptableRecipe == null)
             return;
 
+        setupButton.icon.color = Color.white;
         setupButton.icon.sprite = scriptableRecipe.Sprite;
     }
     public void UI_ClickedOnMe()
@@ -59,10 +60,13 @@ public class DisplayRecipes : MonoBehaviour
     public void DisplayInformations()
     {
         if (scriptableRecipe == null)
+        {
+            setupButton.icon.color = new Color(0, 0, 0, 0);
             return;
+        }
 
+        setupButton.icon.color = Color.white;
         setupButton.item.sprite = scriptableRecipe.Sprite;
-        setupButton.textIngredientNeeded_1.text = scriptableRecipe.ingredient1.IngredientAmount.ToString();
         setupButton.textIngredientNeeded_2.text = scriptableRecipe.ingredient2.IngredientAmount.ToString();
         setupButton.textIngredientNeeded_3.text = scriptableRecipe.ingredient3.IngredientAmount.ToString();
         setupButton.textDescription.text = scriptableRecipe.Description;
