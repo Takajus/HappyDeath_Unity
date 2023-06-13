@@ -13454,6 +13454,12 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.25}
   m_Size: {x: 1, y: 1, z: 0.5}
   m_FadeFactor: 1
+--- !u!1 &524113457 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4694489848926609841, guid: ed8a9a88ee684d94fa42061d71e84fde,
+    type: 3}
+  m_PrefabInstance: {fileID: 4694489849933254987}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &530388370
 GameObject:
   m_ObjectHideFlags: 0
@@ -16810,7 +16816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentQuest: {fileID: 0}
-  questUI: {fileID: 0}
+  questUI: {fileID: 2045010447}
   activeQuests: []
 --- !u!1 &672151501
 GameObject:
@@ -21516,7 +21522,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 645b90f830528bd4cbd41ce4e4435438, type: 2}
   - {fileID: 11400000, guid: d79a0814e596463448d27095c024ed87, type: 2}
   - {fileID: 11400000, guid: 4fa378393c5aa4f409b2b25a93f75b4d, type: 2}
-  inventoryDatabase: {fileID: 0}
+  inventoryDatabase: {fileID: 11400000, guid: 8abd0d7e03f64b14a8e4981f5ee7c34e, type: 2}
 --- !u!4 &906921272
 Transform:
   m_ObjectHideFlags: 0
@@ -43300,9 +43306,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questManager: {fileID: 660314475}
   questDataList:
-  - npc: {fileID: 0}
-    availableQuests: []
-    dialogList: []
+  - npc: {fileID: 524113457}
+    availableQuests:
+    - {fileID: 11400000, guid: 9e6cfa5130d96f442aa839aa4c818656, type: 2}
+    dialogList:
+    - {fileID: 11400000, guid: 0e15c36d2478d314c95e40f372bda881, type: 2}
   E_Input: {fileID: 2116332421}
 --- !u!114 &1874024187
 MonoBehaviour:
@@ -45905,6 +45913,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7089328}
     m_Modifications:
+    - target: {fileID: 450208881, guid: 6338780c43f3a8d45bdf03220396d052, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -458
+      objectReference: {fileID: 0}
+    - target: {fileID: 450208881, guid: 6338780c43f3a8d45bdf03220396d052, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 221
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970053718, guid: 6338780c43f3a8d45bdf03220396d052, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -586.2322
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970053718, guid: 6338780c43f3a8d45bdf03220396d052, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 342.53912
+      objectReference: {fileID: 0}
     - target: {fileID: 300819557257244557, guid: 6338780c43f3a8d45bdf03220396d052,
         type: 3}
       propertyPath: m_RaycastTarget
@@ -46052,6 +46076,11 @@ PrefabInstance:
       objectReference: {fileID: 1750876891}
     - target: {fileID: 300819557641359143, guid: 6338780c43f3a8d45bdf03220396d052,
         type: 3}
+      propertyPath: questManager
+      value: 
+      objectReference: {fileID: 660314475}
+    - target: {fileID: 300819557641359143, guid: 6338780c43f3a8d45bdf03220396d052,
+        type: 3}
       propertyPath: taskText.Array.size
       value: 7
       objectReference: {fileID: 0}
@@ -46093,6 +46122,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2045010445}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2045010447 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 300819557641359143, guid: 6338780c43f3a8d45bdf03220396d052,
+    type: 3}
+  m_PrefabInstance: {fileID: 2045010445}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd6178a173881c4383acc8459ab038c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2048847841
 GameObject:
   m_ObjectHideFlags: 0
