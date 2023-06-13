@@ -34,8 +34,12 @@ public class CraftSetup : MonoBehaviour
     public void Refresh()
     {
         if (scriptableRecipe == null)
+        {
+            setupButton.my_image.color = new Color(0,0,0,0);
             return;
+        }
 
+        setupButton.my_image.color = Color.white;
         setupButton.my_image.sprite = scriptableRecipe.Sprite;
     }
 

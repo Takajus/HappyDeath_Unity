@@ -176,7 +176,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5711374598893215497}
   - component: {fileID: 1736528728920353345}
-  - component: {fileID: 169803141340826974}
   - component: {fileID: 1499768157098946735}
   m_Layer: 0
   m_Name: pf_tb12_1
@@ -217,29 +216,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4902502843623687603}
   m_Mesh: {fileID: 0}
---- !u!114 &169803141340826974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4902502843623687603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 330076f8b818e4740914a43f0cb53ee0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  validMat: {fileID: 0}
-  invalidMat: {fileID: 0}
-  actualObject: {fileID: 0}
-  previewObject: {fileID: 0}
-  item: {fileID: 0}
-  xRange: 2
-  zRange: 2
-  tileDetectionList:
-  - x: 0
-    z: 0
-    needDugTile: 1
 --- !u!65 &1499768157098946735
 BoxCollider:
   m_ObjectHideFlags: 0

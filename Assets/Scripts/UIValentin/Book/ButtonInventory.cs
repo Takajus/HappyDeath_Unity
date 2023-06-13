@@ -53,9 +53,6 @@ public class ButtonInventory : MonoBehaviour
 
     public void DisplayInformations()
     {
-        if (item == null)
-            return;
-
         setupButton.item.sprite = item.Sprite;
         setupButton.textDescription.text = item.Description;
         setupButton.name.text = item.Name;

@@ -37,17 +37,20 @@ public class BookDisplayInventory : MonoBehaviour
 
     public void RefreshInventorySlot()
     {
-
         foreach (var item in inventorySlot)
         {
             item.item = null;
             item.setupButton.buttonImage.sprite = null;
             item.setupButton.textAmount.text = "";
+            item.setupButton.buttonImage.color = new Color(0,0,0,0);
         }
 
         for (int i = 0; i < InventoryManager.Instance.Inventory.Count; i++)
         {
             inventorySlot[i].item = InventoryManager.Instance.Inventory[i];
+            if (inventorySlot[i].item != null)
+                inventorySlot[i].setupButton.buttonImage.color = Color.white;
+
             inventorySlot[i].Refresh();
         }
     }
