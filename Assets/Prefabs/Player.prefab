@@ -137,8 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79a06bc54b0e744690851bcb6250d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animatorDay: {fileID: 0}
-  animatorNight: {fileID: 0}
+  animatorDay: {fileID: 3402734966185266887}
+  animatorNight: {fileID: 3372458715222354111}
   canMove: 1
   isMoving: 0
   moveInput: {fileID: -888215069444558471, guid: 0ac56734837cfea4ea5836dcab41a06e,
@@ -460,6 +460,18 @@ GameObject:
 --- !u!1 &3372458715222354080 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2873664121033394005, guid: 308c118e4adffe74e81df29f4485e4e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 660955058418266101}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3372458715222354111 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2873664121033393994, guid: 308c118e4adffe74e81df29f4485e4e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 660955058418266101}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3402734966185266887 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2744062662534144306, guid: 308c118e4adffe74e81df29f4485e4e3,
     type: 3}
   m_PrefabInstance: {fileID: 660955058418266101}
   m_PrefabAsset: {fileID: 0}
