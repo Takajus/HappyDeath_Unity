@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{14B95F90-6A16-4328-8087-7CE1A331D831}" SchemaVersion="110">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{14B95F90-6A16-4328-8087-7CE1A331D831}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{14B95F90-6A16-4328-8087-7CE1A331D831}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Test_Music" ID="{4BFB7CB8-E853-4094-870D-263AC8AEF986}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Music_Switch_Container" ID="{40442730-4DDF-4A04-8E59-C3EBC7AB41DA}" WorkUnitID="{FD54A367-568D-4AD9-9985-CD91D0E344D8}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Set_Music_Day" ID="{6ED6286F-1E9E-4173-B809-BE7AC741A228}" WorkUnitID="{FD54A367-568D-4AD9-9985-CD91D0E344D8}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Set_Music_Night" ID="{25D800F6-31AE-4526-A4E5-74A0F62FF69C}" WorkUnitID="{FD54A367-568D-4AD9-9985-CD91D0E344D8}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Night" ID="{0D22F4BF-94F7-49B9-A486-E529BBD8DCC5}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>
