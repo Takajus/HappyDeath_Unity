@@ -11,7 +11,7 @@ public class MoodManager : MonoBehaviour
 {
     // TODO: Supprimer ici
     [SerializeField]
-    private static List<ResidentData> residentList = new List<ResidentData>();
+    public static List<ResidentData> residentList = new List<ResidentData>();
     public Image posBar;
     public Image negBar;
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16246733, g: 0.18927264, b: 0.21197918, a: 1}
+  m_IndirectSpecularColor: {r: 0.18154603, g: 0.22718872, b: 0.30740646, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8197,6 +8197,7 @@ PrefabInstance:
       objectReference: {fileID: 585973072}
     m_RemovedComponents:
     - {fileID: 7471945652588123955, guid: a8ecca33a997f494caf1e52de28fba39, type: 3}
+    - {fileID: 7471945652588123957, guid: a8ecca33a997f494caf1e52de28fba39, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a8ecca33a997f494caf1e52de28fba39, type: 3}
 --- !u!4 &323853880 stripped
 Transform:
@@ -11414,7 +11415,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447793036}
-  m_LocalRotation: {x: -0.0047892365, y: -0.9946895, z: 0.05474119, w: -0.08702412}
+  m_LocalRotation: {x: -0.033353083, y: -0.9203639, z: 0.3812272, w: -0.080521464}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16764,6 +16765,53 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659988394}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &660314473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 660314474}
+  - component: {fileID: 660314475}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &660314474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660314473}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.48187828, y: 0, z: 9.48895}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 924752603}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &660314475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660314473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c896b57d7f44d499661bf4b4d9b268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuest: {fileID: 0}
+  questUI: {fileID: 0}
+  activeQuests: []
 --- !u!1 &672151501
 GameObject:
   m_ObjectHideFlags: 0
@@ -21841,6 +21889,7 @@ Transform:
   - {fileID: 1184496038}
   - {fileID: 1911239801}
   - {fileID: 906921272}
+  - {fileID: 660314474}
   - {fileID: 724601191}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -32000,7 +32049,7 @@ PrefabInstance:
     - target: {fileID: 245103821990918672, guid: 011e3e4e14548914180c533974d0f556,
         type: 3}
       propertyPath: timeOfDay
-      value: 30.42
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 245103821990918672, guid: 011e3e4e14548914180c533974d0f556,
         type: 3}
@@ -32010,7 +32059,7 @@ PrefabInstance:
     - target: {fileID: 245103821990918672, guid: 011e3e4e14548914180c533974d0f556,
         type: 3}
       propertyPath: timeMultiplicator
-      value: 0
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 245103821990918672, guid: 011e3e4e14548914180c533974d0f556,
         type: 3}
@@ -43237,33 +43286,34 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 323853879}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1874024182
+--- !u!114 &1874024186
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874024178}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b008f9c1158491a49aaf05bc2b633949, type: 3}
+  m_Script: {fileID: 11500000, guid: 5737b47433d13f742867d162d3893f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogNameTextUI: {fileID: 138904800}
-  DialogTextUI: {fileID: 760440504}
-  nameText:
-  - Granny
-  - Missy
-  - Missy
-  - Missy
-  dialogText:
-  - Well hello Missy, seems my first soul has arrived !
-  - "That\u2019s right mam\u2019 !"
-  - Albert the wood cutter is here. This good man needs a good rest !
-  - "I hope he will finaly have some company\u2026 \r"
-  DialogPanel: {fileID: 1330112836}
-  nextQuestIndex: 1
+  questManager: {fileID: 660314475}
+  questDataList: []
   E_Input: {fileID: 2116332421}
+--- !u!114 &1874024187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874024178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a75bdd243aff64d8e658c0b8b5acdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog: {fileID: 11400000, guid: d8280eeeb840e244ca222b40e21e3045, type: 2}
 --- !u!1 &1876013156
 GameObject:
   m_ObjectHideFlags: 0
@@ -48544,6 +48594,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4155153123254227005, guid: ed8a9a88ee684d94fa42061d71e84fde,
+        type: 3}
+      propertyPath: dialog
+      value: 
+      objectReference: {fileID: 11400000, guid: d8280eeeb840e244ca222b40e21e3045,
+        type: 2}
     - target: {fileID: 4694489848926609840, guid: ed8a9a88ee684d94fa42061d71e84fde,
         type: 3}
       propertyPath: ResidentData
@@ -48559,6 +48615,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NPCSampleObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694489848926609841, guid: ed8a9a88ee684d94fa42061d71e84fde,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4694489848926609846, guid: ed8a9a88ee684d94fa42061d71e84fde,
         type: 3}

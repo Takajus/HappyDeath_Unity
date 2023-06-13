@@ -58,7 +58,7 @@ public class Dialogue : MonoBehaviour
                 return;
             }
         }
-        
+        Debug.Log("dialogue ++");
         ++dialog.index;
     }
 
@@ -87,8 +87,14 @@ public class Dialogue : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                //Debug.Log("truc");
                 NextDialog();
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        dialog.ResetVariables();
     }
 }

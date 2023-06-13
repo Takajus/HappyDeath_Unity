@@ -37,4 +37,10 @@ public class DialogueData : ScriptableObject
         else
             isDisplay = false;
     }
+
+    public void ResetVariables()
+    {
+        index = 0;
+        isLooping = false;
+    }
 }

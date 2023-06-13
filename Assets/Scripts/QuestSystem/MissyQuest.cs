@@ -19,11 +19,13 @@ public class MissyQuest : MonoBehaviour, IInteractable
     public List<QuestData> questDataList = new List<QuestData>();
     private int currentQuestIndex = 0;
     [SerializeField] private GameObject E_Input;
-
+    Dialogue _dialogue;
 
     private void Start()
     {
         questManager = QuestManager.Instance;
+        _dialogue = transform.GetComponent<Dialogue>();
+        //_dialogue.dialog = ResidentData.dialogueData;
         if (questDataList.Count <= 0)
         {
             Debug.Log("NO Quest available");
@@ -32,17 +34,21 @@ public class MissyQuest : MonoBehaviour, IInteractable
 
     public void EndInteract()
     {
-        if (currentQuestIndex > 0)
+        /*if (currentQuestIndex > 0)
         {
             if (!questDataList[currentQuestIndex - 1].availableQuests[currentQuestIndex - 1].isCompleted)
             {
                 Debug.Log("Last Quest not finished yet");
                 return;
             }
+        }*/
+
+        Debug.Log(_dialogue.dialog.index);
+        if (_dialogue.dialog.index >= _dialogue.dialog.diagStructs.Count - 1)
+        {
+            Debug.Log("GiveQuest call");
+            GiveQuest();
         }
-        Debug.Log("Got Quest " + currentQuestIndex);
-        GiveQuest();
-        
     }
     
     public InteractMode GetInteractMode()
@@ -63,6 +69,7 @@ public class MissyQuest : MonoBehaviour, IInteractable
 
             // Send the quest to the QuestManager to accept
             questManager.AcceptQuest(quest);
+            Debug.Log("Got Quest " + currentQuestIndex);
 
             currentQuestIndex++;
         }
@@ -77,24 +84,26 @@ public class MissyQuest : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        
-        if (currentQuestIndex > 0)
+        /*if (currentQuestIndex > 0)
         {
             if (!questDataList[currentQuestIndex - 1].availableQuests[currentQuestIndex - 1].isCompleted)
             {
                 Debug.Log("Last Quest not finished yet");
                 return;
             }
-        }
-        questDataList[currentQuestIndex].dialogList[currentQuestIndex].SetActive(true);
-        Debug.Log("Try lunching the message");
+        }*/
+
+        //questDataList[currentQuestIndex].dialogList[currentQuestIndex].SetActive(true);
         /*if (!temp)
         {
             temp = true;
             QuestSystem.Instance.GetDemoTask(1);
         }*/
-        
-      
+
+        //Debug.Log("ca marche?");
+
+
+        _dialogue.NextDialog();
     }
 
 
