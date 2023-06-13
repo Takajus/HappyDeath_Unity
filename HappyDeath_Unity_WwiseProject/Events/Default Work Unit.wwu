@@ -399,11 +399,8 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Folder Name="Voices" ID="{0BE8E306-86C8-49CC-A040-945B9667BFCF}" ShortID="922710025">
-					<ChildrenList>
-						<WorkUnit Name="WOLF" ID="{40BD4E17-C8D9-4B5F-847F-240587C11A9D}" PersistMode="Reference"/>
-					</ChildrenList>
-				</Folder>
+				<WorkUnit Name="VOICES" ID="{422CA1DC-D104-4E46-A44D-CB5BB6AF2D26}" PersistMode="Reference"/>
+				<WorkUnit Name="UI" ID="{03E174B4-4DD4-459F-93AA-00E9DF8C0217}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
