@@ -17,8 +17,9 @@ public class DialogueStruct
 public class DialogueData : ScriptableObject
 {
     public string dialogueName;
-    public List<DialogueStruct> diagStructs = new List<DialogueStruct>();
+    public List<DialogueStruct> diagStartQuest = new List<DialogueStruct>();
     public DialogueStruct loopDiag;
+    public List<DialogueStruct> diagEndQuest = new List<DialogueStruct>();
     public bool isLooping = false;
     [HideInInspector] public bool isDisplay = false;
     public int index;
@@ -32,7 +33,7 @@ public class DialogueData : ScriptableObject
 
     public void NextIndex()
     {
-        if (index < diagStructs.Count)
+        if (index < diagStartQuest.Count)
             ++index;
         else
             isDisplay = false;

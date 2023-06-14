@@ -15,7 +15,7 @@ public class Dialogue : MonoBehaviour
     {
         dialog.index = 0;
         DialogUI.instance.SetActive(true);
-        if (dialog.index < dialog.diagStructs.Count)
+        if (dialog.index < dialog.diagStartQuest.Count)
         {
             DisplayDialog();
         }
@@ -23,8 +23,11 @@ public class Dialogue : MonoBehaviour
 
     public void NextDialog()
     {
-        if(dialog is null)
+        if (dialog is null)
+        {
+            Debug.LogError("No Dialog to Display !");
             return;
+        }
         
         if (dialog.index == 0)
         {
@@ -44,7 +47,7 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            if (dialog.index < dialog.diagStructs.Count)
+            if (dialog.index < dialog.diagStartQuest.Count)
             {
                 DisplayDialog();
             }
@@ -52,7 +55,6 @@ public class Dialogue : MonoBehaviour
             {
                 if (!dialog.isLooping)
                 {
-                    dialog.index = 0;
                     dialog.isLooping = true;
                 }
 
@@ -75,8 +77,8 @@ public class Dialogue : MonoBehaviour
             return;
         }
         
-        DialogUI.instance.UpdateUI(dialog.diagStructs[dialog.index].characterName,
-            dialog.diagStructs[dialog.index].paragraphe);
+        DialogUI.instance.UpdateUI(dialog.diagStartQuest[dialog.index].characterName,
+            dialog.diagStartQuest[dialog.index].paragraphe);
     }
 
     public void EndDialog()
