@@ -11,7 +11,7 @@ public class ResidentManager : MonoBehaviour, IInteractable
 
     private void Start()
     {
-        tombAssignUI.SetActive(false);
+        //tombAssignUI.SetActive(false);
     }
 
     public InteractMode GetInteractMode()

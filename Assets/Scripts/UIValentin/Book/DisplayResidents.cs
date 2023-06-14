@@ -12,6 +12,7 @@ public class DisplayResidents : MonoBehaviour
         public Image buttonImage;
         public Image background;
         public Image resident;
+        public Image icon;
         public TextMeshProUGUI name;
         public TextMeshProUGUI description;
     }
@@ -34,7 +35,8 @@ public class DisplayResidents : MonoBehaviour
         if (scriptableResident == null)
             return;
 
-        setupButton.buttonImage.sprite = scriptableResident.sprite;
+        setupButton.icon.color = Color.white;
+        setupButton.icon.sprite = scriptableResident.sprite;
     }
 
     public void UI_ClickedOnMe()
@@ -45,8 +47,12 @@ public class DisplayResidents : MonoBehaviour
     public void DisplayInformations()
     {
         if (scriptableResident == null)
+        {
+            setupButton.icon.color = new Color(0, 0, 0, 0);
             return;
+        }
 
+        setupButton.icon.color = Color.white;
         setupButton.resident.sprite = scriptableResident.sprite;
         setupButton.description.text = scriptableResident.description;
         setupButton.name.text = scriptableResident.residentName;

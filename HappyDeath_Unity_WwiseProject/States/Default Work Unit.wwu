@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{760FC1D8-3DC3-4B8C-A830-B25AACA43227}" SchemaVersion="110">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{760FC1D8-3DC3-4B8C-A830-B25AACA43227}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{760FC1D8-3DC3-4B8C-A830-B25AACA43227}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Music_State" ID="{FDFAEC63-5769-4850-B0F3-4EF656C46E53}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="15"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{993AC7DC-733B-4920-8448-B704892F6DE8}"/>
+						<State Name="Day" ID="{416270DC-C904-4BDA-95AB-D9EB6DC8FA9F}"/>
+						<State Name="Night" ID="{0D22F4BF-94F7-49B9-A486-E529BBD8DCC5}"/>
+						<State Name="Menu" ID="{4951DD7E-6423-4364-AD1C-70ECD5334A03}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

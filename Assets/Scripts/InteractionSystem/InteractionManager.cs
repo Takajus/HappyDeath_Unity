@@ -110,6 +110,33 @@ public class InteractionManager : MonoBehaviour
                 break;
         }
 
+        switch (newInteractionMode)
+        {
+            case InteractionMode.Interact:
+                interactHandler.InitializeHandler();
+                break;
+            case InteractionMode.Cut:
+                axeHandler.InitializeHandler();
+                break;
+            case InteractionMode.Dig:
+                shovelHandler.InitializeHandler();
+                break;
+            case InteractionMode.Mine:
+                break;
+            case InteractionMode.Place:
+                placementHandler.InitializeHandler();
+                break;
+            default:
+                interactHandler.InitializeHandler();
+                break;
+        }
+
         interactionMode = newInteractionMode;
+    }
+
+    public void InteruptInteraction()
+    {
+        ChangeInteractionMode(InteractionMode.Interact);
+        InventoryManager.HeldItem = null;
     }
 }

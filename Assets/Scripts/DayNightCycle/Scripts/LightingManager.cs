@@ -136,7 +136,7 @@ public class LightingManager : MonoBehaviour
                 {
                     _cycleState = DayCycleState.Day;
                     StartCoroutine(_CoroutineNightBegin());
-                    MoodManager.Instance.CalculateAverageMood();
+                    MoodManager.instance?.CalculateAverageMood();
                 }
 
                 break;

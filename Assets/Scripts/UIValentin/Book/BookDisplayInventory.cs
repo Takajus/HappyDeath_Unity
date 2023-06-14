@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class BookDisplayInventory : MonoBehaviour
 {
     [SerializeField] private List<ButtonInventory> inventorySlot;
-    [SerializeField] GameObject verticalBox;
+    [SerializeField] List<GameObject> Pages;
+    [SerializeField] TextMeshProUGUI pageNumber;
+    int currentPageNumber = 0;
+
 
     private void Start()
     {
@@ -26,29 +30,67 @@ public class BookDisplayInventory : MonoBehaviour
 
     private void GetInventorySlot()
     {
-        for (int i = 0; i < verticalBox.transform.childCount; i++)
+        foreach (var page in Pages)
         {
-            for (int j = 0; j < verticalBox.transform.GetChild(i).transform.childCount; j++)
+            for (int i = 0; i < page.transform.childCount; i++)
             {
-                inventorySlot.Add(verticalBox.transform.GetChild(i).transform.GetChild(j).GetComponent<ButtonInventory>());
+                for (int j = 0; j < page.transform.GetChild(i).transform.childCount; j++)
+                {
+                    ButtonInventory objectToAdd = page.transform.GetChild(i).transform.GetChild(j).GetComponent<ButtonInventory>();
+                    if (!inventorySlot.Contains(objectToAdd))
+                        inventorySlot.Add(objectToAdd);
+                }
             }
         }
     }
 
     public void RefreshInventorySlot()
     {
-
         foreach (var item in inventorySlot)
         {
             item.item = null;
             item.setupButton.buttonImage.sprite = null;
             item.setupButton.textAmount.text = "";
+            item.setupButton.buttonImage.color = new Color(0,0,0,0);
         }
 
         for (int i = 0; i < InventoryManager.Instance.Inventory.Count; i++)
         {
             inventorySlot[i].item = InventoryManager.Instance.Inventory[i];
+            if (inventorySlot[i].item != null)
+                inventorySlot[i].setupButton.buttonImage.color = Color.white;
+
             inventorySlot[i].Refresh();
         }
+    }
+
+    public void UI_PreviousPage()
+    {
+        Debug.Log("aled");
+        Pages[currentPageNumber].SetActive(false);
+        currentPageNumber--;
+
+        if (currentPageNumber < 0)
+        {
+            currentPageNumber = Pages.Count -1;
+        }
+        Pages[currentPageNumber].SetActive(true);
+
+        pageNumber.text = (currentPageNumber + 1).ToString();
+    }
+    
+    public void UI_NextPage()
+    {
+        Pages[currentPageNumber].SetActive(false);
+        currentPageNumber++;
+
+        if (currentPageNumber >= Pages.Count)
+        {
+            currentPageNumber = 0;
+        }
+
+        Pages[currentPageNumber].SetActive(true);
+        
+        pageNumber.text = (currentPageNumber +1).ToString();
     }
 }

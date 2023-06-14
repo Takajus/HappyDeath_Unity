@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 
-public class Resident : MonoBehaviour
+public class Resident : MonoBehaviour, IInteractable
 {
     public ResidentData ResidentData;
 
@@ -17,11 +17,15 @@ public class Resident : MonoBehaviour
     private int residentAmount = 0;
     float negativeMood = 0f, positiveMood = 0f;
 
+    private Dialogue _dialogue;
+
     private void Awake()
     {
         // TODO: Modifier la list pour utiliser celle de la DataBase
-        //MoodManager.residentList.Add(this);
         transform.GetComponent<Collider>().enabled = false;
+        _dialogue = transform.GetComponent<Dialogue>();
+        MoodManager.residentList.Add(ResidentData);
+
 
         DayCycleEvents.OnNightStart += Day;
         DayCycleEvents.OnDayStart += Night;
@@ -35,7 +39,7 @@ public class Resident : MonoBehaviour
 
     private void Night()
     {
-        if (ResidentData == null || !ResidentData.isAssign)
+        if (ResidentData == null /*|| !ResidentData.isAssign*/)
             return;
         
         transform.GetComponent<Collider>().enabled = true;
@@ -48,6 +52,7 @@ public class Resident : MonoBehaviour
         if (!model.activeInHierarchy)
             model.SetActive(true);
 
+        _dialogue.dialog = ResidentData?.dialogueData;
         negativeMood = 0f;
         positiveMood = 0f;
         residentAmount = 0;
@@ -94,22 +99,6 @@ public class Resident : MonoBehaviour
                         }
                         continue;
                     case Category.Object:
-                        /*PickUpItem otherItem = col.gameObject.GetComponent<PickUpItem>();
-                        if(!otherItem) break;
-                        
-                        if (elementPreference.objectLike.ToString() == otherItem.gameObject.name)
-                        {
-                            if (elementPreference.likeDislike == LikeDislike.Like)
-                            {
-                                ++positiveMood;
-                                // Debug.Log("I LIKE this Object");
-                            }
-                            else
-                            {
-                                ++negativeMood;
-                                // Debug.LogWarning("I HATE this Object");
-                            }
-                        }*/
                         
                         Build otherBuild = col.gameObject.GetComponent<Build>();
                         if(!otherBuild) break;
@@ -204,23 +193,50 @@ public class Resident : MonoBehaviour
 
     private void RecipeConstitution(ElementPreference elementPreference, Build otherBuild)
     {
-        if (elementPreference.likeDislike == LikeDislike.Like)
+
+        DoLikeIngredient(otherBuild.item.recipe.ingredient1);
+        DoLikeIngredient(otherBuild.item.recipe.ingredient2);
+        DoLikeIngredient(otherBuild.item.recipe.ingredient3);
+
+        void DoLikeIngredient(Recipe.Ingredient ingredient)
         {
-            if (elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient1.ingredientType.Name
-                || elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient2.ingredientType.Name
-                || elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient3.ingredientType.Name)
+            if (ingredient.ingredientType == null)
+                return;
+
+            if (elementPreference.objectLike.ToString() == ingredient.ingredientType.Name)
             {
-                ++positiveMood;
+                if (elementPreference.likeDislike == LikeDislike.Like)
+                    ++positiveMood;
+                else
+                    ++negativeMood;
             }
         }
-        else
-        {
-            if (elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient1.ingredientType.Name
-                || elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient2.ingredientType.Name
-                || elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient3.ingredientType.Name)
-            {
-                ++negativeMood;
-            }
-        }
+    }
+
+    public void Hover()
+    {
+        
+    }
+
+    public void UnHover()
+    {
+        
+    }
+
+    public void Interact()
+    {
+
+        _dialogue.NextDialog();
+    
+    }
+
+    public void EndInteract()
+    {
+        
+    }
+
+    public InteractMode GetInteractMode()
+    {
+        throw new NotImplementedException();
     }
 }

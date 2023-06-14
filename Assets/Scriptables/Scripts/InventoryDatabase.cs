@@ -26,7 +26,7 @@ public class InventoryDatabase : ScriptableObject
 
     public void OnEnable()
     {
-        unlockedResidents = new List<ResidentData>();
+        unlockedRecipes = new List<Recipe>();
         unlockedRecipes.AddRange(startingRecipes);
 
         unlockedResidents = new List<ResidentData>();

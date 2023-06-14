@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 0
-  m_FogColor: {r: 1, g: 1, b: 1, a: 1}
+  m_FogColor: {r: 0.31633854, g: 1, b: 0, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16246733, g: 0.18927264, b: 0.21197918, a: 1}
+  m_IndirectSpecularColor: {r: 0.18154603, g: 0.22718872, b: 0.30740646, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -179,6 +179,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1015387824}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &4335702
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -353,6 +357,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2125490719}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &6574242
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -637,8 +645,9 @@ RectTransform:
   - {fileID: 1214980273}
   - {fileID: 1140603226}
   - {fileID: 756916602}
+  - {fileID: 1233841814}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1212,6 +1221,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1889653713}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &37734624
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1331,6 +1344,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1171101289}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &39359951
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1450,6 +1467,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1973004835}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &39949090
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1569,6 +1590,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1684493306}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &48244201
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1777,6 +1802,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 143001894}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &59305000
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2061,6 +2090,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1401727636}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &80962168
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2401,6 +2434,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1013337043}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &85175422
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2520,6 +2557,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1222302528}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &87477083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2894,6 +2935,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1819542820}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &96839474
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2957,103 +3002,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96839471}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &103913860
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 103913861}
-  - component: {fileID: 103913863}
-  - component: {fileID: 103913862}
-  - component: {fileID: 103913864}
-  m_Layer: 0
-  m_Name: SunBackground
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &103913861
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103913860}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 118014496}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &103913862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103913860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d3fea2a2645ad1742a141bc8ffca29be, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &103913863
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103913860}
-  m_CullTransparentMesh: 1
---- !u!95 &103913864
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103913860}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &105534390
 GameObject:
   m_ObjectHideFlags: 0
@@ -3264,108 +3212,6 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.25}
   m_Size: {x: 1, y: 1, z: 0.5}
   m_FadeFactor: 1
---- !u!1 &118014495
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 118014496}
-  - component: {fileID: 118014499}
-  - component: {fileID: 118014498}
-  - component: {fileID: 118014497}
-  m_Layer: 0
-  m_Name: Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &118014496
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 118014495}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 103913861}
-  - {fileID: 502216505}
-  m_Father: {fileID: 2016188349}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
---- !u!114 &118014497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 118014495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &118014498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 118014495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 1
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &118014499
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 118014495}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
 --- !u!1 &119129180
 GameObject:
   m_ObjectHideFlags: 0
@@ -3422,6 +3268,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 315054300}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &119129183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3596,6 +3446,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1307099196}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &130630957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3940,18 +3794,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138904798}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1330112837}
+  m_Father: {fileID: 754500169}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -30}
-  m_SizeDelta: {x: -60.000008, y: 50}
+  m_AnchoredPosition: {x: 0, y: 70}
+  m_SizeDelta: {x: 340, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &138904800
 MonoBehaviour:
@@ -4106,6 +3960,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 768797498}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &139507385
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4280,6 +4138,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2103000244}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &146698587
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4399,6 +4261,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1941494331}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &150985260
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4663,6 +4529,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1367059172}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &164110983
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5243,6 +5113,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1436152450}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &203631904
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5507,6 +5381,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 344532507}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &220054241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5716,6 +5594,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1711499308}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &233109876
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6782,6 +6664,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1606229352}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &247828796
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6901,6 +6787,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 30966496}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &250174267
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7020,6 +6910,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 367609458}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &254839668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7194,6 +7088,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 273586023}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &261201876
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7759,6 +7657,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2032053761}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &301161783
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8025,6 +7927,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 830307717}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &311036191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8291,6 +8197,7 @@ PrefabInstance:
       objectReference: {fileID: 585973072}
     m_RemovedComponents:
     - {fileID: 7471945652588123955, guid: a8ecca33a997f494caf1e52de28fba39, type: 3}
+    - {fileID: 7471945652588123957, guid: a8ecca33a997f494caf1e52de28fba39, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a8ecca33a997f494caf1e52de28fba39, type: 3}
 --- !u!4 &323853880 stripped
 Transform:
@@ -8354,6 +8261,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1542420816}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &325040177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8473,6 +8384,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 309499999}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &325882922
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8592,6 +8507,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 69347230}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &329525792
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8838,6 +8757,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 639271725}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &338833149
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9067,6 +8990,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 562993938}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &348603322
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9427,6 +9354,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 404696204}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &375959038
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9835,6 +9766,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 790732962}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &398549211
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9954,6 +9889,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1384441265}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &398744145
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10143,7 +10082,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &399103534
 MonoBehaviour:
@@ -10228,6 +10167,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 981260360}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &403888746
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10538,6 +10481,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1080067085}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &407557555
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10657,6 +10604,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1221253764}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &409731164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10831,6 +10782,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1793373568}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &418188584
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10950,6 +10905,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 498380081}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &418645382
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11124,6 +11083,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 735457306}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &428872642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11243,6 +11206,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1575437146}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &429126472
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11390,7 +11357,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.17254901, g: 0.17254901, b: 0.17254901, a: 1}
+  m_Color: {r: 0, g: 0.27503014, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -11448,7 +11415,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447793036}
-  m_LocalRotation: {x: -0.0047892365, y: -0.9946895, z: 0.05474119, w: -0.08702412}
+  m_LocalRotation: {x: -0.033353083, y: -0.9203639, z: 0.3812272, w: -0.080521464}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -11532,6 +11499,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 111700804}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &448224006
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11651,6 +11622,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 8565982}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &450506675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11770,6 +11745,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1635734698}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &451580120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11889,6 +11868,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1139358617}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &452440797
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12008,6 +11991,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 795357371}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &454670376
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12217,6 +12204,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 263648492}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &470716802
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12391,6 +12382,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 794556663}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &472251719
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12510,6 +12505,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1827917883}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &475154327
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12629,6 +12628,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 952676304}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &476439832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12884,6 +12887,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1681067263}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &496786444
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13002,103 +13009,6 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.25}
   m_Size: {x: 1, y: 1, z: 0.5}
   m_FadeFactor: 1
---- !u!1 &502216504
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 502216505}
-  - component: {fileID: 502216507}
-  - component: {fileID: 502216506}
-  - component: {fileID: 502216508}
-  m_Layer: 0
-  m_Name: MoonBackground
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &502216505
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502216504}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 118014496}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &502216506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502216504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 222270daed728424aa949378c30a9394, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &502216507
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502216504}
-  m_CullTransparentMesh: 1
---- !u!95 &502216508
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502216504}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &507282721
 GameObject:
   m_ObjectHideFlags: 0
@@ -13155,6 +13065,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 366804968}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &507282724
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13274,6 +13188,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 484168615}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &509532789
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13536,6 +13454,12 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.25}
   m_Size: {x: 1, y: 1, z: 0.5}
   m_FadeFactor: 1
+--- !u!1 &524113457 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4694489848926609841, guid: ed8a9a88ee684d94fa42061d71e84fde,
+    type: 3}
+  m_PrefabInstance: {fileID: 4694489849933254987}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &530388370
 GameObject:
   m_ObjectHideFlags: 0
@@ -13592,6 +13516,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 15274546}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &530388373
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13792,6 +13720,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 387204932}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &536265140
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13966,6 +13898,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 35568049}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &542962120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14085,6 +14021,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1754073236}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &544166419
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14409,6 +14349,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1216340444}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &565000884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14528,6 +14472,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 278830819}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &566916666
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14786,6 +14734,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 310098263}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &573900061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14931,6 +14883,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1481141046}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &581429398
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15062,6 +15018,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 552376945}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &587261613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15181,6 +15141,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1005942564}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &587890874
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15355,6 +15319,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 538072107}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &593402589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15480,6 +15448,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 275642821}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &597287829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15599,6 +15571,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 237419884}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &604674941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15828,6 +15804,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1173803593}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &619165392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16159,6 +16139,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1452547394}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &643868307
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16304,6 +16288,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1173786240}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &647933909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16458,6 +16446,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 795348187}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &648036656
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16712,6 +16704,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 616355893}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &659988397
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16775,6 +16771,53 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659988394}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &660314473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 660314474}
+  - component: {fileID: 660314475}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &660314474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660314473}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.48187828, y: 0, z: 9.48895}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 924752603}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &660314475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660314473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c896b57d7f44d499661bf4b4d9b268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuest: {fileID: 0}
+  questUI: {fileID: 2045010447}
+  activeQuests: []
 --- !u!1 &672151501
 GameObject:
   m_ObjectHideFlags: 0
@@ -16996,6 +17039,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 789916693}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &706339365
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17401,6 +17448,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 4609327}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &717425450
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17636,6 +17687,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1669253182}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &736758490
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17761,6 +17816,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1783776622}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &744639264
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17880,6 +17939,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1512174820}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &746148638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18036,6 +18099,46 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!1 &754500168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 754500169}
+  m_Layer: 5
+  m_Name: UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &754500169
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754500168}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1091664723}
+  - {fileID: 138904799}
+  - {fileID: 760440503}
+  - {fileID: 1439392359}
+  m_Father: {fileID: 1330112837}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &754948476
 GameObject:
   m_ObjectHideFlags: 0
@@ -18092,6 +18195,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 257027221}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &754948479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18235,18 +18342,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760440502}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1330112837}
+  m_Father: {fileID: 754500169}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.16333336}
   m_AnchorMax: {x: 1, y: 0.8166667}
-  m_AnchoredPosition: {x: 0, y: 14.5}
-  m_SizeDelta: {x: -20, y: -45}
+  m_AnchoredPosition: {x: 0, y: 12.500005}
+  m_SizeDelta: {x: 380, y: 85.66666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &760440504
 MonoBehaviour:
@@ -18538,6 +18645,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1779149842}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &774282421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18657,6 +18768,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 128721359}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &780043205
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19201,6 +19316,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1026061502}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &809533614
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19320,6 +19439,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1479795993}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &810953002
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19753,6 +19876,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 853278487}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &825493487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19872,6 +19999,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 105534390}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &825831075
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19991,6 +20122,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 512186139}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &829881492
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20110,6 +20245,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1443878366}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &830096245
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20284,6 +20423,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2061552900}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &831314506
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20547,6 +20690,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 23595476}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &842493613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20666,6 +20813,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 787614948}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &851585533
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20840,6 +20991,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1395489209}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &854155959
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20959,6 +21114,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 14565951}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &857886912
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21078,6 +21237,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 676376487}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &869865209
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21239,6 +21402,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3184661412024425468, guid: 07c163e5a5345824d91b76bab4c6c855,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3184661412024425468, guid: 07c163e5a5345824d91b76bab4c6c855,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3184661412024425468, guid: 07c163e5a5345824d91b76bab4c6c855,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3377965234860959799, guid: 07c163e5a5345824d91b76bab4c6c855,
         type: 3}
       propertyPath: m_Name
@@ -21246,12 +21424,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07c163e5a5345824d91b76bab4c6c855, type: 3}
---- !u!4 &891950309 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2714300408883442317, guid: 07c163e5a5345824d91b76bab4c6c855,
-    type: 3}
-  m_PrefabInstance: {fileID: 891950308}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &900843734
 GameObject:
   m_ObjectHideFlags: 0
@@ -21350,7 +21522,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 645b90f830528bd4cbd41ce4e4435438, type: 2}
   - {fileID: 11400000, guid: d79a0814e596463448d27095c024ed87, type: 2}
   - {fileID: 11400000, guid: 4fa378393c5aa4f409b2b25a93f75b4d, type: 2}
-  inventoryDatabase: {fileID: 0}
+  inventoryDatabase: {fileID: 11400000, guid: 8abd0d7e03f64b14a8e4981f5ee7c34e, type: 2}
 --- !u!4 &906921272
 Transform:
   m_ObjectHideFlags: 0
@@ -21398,12 +21570,12 @@ PrefabInstance:
     - target: {fileID: 4694489848926609841, guid: ed8a9a88ee684d94fa42061d71e84fde,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4694489848926609846, guid: ed8a9a88ee684d94fa42061d71e84fde,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4694489848926609846, guid: ed8a9a88ee684d94fa42061d71e84fde,
         type: 3}
@@ -21723,9 +21895,10 @@ Transform:
   - {fileID: 1184496038}
   - {fileID: 1911239801}
   - {fileID: 906921272}
+  - {fileID: 660314474}
   - {fileID: 724601191}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &933598949
 GameObject:
@@ -21783,6 +21956,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1732368136}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &933598952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22102,6 +22279,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1025745452}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &956745479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22221,6 +22402,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 472169984}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &959357074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22340,6 +22525,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 291632471}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &959829134
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22459,6 +22648,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1565519926}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &966606196
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22837,6 +23030,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 75483877}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &989545431
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22956,6 +23153,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1289443406}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &996221025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23418,6 +23619,73 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.25}
   m_Size: {x: 1, y: 1, z: 0.5}
   m_FadeFactor: 1
+--- !u!1 &1017194874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1017194876}
+  - component: {fileID: 1017194875}
+  m_Layer: 0
+  m_Name: "Vid\xE9o"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!328 &1017194875
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017194874}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 300ecf24cd2a72c48be9902c50917f8d, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 42ee85cad4d1d0542968ae6f4f28ff1d, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 01
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!4 &1017194876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017194874}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1022508306
 GameObject:
   m_ObjectHideFlags: 0
@@ -23901,6 +24169,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 421264899}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1046347419
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24504,18 +24776,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091664722}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1330112837}
+  m_Father: {fileID: 754500169}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 25}
-  m_SizeDelta: {x: 0, y: -50}
+  m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1091664724
 MonoBehaviour:
@@ -24831,6 +25103,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1128043136}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1102521170
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24950,6 +25226,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 617880918}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1102701343
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25069,6 +25349,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 61304529}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1103157507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25277,6 +25561,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 975791025}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1109202557
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25505,6 +25793,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 210868565}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1119369765
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25679,6 +25971,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1256176518}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1120999263
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25798,6 +26094,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 973128847}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1124462012
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26293,6 +26593,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1626358828}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1149093945
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26577,6 +26881,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1715863671}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1164827181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26861,6 +27169,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 626989664}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1174203665
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26992,6 +27304,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1752688131}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1181296755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27536,6 +27852,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1098570901}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1198851623
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27918,6 +28238,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1513300422}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1204660582
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28043,6 +28367,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 197230869}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1209351353
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28106,39 +28434,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209351350}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1211633103
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1211633104}
-  m_Layer: 0
-  m_Name: Timelines
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1211633104
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1211633103}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1584163319}
-  - {fileID: 1893591989}
-  m_Father: {fileID: 2016188349}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1212952488
 GameObject:
   m_ObjectHideFlags: 0
@@ -28785,6 +29080,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1112233121}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1230682916
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28848,6 +29147,79 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230682913}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1233841813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1233841814}
+  - component: {fileID: 1233841816}
+  - component: {fileID: 1233841815}
+  m_Layer: 5
+  m_Name: testVideo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1233841814
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233841813}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7089328}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1233841815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233841813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 8400000, guid: 42ee85cad4d1d0542968ae6f4f28ff1d, type: 2}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1233841816
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233841813}
+  m_CullTransparentMesh: 1
 --- !u!1 &1236607736
 GameObject:
   m_ObjectHideFlags: 0
@@ -28988,6 +29360,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 672151501}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1243668542
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29107,6 +29483,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 832281841}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1247022894
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29226,6 +29606,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1078868673}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1247406602
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29345,6 +29729,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1409237417}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1256088942
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29519,6 +29907,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1782960382}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1257079087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29859,6 +30251,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1022508306}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1272891129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30288,6 +30684,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 196093882}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1283450648
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30407,6 +30807,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 371314186}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1283780879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30510,7 +30914,7 @@ Transform:
   - {fileID: 307773559}
   - {fileID: 1659389655}
   - {fileID: 1821653631}
-  - {fileID: 891950309}
+  - {fileID: 1527111464}
   - {fileID: 446256472}
   m_Father: {fileID: 1733926148}
   m_RootOrder: 0
@@ -30715,6 +31119,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1413576083}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1292492811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30834,6 +31242,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1131881057}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1297647635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31008,6 +31420,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 914126104}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1311348166
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31153,6 +31569,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1098165167}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1327826678
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31403,8 +31823,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1330112837}
+  - component: {fileID: 1330112838}
   m_Layer: 5
-  m_Name: MissyDialog
+  m_Name: DialogUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31422,10 +31843,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1091664723}
-  - {fileID: 138904799}
-  - {fileID: 760440503}
-  - {fileID: 1439392359}
+  - {fileID: 754500169}
   m_Father: {fileID: 7089328}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31434,6 +31852,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 150}
   m_SizeDelta: {x: 500, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1330112838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330112836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48578dfc69cbc2a4097484eb818f0487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogNameTextUI: {fileID: 138904800}
+  DialogTextUI: {fileID: 760440504}
+  UI: {fileID: 754500168}
 --- !u!1 &1330277580
 GameObject:
   m_ObjectHideFlags: 0
@@ -31490,6 +31923,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 94143814}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1330277583
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31618,7 +32055,7 @@ PrefabInstance:
     - target: {fileID: 245103821990918672, guid: 011e3e4e14548914180c533974d0f556,
         type: 3}
       propertyPath: timeOfDay
-      value: 30.42
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 245103821990918672, guid: 011e3e4e14548914180c533974d0f556,
         type: 3}
@@ -31628,7 +32065,7 @@ PrefabInstance:
     - target: {fileID: 245103821990918672, guid: 011e3e4e14548914180c533974d0f556,
         type: 3}
       propertyPath: timeMultiplicator
-      value: 0
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 245103821990918672, guid: 011e3e4e14548914180c533974d0f556,
         type: 3}
@@ -31764,6 +32201,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 417939399}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1360737189
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31883,6 +32324,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1465315414}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1363287132
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32047,7 +32492,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1369643618
 MonoBehaviour:
@@ -32412,6 +32857,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1852457312}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1383878725
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32586,6 +33035,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1012939312}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1385196381
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32995,6 +33448,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 348348020}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1401666187
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33389,6 +33846,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1977714210}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1437512929
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33477,12 +33938,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439392358}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1330112837}
+  m_Father: {fileID: 754500169}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -33784,7 +34245,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1457238958
 GameObject:
@@ -33897,6 +34358,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 88126339}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1458797769
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34016,6 +34481,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1646110460}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1463719646
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34279,6 +34748,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1819497334}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1466897967
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34398,6 +34871,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1586811312}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1468390013
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34762,6 +35239,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2137511404}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1504042960
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35947,6 +36428,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1269017675}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1513227743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36211,6 +36696,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 9867083}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1521249291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36330,6 +36819,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1904731905}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1526956432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36393,6 +36886,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526956429}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1527111464 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3184661412024425468, guid: 07c163e5a5345824d91b76bab4c6c855,
+    type: 3}
+  m_PrefabInstance: {fileID: 891950308}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1538102140
 GameObject:
   m_ObjectHideFlags: 0
@@ -36614,6 +37113,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 823886470}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1541209820
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36788,6 +37291,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1147333985}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1544217061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36907,6 +37414,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 900843734}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1553221596
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37203,6 +37714,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1389694570}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1576048363
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37272,59 +37787,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1738099238027988683}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1584163318
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1584163319}
-  - component: {fileID: 1584163320}
-  m_Layer: 0
-  m_Name: DayTransition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1584163319
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584163318}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1211633104}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!320 &1584163320
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584163318}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 478940e796fc39e4094c91f1ee93bd60, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 4523447592650666249, guid: 478940e796fc39e4094c91f1ee93bd60, type: 2}
-    value: {fileID: 103913860}
-  - key: {fileID: 2288591791625033194, guid: 478940e796fc39e4094c91f1ee93bd60, type: 2}
-    value: {fileID: 103913864}
-  m_ExposedReferences:
-    m_References: []
 --- !u!1 &1586811312
 GameObject:
   m_ObjectHideFlags: 0
@@ -37554,7 +38016,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1622620303
 GameObject:
@@ -37712,6 +38174,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1055047258}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1628248469
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37831,6 +38297,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 911514774}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1633494780
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38005,6 +38475,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1864119689}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1643950364
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38179,6 +38653,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 492047661}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1649895069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38457,6 +38935,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1507069151}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1677756520
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38686,6 +39168,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 677928394}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1699065339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38805,6 +39291,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 153486946}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1699733930
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39150,6 +39640,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2051913398}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1720898034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39269,6 +39763,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1863915888}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1725069322
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39422,7 +39920,7 @@ Transform:
   - {fileID: 329884633}
   - {fileID: 1276458382}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1737444169 stripped
 GameObject:
@@ -39596,6 +40094,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 83236888}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1744091690
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39715,6 +40217,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1818863396}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1746515916
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39950,6 +40456,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 534767217}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1754874272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40226,6 +40736,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1966606382}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1776509428
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40400,6 +40914,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1268797383}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1780894137
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40519,6 +41037,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 92533164}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1781044001
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40809,6 +41331,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 720042022}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1804311033
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40928,6 +41454,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1093863362}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1805994925
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41480,6 +42010,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 569465260}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1823015963
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41857,6 +42391,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1892796151}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1848269348
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42031,6 +42569,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 245346399}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1855633342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42321,6 +42863,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1212952488}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1864097755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42495,6 +43041,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1102143845}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1866811426
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42614,6 +43164,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 390645699}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1868460990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42738,7 +43292,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 323853879}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1874024182
+--- !u!114 &1874024186
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42747,24 +43301,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 1874024178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b008f9c1158491a49aaf05bc2b633949, type: 3}
+  m_Script: {fileID: 11500000, guid: 5737b47433d13f742867d162d3893f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogNameTextUI: {fileID: 138904800}
-  DialogTextUI: {fileID: 760440504}
-  nameText:
-  - Granny
-  - Missy
-  - Missy
-  - Missy
-  dialogText:
-  - Well hello Missy, seems my first soul has arrived !
-  - "That\u2019s right mam\u2019 !"
-  - Albert the wood cutter is here. This good man needs a good rest !
-  - "I hope he will finaly have some company\u2026 \r"
-  DialogPanel: {fileID: 1330112836}
-  nextQuestIndex: 1
+  questManager: {fileID: 660314475}
+  questDataList:
+  - npc: {fileID: 524113457}
+    availableQuests:
+    - {fileID: 11400000, guid: 9e6cfa5130d96f442aa839aa4c818656, type: 2}
+    dialogList:
+    - {fileID: 11400000, guid: 0e15c36d2478d314c95e40f372bda881, type: 2}
   E_Input: {fileID: 2116332421}
+--- !u!114 &1874024187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874024178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a75bdd243aff64d8e658c0b8b5acdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog: {fileID: 11400000, guid: 0e15c36d2478d314c95e40f372bda881, type: 2}
 --- !u!1 &1876013156
 GameObject:
   m_ObjectHideFlags: 0
@@ -42821,6 +43381,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 590825045}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1876013159
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43112,6 +43676,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 521155974}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1878888997
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43424,6 +43992,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 564786506}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1890746529
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43542,63 +44114,6 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.25}
   m_Size: {x: 1, y: 1, z: 0.5}
   m_FadeFactor: 1
---- !u!1 &1893591988
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1893591989}
-  - component: {fileID: 1893591990}
-  m_Layer: 0
-  m_Name: NightTransition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1893591989
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1893591988}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1211633104}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!320 &1893591990
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1893591988}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 5d9cc71ae48e1cb4fb0e7f9a6b983296, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 4523447592650666249, guid: 478940e796fc39e4094c91f1ee93bd60, type: 2}
-    value: {fileID: 103913860}
-  - key: {fileID: 2288591791625033194, guid: 478940e796fc39e4094c91f1ee93bd60, type: 2}
-    value: {fileID: 103913864}
-  - key: {fileID: 4523447592650666249, guid: 5d9cc71ae48e1cb4fb0e7f9a6b983296, type: 2}
-    value: {fileID: 502216504}
-  - key: {fileID: 2288591791625033194, guid: 5d9cc71ae48e1cb4fb0e7f9a6b983296, type: 2}
-    value: {fileID: 502216508}
-  m_ExposedReferences:
-    m_References: []
 --- !u!1 &1896022947
 GameObject:
   m_ObjectHideFlags: 0
@@ -44146,6 +44661,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 811813515}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1919117173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44265,6 +44784,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1375369376}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1934446254
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44555,6 +45078,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2054987217}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1957929246
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44674,6 +45201,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2096258559}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1959621828
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44793,6 +45324,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1396720655}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1961076223
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45122,6 +45657,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 953694543}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1987738300
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45312,54 +45851,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995648188}
   m_CullTransparentMesh: 1
---- !u!1 &2016188348
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2016188349}
-  - component: {fileID: 2016188350}
-  m_Layer: 0
-  m_Name: UICycleManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &2016188349
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2016188348}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.19272527, y: 13.1642275, z: -10.813335}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 118014496}
-  - {fileID: 1211633104}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2016188350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2016188348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd561aea8930421c8e7c0c184f2b4ace, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _dayTransitionTimeline: {fileID: 1584163320}
-  _nightTransitionTimeline: {fileID: 1893591990}
 --- !u!1 &2032053761
 GameObject:
   m_ObjectHideFlags: 0
@@ -45422,6 +45913,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7089328}
     m_Modifications:
+    - target: {fileID: 450208881, guid: 6338780c43f3a8d45bdf03220396d052, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -458
+      objectReference: {fileID: 0}
+    - target: {fileID: 450208881, guid: 6338780c43f3a8d45bdf03220396d052, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 221
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970053718, guid: 6338780c43f3a8d45bdf03220396d052, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -586.2322
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970053718, guid: 6338780c43f3a8d45bdf03220396d052, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 342.53912
+      objectReference: {fileID: 0}
     - target: {fileID: 300819557257244557, guid: 6338780c43f3a8d45bdf03220396d052,
         type: 3}
       propertyPath: m_RaycastTarget
@@ -45569,6 +46076,11 @@ PrefabInstance:
       objectReference: {fileID: 1750876891}
     - target: {fileID: 300819557641359143, guid: 6338780c43f3a8d45bdf03220396d052,
         type: 3}
+      propertyPath: questManager
+      value: 
+      objectReference: {fileID: 660314475}
+    - target: {fileID: 300819557641359143, guid: 6338780c43f3a8d45bdf03220396d052,
+        type: 3}
       propertyPath: taskText.Array.size
       value: 7
       objectReference: {fileID: 0}
@@ -45610,6 +46122,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2045010445}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2045010447 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 300819557641359143, guid: 6338780c43f3a8d45bdf03220396d052,
+    type: 3}
+  m_PrefabInstance: {fileID: 2045010445}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd6178a173881c4383acc8459ab038c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2048847841
 GameObject:
   m_ObjectHideFlags: 0
@@ -45770,6 +46294,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 751962709}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2052867965
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46135,6 +46663,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1120956199}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2073870126
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46424,6 +46956,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 284870306}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2097056036
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46598,6 +47134,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1457238958}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2105086119
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46717,6 +47257,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1336599967}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2105237479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46836,6 +47380,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 33190413}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2113878994
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47039,6 +47587,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1873695210}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2117345431
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47295,6 +47847,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 765386588}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2127214692
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47465,6 +48021,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1420567893}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2134579555
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47639,6 +48199,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1572198121}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2139342031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47885,6 +48449,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9da1c38782f5bf46ae5b4ed84e40774, type: 3}
+--- !u!1001 &4091616703729136532
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4091616704134177832, guid: 03fed0732a616a843a23e8794f12518f,
+        type: 3}
+      propertyPath: m_Name
+      value: UICycleManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091616704134177833, guid: 03fed0732a616a843a23e8794f12518f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091616704134177833, guid: 03fed0732a616a843a23e8794f12518f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.19272527
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091616704134177833, guid: 03fed0732a616a843a23e8794f12518f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.1642275
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091616704134177833, guid: 03fed0732a616a843a23e8794f12518f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.813335
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091616704134177833, guid: 03fed0732a616a843a23e8794f12518f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091616704134177833, guid: 03fed0732a616a843a23e8794f12518f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091616704134177833, guid: 03fed0732a616a843a23e8794f12518f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091616704134177833, guid: 03fed0732a616a843a23e8794f12518f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091616704134177833, guid: 03fed0732a616a843a23e8794f12518f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091616704134177833, guid: 03fed0732a616a843a23e8794f12518f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091616704134177833, guid: 03fed0732a616a843a23e8794f12518f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 03fed0732a616a843a23e8794f12518f, type: 3}
 --- !u!1001 &4403977370250483118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47933,7 +48566,7 @@ PrefabInstance:
     - target: {fileID: 4403977369509755902, guid: 8907cb3aaf137cf41984722b83b2ab6d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4403977369509755902, guid: 8907cb3aaf137cf41984722b83b2ab6d,
         type: 3}
@@ -47992,6 +48625,12 @@ PrefabInstance:
       objectReference: {fileID: 136679661}
     - target: {fileID: 4403977370250483127, guid: 8907cb3aaf137cf41984722b83b2ab6d,
         type: 3}
+      propertyPath: uiDialogAction
+      value: 
+      objectReference: {fileID: 2900648720791444003, guid: 0ac56734837cfea4ea5836dcab41a06e,
+        type: 3}
+    - target: {fileID: 4403977370250483127, guid: 8907cb3aaf137cf41984722b83b2ab6d,
+        type: 3}
       propertyPath: editorMultiplicatorValue
       value: 
       objectReference: {fileID: -6139957634266676123, guid: 0ac56734837cfea4ea5836dcab41a06e,
@@ -48005,6 +48644,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4155153123254227005, guid: ed8a9a88ee684d94fa42061d71e84fde,
+        type: 3}
+      propertyPath: dialog
+      value: 
+      objectReference: {fileID: 11400000, guid: d8280eeeb840e244ca222b40e21e3045,
+        type: 2}
     - target: {fileID: 4694489848926609840, guid: ed8a9a88ee684d94fa42061d71e84fde,
         type: 3}
       propertyPath: ResidentData
@@ -48021,10 +48666,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCSampleObject
       objectReference: {fileID: 0}
+    - target: {fileID: 4694489848926609841, guid: ed8a9a88ee684d94fa42061d71e84fde,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4694489848926609846, guid: ed8a9a88ee684d94fa42061d71e84fde,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4694489848926609846, guid: ed8a9a88ee684d94fa42061d71e84fde,
         type: 3}

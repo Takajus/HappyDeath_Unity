@@ -13,14 +13,19 @@ public class BuildEditor : Editor
 
     public override void OnInspectorGUI()
     {
+        EditorGUI.BeginChangeCheck();
         source.validMat = (Material)EditorGUILayout.ObjectField("Valid Material", source.validMat, typeof(Material), false);
         source.invalidMat = (Material)EditorGUILayout.ObjectField("Invalid Material", source.invalidMat, typeof(Material), false);
 
         source.actualObject = (GameObject)EditorGUILayout.ObjectField("Actual Object", source.actualObject, typeof(GameObject), true);
         source.previewObject = (GameObject)EditorGUILayout.ObjectField("Preview Object", source.previewObject, typeof(GameObject), true);
-        //Need to set dirty
-
+        
         source.item = (Item)EditorGUILayout.ObjectField("Item", source.item, typeof(Item), true);
+
+        if (EditorGUI.EndChangeCheck())
+        {
+            EditorUtility.SetDirty(source);
+        }
         EditorGUILayout.Space();
 
 

@@ -59,6 +59,9 @@ MonoBehaviour:
   - x: 0
     z: 0
     needDugTile: 0
+  - x: 0
+    z: 1
+    needDugTile: 0
 --- !u!65 &803690424838692826
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -225,6 +228,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pf_tb1_11 - Preview
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512579953639489802, guid: 0f50697a5ee5a1842b13b5f99a0565cb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f50697a5ee5a1842b13b5f99a0565cb, type: 3}

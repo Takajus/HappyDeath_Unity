@@ -11,28 +11,20 @@ public class MoodManager : MonoBehaviour
 {
     // TODO: Supprimer ici
     [SerializeField]
-    private static List<ResidentData> residentList = new List<ResidentData>();
+    public static List<ResidentData> residentList = new List<ResidentData>();
     public Image posBar;
     public Image negBar;
 
     public float moodAverage;
     
-    private static MoodManager instance;
+    public static MoodManager instance;
 
-    public static MoodManager Instance
-    {
-        get
-        {
-            if (instance == null)
-                instance = FindObjectOfType<MoodManager>();
+    void Awake() { if (instance == null) { instance = this; DontDestroyOnLoad(gameObject); } else Destroy(gameObject); }
 
-            return instance;
-        } 
-    }
 
     public void CalculateAverageMood()
     {
-        residentList = InventoryManager.Instance.inventoryDatabase.allResidents.FindAll(resid => resid.isAssign == true).ToList(); 
+        residentList = InventoryManager.Instance.inventoryDatabase.allResidents.FindAll(resid => resid.isAssign == true); 
 
         if (residentList.Count < 1)
         {
@@ -52,9 +44,5 @@ public class MoodManager : MonoBehaviour
             posBar.fillAmount = moodAverage;
         else
             negBar.fillAmount = -moodAverage;
-    }
-
-    private void Update()
-    {
     }
 }

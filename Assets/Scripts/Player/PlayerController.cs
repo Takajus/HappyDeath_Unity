@@ -12,8 +12,9 @@ public class PlayerController : MonoBehaviour
     public static PlayerController Instance { get { if (instance == null) instance = FindObjectOfType<PlayerController>(); return instance; } }
     public Rigidbody rb { get; private set; }
     public Collider coll { get; private set; }
-    public Animator animator { get; private set; }
     public GameObject InteractSphere { get => interactSphere; }
+    public Animator animatorDay;
+    public Animator animatorNight;
 
     [Header("Player state")]
     /*[HideInInspector]*/
@@ -47,7 +48,6 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
-        animator = GetComponentInChildren<Animator>();
 
         Cursor.visible = false;
         //Cursor.lockState = CursorLockMode.Confined;
@@ -57,6 +57,12 @@ public class PlayerController : MonoBehaviour
     {
         if (canMove)
             Move();
+        else if (isMoving)
+        {
+            isMoving = false;
+            animatorDay.SetBool("Walking", false);
+            animatorNight.SetBool("Walking", false);
+        }
     }
 
     void Move()
@@ -72,6 +78,9 @@ public class PlayerController : MonoBehaviour
             moveDir = (transform.forward * dir.y) + (transform.right * dir.x);
             lastMoveDir = moveDir.normalized;
         }
+
+        animatorDay.SetBool("Walking", isMoving);
+        animatorNight.SetBool("Walking", isMoving);
 
         UpdateMoveSpeed(dir.x, dir.y);
         moveDir = moveDir.normalized * currentSpeed;
