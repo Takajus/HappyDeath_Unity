@@ -41,11 +41,6 @@ public class DisplayResidentStock : MonoBehaviour
             InitializePanel();
     }
 
-    private void Update()
-    {
-        Debug.Log(InteractHandler.transportedResident?.name);
-    }
-
     void InitializePanel()
     {
         residentList = InventoryManager.Instance.inventoryDatabase.unlockedResidents.Where(e => !e.isAssign).ToList();
@@ -140,7 +135,6 @@ public class DisplayResidentStock : MonoBehaviour
             }
         }
         dislikesText.text = label;
-        Debug.Log("Selected " + selectedResident.name);
     }
 
     public void ExtractSoul()
@@ -148,7 +142,6 @@ public class DisplayResidentStock : MonoBehaviour
         if (selectedResident == null)
             return;
 
-        Debug.Log("Selected " + selectedResident.name);
         InteractHandler.transportedResident = selectedResident;
         ToggleDisplay(false);
     }

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{03E174B4-4DD4-459F-93AA-00E9DF8C0217}" SchemaVersion="110" RootDocumentID="{D901BAB3-A722-4A8C-A67C-7D2206AD7293}" ParentDocumentID="{D901BAB3-A722-4A8C-A67C-7D2206AD7293}">
+	<Events>
+		<WorkUnit Name="UI" ID="{03E174B4-4DD4-459F-93AA-00E9DF8C0217}" OwnerID="{D901BAB3-A722-4A8C-A67C-7D2206AD7293}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Play_SFX_UI_Validate" ID="{68A91E79-4593-4FB1-A67C-A800D757FCCF}">
+					<ChildrenList>
+						<Action Name="" ID="{664A18AD-63F6-4245-988B-2176965ADD61}" ShortID="835327716">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_UI_Validate" ID="{5F85E19F-A2AF-4056-8292-F540DFFB162F}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SFX_UI_Accept" ID="{1B7B87E9-3906-4154-96F6-652FCA9CC6AF}">
+					<ChildrenList>
+						<Action Name="" ID="{F3327001-0A01-4519-B757-47FCC5D5E35F}" ShortID="889247342">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_UI_Accept" ID="{F1A546A9-B171-4A61-BAD3-2D5E099A5F72}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SFX_UI_Deny" ID="{FE2585A6-4E52-414A-9041-452DBC506B4E}">
+					<ChildrenList>
+						<Action Name="" ID="{C1DDF88B-1524-4E5A-A328-35F5D5FF2905}" ShortID="462964488">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_UI_Deny" ID="{174119EE-FB8C-4913-B44F-F2613E42DA4D}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SFX_UI_Overlap" ID="{25473967-6324-47B7-A2D3-D5E3F84A6F75}">
+					<ChildrenList>
+						<Action Name="" ID="{5EC2A878-5C38-4078-AE32-AB9BBA860868}" ShortID="849492764">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_UI_Overlap" ID="{86BFECEC-E6C4-42ED-A715-05C0FD4AA806}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SFX_UI_Choose" ID="{2C5F8A41-4567-4E91-AF36-9FC16C2DB894}">
+					<ChildrenList>
+						<Action Name="" ID="{AFF685B9-DA34-470D-A1F9-B5E920CAA830}" ShortID="637434240">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_UI_Choose" ID="{E632BBC0-F30F-43F3-8BE6-F20A53B7C139}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -14,10 +14,26 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID CRAFT = 2863552425U;
+        static const AkUniqueID DAY_MUSIC = 3703337933U;
         static const AkUniqueID DIG = 445985471U;
+        static const AkUniqueID FOOTSTEPS_DIRT = 1565032450U;
+        static const AkUniqueID FOOTSTEPS_GHOST = 1578778902U;
+        static const AkUniqueID FOOTSTEPS_GRASS = 7365553U;
+        static const AkUniqueID FOOTSTEPS_STONE = 307640020U;
+        static const AkUniqueID FOOTSTEPS_WOOD = 1732241522U;
+        static const AkUniqueID MENU_MUSIC = 4055567060U;
         static const AkUniqueID METALGATE_CLOSE = 1860438862U;
         static const AkUniqueID METALGATE_OPEN = 921440522U;
         static const AkUniqueID PLACE_TOMBSTONE = 269164602U;
+        static const AkUniqueID PLAY_SFX_UI_ACCEPT = 2321459623U;
+        static const AkUniqueID PLAY_SFX_UI_CHOOSE = 1603442012U;
+        static const AkUniqueID PLAY_SFX_UI_DENY = 381303321U;
+        static const AkUniqueID PLAY_SFX_UI_OVERLAP = 2274964804U;
+        static const AkUniqueID PLAY_SFX_UI_VALIDATE = 4047140117U;
+        static const AkUniqueID PLAY_VOX_BANSHEE = 2561686776U;
+        static const AkUniqueID PLAY_VOX_WOLF = 169930784U;
+        static const AkUniqueID STOP_VOX_BANSHEE = 1709289826U;
+        static const AkUniqueID STOP_VOX_WOLF = 4122134662U;
         static const AkUniqueID TAKE_FLOWER = 572867318U;
         static const AkUniqueID TAKE_ROCK = 3680743520U;
         static const AkUniqueID TAKE_TREEBRANCH = 3585906227U;

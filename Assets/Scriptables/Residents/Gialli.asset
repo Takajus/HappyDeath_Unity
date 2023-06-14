@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85f9ff19cbb61e4c8f5c0f45557a422, type: 3}
+  m_Name: Gialli
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2697425839460290874, guid: a86c721afb5a46341896fd324c068570, type: 3}
+  residentName: Gialli
+  description: This bubbly spirit has a beautiful voice... just like a siren.
+  sprite: {fileID: 21300000, guid: 2cfbf6619eb047545a425e8a31732c83, type: 3}
+  race: 1
+  role: 1
+  elementList:
+  - preferenceType: 1
+    race: 1
+    objectLike: 5
+    amount: 1
+    likeDislike: 0
+  - preferenceType: 1
+    race: 1
+    objectLike: 5
+    amount: 1
+    likeDislike: 1
+  - preferenceType: 2
+    race: 4
+    objectLike: 4
+    amount: 1
+    likeDislike: 1
+  secret: 
+  isAssign: 0
+  mood: 0

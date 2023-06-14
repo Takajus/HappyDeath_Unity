@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{422CA1DC-D104-4E46-A44D-CB5BB6AF2D26}" SchemaVersion="110" RootDocumentID="{D901BAB3-A722-4A8C-A67C-7D2206AD7293}" ParentDocumentID="{D901BAB3-A722-4A8C-A67C-7D2206AD7293}">
+	<Events>
+		<WorkUnit Name="VOICES" ID="{422CA1DC-D104-4E46-A44D-CB5BB6AF2D26}" OwnerID="{D901BAB3-A722-4A8C-A67C-7D2206AD7293}" PersistMode="Nested">
+			<ChildrenList>
+				<Folder Name="WOLF" ID="{5DD0C4EE-C4D8-4E08-BF04-9D407975A496}" ShortID="649255530">
+					<ChildrenList>
+						<Event Name="Stop_VOX_Wolf" ID="{9CEB9013-A1CF-4199-B9CE-FDF7A306B270}">
+							<ChildrenList>
+								<Action Name="" ID="{EA59849C-FD19-4544-9D27-FD031F7B1D27}" ShortID="246700375">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOX_Wolf" ID="{E0928A5E-2C70-4276-BBD3-6F14ECC9390D}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_VOX_Wolf" ID="{11717FED-3EA5-4313-B854-A73E5A245651}">
+							<ChildrenList>
+								<Action Name="" ID="{2E40934C-B503-4836-A299-8E05C0560782}" ShortID="172131830">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOX_Wolf" ID="{E0928A5E-2C70-4276-BBD3-6F14ECC9390D}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="BANSHEE" ID="{22C910B6-AE47-43E2-8B54-51590D5DCA03}" ShortID="197582823">
+					<ChildrenList>
+						<Event Name="Play_VOX_Banshee" ID="{FAB8FE22-3EAA-4D42-975C-0DAAA93A983F}">
+							<ChildrenList>
+								<Action Name="" ID="{AAF83562-B559-48FA-81C2-DF3836D2997B}" ShortID="298532303">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOX_Banshee" ID="{709D130D-8DEA-4688-8B1D-F3EC17F1974A}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_VOX_Banshee" ID="{40D344F3-9B98-4D25-897E-65C938B35421}">
+							<ChildrenList>
+								<Action Name="" ID="{A7C4B8D4-CD9A-4BD1-9AE5-07EB90942D1C}" ShortID="581852644">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VOX_Banshee" ID="{709D130D-8DEA-4688-8B1D-F3EC17F1974A}" WorkUnitID="{0CCD82D8-B386-44DB-9B27-1844ABBBB2CC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

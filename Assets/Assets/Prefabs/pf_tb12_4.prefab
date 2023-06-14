@@ -341,7 +341,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7181678516359282025}
-  - component: {fileID: 7413003759223804239}
+  - component: {fileID: 1500025846279130637}
   m_Layer: 0
   m_Name: pf_tb12_4
   m_TagString: Untagged
@@ -369,29 +369,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7413003759223804239
-MonoBehaviour:
+--- !u!65 &1500025846279130637
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7557499924671522771}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 330076f8b818e4740914a43f0cb53ee0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  validMat: {fileID: 0}
-  invalidMat: {fileID: 0}
-  actualObject: {fileID: 0}
-  previewObject: {fileID: 0}
-  item: {fileID: 0}
-  xRange: 2
-  zRange: 2
-  tileDetectionList:
-  - x: 0
-    z: 0
-    needDugTile: 1
+  serializedVersion: 2
+  m_Size: {x: 0.66108876, y: 1.634014, z: 0.33634335}
+  m_Center: {x: -0.0001386702, y: 0.31700712, z: -0.01201719}
 --- !u!1001 &779236946201351700
 PrefabInstance:
   m_ObjectHideFlags: 0
