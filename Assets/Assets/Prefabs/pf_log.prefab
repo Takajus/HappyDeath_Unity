@@ -100,6 +100,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7116081503952714216}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &6616914475424394153
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7926352649666495673}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5536077655852519775, guid: 73b2bf6dbedaa7549abb59495d46cf53, type: 3}
 --- !u!114 &8911389950225924513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,17 +129,3 @@ MonoBehaviour:
   E_Input: {fileID: 0}
   resourceToPick: {fileID: 11400000, guid: f68116be4e14f3a48ab64c152f692af5, type: 2}
   amountToGive: 1
---- !u!64 &6616914475424394153
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7926352649666495673}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5536077655852519775, guid: 73b2bf6dbedaa7549abb59495d46cf53, type: 3}
