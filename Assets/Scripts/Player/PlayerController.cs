@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField, Range(0f, 10f)] float maxSpeed = 3; //Player max move speed
     [SerializeField, Range(0f, 50f)] float accelerationRate = 20; //Rate at which the player accelerates
     [SerializeField, Range(0f, 50f)] float deccelerationRate = 20; //Rate at which the player deccelerates
+    [SerializeField, Range(90f, 720f)] float rotationSpeed = 540f; //Player max rotation speed
     float currentSpeed; //Current speed of the player;
     Vector3 moveDir;
     Vector3 lastMoveDir;
@@ -87,8 +88,11 @@ public class PlayerController : MonoBehaviour
         moveDir = AdjustVelocityToSlope(moveDir);
 
         rb.velocity = moveDir;
+        
+        Quaternion targetRotation = Quaternion.LookRotation(lastMoveDir);
+        playerModels.transform.rotation = Quaternion.RotateTowards(playerModels.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-        playerModels.transform.rotation = Quaternion.LookRotation(lastMoveDir);
+        //playerModels.transform.rotation = Quaternion.LookRotation(lastMoveDir);
 
         //PhysicsMaterial so we don't slide off of slopes or stick to walls
         if (isMoving)
