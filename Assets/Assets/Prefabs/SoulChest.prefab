@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2558373632094637110}
   - component: {fileID: 2558373632094637111}
+  - component: {fileID: 8627309752287175401}
+  - component: {fileID: 7402651925627132528}
   m_Layer: 0
   m_Name: SoulChest
   m_TagString: Untagged
@@ -54,6 +56,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &8627309752287175401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2939438714705303180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0360e46d342b75c4fba5a63afd574b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tombAssignUI: {fileID: 0}
+--- !u!65 &7402651925627132528
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2939438714705303180}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.28386223, y: 0.40126723, z: 0.6031988}
+  m_Center: {x: 0.35806897, y: 0.20688853, z: -0.013319105}
 --- !u!1 &3424971788655090105
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,8 +93,6 @@ GameObject:
   - component: {fileID: 1725034588088506195}
   - component: {fileID: 7930236694041354701}
   - component: {fileID: 1948881792753089810}
-  - component: {fileID: 7941651702857714941}
-  - component: {fileID: 708545960249389025}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -141,32 +167,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7941651702857714941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3424971788655090105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0360e46d342b75c4fba5a63afd574b2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tombAssignUI: {fileID: 0}
---- !u!65 &708545960249389025
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3424971788655090105}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0074937544, y: 0.013988293, z: 0.009551708}
-  m_Center: {x: -0.00009224847, y: 0.00000001529753, z: 0.0042975205}
 --- !u!1 &4096558889480144812
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,8 +5,6 @@ using UnityEngine.InputSystem;
 
 public class PickUpItem : MonoBehaviour, IInteractable
 {
-
-    [SerializeField] GameObject E_Input;
     [SerializeField] Item resourceToPick;
     [SerializeField] int amountToGive = 1;
 
@@ -18,14 +16,12 @@ public class PickUpItem : MonoBehaviour, IInteractable
 
     public void Hover()
     {
-        if (E_Input != null)
-            E_Input.SetActive(true);
+
     }
 
     public void UnHover()
     {
-        if (E_Input != null)
-            E_Input.SetActive(false);
+
     }
 
     public void Interact()

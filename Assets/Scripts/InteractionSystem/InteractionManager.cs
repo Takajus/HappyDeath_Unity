@@ -8,7 +8,7 @@ public class InteractionManager : MonoBehaviour
 {
     public static InteractionManager instance { get; private set; }
     public static InteractionManager Instance { get { if (instance == null) instance = FindObjectOfType<InteractionManager>(); return instance; } }
-    public enum InteractionMode { Interact, Cut, Dig, Mine, Place };
+    public enum InteractionMode { Interact, Cut, Dig, Mine, Place, Destroy };
     public static InteractionMode interactionMode { get; private set; }
     public static ResidentData transportedSoul;
 
@@ -16,6 +16,7 @@ public class InteractionManager : MonoBehaviour
     public PlacementHandler placementHandler { get; private set; }
     public ShovelHandler shovelHandler { get; private set; }
     public AxeHandler axeHandler { get; private set; }
+    public DestructHandler destructHandler { get; private set; }
 
 
     private void Awake()
@@ -24,6 +25,7 @@ public class InteractionManager : MonoBehaviour
         placementHandler = GetComponent<PlacementHandler>();
         shovelHandler = GetComponent<ShovelHandler>();
         axeHandler = GetComponent<AxeHandler>();
+        destructHandler = GetComponent<DestructHandler>();
     }
 
     void Update()
@@ -49,6 +51,10 @@ public class InteractionManager : MonoBehaviour
             else if (InventoryManager.HeldItem.itemType == Item.ItemType.TOOL && InventoryManager.HeldItem.Name == "Shovel")
             {
                 temp = InteractionMode.Dig;
+            }
+            else if (InventoryManager.HeldItem.itemType == Item.ItemType.TOOL && InventoryManager.HeldItem.Name == "Destroy")
+            {
+                temp = InteractionMode.Destroy;
             }
         }
 
@@ -86,6 +92,8 @@ public class InteractionManager : MonoBehaviour
                 return shovelHandler;
             case InteractionMode.Place:
                 return placementHandler;
+            case InteractionMode.Destroy:
+                return destructHandler;
             default:
                 return interactHandler;
         }

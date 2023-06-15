@@ -115,39 +115,17 @@ public class Build : MonoBehaviour, IInteractable
 
     public void Hover()
     {
-        foreach (var renderer in previewMeshes)
-        {
-            List<Material> materials = new List<Material>();
 
-            foreach (var material in renderer.materials)
-            {
-                materials.Add(material);
-            }
-
-            materials.Add(InteractionManager.Instance.GetHoverMat());
-            renderer.materials = materials.ToArray();
-        }
     }
 
     public void UnHover()
     {
-        foreach (var renderer in previewMeshes)
-        {
-            List<Material> materials = new List<Material>();
 
-            foreach (var material in renderer.materials)
-            {
-                materials.Add(material);
-            }
-
-            materials.RemoveAt(materials.Count - 1);
-            renderer.materials = materials.ToArray();
-        }
     }
 
     public void Interact()
     {
-        
+        Destroy(gameObject);
     }
 
     public void EndInteract()

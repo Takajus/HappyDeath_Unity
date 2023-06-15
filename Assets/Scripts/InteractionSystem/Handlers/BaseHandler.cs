@@ -50,7 +50,7 @@ public abstract class BaseHandler : MonoBehaviour
         {
             mouseIsTargeting = false;
 
-            if (mouseTarget)
+            if (mouseTarget && mouseTarget != target)
             {
                 RemoveHoverMat(mouseTarget);
                 UnHoverTarget(mouseTarget);
@@ -78,7 +78,7 @@ public abstract class BaseHandler : MonoBehaviour
         {
             isTargeting = false;
 
-            if (target)
+            if (target && mouseTarget != target)
             {
                 RemoveHoverMat(target);
                 UnHoverTarget(target);
@@ -172,7 +172,7 @@ public abstract class BaseHandler : MonoBehaviour
 
             if (previousInteractedObject == target)
             {
-                AddHoverMat(previousInteractedObject);
+                //AddHoverMat(previousInteractedObject);
                 HoverTarget(previousInteractedObject);
             }
             else if (target != null)
@@ -181,7 +181,6 @@ public abstract class BaseHandler : MonoBehaviour
                 UnHoverTarget(previousInteractedObject);
 
                 SelectTarget(target);
-
             }
             else
             {
@@ -252,7 +251,7 @@ public abstract class BaseHandler : MonoBehaviour
                 materials.Add(material);
             }
 
-            materials.Remove(materials.Last());
+            materials.RemoveAll(e => e.shader == outlineMat.shader);
             renderer.materials = materials.ToArray();
         }
     }
