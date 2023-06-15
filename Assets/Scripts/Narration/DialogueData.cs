@@ -5,7 +5,11 @@ using UnityEngine;
 using NaughtyAttributes;
 using Unity.VisualScripting;
 
+
 [System.Serializable]
+#if UNITY_EDITOR
+[UnityEditor.InitializeOnLoad]
+#endif
 public class DialogueStruct
 {
     public string characterName;
@@ -25,7 +29,7 @@ public class DialogueData : ScriptableObject
     public int index;
     [SerializeField] private int startIndex = 0;
 
-    private void Awake()
+    private void OnEnable()
     {
         index = startIndex;
         isLooping = false;
