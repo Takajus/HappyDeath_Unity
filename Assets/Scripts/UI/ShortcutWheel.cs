@@ -31,14 +31,17 @@ public class ShortcutWheel : MonoBehaviour
 
     private void OnItemRemoved(Item item)
     {
-        foreach (var build in buildsElements)
+        for (int i = 0; i < buildsElements.Count; i++)
         {
-            Item actualItem = build.GetComponent<Item>();
-
-            if (actualItem == item)
+            if (buildsElements[i].TryGetComponent<ToolWheel>(out ToolWheel toolwheel))
             {
-                buildsElements.Remove(build);
+                if (toolwheel.item == item)
+                {
+                    Destroy(buildsElements[i].gameObject);
+                    Destroy(lineNbrBuildsElement[0].gameObject);
+                }
             }
+
         }
     }
 

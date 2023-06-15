@@ -8,6 +8,7 @@ public class BookDisplayInventory : MonoBehaviour
     [SerializeField] private List<ButtonInventory> inventorySlot;
     [SerializeField] List<GameObject> Pages;
     [SerializeField] TextMeshProUGUI pageNumber;
+    [SerializeField] GameObject leftSide;
     int currentPageNumber = 0;
 
 
@@ -24,12 +25,22 @@ public class BookDisplayInventory : MonoBehaviour
         }
 
         RefreshInventorySlot();
-        inventorySlot[0].DisplayInformations();
-        inventorySlot[0].UI_ClickedOnMe();
+        if (inventorySlot.Count > 0)
+        {
+            inventorySlot[0].DisplayInformations();
+            inventorySlot[0].UI_ClickedOnMe();
+        }
     }
 
     private void GetInventorySlot()
     {
+
+        if (HUDManager.Instance.switchBookPanel.IsNewPageNeeded(HUDManager.Instance.inventoryManager.ResidentsInventory.Count, Pages.Count))
+        {
+            GameObject createdPage = HUDManager.Instance.switchBookPanel.CreateItemsPage(leftSide);
+            Pages.Add(createdPage);
+        }
+
         foreach (var page in Pages)
         {
             for (int i = 0; i < page.transform.childCount; i++)
@@ -54,9 +65,9 @@ public class BookDisplayInventory : MonoBehaviour
             item.setupButton.buttonImage.color = new Color(0,0,0,0);
         }
 
-        for (int i = 0; i < InventoryManager.Instance.Inventory.Count; i++)
+        for (int i = 0; i < InventoryManager.Instance.ItemsInventory.Count; i++)
         {
-            inventorySlot[i].item = InventoryManager.Instance.Inventory[i];
+            inventorySlot[i].item = InventoryManager.Instance.ItemsInventory[i];
             if (inventorySlot[i].item != null)
                 inventorySlot[i].setupButton.buttonImage.color = Color.white;
 
