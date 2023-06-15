@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,12 +34,12 @@ public class QuestManager :  MonoBehaviour
         UpdateQuestUI();
     }
 
-    public void CheckQuestProgress(Quest quest)
+    public void CheckQuestProgress(ResidentData residentData, Tomb tomb)
     {
         // V�rifier les objectifs de qu�te et marquer la qu�te comme compl�t�e si n�cessaire
-            if(quest.NewDeadNPC.isAssign == true)
-
+        if(residentData.isAssign == true)
         {
+            Quest quest = activeQuests.Find(e => e.NewDeadNPC == residentData);
             CompleteQuest(quest);
         }
     }
@@ -77,5 +78,14 @@ public class QuestManager :  MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        Tomb.OnAssignNPC -= CheckQuestProgress;
+    }
+
+    private void Awake()
+    {
+        Tomb.OnAssignNPC += CheckQuestProgress;
+    }
 }
 
