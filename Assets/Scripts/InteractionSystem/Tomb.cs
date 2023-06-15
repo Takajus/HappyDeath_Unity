@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Tomb : MonoBehaviour, IInteractable
@@ -8,6 +10,8 @@ public class Tomb : MonoBehaviour, IInteractable
     public Resident resident;
 
     public Transform origin;
+
+    public static Action<ResidentData, Tomb> OnAssignNPC;
 
     public void AssignNPC(ResidentData resident)
     {
@@ -19,7 +23,7 @@ public class Tomb : MonoBehaviour, IInteractable
 
         this.resident.ResidentData = residentData;
 
-        Debug.Log("test");
+        OnAssignNPC?.Invoke(residentData, this);
     }
 
     public void Interact()

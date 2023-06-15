@@ -13,19 +13,22 @@ MonoBehaviour:
   m_Name: DialogueData
   m_EditorClassIdentifier: 
   dialogueName: Test Diag
-  diagStructs:
-  - characterName: Perso 01
-    paragraphe: Coucou
-  - characterName: Perso 02
-    paragraphe: Hey !
-  - characterName: Perso 01
-    paragraphe: Bye bye
-  - characterName: Perso 02
-    paragraphe: ok
+  diagStartQuest:
+  - characterName: 1
+    paragraphe: 2
+  - characterName: 3
+    paragraphe: 4
+  - characterName: 5
+    paragraphe: 6
+  - characterName: 7
+    paragraphe: 8
+  - characterName: 9
+    paragraphe: 10
   loopDiag:
     characterName: Perso
     paragraphe: "Tu m'as d\xE9j\xE0 dit aurevoir non ?"
+  diagEndQuest: []
   isLooping: 0
-  isDisplay: 0
+  isDisplay: 1
   index: 0
   startIndex: 0

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f1f27c407c1e64ea2a8ffd83e0dfb4, type: 3}
+  m_Name: CelticTombBasic
+  m_EditorClassIdentifier: 
+  itemType: 2
+  Prefab: {fileID: 6297766785373098941, guid: c20ae18b56e639e419bd05d308a53f79, type: 3}
+  Sprite: {fileID: 0}
+  Name: Celtic Tomb
+  Description: A basic celtic tomb
+  Amount: 1
+  Placeable: 1
+  recipe: {fileID: 0}

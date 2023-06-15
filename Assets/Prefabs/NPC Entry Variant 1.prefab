@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1878511560
 RectTransform:
   m_ObjectHideFlags: 0
@@ -355,17 +355,17 @@ PrefabInstance:
     - target: {fileID: 7471945652588123954, guid: a8ecca33a997f494caf1e52de28fba39,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.75
+      value: -0.057
       objectReference: {fileID: 0}
     - target: {fileID: 7471945652588123954, guid: a8ecca33a997f494caf1e52de28fba39,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7471945652588123954, guid: a8ecca33a997f494caf1e52de28fba39,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2.393
       objectReference: {fileID: 0}
     - target: {fileID: 7471945652588123954, guid: a8ecca33a997f494caf1e52de28fba39,
         type: 3}
@@ -466,10 +466,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questManager: {fileID: 0}
-  availableQuests:
-  - {fileID: 11400000, guid: 9e6cfa5130d96f442aa839aa4c818656, type: 2}
-  dialogList:
-  - {fileID: 0}
+  questDataList:
+  - npc: {fileID: 11400000, guid: 2c960dc54edd94d4ba261ac58e4bf337, type: 2}
+    availableQuests:
+    - {fileID: 11400000, guid: 9e6cfa5130d96f442aa839aa4c818656, type: 2}
+    dialogList:
+    - {fileID: 11400000, guid: 0e15c36d2478d314c95e40f372bda881, type: 2}
+  - npc: {fileID: 11400000, guid: 44ee3ecf5dbc14b4da3e40bee5c673f0, type: 2}
+    availableQuests:
+    - {fileID: 11400000, guid: bf0feae12507ddf4fbc52ace11dd97e0, type: 2}
+    dialogList:
+    - {fileID: 11400000, guid: d8280eeeb840e244ca222b40e21e3045, type: 2}
+  E_Input: {fileID: 2116332421}
+--- !u!114 &378471786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6080004083422664896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a75bdd243aff64d8e658c0b8b5acdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog: {fileID: 0}
 --- !u!4 &6080004083422664924 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7471945652588123954, guid: a8ecca33a997f494caf1e52de28fba39,

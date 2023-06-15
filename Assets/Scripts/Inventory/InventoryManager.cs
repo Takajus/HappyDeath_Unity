@@ -208,4 +208,12 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public void AddResident(ResidentData residentToAdd)
+    {
+        if (inventoryDatabase.unlockedResidents.Contains(residentToAdd))
+            return;
+
+        inventoryDatabase.unlockedResidents.Add(residentToAdd);
+    }
+
 }
