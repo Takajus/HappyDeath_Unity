@@ -112,12 +112,20 @@ public class InventoryManager : MonoBehaviour
 
     public void AddRecipe(Recipe recipe)
     {
+        //Utilser les unlockedRecipe à la place
         recipesInventory.Add(recipe);
     }
     
     public void AddResident(ResidentData resident)
     {
+        //Utilser les unlockedResidents à la place
         residentsInventory.Add(resident);
+
+        /*if (inventoryDatabase.unlockedResidents.Contains(residentToAdd))
+            return;
+
+        inventoryDatabase.unlockedResidents.Add(residentToAdd);*/
+
     }
 
     public void UI_AddItem(Item itemToAdd)
@@ -208,12 +216,12 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void AddResident(ResidentData residentToAdd)
+    /*public void AddResident2(ResidentData residentToAdd)
     {
         if (inventoryDatabase.unlockedResidents.Contains(residentToAdd))
             return;
 
         inventoryDatabase.unlockedResidents.Add(residentToAdd);
-    }
+    }*/
 
 }
