@@ -547,11 +547,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aa6d2c0e70dc144db33aad2e01e3df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory:
-  - {fileID: 11400000, guid: 7fa2e0cee1d20424cbf4266b35fbfc03, type: 2}
-  - {fileID: 11400000, guid: f68116be4e14f3a48ab64c152f692af5, type: 2}
-  - {fileID: 11400000, guid: 54234a186689e9e45acdd37f7d9b5798, type: 2}
-  itemAmount: 000000000000000000000000
+  itemsInventory: []
+  recipesInventory: []
+  residentsInventory: []
+  itemAmount: 
   craftingManager: {fileID: 6770284019329880740}
   bookDisplayInventory: {fileID: 855861455416283149}
   itemToReset:
@@ -987,6 +986,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2868498344090411285}
     m_Modifications:
+    - target: {fileID: 1218715223, guid: 6f9e1bb1289206144a8edff810513088, type: 3}
+      propertyPath: pageItemsPrefab
+      value: 
+      objectReference: {fileID: 453989978673367433, guid: f4d817c4e5b5c2648a56217fd5b87fe3,
+        type: 3}
+    - target: {fileID: 1218715223, guid: 6f9e1bb1289206144a8edff810513088, type: 3}
+      propertyPath: pageRecipesPrefab
+      value: 
+      objectReference: {fileID: 453989978673367433, guid: 9bdd2c3b1fde51141bd541f299a2c559,
+        type: 3}
     - target: {fileID: 103522611214629927, guid: 6f9e1bb1289206144a8edff810513088,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1067,6 +1076,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1403290784648969997, guid: 6f9e1bb1289206144a8edff810513088,
+        type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 7002754753472201013}
     - target: {fileID: 1403290784648969997, guid: 6f9e1bb1289206144a8edff810513088,
         type: 3}
       propertyPath: inventoryMananger

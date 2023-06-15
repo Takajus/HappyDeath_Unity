@@ -29,43 +29,12 @@ public class InteractionManager : MonoBehaviour
     void Update()
     {
         DetermineInteractionMode();
-
-        switch (interactionMode)
-        {
-            case InteractionMode.Interact:
-                interactHandler.HandleInteractable();
-                break;
-            case InteractionMode.Cut:
-                axeHandler.HandleInteractable();
-                break;
-            case InteractionMode.Dig:
-                shovelHandler.HandleInteractable();
-                break;
-            case InteractionMode.Place:
-                placementHandler.HandleInteractable();
-                break;
-            default:
-                interactHandler.HandleInteractable();
-                break;
-        }
+        GetCurrentHandler().HandleInteractable();
     }
 
     void DetermineInteractionMode()
     {
         InteractionMode temp = InteractionMode.Interact;
-
-        /*if (placementHandler.IsInteracting)
-        {
-            temp = InteractionMode.Place;
-        }
-        else if (axeHandler.axeIsEquiped)
-        {
-            temp = InteractionMode.Cut;
-        }
-        else if (shovelHandler.shovelIsEquiped)
-        {
-            temp = InteractionMode.Dig;
-        }*/
 
         if (InventoryManager.HeldItem)
         {
@@ -89,54 +58,36 @@ public class InteractionManager : MonoBehaviour
 
     void ChangeInteractionMode(InteractionMode newInteractionMode)
     {
-        switch (interactionMode)
-        {
-            case InteractionMode.Interact:
-                interactHandler.ClearHandler();
-                break;
-            case InteractionMode.Cut:
-                axeHandler.ClearHandler();
-                break;
-            case InteractionMode.Dig:
-                shovelHandler.ClearHandler();
-                break;
-            case InteractionMode.Mine:
-                break;
-            case InteractionMode.Place:
-                placementHandler.ClearHandler();
-                break;
-            default:
-                interactHandler.ClearHandler();
-                break;
-        }
-
-        switch (newInteractionMode)
-        {
-            case InteractionMode.Interact:
-                interactHandler.InitializeHandler();
-                break;
-            case InteractionMode.Cut:
-                axeHandler.InitializeHandler();
-                break;
-            case InteractionMode.Dig:
-                shovelHandler.InitializeHandler();
-                break;
-            case InteractionMode.Mine:
-                break;
-            case InteractionMode.Place:
-                placementHandler.InitializeHandler();
-                break;
-            default:
-                interactHandler.InitializeHandler();
-                break;
-        }
-
+        GetCurrentHandler().ClearHandler();
         interactionMode = newInteractionMode;
+        GetCurrentHandler().InitializeHandler();
     }
 
     public void InteruptInteraction()
     {
         ChangeInteractionMode(InteractionMode.Interact);
         InventoryManager.HeldItem = null;
+    }
+
+    public Material GetHoverMat()
+    {
+        return GetCurrentHandler().outlineMat;
+    }
+
+    BaseHandler GetCurrentHandler()
+    {
+        switch (interactionMode)
+        {
+            case InteractionMode.Interact:
+                return interactHandler;
+            case InteractionMode.Cut:                
+                return axeHandler;
+            case InteractionMode.Dig:
+                return shovelHandler;
+            case InteractionMode.Place:
+                return placementHandler;
+            default:
+                return interactHandler;
+        }
     }
 }
