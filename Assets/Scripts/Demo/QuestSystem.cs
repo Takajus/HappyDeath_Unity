@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -42,7 +42,7 @@ public class QuestSystem : MonoBehaviour
         DemoTaskStat = 0;
 
         // Get the QuestManager component attached to the same GameObject
-        questManager = GetComponent<QuestManager>();
+        //questManager = GetComponent<QuestManager>();
     }
 
     private void Update()

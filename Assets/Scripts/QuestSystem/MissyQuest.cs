@@ -1,3 +1,4 @@
+using System;
 using Fungus;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,9 +9,9 @@ using UnityEngine;
 [System.Serializable]
 public class QuestData
 {
-    public GameObject npc;
+    public ResidentData npc;
     public List<Quest> availableQuests = new List<Quest>();
-    public List<GameObject> dialogList = new List<GameObject>();
+    public List<DialogueData> dialogList = new List<DialogueData>();
 }
 public class MissyQuest : MonoBehaviour, IInteractable
 {
@@ -30,25 +31,48 @@ public class MissyQuest : MonoBehaviour, IInteractable
         {
             Debug.Log("NO Quest available");
         }
+
+    }
+
+    private void End()
+    {
+        if (_dialogue.dialog.isDisplay == true)
+        {
+            if (currentQuestIndex > 0)
+            {
+                if (!questDataList[currentQuestIndex - 1].availableQuests[currentQuestIndex - 1].isCompleted)
+                {
+                    Debug.Log("Last Quest not finished yet");
+                    _dialogue.dialog.isDisplay = false;
+                    //EndInteract();
+                    InteractionManager.Instance.interactHandler.ClearHandler();
+                    return;
+                }
+            }
+            else
+            {
+                if (!questDataList[currentQuestIndex].availableQuests[currentQuestIndex].isCompleted && questManager.activeQuests.Count > 0)
+                {
+                    Debug.Log("Last Quest not finished yet");
+                    _dialogue.dialog.isDisplay = false;
+                    //EndInteract();
+                    InteractionManager.Instance.interactHandler.ClearHandler();
+                    return;
+                }
+                Debug.Log("GiveQuest call");
+                GiveQuest();
+                //EndInteract();
+                InteractionManager.Instance.interactHandler.ClearHandler();
+            }
+            
+        }
+        
     }
 
     public void EndInteract()
     {
-        /*if (currentQuestIndex > 0)
-        {
-            if (!questDataList[currentQuestIndex - 1].availableQuests[currentQuestIndex - 1].isCompleted)
-            {
-                Debug.Log("Last Quest not finished yet");
-                return;
-            }
-        }*/
-
-        Debug.Log(_dialogue.dialog.index);
-        if (_dialogue.dialog.index >= _dialogue.dialog.diagStructs.Count - 1)
-        {
-            Debug.Log("GiveQuest call");
-            GiveQuest();
-        }
+        PlayerController.Instance.EnablePlayer();
+        _dialogue.EndDiag -= End;
     }
     
     public InteractMode GetInteractMode()
@@ -63,18 +87,16 @@ public class MissyQuest : MonoBehaviour, IInteractable
         if (currentQuestIndex < questDataList.Count && questManager.currentQuest == null)
         {
             Quest quest = questDataList[currentQuestIndex].availableQuests[currentQuestIndex];
-
+            
+            //_dialogue.dialog = questDataList[currentQuestIndex].dialogList[currentQuestIndex];
             // Remove the quest from the available quests list
-            questDataList.RemoveAt(currentQuestIndex);
+            //questDataList.RemoveAt(currentQuestIndex);
 
             // Send the quest to the QuestManager to accept
             questManager.AcceptQuest(quest);
             Debug.Log("Got Quest " + currentQuestIndex);
 
-            currentQuestIndex++;
         }
-        currentQuestIndex++;
-     
     }
 
     public void Hover()
@@ -84,26 +106,22 @@ public class MissyQuest : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        /*if (currentQuestIndex > 0)
+        _dialogue.EndDiag += End;
+        PlayerController.Instance.DisablePlayer();
+        if (currentQuestIndex < questDataList.Count && questManager.currentQuest == null && currentQuestIndex > 0)
         {
-            if (!questDataList[currentQuestIndex - 1].availableQuests[currentQuestIndex - 1].isCompleted)
-            {
-                Debug.Log("Last Quest not finished yet");
-                return;
-            }
-        }*/
-
-        //questDataList[currentQuestIndex].dialogList[currentQuestIndex].SetActive(true);
-        /*if (!temp)
+            currentQuestIndex++;
+        }
+        
+        if (_dialogue.dialog != questDataList[currentQuestIndex].dialogList[currentQuestIndex] || _dialogue.dialog is null)
         {
-            temp = true;
-            QuestSystem.Instance.GetDemoTask(1);
-        }*/
-
-        //Debug.Log("ca marche?");
-
-
+            _dialogue.dialog = questDataList[currentQuestIndex].dialogList[currentQuestIndex];
+        }
+        
+        
+        
         _dialogue.NextDialog();
+        
     }
 
 

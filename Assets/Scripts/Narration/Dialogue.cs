@@ -3,16 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Dialogue : MonoBehaviour
 {
     public DialogueData dialog;
 
+    public Action EndDiag;
+
     public  void StartDialog()
     {
         dialog.index = 0;
         DialogUI.instance.SetActive(true);
-        if (dialog.index < dialog.diagStructs.Count)
+        if (dialog.index < dialog.diagStartQuest.Count)
         {
             DisplayDialog();
         }
@@ -20,11 +23,15 @@ public class Dialogue : MonoBehaviour
 
     public void NextDialog()
     {
-        if(dialog is null)
+        if (dialog is null)
+        {
+            Debug.LogError("No Dialog to Display !");
             return;
+        }
         
         if (dialog.index == 0)
         {
+            InputManager.Instance.uiDialogAction.action.performed += context => Next();
             DialogUI.instance.SetActive(true);
         }
         
@@ -32,7 +39,6 @@ public class Dialogue : MonoBehaviour
         {
             if (dialog.index > 0)
             {
-                dialog.index = 0;
                 EndDialog();
                 return;
             }
@@ -41,7 +47,7 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            if (dialog.index < dialog.diagStructs.Count)
+            if (dialog.index < dialog.diagStartQuest.Count)
             {
                 DisplayDialog();
             }
@@ -49,11 +55,9 @@ public class Dialogue : MonoBehaviour
             {
                 if (!dialog.isLooping)
                 {
-                    dialog.index = 0;
                     dialog.isLooping = true;
                 }
 
-                dialog.index = 0;
                 EndDialog();
                 return;
             }
@@ -64,6 +68,8 @@ public class Dialogue : MonoBehaviour
 
     private void DisplayDialog()
     {
+        dialog.isDisplay = true;
+        
         if (dialog.isLooping)
         {
             DialogUI.instance.UpdateUI(dialog.loopDiag.characterName,
@@ -71,17 +77,20 @@ public class Dialogue : MonoBehaviour
             return;
         }
         
-        DialogUI.instance.UpdateUI(dialog.diagStructs[dialog.index].characterName,
-            dialog.diagStructs[dialog.index].paragraphe);
+        DialogUI.instance.UpdateUI(dialog.diagStartQuest[dialog.index].characterName,
+            dialog.diagStartQuest[dialog.index].paragraphe);
     }
 
     public void EndDialog()
     {
         // TODO: ending dialog logic
+        dialog.index = 0;
         DialogUI.instance.SetActive(false);
+        EndDiag?.Invoke();
+        InputManager.Instance.uiDialogAction.action.performed -= context => Next();
     }
 
-    private void Update()
+    /*private void Update()
     {
         if (dialog?.index > 0)
         {
@@ -90,6 +99,14 @@ public class Dialogue : MonoBehaviour
                 //Debug.Log("truc");
                 NextDialog();
             }
+        }
+    }*/
+
+    private void Next()
+    {
+        if (dialog?.index > 0)
+        {
+            NextDialog();
         }
     }
 

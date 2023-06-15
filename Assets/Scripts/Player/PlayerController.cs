@@ -57,6 +57,12 @@ public class PlayerController : MonoBehaviour
     {
         if (canMove)
             Move();
+        else if (isMoving)
+        {
+            isMoving = false;
+            animatorDay.SetBool("Walking", false);
+            animatorNight.SetBool("Walking", false);
+        }
     }
 
     void Move()
@@ -72,6 +78,9 @@ public class PlayerController : MonoBehaviour
             moveDir = (transform.forward * dir.y) + (transform.right * dir.x);
             lastMoveDir = moveDir.normalized;
         }
+
+        animatorDay.SetBool("Walking", isMoving);
+        animatorNight.SetBool("Walking", isMoving);
 
         UpdateMoveSpeed(dir.x, dir.y);
         moveDir = moveDir.normalized * currentSpeed;

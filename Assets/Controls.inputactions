@@ -85,6 +85,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "DialogNextStep",
+                    "type": "Button",
+                    "id": "3c84d579-e70c-4807-9057-20a0c9aa8012",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -294,6 +303,17 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "WheelShortcut",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1f19c7b1-34c2-4a83-9a12-af682fb5b834",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "DialogNextStep",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -84,7 +84,7 @@ public abstract class BaseHandler : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         if (Application.isPlaying)
-        Gizmos.DrawSphere(interactSphere.transform.position, 1.5f);
+            Gizmos.DrawSphere(interactSphere.transform.position, 1.5f);
     }
 
     public virtual void HandleInteractable()
@@ -173,6 +173,11 @@ public abstract class BaseHandler : MonoBehaviour
 
         UnHoverTarget(mouseTarget);
         UnHoverTarget(target);
+    }
+
+    public virtual void InitializeHandler()
+    {
+
     }
 
     protected virtual bool HasWantedType(GameObject obj) => true;

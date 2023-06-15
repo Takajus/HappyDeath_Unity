@@ -22,10 +22,10 @@ public class Resident : MonoBehaviour, IInteractable
     private void Awake()
     {
         // TODO: Modifier la list pour utiliser celle de la DataBase
-        MoodManager.residentList.Add(ResidentData);
         transform.GetComponent<Collider>().enabled = false;
         _dialogue = transform.GetComponent<Dialogue>();
-        _dialogue.dialog = ResidentData.dialogueData;
+        MoodManager.residentList.Add(ResidentData);
+
 
         DayCycleEvents.OnNightStart += Day;
         DayCycleEvents.OnDayStart += Night;
@@ -52,6 +52,7 @@ public class Resident : MonoBehaviour, IInteractable
         if (!model.activeInHierarchy)
             model.SetActive(true);
 
+        _dialogue.dialog = ResidentData?.dialogueData;
         negativeMood = 0f;
         positiveMood = 0f;
         residentAmount = 0;
@@ -192,22 +193,22 @@ public class Resident : MonoBehaviour, IInteractable
 
     private void RecipeConstitution(ElementPreference elementPreference, Build otherBuild)
     {
-        if (elementPreference.likeDislike == LikeDislike.Like)
+
+        DoLikeIngredient(otherBuild.item.recipe.ingredient1);
+        DoLikeIngredient(otherBuild.item.recipe.ingredient2);
+        DoLikeIngredient(otherBuild.item.recipe.ingredient3);
+
+        void DoLikeIngredient(Recipe.Ingredient ingredient)
         {
-            if (elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient1.ingredientType.Name
-                || elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient2.ingredientType.Name
-                || elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient3.ingredientType.Name)
+            if (ingredient.ingredientType == null)
+                return;
+
+            if (elementPreference.objectLike.ToString() == ingredient.ingredientType.Name)
             {
-                ++positiveMood;
-            }
-        }
-        else
-        {
-            if (elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient1.ingredientType.Name
-                || elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient2.ingredientType.Name
-                || elementPreference.objectLike.ToString() == otherBuild.item.recipe.ingredient3.ingredientType.Name)
-            {
-                ++negativeMood;
+                if (elementPreference.likeDislike == LikeDislike.Like)
+                    ++positiveMood;
+                else
+                    ++negativeMood;
             }
         }
     }
