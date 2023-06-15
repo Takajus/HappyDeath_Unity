@@ -5,17 +5,11 @@ using UnityEngine;
 
 public class BookDisplayInventory : MonoBehaviour
 {
-    [SerializeField] private List<ButtonInventory> inventorySlot;
+    [SerializeField] private List<ButtonDisplayInventory> inventorySlot;
     [SerializeField] List<GameObject> Pages;
-    [SerializeField] TextMeshProUGUI pageNumber;
+    [SerializeField] TextMeshProUGUI pageNumberText;
     [SerializeField] GameObject leftSide;
     int currentPageNumber = 0;
-
-
-    private void Start()
-    {
-        GetInventorySlot();
-    }
 
     private void OnEnable()
     {
@@ -32,10 +26,16 @@ public class BookDisplayInventory : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        GetInventorySlot();
+    }
+
+
     private void GetInventorySlot()
     {
 
-        if (HUDManager.Instance.switchBookPanel.IsNewPageNeeded(HUDManager.Instance.inventoryManager.ResidentsInventory.Count, Pages.Count))
+        if (HUDManager.Instance.switchBookPanel.IsNewPageNeeded(HUDManager.Instance.inventoryManager.inventoryDatabase.items.Count, Pages.Count))
         {
             GameObject createdPage = HUDManager.Instance.switchBookPanel.CreateItemsPage(leftSide);
             Pages.Add(createdPage);
@@ -47,12 +47,15 @@ public class BookDisplayInventory : MonoBehaviour
             {
                 for (int j = 0; j < page.transform.GetChild(i).transform.childCount; j++)
                 {
-                    ButtonInventory objectToAdd = page.transform.GetChild(i).transform.GetChild(j).GetComponent<ButtonInventory>();
+                    ButtonDisplayInventory objectToAdd = page.transform.GetChild(i).transform.GetChild(j).GetComponent<ButtonDisplayInventory>();
                     if (!inventorySlot.Contains(objectToAdd))
                         inventorySlot.Add(objectToAdd);
                 }
             }
+            page.SetActive(false);
         }
+
+        Pages[0].SetActive(true);
     }
 
     public void RefreshInventorySlot()
@@ -77,7 +80,6 @@ public class BookDisplayInventory : MonoBehaviour
 
     public void UI_PreviousPage()
     {
-        Debug.Log("aled");
         Pages[currentPageNumber].SetActive(false);
         currentPageNumber--;
 
@@ -87,7 +89,7 @@ public class BookDisplayInventory : MonoBehaviour
         }
         Pages[currentPageNumber].SetActive(true);
 
-        pageNumber.text = (currentPageNumber + 1).ToString();
+        pageNumberText.text = (currentPageNumber + 1).ToString();
     }
     
     public void UI_NextPage()
@@ -102,6 +104,6 @@ public class BookDisplayInventory : MonoBehaviour
 
         Pages[currentPageNumber].SetActive(true);
         
-        pageNumber.text = (currentPageNumber +1).ToString();
+        pageNumberText.text = (currentPageNumber +1).ToString();
     }
 }

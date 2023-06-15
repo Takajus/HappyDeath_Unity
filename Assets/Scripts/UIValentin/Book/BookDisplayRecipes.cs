@@ -7,7 +7,11 @@ public class BookDisplayRecipes : MonoBehaviour
 {
     [SerializeField] InventoryManager inventoryManager;
     [SerializeField] List<GameObject> recipesSlot;
+
     [SerializeField] List<GameObject> Pages;
+    [SerializeField] TextMeshProUGUI pageNumberText;
+    int currentPageNumber = 0;
+
     [SerializeField] GameObject leftSide;
 
     [SerializeField] TextMeshProUGUI ingredientOwned_1;
@@ -26,20 +30,13 @@ public class BookDisplayRecipes : MonoBehaviour
             SetRecipesSlot();
             AssignRecipes();
         }
-
-        if (recipesSlot.Count > 0)
-        {
-            recipesSlot[0].GetComponent<DisplayRecipes>().DisplayInformations();
-            recipesSlot[0].GetComponent<DisplayRecipes>().UI_ClickedOnMe();
-        }
     }
 
     private void Start()
     {
-        if (recipesSlot.Count <= 0)
+        if (recipesSlot.Count > 0)
         {
-            SetRecipesSlot();
-            AssignRecipes();
+            recipesSlot[0].GetComponent<ButtonDisplayRecipes>().DisplayInformations();
         }
     }
 
@@ -47,15 +44,7 @@ public class BookDisplayRecipes : MonoBehaviour
     {
         recipesSlot.Clear();
 
-        /*for (int i = 0; i < verticalBox.transform.childCount; i++)
-        {
-            for (int j = 0; j < verticalBox.transform.GetChild(i).transform.childCount; j++)
-            {
-                recipesSlot.Add(verticalBox.transform.GetChild(i).transform.GetChild(j).gameObject);
-            }
-        }*/
-
-        if (HUDManager.Instance.switchBookPanel.IsNewPageNeeded(HUDManager.Instance.inventoryManager.ResidentsInventory.Count, Pages.Count))
+        if (HUDManager.Instance.switchBookPanel.IsNewPageNeeded(HUDManager.Instance.inventoryManager.inventoryDatabase.unlockedRecipes.Count, Pages.Count))
         {
             GameObject createdPage = HUDManager.Instance.switchBookPanel.CreateRecipesPage(leftSide);
             Pages.Add(createdPage);
@@ -70,18 +59,22 @@ public class BookDisplayRecipes : MonoBehaviour
                     recipesSlot.Add(page.transform.GetChild(i).transform.GetChild(j).gameObject);
                 }
             }
+
+            page.SetActive(false);
         }
+
+        Pages[0].SetActive(true);
     }
 
     private void AssignRecipes()
     {
         for (int i = 0; i < recipesSlot.Count; i++)
         {
-            if (inventoryManager.RecipesInventory.Count <= i)
+            if (inventoryManager.inventoryDatabase.unlockedRecipes.Count <= i)
             {
                 break;
             }
-            recipesSlot[i].GetComponent<DisplayRecipes>().SetScriptableRecipe(inventoryManager.RecipesInventory[i]);
+            recipesSlot[i].GetComponent<ButtonDisplayRecipes>().SetScriptableRecipe(inventoryManager.inventoryDatabase.unlockedRecipes[i]);
         }
     }
 
@@ -90,5 +83,34 @@ public class BookDisplayRecipes : MonoBehaviour
         ingredientOwned_1.text = inventoryManager.GetIngredientAmount(Stone).ToString();
         ingredientOwned_2.text = inventoryManager.GetIngredientAmount(Wood).ToString();
         ingredientOwned_3.text = inventoryManager.GetIngredientAmount(Flower).ToString();
+    }
+
+    public void UI_PreviousPage()
+    {
+        Pages[currentPageNumber].SetActive(false);
+        currentPageNumber--;
+
+        if (currentPageNumber < 0)
+        {
+            currentPageNumber = Pages.Count - 1;
+        }
+        Pages[currentPageNumber].SetActive(true);
+
+        pageNumberText.text = (currentPageNumber + 1).ToString();
+    }
+
+    public void UI_NextPage()
+    {
+        Pages[currentPageNumber].SetActive(false);
+        currentPageNumber++;
+
+        if (currentPageNumber >= Pages.Count)
+        {
+            currentPageNumber = 0;
+        }
+
+        Pages[currentPageNumber].SetActive(true);
+
+        pageNumberText.text = (currentPageNumber + 1).ToString();
     }
 }

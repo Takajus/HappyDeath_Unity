@@ -2,16 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DisplayResidents : MonoBehaviour
+public class ButtonDisplayResidents : MonoBehaviour
 {
     [System.Serializable]
     public struct SetupButton
     {
         public Image buttonImage;
         public Image background;
-        public Image resident;
+        public Image imageResidentToShow;
         public Image icon;
         public TextMeshProUGUI name;
         public TextMeshProUGUI description;
@@ -23,6 +24,21 @@ public class DisplayResidents : MonoBehaviour
     private void Start()
     {
         Refresh();
+        GetVariables();
+
+        EventTrigger.Entry entry = new EventTrigger.Entry();
+        entry.eventID = EventTriggerType.PointerEnter;
+        entry.callback.AddListener((eventData) => { UI_Hover(); });
+        GetComponent<EventTrigger>().triggers.Add(entry);
+
+        DisplayInformations();
+    }
+
+    private void GetVariables()
+    {
+        setupButton.description = InventoryManager.Instance.residentTextDescription;
+        setupButton.name = InventoryManager.Instance.residentTextName;
+        setupButton.imageResidentToShow = InventoryManager.Instance.imageResidentToShow;
     }
 
     public void SetScriptableRecipe(ResidentData givenResident)
@@ -39,7 +55,7 @@ public class DisplayResidents : MonoBehaviour
         setupButton.icon.sprite = scriptableResident.sprite;
     }
 
-    public void UI_ClickedOnMe()
+    public void UI_Hover()
     {
         DisplayInformations();
     }
@@ -52,8 +68,13 @@ public class DisplayResidents : MonoBehaviour
             return;
         }
 
+        if (setupButton.description == null)
+        {
+            return;
+        }
+
         setupButton.icon.color = Color.white;
-        setupButton.resident.sprite = scriptableResident.sprite;
+        setupButton.imageResidentToShow.sprite = scriptableResident.sprite;
         setupButton.description.text = scriptableResident.description;
         setupButton.name.text = scriptableResident.residentName;
     }

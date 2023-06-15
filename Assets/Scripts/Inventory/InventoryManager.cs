@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -27,7 +29,31 @@ public class InventoryManager : MonoBehaviour
     public event Action<Item> OnItemAdded;
     public event Action<Item> OnItemRemoved;
 
-//#if !UNITY_EDITOR
+    [Header("Inventorys General Variables")]
+    public Image inventoryImageItemToShow;
+    public TextMeshProUGUI inventoryTextName;
+    public TextMeshProUGUI inventoryTextDescription;
+    
+    [Header("Recipes General Variables")]
+    public Image recipeImageIngredients_1;
+    public TextMeshProUGUI recipeTextCurrentOwnIngredient_1;
+    public TextMeshProUGUI recipeTextIngredientNeeded_1;
+    public Image recipeImageIngredients_2;
+    public TextMeshProUGUI recipeTextCurrentOwnIngredient_2;
+    public TextMeshProUGUI recipeTextIngredientNeeded_2;
+    public Image recipeImageIngredients_3;
+    public TextMeshProUGUI recipeTextCurrentOwnIngredient_3;
+    public TextMeshProUGUI recipeTextIngredientNeeded_3;
+    public Image recipeImageItemToShow;
+    public TextMeshProUGUI recipeTextName;
+    public TextMeshProUGUI recipeTextDescription;
+
+    [Header("Residents General Variables")]
+    public TextMeshProUGUI residentTextDescription;
+    public TextMeshProUGUI residentTextName;
+    public Image imageResidentToShow;
+
+    //#if !UNITY_EDITOR
     private void Start()
     {
         ResetIngredients();
