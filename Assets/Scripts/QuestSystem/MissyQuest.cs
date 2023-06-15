@@ -22,6 +22,8 @@ public class MissyQuest : MonoBehaviour, IInteractable
     [SerializeField] private GameObject E_Input;
     Dialogue _dialogue;
 
+    public static bool isDialogOpen = false;
+
     private void Start()
     {
         questManager = QuestManager.Instance;
@@ -45,7 +47,8 @@ public class MissyQuest : MonoBehaviour, IInteractable
                     Debug.Log("Last Quest not finished yet");
                     _dialogue.dialog.isDisplay = false;
                     //EndInteract();
-                    InteractionManager.Instance.interactHandler.ClearHandler();
+                    InteractionManager.Instance.InteruptInteraction();
+                        //interactHandler.ClearHandler();
                     return;
                 }
             }
@@ -56,13 +59,15 @@ public class MissyQuest : MonoBehaviour, IInteractable
                     Debug.Log("Last Quest not finished yet");
                     _dialogue.dialog.isDisplay = false;
                     //EndInteract();
-                    InteractionManager.Instance.interactHandler.ClearHandler();
+                    InteractionManager.Instance.InteruptInteraction();
+                        //interactHandler.ClearHandler();
                     return;
                 }
                 Debug.Log("GiveQuest call");
                 GiveQuest();
                 //EndInteract();
-                InteractionManager.Instance.interactHandler.ClearHandler();
+                InteractionManager.Instance.InteruptInteraction();
+                    //interactHandler.ClearHandler();
             }
             
         }
@@ -71,6 +76,7 @@ public class MissyQuest : MonoBehaviour, IInteractable
 
     public void EndInteract()
     {
+        isDialogOpen = false;
         PlayerController.Instance.EnablePlayer();
         _dialogue.EndDiag -= End;
     }
@@ -95,7 +101,6 @@ public class MissyQuest : MonoBehaviour, IInteractable
             // Send the quest to the QuestManager to accept
             questManager.AcceptQuest(quest);
             Debug.Log("Got Quest " + currentQuestIndex);
-
         }
     }
 
@@ -106,6 +111,8 @@ public class MissyQuest : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        isDialogOpen = true;
+
         _dialogue.EndDiag += End;
         PlayerController.Instance.DisablePlayer();
         if (currentQuestIndex < questDataList.Count && questManager.currentQuest == null && currentQuestIndex > 0)
@@ -118,8 +125,6 @@ public class MissyQuest : MonoBehaviour, IInteractable
             _dialogue.dialog = questDataList[currentQuestIndex].dialogList[currentQuestIndex];
         }
         
-        
-        
         _dialogue.NextDialog();
         
     }
@@ -129,13 +134,5 @@ public class MissyQuest : MonoBehaviour, IInteractable
     {
         E_Input.SetActive(false);
     }
-
-   
-
-
-
-
-
-
-
+    
 }
