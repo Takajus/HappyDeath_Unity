@@ -23,6 +23,8 @@ public abstract class BaseHandler : MonoBehaviour
     private RaycastHit2D hit2D;
 
     public GameObject currentInteractedObject;
+    public Material outlineMat;
+
     public virtual bool IsInteracting { get => currentInteractedObject != null; }
 
     private void Start()
@@ -49,7 +51,10 @@ public abstract class BaseHandler : MonoBehaviour
             mouseIsTargeting = false;
 
             if (mouseTarget)
+            {
+                RemoveHoverMat(mouseTarget);
                 UnHoverTarget(mouseTarget);
+            }
             mouseTarget = null;
 
             return null;
@@ -74,7 +79,10 @@ public abstract class BaseHandler : MonoBehaviour
             isTargeting = false;
 
             if (target)
+            {
+                RemoveHoverMat(target);
                 UnHoverTarget(target);
+            }
             target = null;
 
             return null;
@@ -93,8 +101,14 @@ public abstract class BaseHandler : MonoBehaviour
             if (InputManager.Instance.gameCancelAction.action.triggered)
             {
                 Select(null);
+                AddHoverMat(mouseTarget);
                 HoverTarget(mouseTarget);
-                HoverTarget(target);
+
+                if (mouseTarget != target)
+                {
+                    HoverTarget(target);
+                    AddHoverMat(target);
+                }
             }
 
         if (HUDManager.IsOpen)
@@ -118,23 +132,35 @@ public abstract class BaseHandler : MonoBehaviour
     protected virtual void UpdateMouseTarget()
     {
         if (mouseTarget != currentInteractedObject)
+        {
+            RemoveHoverMat(mouseTarget);
             UnHoverTarget(mouseTarget);
+        }
 
         mouseTarget = GetMouseTarget();
 
         if (mouseTarget != currentInteractedObject)
+        {
+            AddHoverMat(mouseTarget);
             HoverTarget(mouseTarget);
+        }
     }
 
     protected virtual void UpdateSphereTarget()
     {
         if (target != currentInteractedObject)
+        {
+            RemoveHoverMat(target);
             UnHoverTarget(target);
+        }
 
         target = GetSphereTarget();
 
         if (target != currentInteractedObject)
+        {
+            AddHoverMat(target);
             HoverTarget(target);
+        }
     }
 
     protected virtual void Select(GameObject target)
@@ -146,10 +172,12 @@ public abstract class BaseHandler : MonoBehaviour
 
             if (previousInteractedObject == target)
             {
+                AddHoverMat(previousInteractedObject);
                 HoverTarget(previousInteractedObject);
             }
             else if (target != null)
             {
+                RemoveHoverMat(previousInteractedObject);
                 UnHoverTarget(previousInteractedObject);
 
                 SelectTarget(target);
@@ -157,6 +185,7 @@ public abstract class BaseHandler : MonoBehaviour
             }
             else
             {
+                RemoveHoverMat(previousInteractedObject);
                 UnHoverTarget(previousInteractedObject);
             }
         }
@@ -189,4 +218,42 @@ public abstract class BaseHandler : MonoBehaviour
     protected virtual void SelectTarget(GameObject target) { }
 
     protected virtual void UnSelectTarget(GameObject target) { }
+
+    void AddHoverMat(GameObject target)
+    {
+        if (target == null)
+            return;
+
+        foreach (var renderer in target.GetComponentsInChildren<MeshRenderer>())
+        {
+            List<Material> materials = new List<Material>();
+
+            foreach (var material in renderer.materials)
+            {
+                materials.Add(material);
+            }
+
+            materials.Add(outlineMat);
+            renderer.materials = materials.ToArray();
+        }
+    }
+
+    void RemoveHoverMat(GameObject target)
+    {
+        if (target == null)
+            return;
+
+        foreach (var renderer in target.GetComponentsInChildren<MeshRenderer>())
+        {
+            List<Material> materials = new List<Material>();
+
+            foreach (var material in renderer.materials)
+            {
+                materials.Add(material);
+            }
+
+            materials.Remove(materials.Last());
+            renderer.materials = materials.ToArray();
+        }
+    }
 }

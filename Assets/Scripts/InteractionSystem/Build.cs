@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Build : MonoBehaviour, IInteractable
@@ -12,7 +13,7 @@ public class Build : MonoBehaviour, IInteractable
 
     public int xRange = 2;
     public int zRange = 2;
-    private MeshRenderer previewMesh;
+    private List<MeshRenderer> previewMeshes = new List<MeshRenderer>();
     HashSet<Tile> tiles = new HashSet<Tile>();
     public List<TileDetection> tileDetectionList = new List<TileDetection>();
 
@@ -33,15 +34,25 @@ public class Build : MonoBehaviour, IInteractable
 
     private void Start()
     {
-        previewMesh = previewObject.GetComponent<MeshRenderer>();
+        previewMeshes = previewObject.GetComponentsInChildren<MeshRenderer>().ToList();
     }
 
     public void CheckPlaceability()
     {
         if (IsPlaceable())
-            previewMesh.material = validMat;
+        {
+            for (int i = 0; i < previewMeshes.Count; i++)
+            {
+                previewMeshes[i].material = validMat;
+            }
+        }
         else
-            previewMesh.material = invalidMat;
+        {
+            for (int i = 0; i < previewMeshes.Count; i++)
+            {
+                previewMeshes[i].material = invalidMat;
+            }
+        }
     }
 
     public bool IsPlaceable()
@@ -104,12 +115,34 @@ public class Build : MonoBehaviour, IInteractable
 
     public void Hover()
     {
+        foreach (var renderer in previewMeshes)
+        {
+            List<Material> materials = new List<Material>();
 
+            foreach (var material in renderer.materials)
+            {
+                materials.Add(material);
+            }
+
+            materials.Add(InteractionManager.Instance.GetHoverMat());
+            renderer.materials = materials.ToArray();
+        }
     }
 
     public void UnHover()
     {
+        foreach (var renderer in previewMeshes)
+        {
+            List<Material> materials = new List<Material>();
 
+            foreach (var material in renderer.materials)
+            {
+                materials.Add(material);
+            }
+
+            materials.RemoveAt(materials.Count - 1);
+            renderer.materials = materials.ToArray();
+        }
     }
 
     public void Interact()
