@@ -106,8 +106,8 @@ public abstract class BaseHandler : MonoBehaviour
 
                 if (mouseTarget != target)
                 {
-                    HoverTarget(target);
                     AddHoverMat(target);
+                    HoverTarget(target);
                 }
             }
 
@@ -221,7 +221,7 @@ public abstract class BaseHandler : MonoBehaviour
 
     void AddHoverMat(GameObject target)
     {
-        if (target == null)
+        if (target == null || target.GetComponent<Tile>())
             return;
 
         foreach (var renderer in target.GetComponentsInChildren<MeshRenderer>())
@@ -240,7 +240,7 @@ public abstract class BaseHandler : MonoBehaviour
 
     void RemoveHoverMat(GameObject target)
     {
-        if (target == null)
+        if (target == null || target.GetComponent<Tile>())
             return;
 
         foreach (var renderer in target.GetComponentsInChildren<MeshRenderer>())
