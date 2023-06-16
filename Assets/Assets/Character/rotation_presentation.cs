@@ -10,7 +10,7 @@ public class rotation_presentation : MonoBehaviour
     void Update()
     {
         var rotationVector = transform.rotation.eulerAngles;
-        rotationVector.z = rotationVector.z + vitesseRotation;
+        rotationVector.y = rotationVector.y + vitesseRotation;
         gameObject.transform.rotation = Quaternion.Euler(rotationVector);
     }
 }
