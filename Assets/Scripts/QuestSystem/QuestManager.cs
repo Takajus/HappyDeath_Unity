@@ -40,7 +40,8 @@ public class QuestManager :  MonoBehaviour
         if(residentData.isAssign == true)
         {
             Quest quest = activeQuests.Find(e => e.NewDeadNPC == residentData);
-            CompleteQuest(quest);
+            if (quest != null)
+                CompleteQuest(quest);
         }
     }
 
