@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2707826397959643456}
   - component: {fileID: 4064000186517360188}
+  - component: {fileID: 7030270221963270356}
   m_Layer: 13
   m_Name: TombStoneV3
   m_TagString: Untagged
@@ -61,6 +62,19 @@ MonoBehaviour:
   - x: 0
     z: 1
     needDugTile: 0
+--- !u!65 &7030270221963270356
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416727566958122708}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5675581, y: 0.88941926, z: 0.16713268}
+  m_Center: {x: -0.0073561966, y: 0.44495466, z: -0.0059601963}
 --- !u!1001 &2472802229279937195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71,7 +85,7 @@ PrefabInstance:
     - target: {fileID: 147068891081969310, guid: 2afc04ddb9a427c47af81c828c4bd05d,
         type: 3}
       propertyPath: m_Name
-      value: pf_tb21_2 (1)
+      value: pf_tb21_2 - Preview
       objectReference: {fileID: 0}
     - target: {fileID: 667006411171157028, guid: 2afc04ddb9a427c47af81c828c4bd05d,
         type: 3}
@@ -131,7 +145,7 @@ PrefabInstance:
     - target: {fileID: 3185076934959237536, guid: 2afc04ddb9a427c47af81c828c4bd05d,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2afc04ddb9a427c47af81c828c4bd05d, type: 3}
@@ -234,20 +248,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7648361481242477813}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2269956594926338932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7506953425784834667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1081506f38e570a4d881cd28690fe46d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  resident: {fileID: 3772101608197014084}
-  origin: {fileID: 0}
 --- !u!64 &2108313587269468555
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -262,6 +262,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 7882b399c56ce4f4990e37327100ccfd, type: 3}
+--- !u!114 &2269956594926338932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7506953425784834667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1081506f38e570a4d881cd28690fe46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resident: {fileID: 3772101608197014084}
 --- !u!1001 &8466520770408997876
 PrefabInstance:
   m_ObjectHideFlags: 0

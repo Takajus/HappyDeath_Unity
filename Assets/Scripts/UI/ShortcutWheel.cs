@@ -38,7 +38,10 @@ public class ShortcutWheel : MonoBehaviour
                 if (toolwheel.item == item)
                 {
                     Destroy(buildsElements[i].gameObject);
+                    buildsElements.RemoveAt(i);
+                    i--;
                     Destroy(lineNbrBuildsElement[0].gameObject);
+                    lineNbrBuildsElement.RemoveAt(0);
                 }
             }
 

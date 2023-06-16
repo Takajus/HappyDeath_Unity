@@ -73,8 +73,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.61672866, y: 1.6728555, z: 0.4918963}
-  m_Center: {x: 0.028760731, y: 0.3364281, z: 0.0058712214}
+  m_Size: {x: 0.61672866, y: 1.195703, z: 0.4918963}
+  m_Center: {x: 0.028760731, y: 0.57500434, z: 0.0058712214}
 --- !u!1001 &88462659590940167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -168,7 +168,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resident: {fileID: 3230948611334635818}
-  origin: {fileID: 0}
 --- !u!4 &8346233194934973456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8280306135339225623, guid: f33a33fbcaf99484cafe7a8b641aad1f,
@@ -247,7 +246,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2610009092370204802, guid: f33a33fbcaf99484cafe7a8b641aad1f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f33a33fbcaf99484cafe7a8b641aad1f, type: 3}
 --- !u!4 &4544992319224620402 stripped
 Transform:

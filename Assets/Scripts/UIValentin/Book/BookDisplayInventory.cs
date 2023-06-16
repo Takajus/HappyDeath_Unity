@@ -29,6 +29,7 @@ public class BookDisplayInventory : MonoBehaviour
     private void Start()
     {
         GetInventorySlot();
+        HUDManager.Instance.ToggleInventory(false);
     }
 
 
