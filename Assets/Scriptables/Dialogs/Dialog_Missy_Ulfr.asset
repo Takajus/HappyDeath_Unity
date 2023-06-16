@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2360456d130718041a250d34aace9a1b, type: 3}
+  m_Name: Dialog_Missy_Ulfr
+  m_EditorClassIdentifier: 
+  dialogueName: Dialog_Missy_Ulfr
+  diagStartQuest:
+  - characterName: Granny
+    paragraphe: 'Hello Missy how things in the underworld ? '
+  - characterName: Missy
+    paragraphe: Well, they're just fine. You know, a little dark, a little gloomy.
+      And, as always, hey, full of dead people.
+  - characterName: Granny
+    paragraphe: And who is my new refugee ?
+  - characterName: Missy
+    paragraphe: Ah.... his name is Ulfr the lumberjack. A great man might I say !
+  - characterName: Granny
+    paragraphe: 'Oh that is a rare compliment from you. '
+  - characterName: Missy
+    paragraphe: He may seems grumpy but in reality he is a cinamonroll.
+  - characterName: Granny
+    paragraphe: 'Well I hope we will get along also. '
+  - characterName: Missy
+    paragraphe: I don't see why not! He also share your love of nature so maybe you
+      could bond over it!
+  loopDiag:
+    characterName: Missy
+    paragraphe: Go to work my friend ^^
+  diagEndQuest: []
+  isLooping: 0
+  isDisplay: 0
+  index: 0
+  startIndex: 0

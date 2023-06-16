@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2360456d130718041a250d34aace9a1b, type: 3}
+  m_Name: Dialog_Ulfr_1
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  diagStartQuest:
+  - characterName: Granny
+    paragraphe: 'Welcome to the cemetary Ulfr. '
+  - characterName: Ulfr
+    paragraphe: 'Argh! A ghost ! '
+  - characterName: Granny
+    paragraphe: 'Oh excuse. You must be surprised ! '
+  - characterName: Ulfr
+    paragraphe: I don't like surprises. The last surprise I had was my death.
+  - characterName: Granny
+    paragraphe: Well I can assure you wont die again anytime soon.
+  - characterName: Ulfr
+    paragraphe: Ahaha you think you are funny aren't you ?
+  - characterName: Granny
+    paragraphe: 'Well I''m only an old woman aren''t I ?  '
+  - characterName: Ulfr
+    paragraphe: You are the only tenant of the cemetery?!
+  - characterName: Granny
+    paragraphe: Do see anyone else who could do the job here?
+  - characterName: Ulfr
+    paragraphe: Oh... well I'm sorry I though...
+  - characterName: Granny
+    paragraphe: Don't worry about it. I'm not alone anymore with you and the other.
+      So let's get along.
+  loopDiag:
+    characterName: Ulfr
+    paragraphe: Well hello Granny, how is your day?
+  diagEndQuest: []
+  isLooping: 0
+  isDisplay: 0
+  index: 0
+  startIndex: 0

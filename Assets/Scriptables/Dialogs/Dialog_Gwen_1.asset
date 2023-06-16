@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2360456d130718041a250d34aace9a1b, type: 3}
+  m_Name: Dialog_Gwen_1
+  m_EditorClassIdentifier: 
+  dialogueName: Dialog_Gwen_1
+  diagStartQuest:
+  - characterName: Gwenhyfar
+    paragraphe: Who are you? Where am I?
+  - characterName: Granny
+    paragraphe: "I\u2019m Granny, I\u2019m in charge of your new home!"
+  - characterName: Gwenhyfar
+    paragraphe: "So, you\u2019re the manager here\u2026 I'll be sure to contact you
+      if I have any problems."
+  - characterName: Granny
+    paragraphe: With pleasure! And how can I call you?
+  - characterName: Gwenhyfar
+    paragraphe: "I\u2019m Gwenhyfar, the region's most captivating voice."
+  - characterName: Gwenhyfar
+    paragraphe: My friends call me Gwen. At least, they would if I had any friends.
+  - characterName: Granny
+    paragraphe: "I\u2019m sure you\u2019ll make plenty of friends dearie. "
+  - characterName: Granny
+    paragraphe: Welcome to the cemetery Gwenhyfar!
+  loopDiag:
+    characterName: 
+    paragraphe: 
+  diagEndQuest: []
+  isLooping: 0
+  isDisplay: 0
+  index: 0
+  startIndex: 0

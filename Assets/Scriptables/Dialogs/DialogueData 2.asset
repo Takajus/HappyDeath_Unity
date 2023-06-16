@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2360456d130718041a250d34aace9a1b, type: 3}
+  m_Name: DialogueData 2
+  m_EditorClassIdentifier: 
+  dialogueName: 
+  diagStartQuest:
+  - characterName: Gwenhyfar
+    paragraphe: "You\u2019re the manager here, right?"
+  - characterName: Granny
+    paragraphe: Yes sweety, what can I do for you?
+  - characterName: Gwenhyfar
+    paragraphe: "My tombstone doesn\u2019t meet the standards of a star like me."
+  - characterName: Granny
+    paragraphe: I see, do you want something in particular?
+  - characterName: Gwenhyfar
+    paragraphe: "I need it to be elegant and pretty, just like me. I\u2019m sure
+      you\u2019ll find something."
+  - characterName: Granny
+    paragraphe: "I\u2019ll do my best!"
+  loopDiag:
+    characterName: Gwenhyfar
+    paragraphe: When my tomb will be ready?
+  diagEndQuest:
+  - characterName: Granny
+    paragraphe: Good evening dear, what do you think of your new grave decorations?
+  - characterName: Gwenhyfar
+    paragraphe: Well, at least you don't have bad taste.
+  - characterName: Granny
+    paragraphe: Oh thank you! I was the best flower arranger back in my day.
+  - characterName: Gwenhyfar
+    paragraphe: "Good, I\u2019m pleased to see that I've been assigned to a graveyard
+      worthy of my talent."
+  - characterName: Granny
+    paragraphe: "It\u2019s heartwarming to know that you appreciate our little cemetery
+      so much dearie."
+  isLooping: 0
+  isDisplay: 0
+  index: 0
+  startIndex: 0

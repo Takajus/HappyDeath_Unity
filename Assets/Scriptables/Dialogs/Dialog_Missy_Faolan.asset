@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2360456d130718041a250d34aace9a1b, type: 3}
+  m_Name: Dialog_Missy_Faolan
+  m_EditorClassIdentifier: 
+  dialogueName: Dialog_Missy_Faolan
+  diagStartQuest:
+  - characterName: Granny
+    paragraphe: Well hello missy what news are you bringing me?
+  - characterName: Missy
+    paragraphe: This cemetery is a mess, Granny!
+  - characterName: Missy
+    paragraphe: "I\u2019ll never understand why you want to open this refuge!"
+  - characterName: Granny
+    paragraphe: All souls need a place to rest in peace and you know that.
+  - characterName: Missy
+    paragraphe: You make me remember why am I here for!
+  - characterName: Missy
+    paragraphe: "I bring you a new soul to take in\u2026."
+  - characterName: Missy
+    paragraphe: Their name is Faolan.
+  - characterName: Granny
+    paragraphe: 'Faolan you say? '
+  - characterName: Granny
+    paragraphe: What a lovely name! What are they like?
+  - characterName: Granny
+    paragraphe: What are they like?
+  - characterName: Missy
+    paragraphe: They are very bubbly, their soul is like a young fire.
+  - characterName: Granny
+    paragraphe: "A young fire?\r\nYou mean it\u2019s a child ?!"
+  - characterName: Missy
+    paragraphe: "Well yeah, they were messing so much around in Helheim that Hell
+      herself ordered them to be outcasted\u2026"
+  - characterName: Granny
+    paragraphe: Oh no poor soul.
+  - characterName: Granny
+    paragraphe: "Well don\u2019t worry about them I\u2019m going to take care of
+      this little bubble."
+  - characterName: Missy
+    paragraphe: "I\u2019m counting on you!"
+  loopDiag:
+    characterName: 
+    paragraphe: 
+  diagEndQuest: []
+  isLooping: 0
+  isDisplay: 0
+  index: 0
+  startIndex: 0

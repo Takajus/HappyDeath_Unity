@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2360456d130718041a250d34aace9a1b, type: 3}
+  m_Name: Dialog_Missy_Gwen
+  m_EditorClassIdentifier: 
+  dialogueName: Dialog_Missy_Gwen
+  diagStartQuest:
+  - characterName: Granny
+    paragraphe: "Greetings Missy! I see you\u2019re looking as radiant as ever."
+  - characterName: Missy
+    paragraphe: Hello Granny, always the word to please I see!
+  - characterName: Missy
+    paragraphe: "I\u2019m here to bring you a new soul."
+  - characterName: Granny
+    paragraphe: Oh lovely! What are they like?
+  - characterName: Missy
+    paragraphe: "Well\u2026 A bit special if I\u2019m honest."
+  - characterName: Missy
+    paragraphe: Gwenhyfar is incredibly talented. She is known as much for her beautiful
+      voice as for her bad temper.
+  - characterName: Granny
+    paragraphe: I'm sure she'll be a delight once we get to know her!
+  - characterName: Missy
+    paragraphe: I hope so! But don't take what she says too personally. She had to
+      forge a shell to face public pressure and judgement.
+  - characterName: Granny
+    paragraphe: "I understand. I\u2019ll try my best to be patient, don\u2019t worry!"
+  - characterName: Granny
+    paragraphe: I can't wait to meet such a gifted person.
+  - characterName: Missy
+    paragraphe: In that case, I'll let you go and find her.
+  - characterName: Granny
+    paragraphe: Thank you Missy, take care!
+  loopDiag:
+    characterName: 
+    paragraphe: 
+  diagEndQuest: []
+  isLooping: 0
+  isDisplay: 0
+  index: 0
+  startIndex: 0

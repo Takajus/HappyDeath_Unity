@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2360456d130718041a250d34aace9a1b, type: 3}
+  m_Name: Dialog_Missy_Sigmun
+  m_EditorClassIdentifier: 
+  dialogueName: Dialog_Missy_Sigmun
+  diagStartQuest:
+  - characterName: Granny
+    paragraphe: Good morning Missy. What brings you here?
+  - characterName: Missy
+    paragraphe: "Hello Granny! I\u2019m here to bring you a new soul to rescue."
+  - characterName: Granny
+    paragraphe: "Oh, don\u2019t tell me you got me another child?!"
+  - characterName: Missy
+    paragraphe: "Do you believe think this is a nursery? It\u2019s you who wanted
+      to help spirits, not me."
+  - characterName: Granny
+    paragraphe: So what is the problem of this soul?
+  - characterName: Missy
+    paragraphe: "Well, Sigmun is angry he didn\u2019t get to go to Valhalla. After
+      all, he was a great warrior once\u2026."
+  - characterName: Missy
+    paragraphe: "So be careful he might be rude\u2026."
+  - characterName: Granny
+    paragraphe: "Well, that\u2019s going to be quite an affair."
+  - characterName: Missy
+    paragraphe: "It\u2019s not like you can\u2019t say no, hum?"
+  - characterName: Granny
+    paragraphe: "That\u2019s true, I\u2019ll do my best I guess"
+  loopDiag:
+    characterName: Missy
+    paragraphe: Good luck
+  diagEndQuest: []
+  isLooping: 0
+  isDisplay: 0
+  index: 0
+  startIndex: 0

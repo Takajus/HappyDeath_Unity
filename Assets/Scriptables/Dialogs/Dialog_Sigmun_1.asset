@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2360456d130718041a250d34aace9a1b, type: 3}
+  m_Name: Dialog_Sigmun_1
+  m_EditorClassIdentifier: 
+  dialogueName: Dialog_Sigmun_1
+  diagStartQuest:
+  - characterName: Granny
+    paragraphe: Hi Sigmun, my name is Granny. I'm the one in charge of this humble
+      cemetery.
+  - characterName: Sigmun
+    paragraphe: Oh no another lowly spirit? I should have prayed to the ancestors
+      for luck.
+  - characterName: Granny
+    paragraphe: You don't have to be rude about it.
+  - characterName: Granny
+    paragraphe: Is your new home to your liking at least?
+  - characterName: Sigmun
+    paragraphe: Well, it would if it hadn't been for your incompetence.
+  - characterName: Granny
+    paragraphe: What did I do oh your mighty Sigmun?
+  - characterName: Sigmun
+    paragraphe: Why are the stray dogs running around the cemetery?
+  - characterName: Granny
+    paragraphe: Are you talking about the werewolves?
+  - characterName: Sigmun
+    paragraphe: Is this a shelter for lost animals or what? Make sure I can't see
+      them.
+  - characterName: Granny
+    paragraphe: (Yeah... The only girl who'd loved them must have been his mother)
+  loopDiag:
+    characterName: Sigmun
+    paragraphe: Don't just stand there staring. Go do your dogsitting job.
+  diagEndQuest:
+  - characterName: Sigmun
+    paragraphe: You see it wasn't that hard.
+  - characterName: Granny
+    paragraphe: I didn't know it could exist such a rude monster.
+  - characterName: Sigmun
+    paragraphe: It's not like I said something wrong though.
+  - characterName: Granny
+    paragraphe: aaaaaaahhhhhh *Sigh*
+  isLooping: 0
+  isDisplay: 0
+  index: 0
+  startIndex: 0

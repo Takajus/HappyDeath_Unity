@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2360456d130718041a250d34aace9a1b, type: 3}
+  m_Name: Dialog_Faolan_Introduction
+  m_EditorClassIdentifier: 
+  dialogueName: Dialog_Faolan_Introduction
+  diagStartQuest:
+  - characterName: Granny
+    paragraphe: Hi sweety! My name is Granny nice to meet you Faolan.
+  - characterName: Granny
+    paragraphe: How do you find your new home?
+  - characterName: Faolan
+    paragraphe: Whoa, a reaper spirit! Hi Granny!
+  - characterName: Faolan
+    paragraphe: Thank you for taking me in Granny!
+  - characterName: Granny
+    paragraphe: My pleasure Faolan.
+  - characterName: Granny
+    paragraphe: Is there anything I can do to make your tomb even better?
+  - characterName: Faolan
+    paragraphe: If I could have another friend it would be perfect.
+  - characterName: Granny
+    paragraphe: "Well of course! I\u2019ll make sure of that."
+  loopDiag:
+    characterName: Faolan
+    paragraphe: I am really excited to meet new people!
+  diagEndQuest:
+  - characterName: Foalan
+    paragraphe: Here you go Faolan! I made sure to place you near a friendly person.
+      ^^
+  - characterName: Faolan
+    paragraphe: Thank you so much, Granny! I hope they will play catch with me!
+  - characterName: Granny
+    paragraphe: "You\u2019re welcome, dear. If you need anything else don\u2019t
+      hesitate to tell me."
+  isLooping: 0
+  isDisplay: 0
+  index: 0
+  startIndex: 0
