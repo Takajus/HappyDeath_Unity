@@ -8,11 +8,16 @@ public class ResidentManager : MonoBehaviour, IInteractable
     public static ResidentManager Instance { get { if (instance == null) instance = FindObjectOfType<ResidentManager>(); return instance; } }
 
     public TombUI tombUI;
+    private Animator anim;
 
     private void Start()
     {
         tombUI.ToggleDisplay(false);
         HUDManager.Instance.displayResidentStock.ToggleDisplay(false);
+
+
+        anim = GetComponent<Animator>();
+    
     }
 
     public InteractMode GetInteractMode()
@@ -32,11 +37,12 @@ public class ResidentManager : MonoBehaviour, IInteractable
 
     public void Hover()
     {
-
+        anim.SetBool("isOpenned", true);
     }
 
     public void UnHover()
     {
+        anim.SetBool("isOpenned", false);
 
     }
 
