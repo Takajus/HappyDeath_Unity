@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4915609521995799246}
   - component: {fileID: 3380771495401158173}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: CelticCrossV3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,6 +68,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4915609521995799246}
     m_Modifications:
+    - target: {fileID: 298172606929805069, guid: 4c33c0daad7334f4f95eabbaa5f672a1,
+        type: 3}
+      propertyPath: resident
+      value: 
+      objectReference: {fileID: 3453749776222490110}
     - target: {fileID: 5815328070482008363, guid: 4c33c0daad7334f4f95eabbaa5f672a1,
         type: 3}
       propertyPath: m_Name
@@ -308,3 +313,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7982633338678619214}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3453749776222490110 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4694489848926609840, guid: ed8a9a88ee684d94fa42061d71e84fde,
+    type: 3}
+  m_PrefabInstance: {fileID: 7982633338678619214}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f35adde9f1b61478072fac73b3f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
