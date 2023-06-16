@@ -100,9 +100,45 @@ public class ButtonDisplayRecipes : MonoBehaviour
 
         setupButton.icon.color = Color.white;
         setupButton.icon.sprite = scriptableRecipe.Sprite;
+
+        setupButton.imageItemToShow.color = Color.white;
         setupButton.imageItemToShow.sprite = scriptableRecipe.Sprite;
-        setupButton.textIngredientNeeded_2.text = scriptableRecipe.ingredient2.IngredientAmount.ToString();
-        setupButton.textIngredientNeeded_3.text = scriptableRecipe.ingredient3.IngredientAmount.ToString();
+
+        if (scriptableRecipe.ingredient1.IngredientAmount > 0)
+        {
+            setupButton.imageIngredients_1.sprite = scriptableRecipe.ingredient1.ingredientType.Sprite;
+            setupButton.textIngredientNeeded_1.text = scriptableRecipe.ingredient1.IngredientAmount.ToString();
+            setupButton.textCurrentOwnIngredient_1.text = HUDManager.GetInventoryManager().GetIngredientAmount(scriptableRecipe.ingredient1.ingredientType).ToString();
+            InventoryManager.Instance.parentIngredient_1.SetActive(true);
+        }
+        else
+        {
+            InventoryManager.Instance.parentIngredient_1.SetActive(false);
+        }
+
+        if (scriptableRecipe.ingredient2.IngredientAmount > 0)
+        {
+            setupButton.imageIngredients_2.sprite = scriptableRecipe.ingredient2.ingredientType.Sprite;
+            setupButton.textCurrentOwnIngredient_2.text = HUDManager.GetInventoryManager().GetIngredientAmount(scriptableRecipe.ingredient2.ingredientType).ToString();
+            InventoryManager.Instance.parentIngredient_2.SetActive(true);
+        }
+        else
+        {
+            InventoryManager.Instance.parentIngredient_2.SetActive(false);
+        }
+
+        if (scriptableRecipe.ingredient3.IngredientAmount > 0)
+        {
+            setupButton.imageIngredients_3.sprite = scriptableRecipe.ingredient3.ingredientType.Sprite;
+            setupButton.textIngredientNeeded_3.text = scriptableRecipe.ingredient3.IngredientAmount.ToString();
+            setupButton.textCurrentOwnIngredient_3.text = HUDManager.GetInventoryManager().GetIngredientAmount(scriptableRecipe.ingredient3.ingredientType).ToString();
+            InventoryManager.Instance.parentIngredient_3.SetActive(true);
+        }
+        else
+        {
+            InventoryManager.Instance.parentIngredient_3.SetActive(false);
+        }
+
         setupButton.textDescription.text = scriptableRecipe.Description;
         setupButton.textName.text = scriptableRecipe.Name;
     }

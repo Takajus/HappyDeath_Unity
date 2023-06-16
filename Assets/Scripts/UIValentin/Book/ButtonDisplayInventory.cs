@@ -72,7 +72,12 @@ public class ButtonDisplayInventory : MonoBehaviour
         if (item == null)
             return;
 
-        //Renseignée les variables de la page de droite
+        if (setupButton.imageItem == null)
+        {
+            return;
+        }
+
+        setupButton.imageItem.color = Color.white;
         setupButton.imageItem.sprite = item.Sprite;
         setupButton.textDescription.text = item.Description;
         setupButton.name.text = item.Name;

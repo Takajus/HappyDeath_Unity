@@ -47,11 +47,19 @@ public class InventoryManager : MonoBehaviour
     public Image recipeImageItemToShow;
     public TextMeshProUGUI recipeTextName;
     public TextMeshProUGUI recipeTextDescription;
+    public GameObject parentIngredient_1;
+    public GameObject parentIngredient_2;
+    public GameObject parentIngredient_3;
 
     [Header("Residents General Variables")]
     public TextMeshProUGUI residentTextDescription;
     public TextMeshProUGUI residentTextName;
     public Image imageResidentToShow;
+
+    [Header("Ingredients")]
+    public Item stone;
+    public Item wood;
+    public Item flower;
 
     //#if !UNITY_EDITOR
     private void Start()
@@ -165,8 +173,6 @@ public class InventoryManager : MonoBehaviour
                 return;
             }
         }
-
-
 
         OnItemAdded?.Invoke(itemToAdd);
         itemsInventory.Add(itemToAdd);

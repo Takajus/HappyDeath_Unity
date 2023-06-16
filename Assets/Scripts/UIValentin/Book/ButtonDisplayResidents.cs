@@ -74,6 +74,7 @@ public class ButtonDisplayResidents : MonoBehaviour
         }
 
         setupButton.icon.color = Color.white;
+        setupButton.imageResidentToShow.color = Color.white;
         setupButton.imageResidentToShow.sprite = scriptableResident.sprite;
         setupButton.description.text = scriptableResident.description;
         setupButton.name.text = scriptableResident.residentName;
