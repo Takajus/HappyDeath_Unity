@@ -98,6 +98,7 @@ public abstract class BaseHandler : MonoBehaviour
     public virtual void HandleInteractable()
     {
         if (IsInteracting)
+        {
             if (InputManager.Instance.gameCancelAction.action.triggered)
             {
                 Select(null);
@@ -110,6 +111,9 @@ public abstract class BaseHandler : MonoBehaviour
                     HoverTarget(target);
                 }
             }
+        }
+        else if (InputManager.Instance.gameCancelAction.action.triggered)
+            InteractionManager.Instance.InteruptInteraction();
 
         if (HUDManager.IsOpen)
             return;
