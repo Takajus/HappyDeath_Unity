@@ -16,21 +16,21 @@ MonoBehaviour:
   residentName: Sigmun
   description: 'Think it''s my fault that after a living a heroic life, this warrior,
     would be in "this dirty cemetery". '
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 009ac0be760314345add3f8f666754a1, type: 3}
   race: 2
   role: 1
   elementList:
   - preferenceType: 0
-    "\u3059\u304D": 4
+    race: 0
     objectLike: 2
     amount: 1
     likeDislike: 0
   - preferenceType: 1
-    "\u3059\u304D": 3
+    race: 0
     objectLike: 5
     amount: 1
     likeDislike: 1
-  "\u30B7\u30FC\u30AF\u30EC\u30C3\u30C8": Like hiking and would love to be in a rocky
-    area.
+  secret: 
+  dialogueData: {fileID: 0}
   isAssign: 0
   mood: -1
