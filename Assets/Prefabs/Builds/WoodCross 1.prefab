@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1342251969963346621}
   - component: {fileID: 8459611778738436968}
   - component: {fileID: 4783470739709138514}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: WoodCross 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,6 +169,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -462981019419857548, guid: a8737bb79f7a62f4eb0ae43ab55f5763, type: 3}
+--- !u!114 &4230678798700610822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5882165601520365868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1081506f38e570a4d881cd28690fe46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resident: {fileID: 7888200415140509964}
+  origin: {fileID: 0}
 --- !u!4 &6551179310497328022 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6841527082234257518, guid: b851cb5597b58214898ea9bc98b34ff2,
@@ -250,6 +264,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3197179559841323196}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7888200415140509964 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4694489848926609840, guid: ed8a9a88ee684d94fa42061d71e84fde,
+    type: 3}
+  m_PrefabInstance: {fileID: 3197179559841323196}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f35adde9f1b61478072fac73b3f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4747405526947804229
 PrefabInstance:
   m_ObjectHideFlags: 0

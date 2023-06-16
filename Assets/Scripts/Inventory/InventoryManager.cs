@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -27,7 +29,39 @@ public class InventoryManager : MonoBehaviour
     public event Action<Item> OnItemAdded;
     public event Action<Item> OnItemRemoved;
 
-//#if !UNITY_EDITOR
+    [Header("Inventorys General Variables")]
+    public Image inventoryImageItemToShow;
+    public TextMeshProUGUI inventoryTextName;
+    public TextMeshProUGUI inventoryTextDescription;
+    
+    [Header("Recipes General Variables")]
+    public Image recipeImageIngredients_1;
+    public TextMeshProUGUI recipeTextCurrentOwnIngredient_1;
+    public TextMeshProUGUI recipeTextIngredientNeeded_1;
+    public Image recipeImageIngredients_2;
+    public TextMeshProUGUI recipeTextCurrentOwnIngredient_2;
+    public TextMeshProUGUI recipeTextIngredientNeeded_2;
+    public Image recipeImageIngredients_3;
+    public TextMeshProUGUI recipeTextCurrentOwnIngredient_3;
+    public TextMeshProUGUI recipeTextIngredientNeeded_3;
+    public Image recipeImageItemToShow;
+    public TextMeshProUGUI recipeTextName;
+    public TextMeshProUGUI recipeTextDescription;
+    public GameObject parentIngredient_1;
+    public GameObject parentIngredient_2;
+    public GameObject parentIngredient_3;
+
+    [Header("Residents General Variables")]
+    public TextMeshProUGUI residentTextDescription;
+    public TextMeshProUGUI residentTextName;
+    public Image imageResidentToShow;
+
+    [Header("Ingredients")]
+    public Item stone;
+    public Item wood;
+    public Item flower;
+
+    //#if !UNITY_EDITOR
     private void Start()
     {
         ResetIngredients();
@@ -112,19 +146,19 @@ public class InventoryManager : MonoBehaviour
 
     public void AddRecipe(Recipe recipe)
     {
-        //Utilser les unlockedRecipe à la place
+        //Utilser les unlockedRecipe ï¿½ la place
         recipesInventory.Add(recipe);
     }
     
     public void AddResident(ResidentData resident)
     {
-        //Utilser les unlockedResidents à la place
-        residentsInventory.Add(resident);
+        //Utilser les unlockedResidents ï¿½ la place
+        //residentsInventory.Add(resident);
 
-        /*if (inventoryDatabase.unlockedResidents.Contains(residentToAdd))
+        if (inventoryDatabase.unlockedResidents.Contains(resident))
             return;
 
-        inventoryDatabase.unlockedResidents.Add(residentToAdd);*/
+        inventoryDatabase.unlockedResidents.Add(resident);
 
     }
 
@@ -139,8 +173,6 @@ public class InventoryManager : MonoBehaviour
                 return;
             }
         }
-
-
 
         OnItemAdded?.Invoke(itemToAdd);
         itemsInventory.Add(itemToAdd);

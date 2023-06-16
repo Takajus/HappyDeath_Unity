@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7050949105134161172}
   - component: {fileID: 7624374059635621720}
   - component: {fileID: 5159556782040148249}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: StoneCrossV1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1499768157098946735, guid: d49fcfd8cf4728b4c9b7537385a4580b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d49fcfd8cf4728b4c9b7537385a4580b, type: 3}
 --- !u!4 &7175714760971528905 stripped
 Transform:
@@ -236,6 +237,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4011215350947534751}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8542377135722001967 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4694489848926609840, guid: ed8a9a88ee684d94fa42061d71e84fde,
+    type: 3}
+  m_PrefabInstance: {fileID: 4011215350947534751}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f35adde9f1b61478072fac73b3f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6666387275900123703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -247,6 +260,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pf_tb12_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4902502843623687603, guid: d49fcfd8cf4728b4c9b7537385a4580b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5711374598893215497, guid: d49fcfd8cf4728b4c9b7537385a4580b,
         type: 3}
@@ -317,3 +335,16 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6666387275900123703}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5953303976517980525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768493761668431748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1081506f38e570a4d881cd28690fe46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resident: {fileID: 8542377135722001967}

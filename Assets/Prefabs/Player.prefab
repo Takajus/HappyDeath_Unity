@@ -69,6 +69,7 @@ GameObject:
   - component: {fileID: 4403977370250483126}
   - component: {fileID: 4403977370250483129}
   - component: {fileID: 4403977370250483128}
+  - component: {fileID: 7814697224385553606}
   - component: {fileID: 4403977370250483127}
   m_Layer: 0
   m_Name: Player
@@ -146,6 +147,7 @@ MonoBehaviour:
   maxSpeed: 3
   accelerationRate: 10
   deccelerationRate: 10
+  rotationSpeed: 540
   bottomOffset: 0
   floorCheckRadius: 0.2
   floorLayers:
@@ -281,6 +283,28 @@ MonoBehaviour:
   currentInteractedObject: {fileID: 0}
   outlineMat: {fileID: 2100000, guid: 7cf429517e1b3464b99eebcb82b9cc71, type: 2}
   axeIsEquiped: 0
+--- !u!114 &7814697224385553606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4403977369509755873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e039bc2e882f8934daa89b456b9e4bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitMe:
+    serializedVersion: 2
+    m_Bits: 8192
+  isTargeting: 0
+  hitMeMouse:
+    serializedVersion: 2
+    m_Bits: 8192
+  mouseIsTargeting: 0
+  currentInteractedObject: {fileID: 0}
+  outlineMat: {fileID: 2100000, guid: e83a29b7663b69d4584559f2e375cd96, type: 2}
 --- !u!114 &4403977370250483127
 MonoBehaviour:
   m_ObjectHideFlags: 0

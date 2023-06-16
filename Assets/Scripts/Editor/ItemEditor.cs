@@ -50,12 +50,13 @@ public class ItemEditor : Editor
             default:
                 break;
         }
-        EditorUtility.SetDirty(source);
+        //EditorUtility.SetDirty(source);
     }
 
 
     public void ShowToolUI()
     {
+        EditorGUI.BeginChangeCheck();
         GUILayout.BeginHorizontal("box");
         //EditorGUILayout.LabelField("Prefab");
         source.Prefab = (GameObject)EditorGUILayout.ObjectField("Prefab", source.Prefab, typeof(GameObject), false);
@@ -100,10 +101,13 @@ public class ItemEditor : Editor
         AssetDatabase.SaveAssets();*/
 
         textTitleColor = new Color(0.9f,0f,0f);
+        if (EditorGUI.EndChangeCheck())
+            EditorUtility.SetDirty(source);
     }
 
     public void ShowResourceUI()
     {
+        EditorGUI.BeginChangeCheck();
         GUILayout.BeginHorizontal("box");
         //EditorGUILayout.LabelField("Prefab");
         source.Prefab = (GameObject)EditorGUILayout.ObjectField("Prefab", source.Prefab, typeof(GameObject), false);
@@ -144,10 +148,13 @@ public class ItemEditor : Editor
         source.Placeable = false;
 
         textTitleColor = new Color(0f, 0.9f, 0f);
+        if (EditorGUI.EndChangeCheck())
+            EditorUtility.SetDirty(source);
 
     }
     public void ShowBuildUI()
     {
+        EditorGUI.BeginChangeCheck();
         GUILayout.BeginHorizontal("box");
         //EditorGUILayout.LabelField("Prefab");
         source.Prefab = (GameObject)EditorGUILayout.ObjectField("Prefab",source.Prefab, typeof(GameObject), false);
@@ -190,6 +197,9 @@ public class ItemEditor : Editor
         source.recipe = (Recipe)EditorGUILayout.ObjectField("Recipe", source.recipe, typeof(Recipe), false);
 
         textTitleColor = new Color(0f, 0f, 0.9f);
+
+        if (EditorGUI.EndChangeCheck())
+            EditorUtility.SetDirty(source);
     }
 
     //Draw sur la scene

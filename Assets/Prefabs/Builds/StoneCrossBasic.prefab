@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6295721689113347677}
   - component: {fileID: 6242732576858675904}
-  m_Layer: 0
+  - component: {fileID: 8335955744875761864}
+  m_Layer: 13
   m_Name: StoneCrossBasic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +52,7 @@ MonoBehaviour:
   invalidMat: {fileID: 2100000, guid: beafd94792bcfa74d9829c4b02ae8b8e, type: 2}
   actualObject: {fileID: 663887975084707081}
   previewObject: {fileID: 4405884302856649714}
-  item: {fileID: 11400000, guid: 0d5ee7181ec71264392caaea9f28b61f, type: 2}
+  item: {fileID: 11400000, guid: 59e0b265d0c101e47b38fc9cd41ccb11, type: 2}
   xRange: 2
   zRange: 2
   tileDetectionList:
@@ -61,6 +62,19 @@ MonoBehaviour:
   - x: 0
     z: 1
     needDugTile: 0
+--- !u!65 &8335955744875761864
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4094632084485696084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5675581, y: 1.1850044, z: 0.44224316}
+  m_Center: {x: 0, y: 0.551699, z: 0}
 --- !u!1001 &3042322691403947089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -130,6 +144,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed8a9a88ee684d94fa42061d71e84fde, type: 3}
+--- !u!114 &7718798106381041121 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4694489848926609840, guid: ed8a9a88ee684d94fa42061d71e84fde,
+    type: 3}
+  m_PrefabInstance: {fileID: 3042322691403947089}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f35adde9f1b61478072fac73b3f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7718798106381041127 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4694489848926609846, guid: ed8a9a88ee684d94fa42061d71e84fde,
@@ -222,6 +248,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5566355423597660346}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3514182057803190287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663887975084707081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1081506f38e570a4d881cd28690fe46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resident: {fileID: 7718798106381041121}
 --- !u!1001 &8731890556163407425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -294,7 +333,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3848172157910716571, guid: b0928f2183b2ca04ab3685309fd1ff22, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b0928f2183b2ca04ab3685309fd1ff22, type: 3}
 --- !u!4 &3922363431986733384 stripped
 Transform:

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7050949105134161172}
   - component: {fileID: 4285469828699846963}
   - component: {fileID: 259097857166756967}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: StoneCrossV5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,6 +155,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1134405000696114170}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8736329514960404224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383218872422333906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1081506f38e570a4d881cd28690fe46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resident: {fileID: 8376165123323583640}
+  origin: {fileID: 0}
 --- !u!4 &1016308439577864040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 118378311040502930, guid: 45a2e5fddbdc5eb458e507fd3ac9b87f,
@@ -230,6 +244,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed8a9a88ee684d94fa42061d71e84fde, type: 3}
+--- !u!114 &8376165123323583640 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4694489848926609840, guid: ed8a9a88ee684d94fa42061d71e84fde,
+    type: 3}
+  m_PrefabInstance: {fileID: 3825861107311279400}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f35adde9f1b61478072fac73b3f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8376165123323583646 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4694489848926609846, guid: ed8a9a88ee684d94fa42061d71e84fde,

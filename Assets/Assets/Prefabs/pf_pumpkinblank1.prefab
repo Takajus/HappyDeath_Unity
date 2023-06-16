@@ -93,31 +93,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3387872, y: 0.227069, z: 0.3626514}
   m_Center: {x: -0.0042307973, y: 0.10822695, z: -0.001093261}
+<<<<<<< Updated upstream
+--- !u!114 &1777420283453340122
+MonoBehaviour:
+=======
 --- !u!135 &6199884412866695184
 SphereCollider:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6669616502854236755}
+<<<<<<< Updated upstream
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7ebda759af6fde43a5fae46821c5909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceToPick: {fileID: 11400000, guid: e5d4f779285f71c4495a488f9da59e1b, type: 2}
+  amountToGive: 1
+=======
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.12543158
   m_Center: {x: 0.000000014901161, y: 0.11091971, z: -0.000000029802322}
---- !u!114 &1777420283453340122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6669616502854236755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7ebda759af6fde43a5fae46821c5909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  E_Input: {fileID: 0}
-  resourceToPick: {fileID: 11400000, guid: e5d4f779285f71c4495a488f9da59e1b, type: 2}
-  amountToGive: 1
+>>>>>>> Stashed changes

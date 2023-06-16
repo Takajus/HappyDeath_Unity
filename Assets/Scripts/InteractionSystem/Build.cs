@@ -115,39 +115,30 @@ public class Build : MonoBehaviour, IInteractable
 
     public void Hover()
     {
-        foreach (var renderer in previewMeshes)
-        {
-            List<Material> materials = new List<Material>();
 
-            foreach (var material in renderer.materials)
-            {
-                materials.Add(material);
-            }
-
-            materials.Add(InteractionManager.Instance.GetHoverMat());
-            renderer.materials = materials.ToArray();
-        }
     }
 
     public void UnHover()
     {
-        foreach (var renderer in previewMeshes)
-        {
-            List<Material> materials = new List<Material>();
 
-            foreach (var material in renderer.materials)
-            {
-                materials.Add(material);
-            }
-
-            materials.RemoveAt(materials.Count - 1);
-            renderer.materials = materials.ToArray();
-        }
     }
 
     public void Interact()
     {
-        
+        GetOverlappedTiles();
+        foreach (var tile in tiles)
+            tile.isOccupied = false;
+
+        if (item.recipe.ingredient1.ingredientType != null)
+            InventoryManager.Instance.AddItem(item.recipe.ingredient1.ingredientType, (int)(item.recipe.ingredient1.IngredientAmount / 0.75f));
+        if (item.recipe.ingredient2.ingredientType != null)
+            InventoryManager.Instance.AddItem(item.recipe.ingredient2.ingredientType, (int)(item.recipe.ingredient2.IngredientAmount / 0.75f));
+        if (item.recipe.ingredient3.ingredientType != null)
+            InventoryManager.Instance.AddItem(item.recipe.ingredient3.ingredientType, (int)(item.recipe.ingredient3.IngredientAmount / 0.75f));
+
+        GetComponentInChildren<Tomb>()?.ExtractNPC();
+
+        Destroy(gameObject);
     }
 
     public void EndInteract()

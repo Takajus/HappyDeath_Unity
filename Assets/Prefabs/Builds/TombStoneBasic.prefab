@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2707826397959643456}
   - component: {fileID: 9062247925530023209}
-  m_Layer: 0
+  - component: {fileID: 3598078088751932624}
+  m_Layer: 13
   m_Name: TombStoneBasic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,6 +62,19 @@ MonoBehaviour:
   - x: 0
     z: 1
     needDugTile: 0
+--- !u!65 &3598078088751932624
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416727566958122708}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5675581, y: 0.88941926, z: 0.16713268}
+  m_Center: {x: -0.0073561966, y: 0.44495466, z: -0.0059601963}
 --- !u!1001 &4314145443653423140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133,7 +147,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3782220015846733140, guid: 9b7bca138707cd942a9be3d15bf27180, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9b7bca138707cd942a9be3d15bf27180, type: 3}
 --- !u!1 &2421280204657074766 stripped
 GameObject:
@@ -141,6 +156,33 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4314145443653423140}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &2620599170547737427
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2421280204657074766}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 7882b399c56ce4f4990e37327100ccfd, type: 3}
+--- !u!114 &8482775213732848575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2421280204657074766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1081506f38e570a4d881cd28690fe46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resident: {fileID: 437950159288600646}
 --- !u!4 &3085472791927290100 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1229237800992270544, guid: 9b7bca138707cd942a9be3d15bf27180,
@@ -222,6 +264,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5131223938668145142}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &437950159288600646 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4694489848926609840, guid: ed8a9a88ee684d94fa42061d71e84fde,
+    type: 3}
+  m_PrefabInstance: {fileID: 5131223938668145142}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f35adde9f1b61478072fac73b3f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7287760404372312780
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -287,14 +341,15 @@ PrefabInstance:
     - target: {fileID: 1892903726198305386, guid: 9b7bca138707cd942a9be3d15bf27180,
         type: 3}
       propertyPath: m_Name
-      value: pf_tb21_0 (1)
+      value: pf_tb21_0 - preview
       objectReference: {fileID: 0}
     - target: {fileID: 3782220015846733140, guid: 9b7bca138707cd942a9be3d15bf27180,
         type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3782220015846733140, guid: 9b7bca138707cd942a9be3d15bf27180, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9b7bca138707cd942a9be3d15bf27180, type: 3}
 --- !u!4 &8371191417290406428 stripped
 Transform:

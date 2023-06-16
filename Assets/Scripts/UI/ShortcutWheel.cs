@@ -38,7 +38,10 @@ public class ShortcutWheel : MonoBehaviour
                 if (toolwheel.item == item)
                 {
                     Destroy(buildsElements[i].gameObject);
+                    buildsElements.RemoveAt(i);
+                    i--;
                     Destroy(lineNbrBuildsElement[0].gameObject);
+                    lineNbrBuildsElement.RemoveAt(0);
                 }
             }
 
@@ -73,10 +76,18 @@ public class ShortcutWheel : MonoBehaviour
         tempWheelObject.GetComponent<Image>().sprite = item.Sprite;
         tempWheelObject.GetComponent<Button>().onClick.AddListener(() =>
         {
-            CloseWheel(new InputAction.CallbackContext());
-            InventoryManager.HeldItem = item;
-            tempWheelObject.transform.parent.gameObject.SetActive(false);
+            //CloseWheel(new InputAction.CallbackContext());
+            //InventoryManager.HeldItem = item;
+            //tempWheelObject.transform.parent.gameObject.SetActive(false);
+
+            EquipItem(item);
         });
+    }
+
+    public void EquipItem(Item item)
+    {
+        CloseWheel(new InputAction.CallbackContext());
+        InventoryManager.HeldItem = item;
     }
 
     public void DisplayWheel(InputAction.CallbackContext context)
@@ -129,6 +140,12 @@ public class ShortcutWheel : MonoBehaviour
     }
 
     private void CloseWheel(InputAction.CallbackContext context)
+    {
+        buildsWheel.SetActive(false);
+        toolWheel.SetActive(false);
+    }
+
+    public void CloseWheel()
     {
         buildsWheel.SetActive(false);
         toolWheel.SetActive(false);
