@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ae8096f8d0e74444b152887f682e222, type: 3}
   m_Name: Tombstone 0
   m_EditorClassIdentifier: 
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   ingredient1:
     ingredientType: {fileID: 11400000, guid: 7fa2e0cee1d20424cbf4266b35fbfc03, type: 2}
     IngredientAmount: 3
@@ -22,6 +22,6 @@ MonoBehaviour:
   ingredient3:
     ingredientType: {fileID: 0}
     IngredientAmount: 0
-  item: {fileID: 11400000, guid: c86451dd99e2a2d458bcbec4cbb2162f, type: 2}
+  item: {fileID: 11400000, guid: f4685f79510567b43b8f88475f1a3bf2, type: 2}
   Name: Simple Tombstone
   Description: A simple tombstone.

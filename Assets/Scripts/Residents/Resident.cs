@@ -8,6 +8,7 @@ using UnityEngine;
 public class Resident : MonoBehaviour, IInteractable
 {
     public ResidentData ResidentData;
+    private ResidentData currentData = null;
 
     private GameObject modelSlot, model;
     private bool placeIsCheck = false;
@@ -19,12 +20,14 @@ public class Resident : MonoBehaviour, IInteractable
 
     private Dialogue _dialogue;
 
+    private Collider col;
+
     private void Awake()
     {
         // TODO: Modifier la list pour utiliser celle de la DataBase
-        transform.GetComponent<Collider>().enabled = false;
+        col = transform.GetComponent<Collider>();
+        col.enabled = false;
         _dialogue = transform.GetComponent<Dialogue>();
-        MoodManager.residentList.Add(ResidentData);
 
 
         DayCycleEvents.OnNightStart += Day;
@@ -41,18 +44,9 @@ public class Resident : MonoBehaviour, IInteractable
     {
         if (ResidentData == null /*|| !ResidentData.isAssign*/)
             return;
-        
-        transform.GetComponent<Collider>().enabled = true;
 
-        if(!modelSlot)
-            modelSlot = transform.Find("Model").gameObject;
+        CheckupState(false);
 
-        if(!model)
-            model = Instantiate(ResidentData.prefab, modelSlot.transform);
-        if (!model.activeInHierarchy)
-            model.SetActive(true);
-
-        _dialogue.dialog = ResidentData?.dialogueData;
         negativeMood = 0f;
         positiveMood = 0f;
         residentAmount = 0;
@@ -145,13 +139,52 @@ public class Resident : MonoBehaviour, IInteractable
 
     private void Day()
     {
-        if (model == null)
+        if (ResidentData == null /*|| !ResidentData.isAssign*/)
             return;
-        
-        if (model.activeInHierarchy)
+
+        CheckupState(true);
+    }
+
+    private void CheckupState(bool isDay)
+    {
+        if (currentData != ResidentData)
         {
-            model.SetActive(false);
-            transform.GetComponent<Collider>().enabled = false;
+            if(MoodManager.residentList.Contains(currentData))
+            {
+                MoodManager.residentList.Remove(currentData);
+            }
+            MoodManager.residentList.Add(ResidentData);
+            model = null;
+            _dialogue.dialog = null;
+            currentData = ResidentData;
+        }
+        
+        if(!_dialogue?.dialog)
+            _dialogue.dialog = currentData?.dialogueData;
+
+        if (!isDay)
+        {
+            col.enabled = true;
+
+            if(!modelSlot)
+                modelSlot = transform.Find("Model").gameObject;
+
+            if(!model)
+                model = Instantiate(currentData.prefab, modelSlot.transform);
+            if (!model.activeInHierarchy)
+                model.SetActive(true);
+        }
+        else
+        {
+            if (!model)
+                return;
+            
+            if (model.activeInHierarchy)
+            {
+                model.SetActive(false);
+                col.enabled = false;
+            }
+            
         }
     }
 
@@ -225,14 +258,28 @@ public class Resident : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-
+        _dialogue.EndDiag += End;
+        MissyQuest.isDialogOpen = true;
+        PlayerController.Instance.DisablePlayer();
         _dialogue.NextDialog();
-    
     }
+    
+    private void End()
+    {
+        if (_dialogue.dialog.isDisplay == true)
+        {                   
+            _dialogue.dialog.isDisplay = false;
+            InteractionManager.Instance.InteruptInteraction();
+        }
+        
+    }
+    
 
     public void EndInteract()
     {
-        
+        MissyQuest.isDialogOpen = false;
+        PlayerController.Instance.EnablePlayer();
+        _dialogue.EndDiag -= End;
     }
 
     public InteractMode GetInteractMode()

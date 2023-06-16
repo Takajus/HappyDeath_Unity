@@ -30,6 +30,8 @@ public class QuestManager :  MonoBehaviour
         // Ajouter la qu�te � la liste des qu�tes actives
         activeQuests.Add(currentQuest);
 
+        InventoryManager.Instance.AddResident(quest.NewDeadNPC);
+
         // Mettre � jour l'interface utilisateur
         UpdateQuestUI();
     }
@@ -40,7 +42,8 @@ public class QuestManager :  MonoBehaviour
         if(residentData.isAssign == true)
         {
             Quest quest = activeQuests.Find(e => e.NewDeadNPC == residentData);
-            CompleteQuest(quest);
+            if (quest != null)
+                CompleteQuest(quest);
         }
     }
 

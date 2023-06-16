@@ -146,19 +146,19 @@ public class InventoryManager : MonoBehaviour
 
     public void AddRecipe(Recipe recipe)
     {
-        //Utilser les unlockedRecipe à la place
+        //Utilser les unlockedRecipe ï¿½ la place
         recipesInventory.Add(recipe);
     }
     
     public void AddResident(ResidentData resident)
     {
-        //Utilser les unlockedResidents à la place
-        residentsInventory.Add(resident);
+        //Utilser les unlockedResidents ï¿½ la place
+        //residentsInventory.Add(resident);
 
-        /*if (inventoryDatabase.unlockedResidents.Contains(residentToAdd))
+        if (inventoryDatabase.unlockedResidents.Contains(resident))
             return;
 
-        inventoryDatabase.unlockedResidents.Add(residentToAdd);*/
+        inventoryDatabase.unlockedResidents.Add(resident);
 
     }
 

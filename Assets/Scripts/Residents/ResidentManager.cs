@@ -7,11 +7,12 @@ public class ResidentManager : MonoBehaviour, IInteractable
     private static ResidentManager instance;
     public static ResidentManager Instance { get { if (instance == null) instance = FindObjectOfType<ResidentManager>(); return instance; } }
 
-    public GameObject tombAssignUI;
+    public TombUI tombUI;
 
     private void Start()
     {
-        //tombAssignUI.SetActive(false);
+        tombUI.ToggleDisplay(false);
+        HUDManager.Instance.displayResidentStock.ToggleDisplay(false);
     }
 
     public InteractMode GetInteractMode()
@@ -41,11 +42,11 @@ public class ResidentManager : MonoBehaviour, IInteractable
 
     public void OpenTombUI(Tomb tomb)
     {
-        tombAssignUI.SetActive(true);
+        tombUI.ToggleDisplay(true, tomb);
     }
 
     public void CloseTombUI()
     {
-        tombAssignUI.SetActive(false);
+        tombUI.ToggleDisplay(false);
     }
 }

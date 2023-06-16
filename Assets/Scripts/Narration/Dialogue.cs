@@ -109,9 +109,4 @@ public class Dialogue : MonoBehaviour
             NextDialog();
         }
     }
-
-    private void OnDestroy()
-    {
-        dialog.ResetVariables();
-    }
 }

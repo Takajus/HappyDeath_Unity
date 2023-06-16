@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7050949105134161172}
   - component: {fileID: 6930629077248954099}
   - component: {fileID: 5707059744769833617}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: StoneCrossV3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,6 +144,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed8a9a88ee684d94fa42061d71e84fde, type: 3}
+--- !u!114 &4684118497945091707 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4694489848926609840, guid: ed8a9a88ee684d94fa42061d71e84fde,
+    type: 3}
+  m_PrefabInstance: {fileID: 11110917004124107}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f35adde9f1b61478072fac73b3f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4684118497945091709 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4694489848926609846, guid: ed8a9a88ee684d94fa42061d71e84fde,
@@ -160,12 +172,17 @@ PrefabInstance:
     - target: {fileID: 3880718036275593016, guid: abf34e11df4601e43a93f4138d2157b4,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6124701391334849839, guid: abf34e11df4601e43a93f4138d2157b4,
         type: 3}
       propertyPath: m_Name
       value: pf_tb12_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6124701391334849839, guid: abf34e11df4601e43a93f4138d2157b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6896312695502071701, guid: abf34e11df4601e43a93f4138d2157b4,
         type: 3}
@@ -230,6 +247,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3932469148333352561}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4394425754510293069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092501656646785886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1081506f38e570a4d881cd28690fe46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resident: {fileID: 4684118497945091707}
+  origin: {fileID: 0}
 --- !u!4 &7576866574036713956 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6896312695502071701, guid: abf34e11df4601e43a93f4138d2157b4,

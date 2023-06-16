@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2707826397959643456}
   - component: {fileID: 9153417169838662801}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: TombStoneV2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1264333523018668072, guid: 5a869b26173a2da45a3f8b946a2ed2ec, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5a869b26173a2da45a3f8b946a2ed2ec, type: 3}
 --- !u!1 &2621465763141137210 stripped
 GameObject:
@@ -141,6 +142,34 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2005040144129715244}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &2066142295846325427
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2621465763141137210}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 7882b399c56ce4f4990e37327100ccfd, type: 3}
+--- !u!114 &7132061032291057024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2621465763141137210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1081506f38e570a4d881cd28690fe46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resident: {fileID: 2917041524330683416}
+  origin: {fileID: 0}
 --- !u!4 &3398671343209703808 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3817316317156836780, guid: 5a869b26173a2da45a3f8b946a2ed2ec,
@@ -216,6 +245,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed8a9a88ee684d94fa42061d71e84fde, type: 3}
+--- !u!114 &2917041524330683416 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4694489848926609840, guid: ed8a9a88ee684d94fa42061d71e84fde,
+    type: 3}
+  m_PrefabInstance: {fileID: 7592299771192802728}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f35adde9f1b61478072fac73b3f6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2917041524330683422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4694489848926609846, guid: ed8a9a88ee684d94fa42061d71e84fde,
