@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 0
-  m_FogColor: {r: 1, g: 1, b: 1, a: 1}
+  m_FogColor: {r: 0.5442257, g: 1, b: 0.3333333, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -179,6 +179,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1921434324}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &204682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -353,6 +357,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 218088833}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &4224250
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -472,6 +480,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1885405478}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &5557237
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -591,6 +603,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 733157561}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &11317741
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -710,6 +726,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 830734397}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &16464626
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -939,6 +959,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2044447014}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &24699950
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1168,6 +1192,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 610332447}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &38644541
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1397,6 +1425,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1595177643}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &41358051
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1516,6 +1548,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1246707258}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &43136391
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1635,6 +1671,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1065958423}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &43855317
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1754,6 +1794,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1996267316}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &44911375
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1963,6 +2007,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1790781993}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &49743591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2227,6 +2275,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2073114433}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &54614472
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2456,6 +2508,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1532427228}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &65520176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2575,6 +2631,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1195631563}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &68536260
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2694,6 +2754,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1319053866}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &70849950
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3068,6 +3132,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1058477047}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &84395803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3332,6 +3400,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 182507544}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &88455623
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3451,6 +3523,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1479616911}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &90924971
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3680,6 +3756,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 631016430}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &97360860
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4019,6 +4099,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 853024054}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &104028841
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4358,6 +4442,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 846456690}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &116809605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4477,6 +4565,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1271712626}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &125127223
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4596,6 +4688,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2056862127}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &131823959
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4715,6 +4811,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1047100135}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &136156644
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4834,6 +4934,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 776488411}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &148514123
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5333,6 +5437,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 534570181}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &162023622
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5672,6 +5780,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1985384554}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &172963632
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5846,6 +5958,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1486551954}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &177660478
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6295,6 +6411,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 884932097}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &189599870
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6414,6 +6534,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 976653952}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &189781425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6588,6 +6712,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1366227539}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &194448041
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6817,6 +6945,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1383686408}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &204256570
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6936,6 +7068,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1445254236}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &205239476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7310,6 +7446,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1674471245}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &213359227
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7539,6 +7679,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1701300790}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &229585754
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7658,6 +7802,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1163106602}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &233678727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7832,6 +7980,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1269318510}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &243823621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7951,6 +8103,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1977393908}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &244308300
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8125,6 +8281,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 986526085}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &249964813
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8383,6 +8543,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1141447329}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &262978742
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8502,6 +8666,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1602104322}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &265522688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8658,6 +8826,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1670130097}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &269065397
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8832,6 +9004,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1321109652}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &272036047
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9426,6 +9602,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 580593006}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &311814030
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9600,6 +9780,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1422786213}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &316008307
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9884,6 +10068,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1498548173}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &347626671
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10058,6 +10246,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1588739600}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &351739460
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10177,6 +10369,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 753870176}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &354559253
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10296,6 +10492,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1895731982}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &356015901
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10580,6 +10780,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 343889546}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &363026339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10754,6 +10958,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 798182330}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &367529218
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10873,6 +11081,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 394622553}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &368602108
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11102,6 +11314,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1716852569}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &375257375
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11276,6 +11492,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1974784955}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &379182017
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11395,6 +11615,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1873447081}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &381186447
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11514,6 +11738,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1858397389}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &381525986
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11633,6 +11861,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 933611299}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &384733596
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11752,6 +11984,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 368720487}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &387659335
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11871,6 +12107,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2120487990}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &387852691
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11990,6 +12230,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1534379683}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &388859294
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12329,6 +12573,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 276736177}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &398328569
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12888,6 +13136,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 396876056}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &414018639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13062,6 +13314,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1809067467}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &429114553
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13181,6 +13437,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 582397358}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &431133162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13300,6 +13560,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1441078151}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &433702646
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13619,6 +13883,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2146117828}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &442271478
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13766,7 +14034,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.7241914, g: 0.7241914, b: 0.7241914, a: 1}
+  m_Color: {r: 0.36255163, g: 0.69702876, b: 0.9929976, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -13992,6 +14260,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 743195993}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &452046121
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14111,6 +14383,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 742080922}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &452877196
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14230,6 +14506,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1945108320}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &453960989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14349,6 +14629,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1912202283}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &457109141
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14468,6 +14752,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1263685208}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &458601204
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14641,6 +14929,51 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.25}
   m_Size: {x: 1, y: 1, z: 0.5}
   m_FadeFactor: 1
+--- !u!1 &464048635
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 464048637}
+  - component: {fileID: 464048636}
+  m_Layer: 0
+  m_Name: _FungusState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &464048636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464048635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedFlowchart: {fileID: 0}
+--- !u!4 &464048637
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464048635}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &467071365
 GameObject:
   m_ObjectHideFlags: 0
@@ -14697,6 +15030,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1565069243}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &467071368
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14871,6 +15208,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 100701140}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &468335782
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15190,6 +15531,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1902249593}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &476089051
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15474,6 +15819,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1711512735}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &481998058
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15593,6 +15942,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 641499907}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &485499122
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15712,6 +16065,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1127611738}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &486318016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16051,6 +16408,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1409149029}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &501038875
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16260,6 +16621,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1206183297}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &506339830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16330,6 +16695,81 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 23578556079219970, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23578556079219970, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23578556079219970, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23578556079219970, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 431422082098523986, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 431422082098523986, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 431422082098523986, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205771295897366324, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205771295897366324, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205771295897366324, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205771295897366324, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943643628162854185, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943643628162854185, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943643628162854185, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943643628162854185, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2868498343068558561, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
         type: 3}
       propertyPath: m_IsActive
@@ -16445,6 +16885,221 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3002879079237395072, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3002879079237395072, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3002879079237395072, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3002879079237395072, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3520519002439359499, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3520519002439359499, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3520519002439359499, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3520519002439359499, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3699827586727761284, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3699827586727761284, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3699827586727761284, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3699827586727761284, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247765058329159346, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247765058329159346, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247765058329159346, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247765058329159346, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383847529162338481, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383847529162338481, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383847529162338481, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4383847529162338481, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702693041535413067, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702693041535413067, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702693041535413067, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702693041535413067, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704843795924817170, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704843795924817170, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704843795924817170, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704843795924817170, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826775684825801208, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826775684825801208, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826775684825801208, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826775684825801208, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161875680250188911, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161875680250188911, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161875680250188911, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161875680250188911, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222640903369597582, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222640903369597582, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222640903369597582, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222640903369597582, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708099548457752802, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708099548457752802, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708099548457752802, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7002754753472201013, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
         type: 3}
       propertyPath: inventory.Array.size
@@ -16467,6 +17122,91 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 54234a186689e9e45acdd37f7d9b5798,
         type: 2}
+    - target: {fileID: 7008180637655201354, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008180637655201354, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008180637655201354, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993110667104475558, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993110667104475558, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993110667104475558, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993110667104475558, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251134487200672030, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251134487200672030, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251134487200672030, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251134487200672030, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588357797230727206, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588357797230727206, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588357797230727206, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8588357797230727206, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801554636247503132, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801554636247503132, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c983a5c87268c04b9cbd87cc6b9648d, type: 3}
 --- !u!1 &518534590
@@ -16525,6 +17265,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 553478288}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &518534593
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16644,6 +17388,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 542136573}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &521233102
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16763,6 +17511,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 94173282}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &521320363
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16882,6 +17634,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 611982955}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &528709513
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17001,6 +17757,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 926180076}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &530238020
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17285,6 +18045,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 270520754}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &550239638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17404,6 +18168,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1931640405}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &552066989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17578,6 +18346,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1042358719}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &562113489
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17697,6 +18469,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2012604391}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &563820587
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17981,6 +18757,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 56354298}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &568413544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18100,6 +18880,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1891030679}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &569993743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18219,6 +19003,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 495039971}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &574425643
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18338,6 +19126,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1219711433}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &580235781
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18856,6 +19648,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1512345092}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &607248560
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19085,6 +19881,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1508733000}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &615498132
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19424,6 +20224,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1042578914}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &624527960
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19604,6 +20408,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 446604387}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &629034076
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19723,6 +20531,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 908990044}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &629256422
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19952,6 +20764,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1712072145}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &638576380
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20071,6 +20887,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1894310522}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &639236160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20300,6 +21120,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1048019463}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &643426654
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20419,6 +21243,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 103566191}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &647355601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20538,6 +21366,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 219131885}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &648954191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20718,6 +21550,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1132780009}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &659042869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20837,6 +21673,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 781598475}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &663798896
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21156,6 +21996,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1037192073}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &673866736
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21275,6 +22119,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 799181900}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &680745853
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21394,6 +22242,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 39101348}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &685066211
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21623,6 +22475,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1453445632}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &691757529
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21797,6 +22653,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 649116357}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &698480615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21916,6 +22776,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 166115648}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &701330741
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22035,6 +22899,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1038061139}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &703285300
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22154,6 +23022,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1464410844}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &704630164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22328,6 +23200,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1465645747}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &708417546
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22447,6 +23323,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 204232785}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &710673148
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22540,7 +23420,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1540340870}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &714502398
 SpriteRenderer:
@@ -22650,6 +23530,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1942120521}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &716798615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22769,6 +23653,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 403432713}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &718717423
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22943,6 +23831,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1146525662}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &732815384
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23172,6 +24064,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 999086105}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &736028243
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23291,6 +24187,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1641613483}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &738755851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23520,6 +24420,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 82900255}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &749393489
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23639,6 +24543,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1162889403}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &752977983
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23813,6 +24721,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1283134209}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &754616111
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23932,6 +24844,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 27198311}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &758513670
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24106,6 +25022,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1402455952}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &764442113
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24225,6 +25145,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1686889080}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &771149336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24489,6 +25413,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 719075101}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &777162212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24608,6 +25536,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 498298160}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &778021157
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25257,6 +26189,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 357700419}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &799602478
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25376,6 +26312,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 308871709}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &804008089
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25495,6 +26435,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1749413525}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &811174923
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25724,6 +26668,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1209768843}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &817475803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25843,6 +26791,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1928074231}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &820070759
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25962,6 +26914,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 623855832}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &823559693
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26081,6 +27037,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 315508265}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &824682010
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26475,6 +27435,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 398929322}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &837300760
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26594,6 +27558,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1407933289}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &838641244
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26823,6 +27791,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 243680861}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &851255049
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26997,6 +27969,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 39091386}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &854310830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27171,6 +28147,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2095084219}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &856734827
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27290,6 +28270,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 207337635}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &860515934
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27533,6 +28517,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1868599968}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &866994116
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27652,6 +28640,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1049881118}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &868075633
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27771,6 +28763,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1058033076}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &868950163
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27890,6 +28886,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1347772460}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &873063900
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28009,6 +29009,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1197469989}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &881234754
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28331,6 +29335,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1241387520}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &893124350
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28505,6 +29513,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 567143185}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &906977266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28624,6 +29636,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 480498481}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &907403444
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28916,6 +29932,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1010670695}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &918121886
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29437,6 +30457,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1616619421}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &933195077
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29866,6 +30890,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 690032629}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &942693300
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30019,6 +31047,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 193642109}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &947603347
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30138,6 +31170,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1433351539}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &949145827
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30257,6 +31293,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1684930340}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &950929267
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30521,6 +31561,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1276574171}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &956478920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30640,6 +31684,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 629029642}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &956787377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30759,6 +31807,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1840355304}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &959134316
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30878,6 +31930,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1973189592}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &960330873
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31107,6 +32163,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 478283094}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &966694719
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31611,6 +32671,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1224860123}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &997821292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31785,6 +32849,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1184347054}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1002429269
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31959,6 +33027,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 968216910}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1008084647
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32078,6 +33150,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 990594255}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1008726350
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32252,6 +33328,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 604313624}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1013105723
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32371,6 +33451,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1696772784}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1015757628
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32490,6 +33574,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 470724084}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1015965220
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32664,6 +33752,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 532388956}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1027648714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32838,6 +33930,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1869397418}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1032731756
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33177,6 +34273,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1646888418}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1042581175
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33351,6 +34451,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 618892656}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1042970436
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33745,6 +34849,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 97486155}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1058371331
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34139,6 +35247,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1692539578}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1067743278
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34313,6 +35425,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 564187529}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1086040275
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34597,6 +35713,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1438183913}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1095794158
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34806,6 +35926,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 256200611}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1097049696
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34925,6 +36049,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1602027257}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1101486339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35105,6 +36233,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1172912904}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1105080831
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35368,6 +36500,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 185816136}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1111999556
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35487,6 +36623,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 405054790}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1113485843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35661,6 +36801,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 665070884}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1119046483
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36000,6 +37144,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1489303923}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1134545260
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36119,6 +37267,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1501369063}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1136344339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36458,6 +37610,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 814773219}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1153614263
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36577,6 +37733,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1902671230}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1155937491
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36751,6 +37911,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 816560646}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1156186834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36925,6 +38089,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 367204129}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1162409316
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37154,6 +38322,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1307610700}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1171050706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38312,6 +39484,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1626795950}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1188038708
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38431,6 +39607,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2044283586}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1190496019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38550,6 +39730,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 604414238}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1194652403
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38669,6 +39853,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 404235549}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1194848426
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38898,6 +40086,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 160212196}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1198197386
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39017,6 +40209,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 621493466}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1202628655
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39246,6 +40442,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 850616634}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1213323655
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39475,6 +40675,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 18117882}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1217752670
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39759,6 +40963,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1522023310}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1226303812
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39966,6 +41174,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1939859317}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1234714981
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40230,6 +41442,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 103205503}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1241836899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40459,6 +41675,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1727976793}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1249831137
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40578,6 +41798,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 666874207}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1259962695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40697,6 +41921,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1584448296}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1260507050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40849,6 +42077,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 56644446}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1263608776
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41133,6 +42365,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 470736038}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1271220221
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41362,6 +42598,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1838503065}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1277481266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41566,7 +42806,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279133917}
   m_LocalRotation: {x: 0.3420201, y: 0, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: 0, y: 10.115597, z: -11.652517}
+  m_LocalPosition: {x: 0, y: 10.115597, z: -11.652516}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41663,6 +42903,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1834676129}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1280446282
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41947,6 +43191,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 642034910}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1289974276
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42121,6 +43369,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1388455830}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1299957911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42295,6 +43547,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1054692006}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1306629696
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42469,6 +43725,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1725374379}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1309865486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42643,6 +43903,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1523092046}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1314630889
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42817,6 +44081,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1095187096}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1319407716
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42991,6 +44259,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 165527182}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1322126123
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43110,6 +44382,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 934587516}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1322788498
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43229,6 +44505,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1397014687}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1324344559
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43348,6 +44628,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 781147480}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1325658058
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43467,6 +44751,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 434376057}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1333398428
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43696,6 +44984,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 792448575}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1341655645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43815,6 +45107,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1878837028}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1343056967
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43934,6 +45230,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1398304895}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1346130226
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44163,6 +45463,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1851462697}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1358087556
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44282,6 +45586,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 933401358}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1363008608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44456,6 +45764,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1143987064}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1366870068
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44664,6 +45976,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1427932788}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1369961497
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44838,6 +46154,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1814540511}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1375363251
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44957,6 +46277,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1747881289}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1377702087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45076,6 +46400,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1922922788}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1378280017
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45195,6 +46523,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1751621891}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1378914928
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45314,6 +46646,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1940751086}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1380246715
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45433,6 +46769,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 272083846}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1380594513
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45552,6 +46892,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 334969006}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1382421654
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45781,6 +47125,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 115139352}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1392683979
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45900,6 +47248,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 866858959}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1395895204
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46074,6 +47426,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1925866203}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1398301510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46393,6 +47749,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 116129579}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1404146944
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46622,6 +47982,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 359865775}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1414500113
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46741,6 +48105,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2046118318}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1417447505
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46970,6 +48338,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1681132900}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1423278546
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47089,6 +48461,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1155989760}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1423983892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47208,6 +48584,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1587045137}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1426111220
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47327,6 +48707,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1351688995}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1427761331
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47501,6 +48885,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1158416678}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1429120682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47730,6 +49118,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1569576019}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1433796739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47959,6 +49351,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1031475040}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1441187563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48133,6 +49529,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1340733498}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1448474594
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48307,6 +49707,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 3831531}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1456422782
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48536,6 +49940,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 791513511}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1466431024
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48710,6 +50118,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2043074012}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1467813847
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48829,6 +50241,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1541827873}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1467842391
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48948,6 +50364,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1337432975}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1478097675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49313,7 +50733,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1540340870}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1498548173
 GameObject:
@@ -49426,6 +50846,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1655753415}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1499788700
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49545,6 +50969,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1554339562}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1501321184
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49719,6 +51147,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 606215058}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1501650580
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49807,7 +51239,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504708304}
   m_LocalRotation: {x: 0.3420201, y: -0, z: -0, w: 0.9396927}
-  m_LocalPosition: {x: 0, y: 10.115597, z: -11.652517}
+  m_LocalPosition: {x: 0, y: 10.115597, z: -11.652516}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -50490,6 +51922,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 467182370}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1509831057
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50664,6 +52100,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 582300085}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1515004281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50857,6 +52297,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1020326089}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1517264070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50976,6 +52420,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1374446639}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1521221368
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51150,6 +52598,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1178929460}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1522507059
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51324,6 +52776,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 53495871}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1523670673
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51443,6 +52899,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1910585319}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1527063022
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51562,6 +53022,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 244631564}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1532025574
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51797,6 +53261,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1294718126}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1541157799
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51971,6 +53439,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 698054949}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1546557557
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52090,6 +53562,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1589532924}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1549201039
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52209,6 +53685,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1676905294}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1552387297
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52328,6 +53808,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1086927793}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1553027741
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52502,6 +53986,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 961082297}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1555195062
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52621,6 +54109,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 920967521}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1555262427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52740,6 +54232,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 178038439}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1557078255
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52859,6 +54355,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1784332406}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1559281049
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52978,6 +54478,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1605148730}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1560225989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53097,6 +54601,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 411716204}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1561584176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53216,6 +54724,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 186011812}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1562194009
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53335,6 +54847,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 165258606}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1562976571
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53454,6 +54970,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 885749323}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1563500635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53628,6 +55148,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 996311445}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1565949379
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53747,6 +55271,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1313922872}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1568444689
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53921,6 +55449,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 997196562}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1579262627
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54315,6 +55847,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1819331176}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1593265123
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54544,6 +56080,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 617821339}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1598490203
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54663,6 +56203,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1644342033}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1598680025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55057,6 +56601,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 903608305}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1614464218
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55231,6 +56779,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 203154456}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1624368823
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55570,6 +57122,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 912097923}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1642341608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55799,6 +57355,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1249655019}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1650406396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55918,6 +57478,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1597760102}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1652638851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56092,6 +57656,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1657899419}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1657729432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56509,6 +58077,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 150602816}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1672718688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56628,6 +58200,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 832657673}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1673322987
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56863,6 +58439,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2039905105}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1678288918
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56982,6 +58562,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 71293250}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1678675913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57101,6 +58685,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2143884157}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1679489215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57550,6 +59138,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 95383950}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1702359001
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57669,6 +59261,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 389726666}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1702493355
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57872,6 +59468,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 955326080}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1708281675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58136,6 +59736,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1114562295}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1710876393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58255,6 +59859,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 564756120}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1711484129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58539,6 +60147,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 298882834}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1717685533
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58658,6 +60270,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1417859322}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1719146910
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58777,6 +60393,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 491685370}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1720884394
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58951,6 +60571,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 297026393}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1726066888
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59125,6 +60749,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1217073758}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1729153238
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59368,6 +60996,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1614003861}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1735797211
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59487,6 +61119,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1042846325}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1743623214
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59606,6 +61242,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2056801439}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1744344631
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59725,6 +61365,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1609363772}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1747105707
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59913,6 +61557,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 828347487}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1747647708
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60087,6 +61735,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 208181598}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1748936626
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60316,6 +61968,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1282472619}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1753831945
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60525,6 +62181,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 187753870}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1756673288
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60644,6 +62304,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 186205464}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1765345895
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60818,6 +62482,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1997407874}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1770691913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60937,6 +62605,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 797011598}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1771822176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61117,6 +62789,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 18885763}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1789707261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61291,6 +62967,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 206871526}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1796899115
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61410,6 +63090,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 934474404}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1799809829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61529,6 +63213,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 833036537}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1802788935
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61648,6 +63336,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1067131168}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1803351406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61767,6 +63459,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 487153817}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1805836187
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61941,6 +63637,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1289451863}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1812946339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62170,6 +63870,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1072361117}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1821208421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62289,6 +63993,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1975126226}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1823698623
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62408,6 +64116,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1222043558}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1832609299
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62527,6 +64239,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1265716292}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1833540636
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62791,6 +64507,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 986248553}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1834986920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62910,6 +64630,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 82064478}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1835429304
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63304,6 +65028,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 855295711}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1858740289
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63423,6 +65151,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 836011822}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1858994546
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63542,6 +65274,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 708012569}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1859820037
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63661,6 +65397,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1140072057}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1862436190
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63780,6 +65520,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2080785016}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1862697857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63899,6 +65643,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 762018189}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1865147530
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64238,6 +65986,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 413550070}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1878647208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64412,6 +66164,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 410189983}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1884113701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64965,6 +66721,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 435643448}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1905187205
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65139,6 +66899,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1006729217}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1910776810
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65258,6 +67022,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 169880025}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1911424638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65377,6 +67145,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1508862219}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1911601866
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65557,6 +67329,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 632853116}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1914478515
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65676,6 +67452,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 173656620}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1919086511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65795,6 +67575,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1632074195}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1919573613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65914,6 +67698,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1710622975}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1920532989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66033,6 +67821,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1179123177}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1920577775
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66482,6 +68274,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 889400195}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1934896277
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66601,6 +68397,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 795366332}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1935203434
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66720,6 +68520,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1905034647}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1935459093
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66839,6 +68643,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1088592771}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1939293307
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67178,6 +68986,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1466937673}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1946535081
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67297,6 +69109,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 27217929}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1946683188
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67496,6 +69312,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1064893599}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1970891334
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67615,6 +69435,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1765483085}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1971214122
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67789,6 +69613,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1508890896}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1973526834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68018,6 +69846,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 480631625}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1976123626
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68192,6 +70024,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 966530755}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1984199362
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68311,6 +70147,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1579344421}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1985314167
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68485,6 +70325,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1493791670}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1989602677
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68659,6 +70503,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 424980943}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &1996646235
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68833,6 +70681,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2049599082}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2006642020
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69007,6 +70859,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 2136678373}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2016053526
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69126,6 +70982,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1921733952}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2016281425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69245,6 +71105,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 735777840}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2021503503
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69364,6 +71228,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 403992414}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2032364258
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69483,6 +71351,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 690328437}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2035326452
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69602,6 +71474,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 114696751}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2039373830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69721,6 +71597,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1062137948}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2039841739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69950,6 +71830,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 389041355}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2044272002
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70179,6 +72063,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1214933058}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2045359832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70298,6 +72186,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 460472658}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2045934079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70527,6 +72419,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1122156836}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2054974254
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70756,6 +72652,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1844493839}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2057750789
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70875,6 +72775,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 318574494}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2058419208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70994,6 +72898,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1430105160}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2066484375
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71113,6 +73021,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 110882284}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2067163633
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71232,6 +73144,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 300988428}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2067600846
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71406,6 +73322,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1632665810}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2077997933
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71525,6 +73445,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 462644967}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2080495118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71699,6 +73623,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 376973265}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2084279835
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71818,6 +73746,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1102257440}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2086706180
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71937,6 +73869,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 369908491}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2091856992
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72111,6 +74047,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 306893964}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2105822866
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72236,6 +74176,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 363003916}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2117815514
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72410,6 +74354,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 85334379}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2121024786
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72529,6 +74477,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 348080375}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2124035411
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72648,6 +74600,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1123960266}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2132215936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72877,6 +74833,10 @@ MonoBehaviour:
   hoverMaterial: {fileID: 2100000, guid: a1a7332bc2a529d4a903a529f0dc90dc, type: 2}
   selectMaterial: {fileID: 2100000, guid: 883b2808d5e90c84d8155c92ad0361c9, type: 2}
   digDecal: {fileID: 1865222973}
+  digDecalUp: {fileID: 0}
+  digDecalDown: {fileID: 0}
+  digDecalLeft: {fileID: 0}
+  digDecalRight: {fileID: 0}
 --- !u!65 &2144192932
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73166,6 +75126,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
         type: 3}
+      propertyPath: Dig.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: d0b462f97e701a14192043f633e45283,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Craft.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 3c32ff5b522cd01429db567e5ae8932c,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
       propertyPath: Flower.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 963b061193b0eac4dab7110e817c6780,
@@ -73175,6 +75147,90 @@ PrefabInstance:
       propertyPath: uiClick.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 963b061193b0eac4dab7110e817c6780,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Day_Music.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 3206002e3b0b9b841b87e74241de20fe,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Take_Rock.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 9179b49e404dd784db073f5ce5d808a1,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Menu_Music.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 6127fbf29cd42924dbf240144747c7c5,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Night_Music.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 81208be95e736be48b011f6228fbfc4e,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Take_Flower.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 963b061193b0eac4dab7110e817c6780,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Footsteps_Dirt.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 52d6afd21352a074aac0fad7629a2d16,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Footsteps_Wood.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: d8bafb0bf0e46654a91b97f6cf66f335,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: MetalGate_Open.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: ffcc1a338b8cfc444a3960e493e09b2a,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Footsteps_Ghost.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 8102155721404914e90fc5360e885f23,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Footsteps_Grass.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: ba00ca31f0765a845a514c4259c28d82,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Footsteps_Stone.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 946110c4e7c0c714dbc37aa465907f52,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: MetalGate_Close.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 75b5d19521325be43981edcee55b41e6,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Place_Tombstone.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c046f6b800d43e74d8e5d3f942d1f1ef,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Take_TreeBranch.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 65ff25337df803c4d9a018f9ee645747,
         type: 2}
     - target: {fileID: 8031455160181792341, guid: b616bc82e4a45a742b128b7cdefad30d,
         type: 3}

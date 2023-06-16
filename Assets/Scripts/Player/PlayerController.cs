@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     public GameObject InteractSphere { get => interactSphere; }
     public Animator animatorDay;
     public Animator animatorNight;
+   // public AK.Wwise.Event Footsteps_Ghost;
+    public AK.Wwise.Event Footsteps_Grass;
 
     [Header("Player state")]
     /*[HideInInspector]*/
@@ -78,10 +80,12 @@ public class PlayerController : MonoBehaviour
         {
             moveDir = (transform.forward * dir.y) + (transform.right * dir.x);
             lastMoveDir = moveDir.normalized;
+            FindObjectOfType<AudioManager>().PlaySound(Footsteps_Grass);
         }
 
         animatorDay.SetBool("Walking", isMoving);
         animatorNight.SetBool("Walking", isMoving);
+      
 
         UpdateMoveSpeed(dir.x, dir.y);
         moveDir = moveDir.normalized * currentSpeed;
