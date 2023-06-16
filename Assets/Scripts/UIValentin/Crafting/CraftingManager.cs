@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.UIElements;
 
 public class CraftingManager : MonoBehaviour
 {
@@ -24,6 +23,10 @@ public class CraftingManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI ingredientAmountOwned_1;
     [SerializeField] TextMeshProUGUI ingredientAmountOwned_2;
     [SerializeField] TextMeshProUGUI ingredientAmountOwned_3;
+
+    [SerializeField] Image imageIngredient_1;
+    [SerializeField] Image imageIngredient_2;
+    [SerializeField] Image imageIngredient_3;
 
     public Action<CraftSetup> OnRecipeSelected;
     public Action<CraftSetup> OnItemCraft;
@@ -72,8 +75,44 @@ public class CraftingManager : MonoBehaviour
         {
             for (int j = 0; j < verticalBox.transform.GetChild(i).transform.childCount; j++)
             {
-                craftingSlot.Add(verticalBox.transform.GetChild(i).transform.GetChild(j).gameObject);
+                craftingSlot.Add(verticalBox.transform.GetChild(i).transform.GetChild(j).transform.GetChild(0).gameObject);
             } 
+        }
+    }
+
+    public void UI_OnClick()
+    {
+        if (selectedRecipe.scriptableRecipe.ingredient1.IngredientAmount > 0)
+        {
+            imageIngredient_1.sprite = selectedRecipe.scriptableRecipe.ingredient1.ingredientType.Sprite;
+            ingredientAmountNeeded_1.text = selectedRecipe.scriptableRecipe.ingredient1.IngredientAmount.ToString();
+            ingredientAmountOwned_1.text = HUDManager.GetInventoryManager().GetIngredientAmount(selectedRecipe.scriptableRecipe.ingredient1.ingredientType).ToString();
+        }
+        else
+        {
+            InventoryManager.Instance.parentIngredient_1.SetActive(false);
+        }
+
+        if (selectedRecipe.scriptableRecipe.ingredient2.IngredientAmount > 0)
+        {
+            imageIngredient_2.sprite = selectedRecipe.scriptableRecipe.ingredient2.ingredientType.Sprite;
+            ingredientAmountNeeded_2.text = selectedRecipe.scriptableRecipe.ingredient2.IngredientAmount.ToString();
+            ingredientAmountOwned_2.text = HUDManager.GetInventoryManager().GetIngredientAmount(selectedRecipe.scriptableRecipe.ingredient2.ingredientType).ToString();
+        }
+        else
+        {
+            InventoryManager.Instance.parentIngredient_2.SetActive(false);
+        }
+
+        if (selectedRecipe.scriptableRecipe.ingredient3.IngredientAmount > 0)
+        {
+            imageIngredient_3.sprite = selectedRecipe.scriptableRecipe.ingredient3.ingredientType.Sprite;
+            ingredientAmountNeeded_3.text = selectedRecipe.scriptableRecipe.ingredient3.IngredientAmount.ToString();
+            ingredientAmountOwned_3.text = HUDManager.GetInventoryManager().GetIngredientAmount(selectedRecipe.scriptableRecipe.ingredient3.ingredientType).ToString();
+        }
+        else
+        {
+            InventoryManager.Instance.parentIngredient_3.SetActive(false);
         }
     }
 
@@ -97,18 +136,18 @@ public class CraftingManager : MonoBehaviour
         if (selectedRecipe.ScriptableRecipe.ingredient1.IngredientAmount > 0)
             ingredientAmountNeeded_1.text = selectedRecipe.ScriptableRecipe.ingredient1.IngredientAmount.ToString();
         else
-            ingredientAmountNeeded_1.text = "none";
+            ingredientAmountNeeded_1.text = "";
 
 
         if (selectedRecipe.ScriptableRecipe.ingredient2.IngredientAmount > 0)
             ingredientAmountNeeded_2.text = selectedRecipe.ScriptableRecipe.ingredient2.IngredientAmount.ToString();
         else
-            ingredientAmountNeeded_2.text = "none";
+            ingredientAmountNeeded_2.text = "";
 
         if (selectedRecipe.ScriptableRecipe.ingredient3.IngredientAmount > 0)
             ingredientAmountNeeded_3.text = selectedRecipe.ScriptableRecipe.ingredient3.IngredientAmount.ToString();
         else
-            ingredientAmountNeeded_3.text = "none";
+            ingredientAmountNeeded_3.text = "";
 
         RefreshIngredientsOwned();
     }
@@ -125,6 +164,7 @@ public class CraftingManager : MonoBehaviour
         if (HaveEnoughtIngredients())
         {
             OnItemCraft.Invoke(selectedRecipe);
+            RefreshIngredientsOwned();
         }
     }
 
