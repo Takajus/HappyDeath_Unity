@@ -11,8 +11,8 @@ public class QuestSystem : MonoBehaviour
     [SerializeField] private TMP_Text ToDoTextUI;
 
     //QuestUI
-    [SerializeField] private Text questTitleText;
-    [SerializeField] private Text questDescriptionText;
+    [SerializeField] private TMP_Text questTitleText;
+    [SerializeField] private TMP_Text questDescriptionText;
     public QuestManager questManager;
 
     [Header("Demo Text (WIP)")]

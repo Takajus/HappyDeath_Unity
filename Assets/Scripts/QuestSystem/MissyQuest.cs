@@ -17,7 +17,7 @@ public class MissyQuest : MonoBehaviour, IInteractable
 {
     public QuestManager questManager;
 
-    public List<QuestData> questDataList = new List<QuestData>();
+    public List<QuestData> questDataList = new();
     private int currentQuestIndex = 0;
     [SerializeField] private GameObject E_Input;
     Dialogue _dialogue;
@@ -51,6 +51,11 @@ public class MissyQuest : MonoBehaviour, IInteractable
                         //interactHandler.ClearHandler();
                     return;
                 }
+                Debug.Log("GiveQuest call");
+                GiveQuest();
+                //EndInteract();
+                InteractionManager.Instance.InteruptInteraction();
+                //interactHandler.ClearHandler();
             }
             else
             {
@@ -92,7 +97,7 @@ public class MissyQuest : MonoBehaviour, IInteractable
        
         if (currentQuestIndex < questDataList.Count && questManager.currentQuest == null)
         {
-            Quest quest = questDataList[currentQuestIndex].availableQuests[currentQuestIndex];
+            Quest quest = questDataList[currentQuestIndex].availableQuests[0];
             
             //_dialogue.dialog = questDataList[currentQuestIndex].dialogList[currentQuestIndex];
             // Remove the quest from the available quests list
@@ -115,14 +120,20 @@ public class MissyQuest : MonoBehaviour, IInteractable
 
         _dialogue.EndDiag += End;
         PlayerController.Instance.DisablePlayer();
-        if (currentQuestIndex < questDataList.Count && questManager.currentQuest == null && currentQuestIndex > 0)
+
+
+        if (currentQuestIndex != questDataList.Count)
         {
-            currentQuestIndex++;
-        }
-        
-        if (_dialogue.dialog != questDataList[currentQuestIndex].dialogList[currentQuestIndex] || _dialogue.dialog is null)
-        {
-            _dialogue.dialog = questDataList[currentQuestIndex].dialogList[currentQuestIndex];
+            if (currentQuestIndex < questDataList.Count && questManager.currentQuest == null &&
+                questDataList[currentQuestIndex].availableQuests[currentQuestIndex].isCompleted)
+            {
+                currentQuestIndex++;
+            }
+
+            if (_dialogue.dialog != questDataList[currentQuestIndex].dialogList[0])
+            {
+                _dialogue.dialog = questDataList[currentQuestIndex].dialogList[0];
+            }
         }
         
         _dialogue.NextDialog();
