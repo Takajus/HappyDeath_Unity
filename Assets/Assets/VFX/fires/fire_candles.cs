@@ -15,13 +15,23 @@ public class fire_candles : MonoBehaviour
 	void Start()
 	{
 		SpawnNewFire(false);
+	}
+
+    private void OnEnable()
+    {
 		DayCycleEvents.OnDayStart += IsDay;
 		DayCycleEvents.OnNightStart += IsNight;
 	}
 
-	// Update is called once per frame
+    private void OnDisable()
+    {
+		DayCycleEvents.OnDayStart -= IsDay;
+		DayCycleEvents.OnNightStart -= IsNight;
+	}
 
-	public void SpawnNewFire(bool isDay)
+    // Update is called once per frame
+
+    public void SpawnNewFire(bool isDay)
 	{
 		DestroyCurrentFire();
 
