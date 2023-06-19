@@ -141,7 +141,6 @@ GameObject:
   - component: {fileID: 26758630471932295}
   - component: {fileID: 6778913777354255093}
   - component: {fileID: 8544113952264117674}
-  - component: {fileID: 6010860189324633185}
   m_Layer: 0
   m_Name: Plane.006
   m_TagString: Untagged
@@ -214,29 +213,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6010860189324633185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8885700857692842822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 330076f8b818e4740914a43f0cb53ee0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  validMat: {fileID: 0}
-  invalidMat: {fileID: 0}
-  actualObject: {fileID: 0}
-  previewObject: {fileID: 0}
-  item: {fileID: 0}
-  xRange: 2
-  zRange: 2
-  tileDetectionList:
-  - x: 0
-    z: 0
-    needDugTile: 1
-  - x: 0
-    z: 1
-    needDugTile: 1
