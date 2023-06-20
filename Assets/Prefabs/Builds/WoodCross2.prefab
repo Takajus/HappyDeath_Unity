@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7453160117396234039}
   - component: {fileID: 1449041722060188956}
   - component: {fileID: 6033612022426946362}
+  - component: {fileID: -3399645190803380448}
   m_Layer: 13
   m_Name: WoodCross2
   m_TagString: Untagged
@@ -75,6 +76,22 @@ MonoBehaviour:
   - x: 0
     z: 1
     needDugTile: 0
+--- !u!208 &-3399645190803380448
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5534453307472053303}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &121551996122457565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -236,20 +253,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4662523261090847779}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5960336624044423446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6918344709419738035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1081506f38e570a4d881cd28690fe46d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  resident: {fileID: 4066261094426417919}
-  origin: {fileID: 0}
 --- !u!64 &5880148541375941097
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -264,6 +267,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -462981019419857548, guid: a8737bb79f7a62f4eb0ae43ab55f5763, type: 3}
+--- !u!114 &5960336624044423446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6918344709419738035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1081506f38e570a4d881cd28690fe46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resident: {fileID: 4066261094426417919}
 --- !u!4 &7730769021315512585 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3169875825521206570, guid: cd5a67ac12137814d93e0a33906bc504,

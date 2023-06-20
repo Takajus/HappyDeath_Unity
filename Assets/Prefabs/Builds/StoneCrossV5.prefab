@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7050949105134161172}
   - component: {fileID: 4285469828699846963}
   - component: {fileID: 259097857166756967}
+  - component: {fileID: 7652896768934544466}
   m_Layer: 13
   m_Name: StoneCrossV5
   m_TagString: Untagged
@@ -75,6 +76,22 @@ MonoBehaviour:
   - x: 0
     z: 1
     needDugTile: 0
+--- !u!208 &7652896768934544466
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161230830955021985}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1134405000696114170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -168,7 +185,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resident: {fileID: 8376165123323583640}
-  origin: {fileID: 0}
 --- !u!4 &1016308439577864040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 118378311040502930, guid: 45a2e5fddbdc5eb458e507fd3ac9b87f,

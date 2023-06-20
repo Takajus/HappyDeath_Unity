@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1342251969963346621}
   - component: {fileID: 8459611778738436968}
   - component: {fileID: 4783470739709138514}
+  - component: {fileID: -2664927422200530807}
   m_Layer: 13
   m_Name: WoodCross 1
   m_TagString: Untagged
@@ -75,6 +76,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!208 &-2664927422200530807
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2234632886570338085}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &295982472948960248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -182,7 +199,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resident: {fileID: 7888200415140509964}
-  origin: {fileID: 0}
 --- !u!4 &6551179310497328022 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6841527082234257518, guid: b851cb5597b58214898ea9bc98b34ff2,
