@@ -34127,7 +34127,7 @@ PrefabInstance:
     - target: {fileID: 2868498344090411273, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2868498344090411285, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
         type: 3}
@@ -122453,6 +122453,34 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.25}
   m_Size: {x: 1, y: 1, z: 0.5}
   m_FadeFactor: 1
+--- !u!1 &1930920562 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4403977369509755873, guid: 8907cb3aaf137cf41984722b83b2ab6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4403977370250483118}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1930920574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930920562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6011992c5f14b4b8f21afb6af93498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitMe:
+    serializedVersion: 2
+    m_Bits: 1
+  isTargeting: 0
+  hitMeMouse:
+    serializedVersion: 2
+    m_Bits: 1
+  mouseIsTargeting: 0
+  currentInteractedObject: {fileID: 0}
+  outlineMat: {fileID: 2100000, guid: 7cf429517e1b3464b99eebcb82b9cc71, type: 2}
 --- !u!1 &1931852265
 GameObject:
   m_ObjectHideFlags: 0

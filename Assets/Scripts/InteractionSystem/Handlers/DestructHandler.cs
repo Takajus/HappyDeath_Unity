@@ -15,6 +15,7 @@ public class DestructHandler : BaseHandler
     protected override void HoverTarget(GameObject target)
     {
         target?.GetComponent<Build>()?.Hover();
+        AddHoverMat(target);
     }
 
     protected override void UnHoverTarget(GameObject target)
@@ -26,6 +27,7 @@ public class DestructHandler : BaseHandler
         }
 
         target?.GetComponent<Build>()?.UnHover();
+        RemoveHoverMat(target);
     }
 
     protected override void SelectTarget(GameObject target)

@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class ShovelHandler : BaseHandler
 {
-    public bool shovelIsEquiped;
-
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-            shovelIsEquiped = !shovelIsEquiped;
-    }
-
     protected override bool HasWantedType(GameObject obj)
     {
         if (obj.GetComponent<IDiggable>() != null)
@@ -24,11 +15,13 @@ public class ShovelHandler : BaseHandler
     protected override void HoverTarget(GameObject target)
     {
         target?.GetComponent<IDiggable>()?.DigHover();
+        AddHoverMat(target);
     }
 
     protected override void UnHoverTarget(GameObject target)
     {
         target?.GetComponent<IDiggable>()?.DigUnHover();
+        RemoveHoverMat(target);
     }
 
     protected override void SelectTarget(GameObject target)
