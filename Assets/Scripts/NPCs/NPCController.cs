@@ -6,14 +6,12 @@ using UnityEngine.AI;
 public class NPCController : MonoBehaviour
 {
     NavMeshAgent agent;
-    public float range = 40f;
+    public float range = 5f;
     public bool shouldMove;
     private bool canMove = true;
     private float pauseTimeAmount = 0f;
 
-    public Transform areaCenter;
-
-    float timerForceChangeTarget = 5f;
+    public Vector3 areaCenter;
 
     Animator animator;
 
@@ -21,40 +19,13 @@ public class NPCController : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-        areaCenter = GameObject.Find("AreaCenter").transform;
+        areaCenter = new Vector3(transform.position.x,transform.position.y,transform.position.z);
         shouldMove = true;
-        //StartCoroutine(MoveAndWait());
     }
     void Update()
     {
         if (shouldMove)
         {
-/*            if (timerForceChangeTarget > 0)
-            {
-                timerForceChangeTarget -= Time.deltaTime;
-            }
-            else
-            {
-                Vector3 point;
-                animator.SetBool("Walking", false);
-
-                if (pauseTimeAmount >= 0)
-                {
-                    //isMoving = false;
-                    Debug.Log(pauseTimeAmount);
-                    pauseTimeAmount -= Time.deltaTime;
-                }
-                else if (RandomPoint(range, out point))
-                {
-                    Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
-                    //agent.SetDestination(point);
-                    //isMoving = true;
-                    StartCoroutine(RotateTowards(point));
-                    pauseTimeAmount = 2f;
-                }
-                timerForceChangeTarget = 5f;
-            }*/
-            //animator.SetBool("Walking", isMoving);
             if (agent.remainingDistance <= agent.stoppingDistance && canMove)
             {
                 Vector3 point;
@@ -66,42 +37,18 @@ public class NPCController : MonoBehaviour
                     Debug.Log(pauseTimeAmount);
                     pauseTimeAmount -= Time.deltaTime;
                 }
-                else if (RandomPoint(range, out point))
+                else if (RandomPoint(areaCenter, range, out point))
                 {
                     Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
-                    //agent.SetDestination(point);
-                    //isMoving = true;
                     StartCoroutine(RotateTowards(point));
                     pauseTimeAmount = 2f;
                 }
-                /*else if (RandomPoint(areaCenter.position, range, out point))
-                {
-                    Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
-                    //agent.SetDestination(point);
-                    //isMoving = true;
-                    StartCoroutine(RotateTowards(point));
-                    pauseTimeAmount = 2f;
-                }*/
             }
         }
     }
-    /*bool RandomPoint(Vector3 center, float range, out Vector3 result)
+    bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
         Vector3 randomPoint = center + UnityEngine.Random.insideUnitSphere * range;
-        NavMeshHit hit;
-        if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas))
-        {
-            result = hit.position;
-            return true;
-        }
-
-        result = Vector3.zero;
-        return false;
-    }*/
-    
-    bool RandomPoint(float range, out Vector3 result)
-    {
-        Vector3 randomPoint = UnityEngine.Random.insideUnitSphere * range;
         NavMeshHit hit;
         if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas))
         {
