@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ae136ff764b52ef43be645b75c26e212, type: 2}
+    - target: {fileID: 2437338150977753746, guid: 2d2e501c7533358449ca28ff3f3b4a04,
+        type: 3}
+      propertyPath: range
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 6984671218497540077, guid: 2d2e501c7533358449ca28ff3f3b4a04,
         type: 3}
       propertyPath: m_RootOrder
@@ -72,5 +77,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: LoupBetaAnimation Brown
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4223726920537657119, guid: 2d2e501c7533358449ca28ff3f3b4a04, type: 3}
+    - {fileID: -3491686687961213750, guid: 2d2e501c7533358449ca28ff3f3b4a04, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2d2e501c7533358449ca28ff3f3b4a04, type: 3}
+--- !u!1 &7622630875818985802 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7756704730780308823, guid: 2d2e501c7533358449ca28ff3f3b4a04,
+    type: 3}
+  m_PrefabInstance: {fileID: 174619756263709725}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &5260118006384999889
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7622630875818985802}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.1
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
