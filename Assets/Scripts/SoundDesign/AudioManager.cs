@@ -40,8 +40,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        DayCycleEvents.OnNightStart += DayMusic;
-        DayCycleEvents.OnDayStart += NightMusic;
+        
     }
 
     public void PlaySound(AK.Wwise.Event wwise_event)
@@ -59,7 +58,7 @@ public class AudioManager : MonoBehaviour
 
     private void Update()
     {
-       
+
 
         //if (Input.GetKeyUp(KeyCode.Escape))
         //{
@@ -67,19 +66,6 @@ public class AudioManager : MonoBehaviour
         //    //PlaySound(Craft);
         //}
     }
-
-    private void DayMusic()
-    {
-       // FindObjectOfType<AudioManager>().StopSound(Night_Music);
-        FindObjectOfType<AudioManager>().PlaySound(Day_Music);
-    }
-
-    private void NightMusic()
-    {
-        FindObjectOfType<AudioManager>().StopSound(Day_Music);
-       //FindObjectOfType<AudioManager>().PlaySound(Night_Music);
-    }
-   
 
     //How to play sound in scripts:
     //FindObjectofType<AudioManager>().Play("name of the sound");

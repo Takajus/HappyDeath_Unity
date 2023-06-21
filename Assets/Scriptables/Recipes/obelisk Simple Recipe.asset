@@ -10,19 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ae8096f8d0e74444b152887f682e222, type: 3}
-  m_Name: Classic Stone Tomb 5
+  m_Name: obelisk Simple Recipe
   m_EditorClassIdentifier: 
-  Sprite: {fileID: 21300000, guid: 90f4dc93e91bf73489d3baa341eac1ef, type: 3}
+  Sprite: {fileID: 21300000, guid: 1b0bbefa75da41a4b860c96184fecf09, type: 3}
   ingredient1:
     ingredientType: {fileID: 11400000, guid: 7fa2e0cee1d20424cbf4266b35fbfc03, type: 2}
-    IngredientAmount: 6
+    IngredientAmount: 10
   ingredient2:
-    ingredientType: {fileID: 11400000, guid: 54234a186689e9e45acdd37f7d9b5798, type: 2}
-    IngredientAmount: 3
+    ingredientType: {fileID: 0}
+    IngredientAmount: 0
   ingredient3:
     ingredientType: {fileID: 0}
     IngredientAmount: 0
-  item: {fileID: 11400000, guid: 3bc5e33339c7b68419b460f643110ca6, type: 2}
-  Name: Pumpkin Flower Ivy Classic Crossed Stone Tomb
-  Description: A Classic Crossed Stone Tomb with a wooden base and a stone cross
-    on top decorated with climbing ivy.
+  item: {fileID: 11400000, guid: a9e2a755d60b160448751ce0d6c48a64, type: 2}
+  Name: Simple Obelisk
+  Description: Obelisk Grave for spcial pepole

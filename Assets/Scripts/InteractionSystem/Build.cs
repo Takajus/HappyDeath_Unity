@@ -59,6 +59,7 @@ public class Build : MonoBehaviour, IInteractable
     {
         GetOverlappedTiles();
 
+        AudioManager.Instance.Place_Tombstone.Post(gameObject);
         if (tiles.Count < tileDetectionList.Count)
             return false;
 
