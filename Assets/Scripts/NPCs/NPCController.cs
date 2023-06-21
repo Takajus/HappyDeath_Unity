@@ -34,7 +34,7 @@ public class NPCController : MonoBehaviour
                 if (pauseTimeAmount >= 0)
                 {
                     //isMoving = false;
-                    Debug.Log(pauseTimeAmount);
+                    //Debug.Log(pauseTimeAmount);
                     pauseTimeAmount -= Time.deltaTime;
                 }
                 else if (RandomPoint(areaCenter, range, out point))
