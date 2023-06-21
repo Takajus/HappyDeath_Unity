@@ -30,6 +30,7 @@ public class CraftingManager : MonoBehaviour
 
     public Action<CraftSetup> OnRecipeSelected;
     public Action<CraftSetup> OnItemCraft;
+    public AK.Wwise.Event Craft;
 
     private void Awake()
     {
@@ -161,8 +162,10 @@ public class CraftingManager : MonoBehaviour
 
     public void UI_Craft()
     {
+       
         if (HaveEnoughtIngredients())
         {
+            FindObjectOfType<AudioManager>().PlaySound(Craft);
             OnItemCraft.Invoke(selectedRecipe);
             RefreshIngredientsOwned();
         }

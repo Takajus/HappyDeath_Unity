@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f1f27c407c1e64ea2a8ffd83e0dfb4, type: 3}
+  m_Name: Obelisk
+  m_EditorClassIdentifier: 
+  itemType: 2
+  Prefab: {fileID: 292531919109643474, guid: f8bb8473997688b4ba3be28ebe5b7556, type: 3}
+  Sprite: {fileID: 21300000, guid: 1b0bbefa75da41a4b860c96184fecf09, type: 3}
+  Name: 'Simple Obelisk '
+  Description: A Classic Obelisk Stone Tomb
+  Amount: 1
+  Placeable: 1
+  recipe: {fileID: 11400000, guid: 0989c182addae3f42b94020d297cbd6c, type: 2}
