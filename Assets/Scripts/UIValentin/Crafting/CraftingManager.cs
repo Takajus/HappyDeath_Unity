@@ -62,11 +62,11 @@ public class CraftingManager : MonoBehaviour
     {
         for (int i = 0; i < craftingSlot.Count; i++)
         {
-            if (HUDManager.GetInventoryManager().inventoryDatabase.allRecipes.Count <= i)
+            if (HUDManager.GetInventoryManager().inventoryDatabase.unlockedRecipes.Count <= i)
             {
                 break;
             }
-            craftingSlot[i].GetComponent<CraftSetup>().SetScriptableRecipe(HUDManager.GetInventoryManager().inventoryDatabase.allRecipes[i]);
+            craftingSlot[i].GetComponent<CraftSetup>().SetScriptableRecipe(HUDManager.GetInventoryManager().inventoryDatabase.unlockedRecipes[i]);
         }
     }
 
