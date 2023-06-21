@@ -12,23 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2360456d130718041a250d34aace9a1b, type: 3}
   m_Name: DialogueData
   m_EditorClassIdentifier: 
+  dialogState: 3
   dialogueName: Test Diag
-  diagStartQuest:
-  - characterName: 1
-    paragraphe: 2
-  - characterName: 3
-    paragraphe: 4
-  - characterName: 5
-    paragraphe: 6
-  - characterName: 7
-    paragraphe: 8
-  - characterName: 9
-    paragraphe: 10
-  loopDiag:
-    characterName: Perso
-    paragraphe: "Tu m'as d\xE9j\xE0 dit aurevoir non ?"
-  diagEndQuest: []
-  isLooping: 0
-  isDisplay: 1
+  dialogs:
+  - dialogType: 0
+    FirstCharacter: Granny
+    SecoundCharacter: Missy
+    dialogParts:
+    - paragraphe: StartDialogue
+    - paragraphe: 2
+    - paragraphe: 3
+    - paragraphe: 4
+    - paragraphe: 5
+    - paragraphe: 6
+  - dialogType: 1
+    FirstCharacter: Granny
+    SecoundCharacter: Missy
+    dialogParts:
+    - paragraphe: LoopDialogue
+  - dialogType: 2
+    FirstCharacter: Granny
+    SecoundCharacter: Missy
+    dialogParts:
+    - paragraphe: Fin de la Quest
+  isDisplay: 0
   index: 0
   startIndex: 0

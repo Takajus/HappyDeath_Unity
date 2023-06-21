@@ -10,19 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2360456d130718041a250d34aace9a1b, type: 3}
-  m_Name: DialogueData 1
+  m_Name: Genereic_DialogueData
   m_EditorClassIdentifier: 
-  dialogueName: Test Diag
-  diagStartQuest:
-  - characterName: test
-    paragraphe: test
-  - characterName: g
-    paragraphe: testg
-  loopDiag:
-    characterName: Perso 05
-    paragraphe: "Tu m'as d\xE9j\xE0 dit aurevoir non ?"
-  diagEndQuest: []
-  isLooping: 0
-  isDisplay: 1
+  dialogState: 3
+  dialogueName: Generic Dialog
+  dialogs:
+  - dialogType: 0
+    dialogParts:
+    - characterName: 
+      paragraphe: Generic Dialog
+    - characterName: 
+      paragraphe: 2
+    - characterName: 
+      paragraphe: 3
+    - characterName: 
+      paragraphe: 4
+  isDisplay: 0
   index: 0
   startIndex: 0

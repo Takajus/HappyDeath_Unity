@@ -152,7 +152,7 @@ public class WaveSpawner : MonoBehaviour
 
         for(int i = 0; i < _wave.count; i++)
         {
-            _wave.npc.GetComponent<MissyQuest>().questManager = QM;
+            _wave.npc.GetComponent<Missy>().questManager = QM;
             SpawnNpc(_wave.npc);
             yield return new WaitForSeconds(1f / _wave.rate);
         }

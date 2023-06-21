@@ -259,25 +259,24 @@ public class Resident : MonoBehaviour, IInteractable
     public void Interact()
     {
         _dialogue.EndDiag += End;
-        MissyQuest.isDialogOpen = true;
+        Missy.isDialogOpen = true;
         PlayerController.Instance.DisablePlayer();
         _dialogue.NextDialog();
     }
     
-    private void End()
+    private void End(DialogueData dialog)
     {
-        if (_dialogue.dialog.isDisplay == true)
+        if (dialog.isDisplay == true)
         {                   
-            _dialogue.dialog.isDisplay = false;
+            dialog.isDisplay = false;
             InteractionManager.Instance.InteruptInteraction();
         }
         
     }
-    
 
     public void EndInteract()
     {
-        MissyQuest.isDialogOpen = false;
+        Missy.isDialogOpen = false;
         PlayerController.Instance.EnablePlayer();
         _dialogue.EndDiag -= End;
     }

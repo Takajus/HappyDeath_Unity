@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6294e1cae288ef4ba72f5b13f31ec78, type: 3}
-  m_Name: wolfQuest
+  m_Script: {fileID: 11500000, guid: d087fdf1552f05b47a2ebf7422aef00b, type: 3}
+  m_Name: Missy_Faolan
   m_EditorClassIdentifier: 
-  questTitle: Sad Wolf
-  questDescription: 'Place this wolf near his friends '
+  questTitle: Bury Faolan
+  questDescription: Go bury Faolan in your cemetery
+  questDialog: {fileID: 11400000, guid: 1e096d6e6f277a043b31835f9458d5af, type: 2}
+  questStatus: 1
   NewDeadNPC: {fileID: 11400000, guid: 2c960dc54edd94d4ba261ac58e4bf337, type: 2}
-  isCompleted: 0

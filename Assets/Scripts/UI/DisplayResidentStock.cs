@@ -112,7 +112,7 @@ public class DisplayResidentStock : MonoBehaviour
                     label += like.race + "\n";
                     break;
                 case Category.Place:
-                    label += "There is no Place enum wtf did you do that for ?" + "\n";
+                    label += like.objectLike + "\n";
                     break;
             }
         }
@@ -130,7 +130,7 @@ public class DisplayResidentStock : MonoBehaviour
                     label += like.race + "\n";
                     break;
                 case Category.Place:
-                    label += "There is no Place enum yet wtf did you do that for ?" + "\n";
+                    label += like.objectLike + "\n";
                     break;
             }
         }
