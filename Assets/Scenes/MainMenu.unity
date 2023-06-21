@@ -2998,7 +2998,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -4359,6 +4359,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 655822552}
     m_Modifications:
+    - target: {fileID: 298495287018267445, guid: ea55ff517545d464c8bf177bf95d75f4,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2481851596719751086, guid: ea55ff517545d464c8bf177bf95d75f4,
         type: 3}
       propertyPath: m_RootOrder
@@ -10515,6 +10520,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 655822552}
     m_Modifications:
+    - target: {fileID: 298495287018267445, guid: ea55ff517545d464c8bf177bf95d75f4,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2481851596719751086, guid: ea55ff517545d464c8bf177bf95d75f4,
         type: 3}
       propertyPath: m_RootOrder
