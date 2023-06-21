@@ -59,7 +59,6 @@ public class Build : MonoBehaviour, IInteractable
     {
         GetOverlappedTiles();
 
-        AudioManager.Instance.Place_Tombstone.Post(gameObject);
         if (tiles.Count < tileDetectionList.Count)
             return false;
 
@@ -93,6 +92,7 @@ public class Build : MonoBehaviour, IInteractable
         actualObject.SetActive(true);
         previewObject.SetActive(false);
         InventoryManager.Instance.RemoveItem(item);
+        AudioManager.Instance.Place_Tombstone.Post(gameObject);
 
         foreach (var tile in tiles)
         {
@@ -131,11 +131,11 @@ public class Build : MonoBehaviour, IInteractable
             tile.isOccupied = false;
 
         if (item.recipe.ingredient1.ingredientType != null)
-            InventoryManager.Instance.AddItem(item.recipe.ingredient1.ingredientType, (int)(item.recipe.ingredient1.IngredientAmount / 0.75f));
+            InventoryManager.Instance.AddItem(item.recipe.ingredient1.ingredientType, (int)(item.recipe.ingredient1.IngredientAmount * 0.75f));
         if (item.recipe.ingredient2.ingredientType != null)
-            InventoryManager.Instance.AddItem(item.recipe.ingredient2.ingredientType, (int)(item.recipe.ingredient2.IngredientAmount / 0.75f));
+            InventoryManager.Instance.AddItem(item.recipe.ingredient2.ingredientType, (int)(item.recipe.ingredient2.IngredientAmount * 0.75f));
         if (item.recipe.ingredient3.ingredientType != null)
-            InventoryManager.Instance.AddItem(item.recipe.ingredient3.ingredientType, (int)(item.recipe.ingredient3.IngredientAmount / 0.75f));
+            InventoryManager.Instance.AddItem(item.recipe.ingredient3.ingredientType, (int)(item.recipe.ingredient3.IngredientAmount * 0.75f));
 
         GetComponentInChildren<Tomb>()?.ExtractNPC();
 

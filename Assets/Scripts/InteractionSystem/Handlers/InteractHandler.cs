@@ -32,6 +32,7 @@ public class InteractHandler : BaseHandler
     protected override void HoverTarget(GameObject target)
     {
         target?.GetComponent<IInteractable>()?.Hover();
+        AddHoverMat(target);
     }
 
     protected override void UnHoverTarget(GameObject target)
@@ -43,6 +44,7 @@ public class InteractHandler : BaseHandler
         }
 
         target?.GetComponent<IInteractable>()?.UnHover();
+        RemoveHoverMat(target);
     }
 
     protected override void SelectTarget(GameObject target)

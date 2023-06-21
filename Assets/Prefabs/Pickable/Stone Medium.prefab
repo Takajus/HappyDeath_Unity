@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 769548029622802107}
-  - component: {fileID: 769548029622802106}
-  - component: {fileID: 769548029622802101}
   m_Layer: 0
   m_Name: Stone Medium
   m_TagString: Untagged
@@ -34,33 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &769548029622802106
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 769548029622802103}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.7802359, y: 0.8359887, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &769548029622802101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 769548029622802103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7ebda759af6fde43a5fae46821c5909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  resourceToPick: {fileID: 11400000, guid: 7fa2e0cee1d20424cbf4266b35fbfc03, type: 2}
-  amountToGive: 10
 --- !u!1001 &858465832525661893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -145,6 +116,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: daaf703352d380c41bd5fdd5e8e3685e, type: 3}
+--- !u!1 &1187165937135732110 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1986169903671657291, guid: daaf703352d380c41bd5fdd5e8e3685e,
+    type: 3}
+  m_PrefabInstance: {fileID: 858465832525661893}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &8393068256887160309
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187165937135732110}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1200343569097333170, guid: c479ba38db1e11a438d98b7747fd9d55, type: 3}
+--- !u!114 &9137925475851495477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187165937135732110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7ebda759af6fde43a5fae46821c5909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceToPick: {fileID: 11400000, guid: 7fa2e0cee1d20424cbf4266b35fbfc03, type: 2}
+  amountToGive: 10
 --- !u!4 &1959762438095839028 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1214735694142609905, guid: daaf703352d380c41bd5fdd5e8e3685e,
