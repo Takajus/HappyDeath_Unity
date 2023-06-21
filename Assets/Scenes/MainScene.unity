@@ -13076,6 +13076,48 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Craft.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 3c32ff5b522cd01429db567e5ae8932c,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Take_Rock.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 9179b49e404dd784db073f5ce5d808a1,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Take_Flower.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 963b061193b0eac4dab7110e817c6780,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Footsteps_Ghost.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 8102155721404914e90fc5360e885f23,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Footsteps_Grass.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: ba00ca31f0765a845a514c4259c28d82,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Place_Tombstone.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c046f6b800d43e74d8e5d3f942d1f1ef,
+        type: 2}
+    - target: {fileID: 5756700854581766386, guid: b616bc82e4a45a742b128b7cdefad30d,
+        type: 3}
+      propertyPath: Take_TreeBranch.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 65ff25337df803c4d9a018f9ee645747,
+        type: 2}
     - target: {fileID: 8031455160181792341, guid: b616bc82e4a45a742b128b7cdefad30d,
         type: 3}
       propertyPath: m_Name
@@ -13112,7 +13154,8 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 5fdddec108a383b42816511fa57de037,
+      type: 2}
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
@@ -34953,6 +34996,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMin.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828947804056331885, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -16
       objectReference: {fileID: 0}
     - target: {fileID: 7848022706283677688, guid: 7c983a5c87268c04b9cbd87cc6b9648d,
         type: 3}
