@@ -20,6 +20,7 @@ public class ShortcutWheel : MonoBehaviour
     public List<GameObject> lineNbrBuildsElement = new List<GameObject>();
     public GameObject toolWheelPrefab;
     public GameObject linePrefab;
+    public static bool wheelIsOpen;
 
     private void Start()
     {
@@ -92,6 +93,7 @@ public class ShortcutWheel : MonoBehaviour
 
     public void DisplayWheel(InputAction.CallbackContext context)
     {
+        wheelIsOpen = true;
         UI_ActivateWheel();
         degree = 360 / toolsElements.Count;
 
@@ -129,24 +131,28 @@ public class ShortcutWheel : MonoBehaviour
 
     private void OpenBuildsWheel()
     {
+        wheelIsOpen = true;
         toolWheel.SetActive(false);
         buildsWheel.SetActive(true);
     }
 
     public void UI_ActivateWheel()
     {
+        wheelIsOpen = true;
         toolWheel.SetActive(true);
         buildsWheel.SetActive(false);
     }
 
     private void CloseWheel(InputAction.CallbackContext context)
     {
+        wheelIsOpen = false;
         buildsWheel.SetActive(false);
         toolWheel.SetActive(false);
     }
 
     public void CloseWheel()
     {
+        wheelIsOpen = false;
         buildsWheel.SetActive(false);
         toolWheel.SetActive(false);
     }

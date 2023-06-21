@@ -69,10 +69,11 @@ public class InteractionManager : MonoBehaviour
         GetCurrentHandler().InitializeHandler();
     }
 
-    public void InteruptInteraction()
+    public void InteruptInteraction(bool clearHeldItem = true)
     {
         ChangeInteractionMode(InteractionMode.Interact);
-        InventoryManager.HeldItem = null;
+        if (clearHeldItem)
+            InventoryManager.HeldItem = null;
     }
 
     public Material GetHoverMat()
