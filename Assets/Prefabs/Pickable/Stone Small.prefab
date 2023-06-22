@@ -148,8 +148,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ebda759af6fde43a5fae46821c5909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actionName: Channeling
+  channelingTime: 0.5
   resourceToPick: {fileID: 11400000, guid: 7fa2e0cee1d20424cbf4266b35fbfc03, type: 2}
-  amountToGive: 5
+  amountToGive: 10
 --- !u!4 &1959762438095839028 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1214735694142609905, guid: daaf703352d380c41bd5fdd5e8e3685e,

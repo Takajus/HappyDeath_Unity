@@ -20,7 +20,7 @@ public class InventoryDatabase : ScriptableObject
     public List<ResidentData> allResidents;
 
     [Header("Starting kit")]
-    [SerializeField] protected List<Item> startingItems;
+    public List<Item> startingItems;
     [SerializeField] protected List<Recipe> startingRecipes;
     [SerializeField] protected List<ResidentData> startingResidents;
 

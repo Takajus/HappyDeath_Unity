@@ -66,6 +66,11 @@ public class InventoryManager : MonoBehaviour
     //#if !UNITY_EDITOR
     private void Start()
     {
+        foreach (var item in inventoryDatabase.startingItems)
+        {
+            AddItem(item);
+        }
+
         ResetIngredients();
     }
     //#endif
