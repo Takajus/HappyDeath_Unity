@@ -36,13 +36,13 @@ public class Missy : MonoBehaviour, IInteractable
         {
             Debug.Log("NO Quest available");
         }
-        else
+        /*else
         {
             foreach (QuestData questData in questDataList)
             {
                 questData.Init();
             }
-        }
+        }*/
     }
 
     private void End(DialogueData dialog)
@@ -85,6 +85,8 @@ public class Missy : MonoBehaviour, IInteractable
             }
         }*/
 
+        GiveQuest();
+        
         // Ce code permet de mettre fin à l'interaction avec Missy si le dialog est désactivé
         if (dialog.isDisplay == true)
         {
@@ -97,6 +99,8 @@ public class Missy : MonoBehaviour, IInteractable
     {
         isDialogOpen = false;
         PlayerController.Instance.EnablePlayer();
+        InputManager.Instance.uiDialogAction.action.performed -= _dialogue.Next;
+        InputManager.Instance.uiCancelAction.action.performed -= _dialogue.InteruptedDialogue;
         _dialogue.EndDiag -= End;
     }
     
@@ -128,16 +132,15 @@ public class Missy : MonoBehaviour, IInteractable
             {
                 case QuestStatus.StandBy:
                     questManager.AcceptQuest(questDataList[currentQuestIndex]);
-                    _dialogue.dialog = questDataList[currentQuestIndex].questDialog;
                     break;
                 case QuestStatus.InProgress:
                     break;
                 case QuestStatus.Completed:
-                    if (questDataList[currentQuestIndex].questDialog.dialogState != DialogType.None)
+                    /*if (questDataList[currentQuestIndex].questDialog.dialogState != DialogType.None)
                     {
                         questDataList[currentQuestIndex].questDialog.dialogState = DialogType.EndDialog;
                         break;
-                    }
+                    }*/
                     ++currentQuestIndex;
                     break;
             }
@@ -160,7 +163,13 @@ public class Missy : MonoBehaviour, IInteractable
         //------------------------//
 
         // TODO: Dialog attribution check !
-        GiveQuest();
+        /*if (questDataList[currentQuestIndex].questStatus == QuestStatus.Completed)
+            ++currentQuestIndex;*/
+        
+        if (currentQuestIndex < questDataList.Count)
+            _dialogue.dialog = questDataList[currentQuestIndex].questDialog;
+        else
+            _dialogue.dialog = null;
         
         /*if (currentQuestIndex != questDataList.Count)
         {

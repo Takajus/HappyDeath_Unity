@@ -20,7 +20,8 @@ public class Dialogue : MonoBehaviour
             genericDialog.dialogState = DialogType.StartDialog;
             if (genericDialog.index == 0 && !genericDialog.isDisplay)
             {
-                //InputManager.Instance.uiDialogAction.action.performed += context => Next();
+                InputManager.Instance.uiDialogAction.action.performed += Next;
+                InputManager.Instance.uiCancelAction.action.performed += InteruptedDialogue;
                 DialogUI.instance.SetActive(true);
             }
             
@@ -32,14 +33,15 @@ public class Dialogue : MonoBehaviour
             }
             else
             {
-                EndDialog(genericDialog);
+                EndDialog();
             }
             return;
         }
         
         if (dialog.index == 0 && !dialog.isDisplay)
         {
-            InputManager.Instance.uiDialogAction.action.performed += context => Next();
+            InputManager.Instance.uiDialogAction.action.performed += Next;
+            InputManager.Instance.uiCancelAction.action.performed += InteruptedDialogue;
             DialogUI.instance.SetActive(true);
         }
 
@@ -55,6 +57,11 @@ public class Dialogue : MonoBehaviour
                 NextDialog();
                 return;
             case DialogType.StartDialog:
+                if ((int)dialog.dialogState >= dialog.dialogs.Count)
+                {
+                    EndDialog();
+                    return;
+                }
                 if (dialog.index < dialog.dialogs[(int)dialog.dialogState].dialogParts.Count)
                 {
                     DisplayDialog(dialog);
@@ -63,10 +70,15 @@ public class Dialogue : MonoBehaviour
                 else
                 {
                     dialog.dialogState = DialogType.LoopDialog;
-                    EndDialog(dialog);
+                    EndDialog();
                     return;
                 }
             case DialogType.LoopDialog:
+                if ((int)dialog.dialogState >= dialog.dialogs.Count)
+                {
+                    EndDialog();
+                    return;
+                }
                 if (dialog.index < dialog.dialogs[(int)dialog.dialogState].dialogParts.Count)
                 {
                     DisplayDialog(dialog);
@@ -74,10 +86,15 @@ public class Dialogue : MonoBehaviour
                 }
                 else
                 {
-                    EndDialog(dialog);
+                    EndDialog();
                     return;
                 }
             case DialogType.EndDialog:
+                if ((int)dialog.dialogState >= dialog.dialogs.Count)
+                {
+                    EndDialog();
+                    return;
+                }
                 if (dialog.index < dialog.dialogs[(int)dialog.dialogState].dialogParts.Count)
                 {
                     DisplayDialog(dialog);
@@ -85,7 +102,7 @@ public class Dialogue : MonoBehaviour
                 }
                 else
                 {
-                    EndDialog(dialog);
+                    EndDialog();
                     dialog.dialogState = DialogType.None;
                     dialog = null;
                     return;
@@ -105,13 +122,18 @@ public class Dialogue : MonoBehaviour
         DialogUI.instance.UpdateUI(name,paragraphe);
     }
 
-    public void EndDialog(DialogueData dialogue)
+    public void EndDialog()
     {
-        dialogue.index = 0;
+        DialogueData temp = dialog;
+        if (dialog is null)
+            temp = genericDialog;
+
+        temp.index = 0;
         
         DialogUI.instance.SetActive(false);
-        InputManager.Instance.uiDialogAction.action.performed -= context => Next();
-        EndDiag?.Invoke(dialogue);
+        InputManager.Instance.uiDialogAction.action.performed -= Next;
+        InputManager.Instance.uiCancelAction.action.performed -= InteruptedDialogue;
+        EndDiag?.Invoke(temp);
     }
 
     /*private void Update()
@@ -126,8 +148,14 @@ public class Dialogue : MonoBehaviour
         }
     }*/
 
-    private void Next()
+    public void Next(InputAction.CallbackContext context)
     {
         NextDialog();
     }
+
+    public void InteruptedDialogue(InputAction.CallbackContext context)
+    {
+        EndDialog();
+    }
 }
+

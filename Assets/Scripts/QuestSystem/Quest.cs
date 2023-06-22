@@ -9,7 +9,9 @@ public enum QuestStatus
     InProgress,
     Completed
 }
-
+#if UNITY_EDITOR
+[UnityEditor.InitializeOnLoad]
+#endif
 [CreateAssetMenu(fileName = "New Quest", menuName = "Quest")]
 public class QuestData : ScriptableObject
 {
@@ -19,7 +21,7 @@ public class QuestData : ScriptableObject
     [Header("Linked Dialog")]
     public DialogueData questDialog;
     
-    [HideInInspector] public QuestStatus questStatus;
+    public QuestStatus questStatus;
     //public ResidentData NewDeadNPC;
     //public bool isCompleted, inProgress;
     
@@ -28,7 +30,7 @@ public class QuestData : ScriptableObject
         // Methode pour les sous-class
     }
 
-    public void Init()
+    public void OnEnable()
     {
         questStatus = QuestStatus.StandBy;
     }

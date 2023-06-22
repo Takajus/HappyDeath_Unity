@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Fungus;
 using Unity.VisualScripting;
@@ -21,6 +22,8 @@ public class Resident : MonoBehaviour, IInteractable
     private Dialogue _dialogue;
 
     private Collider col;
+    
+    [HideInInspector] public int currentQuestIndex = 0;
 
     private void Awake()
     {
@@ -29,9 +32,8 @@ public class Resident : MonoBehaviour, IInteractable
         col.enabled = false;
         _dialogue = transform.GetComponent<Dialogue>();
 
-
         DayCycleEvents.OnNightStart += Day;
-        DayCycleEvents.OnDayStart += Night;
+        DayCycleEvents.OnDayStart += TempNight;
     }
 
     private void OnDrawGizmos()
@@ -40,12 +42,19 @@ public class Resident : MonoBehaviour, IInteractable
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }
 
-    private void Night()
+    public void TempNight()
+    {
+        StartCoroutine(Night());
+    }
+    
+    private IEnumerator Night()
     {
         if (ResidentData == null /*|| !ResidentData.isAssign*/)
-            return;
+            yield break;
 
         CheckupState(false);
+
+        yield return new WaitForSeconds(0.2f);
 
         negativeMood = 0f;
         positiveMood = 0f;
@@ -55,7 +64,7 @@ public class Resident : MonoBehaviour, IInteractable
 
         if (detectionRadius < 1f)
         {
-            return;
+            yield break;
         }
         
         Collider[] colliders = Physics.OverlapSphere(transform.position, detectionRadius);
@@ -258,26 +267,61 @@ public class Resident : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        _dialogue.EndDiag += End;
         Missy.isDialogOpen = true;
+        _dialogue.EndDiag += End;
         PlayerController.Instance.DisablePlayer();
+        _dialogue.genericDialog = ResidentData.dialogueData;
+        
+        if (currentQuestIndex < ResidentData.quests.Count)
+            _dialogue.dialog = ResidentData.quests[currentQuestIndex].questDialog;
+        else
+            _dialogue.dialog = null;
+        
         _dialogue.NextDialog();
     }
     
     private void End(DialogueData dialog)
     {
+        GiveQuest();
         if (dialog.isDisplay == true)
         {                   
             dialog.isDisplay = false;
-            InteractionManager.Instance.InteruptInteraction();
         }
+        InteractionManager.Instance.InteruptInteraction();
+    }
+    
+    public void GiveQuest()
+    {
         
+        if (currentQuestIndex < ResidentData.quests.Count)
+        {
+            switch (ResidentData.quests[currentQuestIndex].questStatus)
+            {
+                case QuestStatus.StandBy:
+                    QuestManager.Instance.AcceptQuest(ResidentData.quests[currentQuestIndex]);
+                    break;
+                case QuestStatus.InProgress:
+                    break;
+                case QuestStatus.Completed:
+                    /*if (questDataList[currentQuestIndex].questDialog.dialogState != DialogType.None)
+                    {
+                        questDataList[currentQuestIndex].questDialog.dialogState = DialogType.EndDialog;
+                        break;
+                    }*/
+                    ++currentQuestIndex;
+                    break;
+            }
+        }
+        else
+            _dialogue.dialog = null;
     }
 
     public void EndInteract()
     {
         Missy.isDialogOpen = false;
         PlayerController.Instance.EnablePlayer();
+        InputManager.Instance.uiDialogAction.action.performed -= _dialogue.Next;
+        InputManager.Instance.uiCancelAction.action.performed -= _dialogue.InteruptedDialogue;
         _dialogue.EndDiag -= End;
     }
 

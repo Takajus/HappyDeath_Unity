@@ -69,6 +69,9 @@ public class ResidentData : ScriptableObject
     [Header("Dialog")] 
     public DialogueData dialogueData;
 
+    [Header("LinkedQuest")] // TODO: Change to a list in the futur for multiple quest 
+    public List<QuestData> quests = new List<QuestData>();
+
     [HideInInspector]
     public bool isAssign;
 
@@ -78,5 +81,6 @@ public class ResidentData : ScriptableObject
     private void Awake()
     {
         isAssign = false;
+        mood = 0;
     }
 }

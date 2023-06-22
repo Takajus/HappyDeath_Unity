@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2360456d130718041a250d34aace9a1b, type: 3}
   m_Name: Dialog_Missy_Faolan
   m_EditorClassIdentifier: 
-  dialogState: 0
+  dialogState: 3
   dialogueName: Dialog_Missy_Faolan
   dialogs:
   - dialogType: 0
@@ -57,8 +57,10 @@ MonoBehaviour:
     dialogParts:
     - characterName: Missy
       paragraphe: Take care of Faolan
-  - dialogType: 0
-    dialogParts: []
-  isDisplay: 1
-  index: 1
+  - dialogType: 2
+    dialogParts:
+    - characterName: Missy
+      paragraphe: Thank you for taking care of Faolan
+  isDisplay: 0
+  index: 0
   startIndex: 0

@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2360456d130718041a250d34aace9a1b, type: 3}
+  m_Name: Dialog_Faolan_FirstFear
+  m_EditorClassIdentifier: 
+  dialogState: 3
+  dialogueName: Dialog_Faolan_Introduction
+  dialogs:
+  - dialogType: 0
+    dialogParts:
+    - characterName: Faolan
+      paragraphe: granny! Granny! Help me!
+    - characterName: Granny
+      paragraphe: Calm down Faolan what happened
+    - characterName: Faolan
+      paragraphe: Water! Please get me out of here!!!
+    - characterName: Granny
+      paragraphe: Don't worry I'll see to it immediately
+  - dialogType: 1
+    dialogParts:
+    - characterName: Faolan
+      paragraphe: Oh no! Not water please!!!
+  - dialogType: 2
+    dialogParts:
+    - characterName: Faolan
+      paragraphe: Phew! Thank you Granny!
+    - characterName: Granny
+      paragraphe: Always ready to help but tell me why did you panic?
+    - characterName: Faolan
+      paragraphe: Well, it's because... I used to play by the lake and one day I
+        just fell... Taht was when I found myself in the  middle of this world.
+    - characterName: Granny
+      paragraphe: Oh, you poor thing... Well, now you can rest assured. You are safe
+        with me.
+    - characterName: Faolan
+      paragraphe: Thank you, Granny.
+  isDisplay: 0
+  index: 0
+  startIndex: 0

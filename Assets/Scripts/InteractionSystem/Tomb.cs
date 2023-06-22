@@ -9,8 +9,8 @@ public class Tomb : MonoBehaviour, IInteractable
     public ResidentData residentData { get; private set; }
     public Resident resident;
 
-    public static Action<ResidentData, Tomb> OnAssignNPC;
-    public static Action<ResidentData, Tomb> OnExtractNPC;
+    public static Action/*<ResidentData, Tomb>*/ OnAssignNPC;
+    public static Action/*<ResidentData, Tomb>*/ OnExtractNPC;
 
     public void AssignNPC(ResidentData resident)
     {
@@ -28,7 +28,7 @@ public class Tomb : MonoBehaviour, IInteractable
 
         this.resident.ResidentData = residentData;
 
-        OnAssignNPC?.Invoke(residentData, this);
+        OnAssignNPC?.Invoke(/*residentData, this*/);
     }
 
     public void ExtractNPC()
@@ -43,7 +43,7 @@ public class Tomb : MonoBehaviour, IInteractable
 
         this.resident.ResidentData = null;
 
-        OnExtractNPC?.Invoke(residentData, this);
+        OnExtractNPC?.Invoke(/*residentData, this*/);
     }
 
     public void Interact()

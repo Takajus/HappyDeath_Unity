@@ -32,5 +32,7 @@ MonoBehaviour:
     likeDislike: 1
   secret: 
   dialogueData: {fileID: 11400000, guid: 5c288bcbb704fd448823cdb3c656848c, type: 2}
-  isAssign: 0
-  mood: -1
+  quests:
+  - {fileID: 11400000, guid: a1ae6a0f397213b48afa64a28ea377db, type: 2}
+  isAssign: 1
+  mood: 1

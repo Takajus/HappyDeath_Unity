@@ -51,12 +51,14 @@ public class QuestManager :  MonoBehaviour
         
         if(quest is MissyBurialQuest)
             Tomb.OnAssignNPC += CheckQuestProgress;
+        else if (quest is PositiveMoodQuest)
+            DayCycleEvents.OnDayStart += CheckQuestProgress;
 
-        // Mettre � jour l'interface utilisateur
+            // Mettre � jour l'interface utilisateur
         UpdateQuestUI();
     }
 
-    public void CheckQuestProgress(ResidentData residentData, Tomb tomb)
+    public void CheckQuestProgress(/*ResidentData residentData, Tomb tomb*/)
     {
         currentQuest.CheckQuestUpdate();
         if (currentQuest.questStatus == QuestStatus.Completed)
@@ -75,6 +77,7 @@ public class QuestManager :  MonoBehaviour
     {
         // Marquer la qu�te comme compl�t�e
         //quest.questStatus = QuestStatus.Completed;
+        quest.questDialog.dialogState = DialogType.EndDialog;
 
         // Supprimer la qu�te termin�e de la liste des qu�tes actives
         //activeQuests.Remove(quest);
@@ -95,6 +98,7 @@ public class QuestManager :  MonoBehaviour
     private void OnDestroy()
     {
         Tomb.OnAssignNPC -= CheckQuestProgress;
+        DayCycleEvents.OnNightStart -= CheckQuestProgress;
     }
 
     private void Awake()

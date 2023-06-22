@@ -24,7 +24,7 @@ MonoBehaviour:
   role: 1
   elementList:
   - preferenceType: 1
-    race: 0
+    race: 3
     objectLike: 5
     amount: 1
     likeDislike: 0
@@ -34,6 +34,8 @@ MonoBehaviour:
     amount: 1
     likeDislike: 1
   secret: 
-  dialogueData: {fileID: 11400000, guid: 1de6ae185eefef844aad2a21f5f1a8ed, type: 2}
-  isAssign: 0
-  mood: -1
+  dialogueData: {fileID: 11400000, guid: 749aa4e7b3dac824a9123aca4b704d5f, type: 2}
+  quests:
+  - {fileID: 11400000, guid: a1ae6a0f397213b48afa64a28ea377db, type: 2}
+  isAssign: 1
+  mood: 0
