@@ -25,7 +25,7 @@ public class Dialogue : MonoBehaviour
                 DialogUI.instance.SetActive(true);
             }
             
-            if ((int)dialog.dialogState >= dialog.dialogs.Count)
+            if ((int)genericDialog.dialogState >= genericDialog.dialogs.Count)
             {
                 EndDialog();
                 return;

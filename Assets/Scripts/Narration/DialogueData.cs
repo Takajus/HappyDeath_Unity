@@ -60,6 +60,6 @@ public class DialogueData : ScriptableObject
     public void ResetVariables()
     {
         index = 0;
-        dialogState = DialogType.StartDialog;
+        //dialogState = DialogType.StartDialog;
     }
 }
