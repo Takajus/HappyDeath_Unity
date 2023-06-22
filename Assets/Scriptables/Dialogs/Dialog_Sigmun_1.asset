@@ -12,44 +12,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2360456d130718041a250d34aace9a1b, type: 3}
   m_Name: Dialog_Sigmun_1
   m_EditorClassIdentifier: 
+  dialogState: 2
   dialogueName: Dialog_Sigmun_1
-  diagStartQuest:
-  - characterName: Granny
-    paragraphe: Hi Sigmun, my name is Granny. I'm the one in charge of this humble
-      cemetery.
-  - characterName: Sigmun
-    paragraphe: Oh no another lowly spirit? I should have prayed to the ancestors
-      for luck.
-  - characterName: Granny
-    paragraphe: You don't have to be rude about it.
-  - characterName: Granny
-    paragraphe: Is your new home to your liking at least?
-  - characterName: Sigmun
-    paragraphe: Well, it would if it hadn't been for your incompetence.
-  - characterName: Granny
-    paragraphe: What did I do oh your mighty Sigmun?
-  - characterName: Sigmun
-    paragraphe: Why are the stray dogs running around the cemetery?
-  - characterName: Granny
-    paragraphe: Are you talking about the werewolves?
-  - characterName: Sigmun
-    paragraphe: Is this a shelter for lost animals or what? Make sure I can't see
-      them.
-  - characterName: Granny
-    paragraphe: (Yeah... The only girl who'd loved them must have been his mother)
-  loopDiag:
-    characterName: Sigmun
-    paragraphe: Don't just stand there staring. Go do your dogsitting job.
-  diagEndQuest:
-  - characterName: Sigmun
-    paragraphe: You see it wasn't that hard.
-  - characterName: Granny
-    paragraphe: I didn't know it could exist such a rude monster.
-  - characterName: Sigmun
-    paragraphe: It's not like I said something wrong though.
-  - characterName: Granny
-    paragraphe: aaaaaaahhhhhh *Sigh*
-  isLooping: 0
+  dialogs:
+  - dialogType: 0
+    dialogParts:
+    - characterName: Granny
+      paragraphe: Hi Sigmun, my name is Granny. I'm the one in charge of this humble
+        cemetery.
+    - characterName: Sigmun
+      paragraphe: Oh no another lowly spirit? I should have prayed to the ancestors
+        for luck.
+    - characterName: Granny
+      paragraphe: You don't have to be rude about it.
+    - characterName: Granny
+      paragraphe: Is your new home to your liking?
+    - characterName: Sigmun
+      paragraphe: Well, it would if it hadn't been for your incompetence.
+    - characterName: Granny
+      paragraphe: What did I do oh your mighty Sigmun?
+    - characterName: Sigmun
+      paragraphe: Why are the stray dogs running around the cemetery?
+    - characterName: Granny
+      paragraphe: Are you talking about the werewolves?
+    - characterName: Sigmun
+      paragraphe: Is this a shelter for lost animals or what? Make sure I can't see
+        them.
+    - characterName: Granny
+      paragraphe: (Yeah... The only girl who'd loved them must have been his mother)
+  - dialogType: 1
+    dialogParts:
+    - characterName: Sigmun
+      paragraphe: Do your job!
+  - dialogType: 2
+    dialogParts:
+    - characterName: Sigmun
+      paragraphe: You see it wasn't that hard.
+    - characterName: Granny
+      paragraphe: I didn't know it could exist such a rude monster.
+    - characterName: Sigmun
+      paragraphe: It's not like I said something wrong though.
+    - characterName: Granny
+      paragraphe: aaaaaaahhhhhh *Sigh*
   isDisplay: 0
   index: 0
   startIndex: 0

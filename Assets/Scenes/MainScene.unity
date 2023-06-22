@@ -117579,13 +117579,19 @@ PrefabInstance:
     - target: {fileID: -3767210202718894058, guid: 6f5f96fe7b2a5cd46a142dcd06ab8f55,
         type: 3}
       propertyPath: questDataList.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -3767210202718894058, guid: 6f5f96fe7b2a5cd46a142dcd06ab8f55,
         type: 3}
       propertyPath: questDataList.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 07dc96522bd880042b065bee7e6f860a,
+        type: 2}
+    - target: {fileID: -3767210202718894058, guid: 6f5f96fe7b2a5cd46a142dcd06ab8f55,
+        type: 3}
+      propertyPath: questDataList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: d4428bab4a368b541bd673e10042c83c,
         type: 2}
     - target: {fileID: -3767210202718894058, guid: 6f5f96fe7b2a5cd46a142dcd06ab8f55,
         type: 3}

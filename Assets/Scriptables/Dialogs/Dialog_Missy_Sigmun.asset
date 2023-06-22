@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2360456d130718041a250d34aace9a1b, type: 3}
   m_Name: Dialog_Missy_Sigmun
   m_EditorClassIdentifier: 
-  dialogState: 2
+  dialogState: 3
   dialogueName: Dialog_Missy_Sigmun
   dialogs:
   - dialogType: 0
@@ -43,6 +43,10 @@ MonoBehaviour:
     dialogParts:
     - characterName: Missy
       paragraphe: Good Luck
+  - dialogType: 2
+    dialogParts:
+    - characterName: Missy
+      paragraphe: Thank you for taking care of Sigmun
   isDisplay: 0
   index: 0
   startIndex: 0
