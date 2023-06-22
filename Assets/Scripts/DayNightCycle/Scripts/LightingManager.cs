@@ -27,7 +27,7 @@ public class LightingManager : MonoBehaviour
         Night,
     }
 
-    private DayCycleState _cycleState = DayCycleState.Day;
+    public DayCycleState _cycleState = DayCycleState.Day;
 
     [SerializeField, Range(0f, 100f)] private float timeMultiplicator = 1f;
 
