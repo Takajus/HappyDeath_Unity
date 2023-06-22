@@ -212,6 +212,19 @@ public abstract class BaseHandler : MonoBehaviour
         if (target == null || target.GetComponent<Tile>())
             return;
 
+        foreach (var renderer in target.GetComponentsInChildren<SkinnedMeshRenderer>())
+        {
+            List<Material> materials = new List<Material>();
+
+            foreach (var material in renderer.materials)
+            {
+                materials.Add(material);
+            }
+
+            materials.Add(outlineMat);
+            renderer.materials = materials.ToArray();
+        }
+
         foreach (var renderer in target.GetComponentsInChildren<MeshRenderer>())
         {
             List<Material> materials = new List<Material>();
@@ -230,6 +243,19 @@ public abstract class BaseHandler : MonoBehaviour
     {
         if (target == null || target.GetComponent<Tile>())
             return;
+
+        foreach (var renderer in target.GetComponentsInChildren<SkinnedMeshRenderer>())
+        {
+            List<Material> materials = new List<Material>();
+
+            foreach (var material in renderer.materials)
+            {
+                materials.Add(material);
+            }
+
+            materials.RemoveAll(e => e.shader == outlineMat.shader);
+            renderer.materials = materials.ToArray();
+        }
 
         foreach (var renderer in target.GetComponentsInChildren<MeshRenderer>())
         {
