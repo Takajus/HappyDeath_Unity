@@ -6,15 +6,26 @@ using System.Linq;
 
 public class QuestManager :  MonoBehaviour
 {
-    public Quest currentQuest; // The current active quest
+    public QuestData currentQuest; // The current active quest
     public QuestSystem questUI;
-    public List<Quest> activeQuests = new List<Quest>();
+    public List<QuestData> activeQuests = new List<QuestData>();
     private int currentQuestIndex = 0;
 
     private static QuestManager instance;
+    
+    public static QuestManager Instance
+    {
+        get
+        {
+            if (instance == null)
+                instance = FindObjectOfType<QuestManager>();
+
+            return instance;
+        }
+    }
 
     // Method to accept a quest
-    public void AcceptQuest(Quest quest)
+    public void AcceptQuest(QuestData quest)
     {
         // V�rifier si le joueur n'a pas d�j� une qu�te en cours
         if (currentQuest != null)
@@ -30,36 +41,49 @@ public class QuestManager :  MonoBehaviour
         // Ajouter la qu�te � la liste des qu�tes actives
         activeQuests.Add(currentQuest);
 
-        InventoryManager.Instance.AddResident(quest.NewDeadNPC);
+        /*if (quest is MissyBurialQuest)
+        {
+            MissyBurialQuest missyQuest = (MissyBurialQuest)quest;
+            InventoryManager.Instance.AddResident(missyQuest.NewDeadNPC);
+        }*/
+        
+        quest.CheckQuestUpdate();
+        
+        if(quest is MissyBurialQuest)
+            Tomb.OnAssignNPC += CheckQuestProgress;
+        else if (quest is PositiveMoodQuest)
+            DayCycleEvents.OnDayStart += CheckQuestProgress;
 
-        // Mettre � jour l'interface utilisateur
+            // Mettre � jour l'interface utilisateur
         UpdateQuestUI();
     }
 
-    public void CheckQuestProgress(ResidentData residentData, Tomb tomb)
+    public void CheckQuestProgress(/*ResidentData residentData, Tomb tomb*/)
     {
-        // V�rifier les objectifs de qu�te et marquer la qu�te comme compl�t�e si n�cessaire
-        if(residentData.isAssign == true)
+        currentQuest.CheckQuestUpdate();
+        if (currentQuest.questStatus == QuestStatus.Completed)
         {
-            Quest quest = activeQuests.Find(e => e.NewDeadNPC == residentData);
-            if (quest != null)
-                CompleteQuest(quest);
+            CompleteQuest(currentQuest);
         }
     }
 
-    public void ReceiveNewQuest(Quest quest)
+    public void ReceiveNewQuest(QuestData quest)
     {
         currentQuest = quest;
         UpdateQuestUI();
     }
 
-    public void CompleteQuest(Quest quest)
+    public void CompleteQuest(QuestData quest)
     {
         // Marquer la qu�te comme compl�t�e
-        quest.isCompleted = true;
+        //quest.questStatus = QuestStatus.Completed;
+        quest.questDialog.dialogState = DialogType.EndDialog;
 
         // Supprimer la qu�te termin�e de la liste des qu�tes actives
         //activeQuests.Remove(quest);
+        
+        if(quest is MissyBurialQuest)
+            Tomb.OnAssignNPC -= CheckQuestProgress;
 
         currentQuest = null;
         UpdateQuestUI();
@@ -70,25 +94,15 @@ public class QuestManager :  MonoBehaviour
     {
         questUI.UpdateQuestUI(currentQuest);
     }
-    public static QuestManager Instance
-    {
-        get
-        {
-            if (instance == null)
-                instance = FindObjectOfType<QuestManager>();
-
-            return instance;
-        }
-    }
 
     private void OnDestroy()
     {
         Tomb.OnAssignNPC -= CheckQuestProgress;
+        DayCycleEvents.OnNightStart -= CheckQuestProgress;
     }
 
     private void Awake()
     {
-        Tomb.OnAssignNPC += CheckQuestProgress;
     }
 }
 

@@ -150,7 +150,8 @@ public class LightingManager : MonoBehaviour
             DayCycleEvents.OnNightStart.Invoke();
             yield break;
         }
-            
+        
+        DayCycleEvents.OnNight?.Invoke();
         UIDayCycleManager.Instance.StartDayTransition();
         while (UIDayCycleManager.Instance.IsTransitionRunning)
         {
@@ -168,6 +169,7 @@ public class LightingManager : MonoBehaviour
             yield break;
         }
         
+        DayCycleEvents.OnDay?.Invoke();
         UIDayCycleManager.Instance.StartNightTransition();
         while (UIDayCycleManager.Instance.IsTransitionRunning)
         {

@@ -12,47 +12,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2360456d130718041a250d34aace9a1b, type: 3}
   m_Name: Dialog_Missy_Faolan
   m_EditorClassIdentifier: 
+  dialogState: 3
   dialogueName: Dialog_Missy_Faolan
-  diagStartQuest:
-  - characterName: Granny
-    paragraphe: Well hello missy what news are you bringing me?
-  - characterName: Missy
-    paragraphe: This cemetery is a mess, Granny!
-  - characterName: Missy
-    paragraphe: "I\u2019ll never understand why you want to open this refuge!"
-  - characterName: Granny
-    paragraphe: All souls need a place to rest in peace and you know that.
-  - characterName: Missy
-    paragraphe: You make me remember why am I here for!
-  - characterName: Missy
-    paragraphe: "I bring you a new soul to take in\u2026."
-  - characterName: Missy
-    paragraphe: Their name is Faolan.
-  - characterName: Granny
-    paragraphe: 'Faolan you say? '
-  - characterName: Granny
-    paragraphe: What a lovely name! What are they like?
-  - characterName: Granny
-    paragraphe: What are they like?
-  - characterName: Missy
-    paragraphe: They are very bubbly, their soul is like a young fire.
-  - characterName: Granny
-    paragraphe: "A young fire?\r\nYou mean it\u2019s a child ?!"
-  - characterName: Missy
-    paragraphe: "Well yeah, they were messing so much around in Helheim that Hell
-      herself ordered them to be outcasted\u2026"
-  - characterName: Granny
-    paragraphe: Oh no poor soul.
-  - characterName: Granny
-    paragraphe: "Well don\u2019t worry about them I\u2019m going to take care of
-      this little bubble."
-  - characterName: Missy
-    paragraphe: "I\u2019m counting on you!"
-  loopDiag:
-    characterName: 
-    paragraphe: 
-  diagEndQuest: []
-  isLooping: 0
+  dialogs:
+  - dialogType: 0
+    dialogParts:
+    - characterName: Grandma
+      paragraphe: Well, hello! What news are you bringing me, missy?
+    - characterName: Missy
+      paragraphe: This cemetery is a mess, Granny!
+    - characterName: Missy
+      paragraphe: I'll never understand why you want to open this refuge !
+    - characterName: Grandma
+      paragraphe: All souls need a place to rest in peace, and you know that.
+    - characterName: Missy
+      paragraphe: You remind me why I am here!
+    - characterName: Missy
+      paragraphe: "I bring you a new soul to take in\u2026."
+    - characterName: Missy
+      paragraphe: Their name is Faolan.
+    - characterName: Grandma
+      paragraphe: Faolan you say ?
+    - characterName: Grandma
+      paragraphe: What a lovely name !
+    - characterName: Grandma
+      paragraphe: What are they like?
+    - characterName: Missy
+      paragraphe: They are very bubbly. Their soul is like a young fire.
+    - characterName: Grandma
+      paragraphe: A young fire ?
+    - characterName: Grandma
+      paragraphe: "You mean it\u2019s a child ?!"
+    - characterName: Missy
+      paragraphe: "Well yeah, they were messing so much around in Helheim that Hell
+        herself ordered them to be outcasted\u2026"
+    - characterName: Grandma
+      paragraphe: Oh no poor soul.
+    - characterName: Grandma
+      paragraphe: "Well don\u2019t worry about them I\u2019m going to take care of
+        this little bubble."
+    - characterName: Missy
+      paragraphe: "I\u2019m counting on you!"
+  - dialogType: 1
+    dialogParts:
+    - characterName: Missy
+      paragraphe: Take care of Faolan
+  - dialogType: 2
+    dialogParts:
+    - characterName: Missy
+      paragraphe: Thank you for taking care of Faolan
   isDisplay: 0
   index: 0
   startIndex: 0

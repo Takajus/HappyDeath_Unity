@@ -117579,8 +117579,14 @@ PrefabInstance:
     - target: {fileID: -3767210202718894058, guid: 6f5f96fe7b2a5cd46a142dcd06ab8f55,
         type: 3}
       propertyPath: questDataList.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -3767210202718894058, guid: 6f5f96fe7b2a5cd46a142dcd06ab8f55,
+        type: 3}
+      propertyPath: questDataList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 07dc96522bd880042b065bee7e6f860a,
+        type: 2}
     - target: {fileID: -3767210202718894058, guid: 6f5f96fe7b2a5cd46a142dcd06ab8f55,
         type: 3}
       propertyPath: questDataList.Array.data[0].npc
@@ -117630,7 +117636,11 @@ PrefabInstance:
     - target: {fileID: 378471786, guid: 6f5f96fe7b2a5cd46a142dcd06ab8f55, type: 3}
       propertyPath: dialog
       value: 
-      objectReference: {fileID: 11400000, guid: d8280eeeb840e244ca222b40e21e3045,
+      objectReference: {fileID: 0}
+    - target: {fileID: 378471786, guid: 6f5f96fe7b2a5cd46a142dcd06ab8f55, type: 3}
+      propertyPath: genericDialog
+      value: 
+      objectReference: {fileID: 11400000, guid: 0e15c36d2478d314c95e40f372bda881,
         type: 2}
     - target: {fileID: 6059782213916787819, guid: 6f5f96fe7b2a5cd46a142dcd06ab8f55,
         type: 3}

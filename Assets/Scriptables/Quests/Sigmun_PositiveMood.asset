@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9b9eee11567f2c4c994d77d95e0868b, type: 3}
+  m_Name: Sigmun_PositiveMood
+  m_EditorClassIdentifier: 
+  questTitle: Sigmun
+  questDescription: Likes being around people.
+  questDialog: {fileID: 11400000, guid: 5c288bcbb704fd448823cdb3c656848c, type: 2}
+  questStatus: 0
+  resident: {fileID: 11400000, guid: 44ee3ecf5dbc14b4da3e40bee5c673f0, type: 2}

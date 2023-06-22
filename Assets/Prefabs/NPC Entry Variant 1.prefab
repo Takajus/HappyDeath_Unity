@@ -467,16 +467,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questManager: {fileID: 0}
   questDataList:
-  - npc: {fileID: 11400000, guid: 2c960dc54edd94d4ba261ac58e4bf337, type: 2}
-    availableQuests:
-    - {fileID: 11400000, guid: 9e6cfa5130d96f442aa839aa4c818656, type: 2}
-    dialogList:
-    - {fileID: 11400000, guid: 0e15c36d2478d314c95e40f372bda881, type: 2}
-  - npc: {fileID: 11400000, guid: 44ee3ecf5dbc14b4da3e40bee5c673f0, type: 2}
-    availableQuests:
-    - {fileID: 11400000, guid: bf0feae12507ddf4fbc52ace11dd97e0, type: 2}
-    dialogList:
-    - {fileID: 11400000, guid: d8280eeeb840e244ca222b40e21e3045, type: 2}
+  - {fileID: 11400000, guid: 07dc96522bd880042b065bee7e6f860a, type: 2}
+  - {fileID: 11400000, guid: d4428bab4a368b541bd673e10042c83c, type: 2}
+  currentQuestIndex: 0
   E_Input: {fileID: 2116332421}
 --- !u!114 &378471786
 MonoBehaviour:
@@ -491,6 +484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog: {fileID: 0}
+  genericDialog: {fileID: 11400000, guid: 0e15c36d2478d314c95e40f372bda881, type: 2}
 --- !u!4 &6080004083422664924 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7471945652588123954, guid: a8ecca33a997f494caf1e52de28fba39,

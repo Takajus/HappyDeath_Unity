@@ -6,21 +6,24 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 
-[System.Serializable]
+/*[System.Serializable]
 public class QuestData
 {
     public ResidentData npc;
     public List<Quest> availableQuests = new List<Quest>();
     public List<DialogueData> dialogList = new List<DialogueData>();
-}
-public class MissyQuest : MonoBehaviour, IInteractable
+}*/
+
+public class Missy : MonoBehaviour, IInteractable
 {
     public QuestManager questManager;
 
     public List<QuestData> questDataList = new();
-    private int currentQuestIndex = 0;
+    
+    [HideInInspector] public int currentQuestIndex = 0;
+    private Dialogue _dialogue;
+    
     [SerializeField] private GameObject E_Input;
-    Dialogue _dialogue;
 
     public static bool isDialogOpen = false;
 
@@ -33,12 +36,18 @@ public class MissyQuest : MonoBehaviour, IInteractable
         {
             Debug.Log("NO Quest available");
         }
-
+        /*else
+        {
+            foreach (QuestData questData in questDataList)
+            {
+                questData.Init();
+            }
+        }*/
     }
 
-    private void End()
+    private void End(DialogueData dialog)
     {
-        if (_dialogue.dialog.isDisplay == true)
+        /*if (_dialogue.dialog.isDisplay == true)
         {
             if (currentQuestIndex > 0)
             {
@@ -74,15 +83,24 @@ public class MissyQuest : MonoBehaviour, IInteractable
                 InteractionManager.Instance.InteruptInteraction();
                     //interactHandler.ClearHandler();
             }
-            
-        }
+        }*/
+
+        GiveQuest();
         
+        // Ce code permet de mettre fin à l'interaction avec Missy si le dialog est désactivé
+        if (dialog.isDisplay == true)
+        {
+            dialog.isDisplay = false;
+        }
+        InteractionManager.Instance.InteruptInteraction();
     }
 
     public void EndInteract()
     {
         isDialogOpen = false;
         PlayerController.Instance.EnablePlayer();
+        InputManager.Instance.uiDialogAction.action.performed -= _dialogue.Next;
+        InputManager.Instance.uiCancelAction.action.performed -= _dialogue.InteruptedDialogue;
         _dialogue.EndDiag -= End;
     }
     
@@ -95,9 +113,9 @@ public class MissyQuest : MonoBehaviour, IInteractable
     public void GiveQuest()
     {
        
-        if (currentQuestIndex < questDataList.Count && questManager.currentQuest == null)
+        /*if (currentQuestIndex < questDataList.Count && questManager.currentQuest == null)
         {
-            Quest quest = questDataList[currentQuestIndex].availableQuests[0];
+            QuestData quest = questDataList[currentQuestIndex].availableQuests[0];
             
             //_dialogue.dialog = questDataList[currentQuestIndex].dialogList[currentQuestIndex];
             // Remove the quest from the available quests list
@@ -106,7 +124,29 @@ public class MissyQuest : MonoBehaviour, IInteractable
             // Send the quest to the QuestManager to accept
             questManager.AcceptQuest(quest);
             Debug.Log("Got Quest " + currentQuestIndex);
+        }*/
+        
+        if (currentQuestIndex < questDataList.Count)
+        {
+            switch (questDataList[currentQuestIndex].questStatus)
+            {
+                case QuestStatus.StandBy:
+                    questManager.AcceptQuest(questDataList[currentQuestIndex]);
+                    break;
+                case QuestStatus.InProgress:
+                    break;
+                case QuestStatus.Completed:
+                    /*if (questDataList[currentQuestIndex].questDialog.dialogState != DialogType.None)
+                    {
+                        questDataList[currentQuestIndex].questDialog.dialogState = DialogType.EndDialog;
+                        break;
+                    }*/
+                    ++currentQuestIndex;
+                    break;
+            }
         }
+        else
+            _dialogue.dialog = null;
     }
 
     public void Hover()
@@ -116,13 +156,22 @@ public class MissyQuest : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        //--- DON'T TOUCH HERE ---//
         isDialogOpen = true;
-
         _dialogue.EndDiag += End;
         PlayerController.Instance.DisablePlayer();
+        //------------------------//
 
-
-        if (currentQuestIndex != questDataList.Count)
+        // TODO: Dialog attribution check !
+        /*if (questDataList[currentQuestIndex].questStatus == QuestStatus.Completed)
+            ++currentQuestIndex;*/
+        
+        if (currentQuestIndex < questDataList.Count)
+            _dialogue.dialog = questDataList[currentQuestIndex].questDialog;
+        else
+            _dialogue.dialog = null;
+        
+        /*if (currentQuestIndex != questDataList.Count)
         {
             if (currentQuestIndex < questDataList.Count && questManager.currentQuest == null &&
                 questDataList[currentQuestIndex].availableQuests[currentQuestIndex].isCompleted)
@@ -134,16 +183,14 @@ public class MissyQuest : MonoBehaviour, IInteractable
             {
                 _dialogue.dialog = questDataList[currentQuestIndex].dialogList[0];
             }
-        }
-        
+        }*/
+
         _dialogue.NextDialog();
         
     }
-
 
     public void UnHover()
     {
         E_Input.SetActive(false);
     }
-    
 }

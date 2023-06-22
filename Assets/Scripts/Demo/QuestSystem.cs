@@ -99,7 +99,7 @@ public class QuestSystem : MonoBehaviour
                     GetDemoTask(2);
     }
 
-    public void UpdateQuestUI(Quest quest)
+    public void UpdateQuestUI(QuestData quest)
     {
 
         if (quest != null)

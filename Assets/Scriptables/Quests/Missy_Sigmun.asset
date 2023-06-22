@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6294e1cae288ef4ba72f5b13f31ec78, type: 3}
-  m_Name: GhostQuest
+  m_Script: {fileID: 11500000, guid: d087fdf1552f05b47a2ebf7422aef00b, type: 3}
+  m_Name: Missy_Sigmun
   m_EditorClassIdentifier: 
-  questTitle: 'Ghost '
-  questDescription: this lonely ghost is lost help him
+  questTitle: Bury Sigmun
+  questDescription: Go bury Sigmun in your cemetery
+  questDialog: {fileID: 11400000, guid: 72fc06f34c75e434cabe1700147ad94f, type: 2}
+  questStatus: 0
   NewDeadNPC: {fileID: 11400000, guid: 44ee3ecf5dbc14b4da3e40bee5c673f0, type: 2}
-  isCompleted: 0

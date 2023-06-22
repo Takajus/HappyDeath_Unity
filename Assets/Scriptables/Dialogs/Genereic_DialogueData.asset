@@ -10,31 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2360456d130718041a250d34aace9a1b, type: 3}
-  m_Name: DialogueData
+  m_Name: Genereic_DialogueData
   m_EditorClassIdentifier: 
   dialogState: 3
-  dialogueName: Test Diag
+  dialogueName: Generic Dialog
   dialogs:
   - dialogType: 0
-    FirstCharacter: Granny
-    SecoundCharacter: Missy
     dialogParts:
-    - paragraphe: StartDialogue
-    - paragraphe: 2
-    - paragraphe: 3
-    - paragraphe: 4
-    - paragraphe: 5
-    - paragraphe: 6
-  - dialogType: 1
-    FirstCharacter: Granny
-    SecoundCharacter: Missy
-    dialogParts:
-    - paragraphe: LoopDialogue
-  - dialogType: 2
-    FirstCharacter: Granny
-    SecoundCharacter: Missy
-    dialogParts:
-    - paragraphe: Fin de la Quest
+    - characterName: 
+      paragraphe: Generic Dialog
+    - characterName: 
+      paragraphe: 2
+    - characterName: 
+      paragraphe: 3
+    - characterName: 
+      paragraphe: 4
   isDisplay: 0
   index: 0
   startIndex: 0
