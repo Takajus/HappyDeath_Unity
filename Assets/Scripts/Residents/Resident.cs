@@ -36,6 +36,12 @@ public class Resident : MonoBehaviour, IInteractable
         DayCycleEvents.OnDayStart += TempNight;
     }
 
+    private void OnDestroy()
+    {
+        DayCycleEvents.OnNightStart -= Day;
+        DayCycleEvents.OnDayStart -= TempNight;
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;    
@@ -44,7 +50,8 @@ public class Resident : MonoBehaviour, IInteractable
 
     public void TempNight()
     {
-        StartCoroutine(Night());
+        if(this.isActiveAndEnabled)
+            StartCoroutine(Night());
     }
     
     private IEnumerator Night()
