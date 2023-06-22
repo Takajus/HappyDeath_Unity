@@ -22,7 +22,7 @@ public class BookDisplayInventory : MonoBehaviour
         if (inventorySlot.Count > 0)
         {
             inventorySlot[0].DisplayInformations();
-            inventorySlot[0].UI_ClickedOnMe();
+            //inventorySlot[0].UI_ClickedOnMe();
         }
     }
 

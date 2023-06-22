@@ -17,7 +17,9 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
-        FindObjectOfType<AudioManager>().PlaySound(Menu_Music);
+        //Menu_Music.Post(gameObject);
+        AudioManager.Instance.PlaySound(Menu_Music);
+        Cursor.visible = true;
     }
     
 

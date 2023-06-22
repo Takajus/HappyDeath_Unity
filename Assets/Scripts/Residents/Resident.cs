@@ -282,6 +282,12 @@ public class Resident : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        if (_dialogue.dialog == null)
+        {
+            InteractionManager.Instance.InteruptInteraction();
+            return;
+        }
+
         Missy.isDialogOpen = true;
         _dialogue.EndDiag += End;
         PlayerController.Instance.DisablePlayer();

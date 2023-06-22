@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class HUDManager : MonoBehaviour
 {
@@ -32,11 +33,8 @@ public class HUDManager : MonoBehaviour
     
     private void OnDisable()
     {
-        if (InputManager.Instance != null)
-        {
-            InputManager.Instance.uiInventoryAction.action.performed -= ToggleInventory;
-            InputManager.Instance.gameCancelAction.action.performed -= CloseUI;
-        }
+        InputManager.Instance.uiInventoryAction.action.performed -= ToggleInventory;
+        InputManager.Instance.gameCancelAction.action.performed -= CloseUI;
     }
 
     public static InventoryManager GetInventoryManager()
@@ -46,29 +44,23 @@ public class HUDManager : MonoBehaviour
 
     public void CloseUI(InputAction.CallbackContext context)
     {
-        isBookOpen = false;
-        DesActivatePanel();
-        pannelInventory.SetActive(true);
-        switchBookPanel.gameObject.SetActive(false);
-        InteractionManager.Instance.InteruptInteraction(false);
+        if (IsOpen)
+        {
+            ToggleInventory(false);
+            InteractionManager.Instance.InteruptInteraction(true);
+        }
     }
 
     public void ToggleInventory(InputAction.CallbackContext context)
     {
-        if (isBookOpen)
-        {
-            CloseUI(context);
-            return;
-        }
-
-        if (!IsOpen)
-        {
-            ToggleInventory(!isBookOpen);
-        }
+        ToggleInventory(!isBookOpen);
     }
 
     public void ToggleInventory(bool state)
     {
+        if (state)
+            InteractionManager.Instance.InteruptInteraction(true);
+
         isBookOpen = state;
 
         DesActivatePanel();
@@ -78,11 +70,7 @@ public class HUDManager : MonoBehaviour
 
     public void UI_ToggleInventory()
     {
-        isBookOpen = !isBookOpen;
-
-        DesActivatePanel();
-        pannelInventory.SetActive(isBookOpen);
-        switchBookPanel.gameObject.SetActive(isBookOpen);
+        ToggleInventory(!isBookOpen);
     }
 
     private void ToggleCraft(InputAction.CallbackContext context)
@@ -104,4 +92,16 @@ public class HUDManager : MonoBehaviour
         pannelResidents.SetActive(false);
     }
 
+    public void ResetGame()
+    {
+        ToggleCraft(false);
+        ToggleInventory(false);
+        InteractionManager.Instance.InteruptInteraction();
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
