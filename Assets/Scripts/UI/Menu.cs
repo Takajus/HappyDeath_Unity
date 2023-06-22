@@ -16,10 +16,10 @@ public class Menu : MonoBehaviour
 
     IEnumerator LoadYourAsyncScene()
     {
+        loadScreen.SetActive(true);
         yield return new WaitForSeconds(.6f);
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("MainScene");
-        loadScreen.SetActive(true);
 
         while (!asyncLoad.isDone)
         {
