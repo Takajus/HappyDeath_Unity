@@ -84,6 +84,8 @@ public class QuestManager :  MonoBehaviour
         
         if(quest is MissyBurialQuest)
             Tomb.OnAssignNPC -= CheckQuestProgress;
+        else if (quest is PositiveMoodQuest)
+            DayCycleEvents.OnDayStart -= CheckQuestProgress;
 
         currentQuest = null;
         UpdateQuestUI();

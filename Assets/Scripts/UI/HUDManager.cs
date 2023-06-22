@@ -19,7 +19,7 @@ public class HUDManager : MonoBehaviour
     [SerializeField] GameObject pannelRecipies;
     [SerializeField] GameObject pannelResidents;
 
-    public static bool IsOpen { get => (isBookOpen || isCraftOpen || DisplayResidentStock.IsOpen || MissyQuest.isDialogOpen || TombUI.IsOpen || ShortcutWheel.wheelIsOpen); }
+    public static bool IsOpen { get => (isBookOpen || isCraftOpen || DisplayResidentStock.IsOpen || Missy.isDialogOpen || TombUI.IsOpen || ShortcutWheel.wheelIsOpen); }
 
     public static bool isBookOpen = false;
     public static bool isCraftOpen = false;
