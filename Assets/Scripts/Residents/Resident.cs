@@ -155,8 +155,11 @@ public class Resident : MonoBehaviour, IInteractable
 
     private void Day()
     {
-        if (ResidentData == null /*|| !ResidentData.isAssign*/)
+        /*if (ResidentData == null /*|| !ResidentData.isAssign#1#)
+        {
+            Destroy(model);
             return;
+        }*/
 
         CheckupState(true);
     }
@@ -168,6 +171,11 @@ public class Resident : MonoBehaviour, IInteractable
             if(MoodManager.residentList.Contains(currentData))
             {
                 MoodManager.residentList.Remove(currentData);
+            }
+            if (ResidentData == null /*|| !ResidentData.isAssign*/)
+            {
+                Destroy(model);
+                return;
             }
             MoodManager.residentList.Add(ResidentData);
             model = null;
