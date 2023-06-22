@@ -4,14 +4,6 @@ using UnityEngine;
 
 public class AxeHandler : BaseHandler
 {
-    public bool axeIsEquiped;
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.H))
-            axeIsEquiped = !axeIsEquiped;
-    }
-
     protected override bool HasWantedType(GameObject obj)
     {
         if (obj.GetComponent<ICuttable>() != null)
@@ -23,11 +15,13 @@ public class AxeHandler : BaseHandler
     protected override void HoverTarget(GameObject target)
     {
         target?.GetComponent<ICuttable>()?.CutHover();
+        AddHoverMat(target);
     }
 
     protected override void UnHoverTarget(GameObject target)
     {
         target?.GetComponent<ICuttable>()?.CutUnHover();
+        RemoveHoverMat(target);
     }
 
     protected override void SelectTarget(GameObject target)

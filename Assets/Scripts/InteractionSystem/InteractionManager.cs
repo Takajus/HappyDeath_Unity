@@ -16,6 +16,7 @@ public class InteractionManager : MonoBehaviour
     public PlacementHandler placementHandler { get; private set; }
     public ShovelHandler shovelHandler { get; private set; }
     public AxeHandler axeHandler { get; private set; }
+    public PickaxeHandler pickaxeHandler { get; private set; }
     public DestructHandler destructHandler { get; private set; }
 
 
@@ -25,6 +26,7 @@ public class InteractionManager : MonoBehaviour
         placementHandler = GetComponent<PlacementHandler>();
         shovelHandler = GetComponent<ShovelHandler>();
         axeHandler = GetComponent<AxeHandler>();
+        pickaxeHandler = GetComponent<PickaxeHandler>();
         destructHandler = GetComponent<DestructHandler>();
     }
 
@@ -52,6 +54,10 @@ public class InteractionManager : MonoBehaviour
             {
                 temp = InteractionMode.Dig;
             }
+            else if (InventoryManager.HeldItem.itemType == Item.ItemType.TOOL && InventoryManager.HeldItem.Name == "Pickaxe")
+            {
+                temp = InteractionMode.Mine;
+            }
             else if (InventoryManager.HeldItem.itemType == Item.ItemType.TOOL && InventoryManager.HeldItem.Name == "Destroy")
             {
                 temp = InteractionMode.Destroy;
@@ -69,10 +75,15 @@ public class InteractionManager : MonoBehaviour
         GetCurrentHandler().InitializeHandler();
     }
 
-    public void InteruptInteraction()
+    public void InteruptInteraction(bool clearHeldItem = true)
     {
+        if (clearHeldItem)
+        {
+            InventoryManager.HeldItem = null;
+            InventoryManager.Instance.HeldItemChanged();
+        }
+
         ChangeInteractionMode(InteractionMode.Interact);
-        InventoryManager.HeldItem = null;
     }
 
     public Material GetHoverMat()
@@ -90,10 +101,13 @@ public class InteractionManager : MonoBehaviour
                 return axeHandler;
             case InteractionMode.Dig:
                 return shovelHandler;
+            case InteractionMode.Mine:
+                return pickaxeHandler;
             case InteractionMode.Place:
                 return placementHandler;
             case InteractionMode.Destroy:
                 return destructHandler;
+
             default:
                 return interactHandler;
         }

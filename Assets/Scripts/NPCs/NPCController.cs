@@ -5,89 +5,111 @@ using UnityEngine.AI;
 
 public class NPCController : MonoBehaviour
 {
-    public NavMeshAgent agent;
-    public float range;
-    public bool shouldMove;
-    private bool canMove = true;
-    private float pauseTimeAmount = 0f;
+	NavMeshAgent agent;
+	public float range = 5f;
+	private bool shouldMove;
+	private bool canMove = true;
+	private float pauseTimeAmount = 0f;
 
-    public Transform areaCenter;
+	private Vector3 areaCenter;
 
-    [SerializeField] Animator animator;
+	[SerializeField] Animator animator;
 
-    private void Start()
-    {
-        agent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
-        //StartCoroutine(MoveAndWait());
-    }
-    void Update()
-    {
-        if (shouldMove)
-        {
-            //animator.SetBool("Walking", isMoving);
-            if (agent.remainingDistance <= agent.stoppingDistance && canMove)
-            {
-                Vector3 point;
-                animator.SetBool("Walking", false);
+	private void Start()
+	{
+		agent = GetComponent<NavMeshAgent>();
+		if(!animator)
+		animator = GetComponent<Animator>();
+		areaCenter = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+		shouldMove = true;
+	}
+	void Update()
+	{
+		if (shouldMove)
+		{
+			if (agent.remainingDistance <= agent.stoppingDistance && canMove)
+			{
+				Vector3 point;
+				animator.SetBool("Walking", false);
 
-                if (pauseTimeAmount >= 0)
-                {
-                    //isMoving = false;
-                    Debug.Log(pauseTimeAmount);
-                    pauseTimeAmount -= Time.deltaTime;
-                }
-                else if (RandomPoint(areaCenter.position, range, out point))
-                {
-                    Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
-                    //agent.SetDestination(point);
-                    //isMoving = true;
-                    StartCoroutine(RotateTowards(point));
-                    pauseTimeAmount = 2f;
-                }
-            }
-        }
-    }
-    bool RandomPoint(Vector3 center, float range, out Vector3 result)
-    {
-        Vector3 randomPoint = center + UnityEngine.Random.insideUnitSphere * range;
-        NavMeshHit hit;
-        if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas))
-        {
-            result = hit.position;
-            return true;
-        }
+				if (pauseTimeAmount >= 0)
+				{
+					//isMoving = false;
+					//Debug.Log(pauseTimeAmount);
+					pauseTimeAmount -= Time.deltaTime;
+				}
+				else if (RandomPoint(areaCenter, range, out point))
+				{
+					Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
+					StartCoroutine(RotateTowards(point));
+					pauseTimeAmount = 2f;
+				}
+			}
+		}
+	}
 
-        result = Vector3.zero;
-        return false;
-    }
+	bool RandomPoint(Vector3 center, float range, out Vector3 result)
+	{
+		Vector3 randomPoint = center + UnityEngine.Random.insideUnitSphere * range;
+		NavMeshHit hit;
+		NavMeshPath navMeshPath = new NavMeshPath();
 
-    IEnumerator RotateTowards(Vector3 point)
-    {
-        canMove = false;
-        float turnSpeed = 3;
+		int triesAmount = 25;
+		int currentTriesAmount = 0;
 
-        Vector3 direction = (new Vector3(point.x, transform.position.y, point.z) - transform.position).normalized;
-        float elaspedTime = 0;
-        float duration = Mathf.Abs(Vector3.Angle(transform.forward, direction) / 180) * turnSpeed;
+		if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas))
+		{
+			result = hit.position;
+			NavMesh.CalculatePath(transform.position, result, NavMesh.AllAreas, navMeshPath);
+			while (navMeshPath.status != NavMeshPathStatus.PathComplete)
+			{
+				if (currentTriesAmount <= triesAmount)
+				{
+					currentTriesAmount++;
+					if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas))
+					{
+						result = hit.position;
+						NavMesh.CalculatePath(transform.position, result, NavMesh.AllAreas, navMeshPath);
+					}
+				}
+				else
+				{
+					result = Vector3.zero;
+					return false;
+				}
+			}
+			return true;
+		}
+		result = Vector3.zero;
+		return false;
+	}
 
-        Quaternion startRotation = transform.rotation;
-        Quaternion endRotation = Quaternion.LookRotation(direction, Vector3.up);
+	IEnumerator RotateTowards(Vector3 point)
+	{
+		canMove = false;
+		float turnSpeed = 3;
+
+		Vector3 direction = (new Vector3(point.x, transform.position.y, point.z) - transform.position).normalized;
+		float elaspedTime = 0;
+		float duration = Mathf.Abs(Vector3.Angle(transform.forward, direction) / 180) * turnSpeed;
+
+		Quaternion startRotation = transform.rotation;
+		Quaternion endRotation = Quaternion.LookRotation(direction, Vector3.up);
 
 
-        animator.SetBool("Walking", true);
-        while (elaspedTime < duration) 
-        {
-            float percentage = Mathf.SmoothStep(0, 1 ,elaspedTime / duration);
+		animator.SetBool("Walking", true);
+		while (elaspedTime < duration)
+		{
+			float percentage = Mathf.SmoothStep(0, 1, elaspedTime / duration);
 
-            transform.rotation = Quaternion.Lerp(startRotation, endRotation, percentage);
+			transform.rotation = Quaternion.Lerp(startRotation, endRotation, percentage);
 
-            elaspedTime += Time.deltaTime;
-            yield return null;
-        }
+			elaspedTime += Time.deltaTime;
+			yield return null;
+		}
 
-        agent.SetDestination(point);
-        canMove = true;
-        yield return null;
-    }
+		agent.SetDestination(point);
+		canMove = true;
+		yield return null;
+	}
 }

@@ -61,6 +61,8 @@ public class InventoryManager : MonoBehaviour
     public Item wood;
     public Item flower;
 
+    [SerializeField] Image iconButtonHeldItem;
+
     //#if !UNITY_EDITOR
     private void Start()
     {
@@ -86,6 +88,18 @@ public class InventoryManager : MonoBehaviour
         PayForCraft(selectedRecepie);
 
         AddItem(itemToCreate);
+    }
+
+    public void HeldItemChanged()
+    {
+        if (!HeldItem)
+        {
+            iconButtonHeldItem.color = new Color(1, 1, 1, 0);
+            return;
+        }
+
+        iconButtonHeldItem.color = new Color(1, 1, 1, 1);
+        iconButtonHeldItem.sprite = HeldItem.Sprite;
     }
 
     private void PayForCraft(CraftSetup selectedRecepie)

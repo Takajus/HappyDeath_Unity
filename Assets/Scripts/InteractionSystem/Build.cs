@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Build : MonoBehaviour, IInteractable
+public class Build : BaseChanneler, IInteractable
 {
     public Material validMat;
     public Material invalidMat;
@@ -92,6 +92,7 @@ public class Build : MonoBehaviour, IInteractable
         actualObject.SetActive(true);
         previewObject.SetActive(false);
         InventoryManager.Instance.RemoveItem(item);
+        AudioManager.Instance.Place_Tombstone.Post(gameObject);
 
         foreach (var tile in tiles)
         {
@@ -125,29 +126,35 @@ public class Build : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        GetOverlappedTiles();
-        foreach (var tile in tiles)
-            tile.isOccupied = false;
-
-        if (item.recipe.ingredient1.ingredientType != null)
-            InventoryManager.Instance.AddItem(item.recipe.ingredient1.ingredientType, (int)(item.recipe.ingredient1.IngredientAmount / 0.75f));
-        if (item.recipe.ingredient2.ingredientType != null)
-            InventoryManager.Instance.AddItem(item.recipe.ingredient2.ingredientType, (int)(item.recipe.ingredient2.IngredientAmount / 0.75f));
-        if (item.recipe.ingredient3.ingredientType != null)
-            InventoryManager.Instance.AddItem(item.recipe.ingredient3.ingredientType, (int)(item.recipe.ingredient3.IngredientAmount / 0.75f));
-
-        GetComponentInChildren<Tomb>()?.ExtractNPC();
-
-        Destroy(gameObject);
+        if (!isChanneling)
+            StartCoroutine(StartChanneling());
     }
 
     public void EndInteract()
     {
-        
+        CancelChanneling();
     }
 
     public InteractMode GetInteractMode()
     {
         throw new System.NotImplementedException();
+    }
+
+    protected override void ChannelingComplete()
+    {
+        GetOverlappedTiles();
+        foreach (var tile in tiles)
+            tile.isOccupied = false;
+
+        if (item.recipe.ingredient1.ingredientType != null)
+            InventoryManager.Instance.AddItem(item.recipe.ingredient1.ingredientType, (int)(item.recipe.ingredient1.IngredientAmount * 0.75f));
+        if (item.recipe.ingredient2.ingredientType != null)
+            InventoryManager.Instance.AddItem(item.recipe.ingredient2.ingredientType, (int)(item.recipe.ingredient2.IngredientAmount * 0.75f));
+        if (item.recipe.ingredient3.ingredientType != null)
+            InventoryManager.Instance.AddItem(item.recipe.ingredient3.ingredientType, (int)(item.recipe.ingredient3.IngredientAmount * 0.75f));
+
+        GetComponentInChildren<Tomb>()?.ExtractNPC();
+
+        Destroy(gameObject);
     }
 }

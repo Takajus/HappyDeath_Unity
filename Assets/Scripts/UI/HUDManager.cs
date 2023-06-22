@@ -13,12 +13,13 @@ public class HUDManager : MonoBehaviour
     public SwitchBookPanel switchBookPanel;
     public QuestSystem questSystem;
     public DisplayResidentStock displayResidentStock;
+    public ShortcutWheel shortcutWheel;
 
     [SerializeField] GameObject pannelInventory;
     [SerializeField] GameObject pannelRecipies;
     [SerializeField] GameObject pannelResidents;
 
-    public static bool IsOpen { get => (isBookOpen || isCraftOpen || DisplayResidentStock.IsOpen || Missy.isDialogOpen || TombUI.IsOpen); }
+    public static bool IsOpen { get => (isBookOpen || isCraftOpen || DisplayResidentStock.IsOpen || MissyQuest.isDialogOpen || TombUI.IsOpen || ShortcutWheel.wheelIsOpen); }
 
     public static bool isBookOpen = false;
     public static bool isCraftOpen = false;
@@ -26,6 +27,7 @@ public class HUDManager : MonoBehaviour
     private void OnEnable()
     {
         InputManager.Instance.uiInventoryAction.action.performed += ToggleInventory;
+        InputManager.Instance.gameCancelAction.action.performed += CloseUI;
     }
     
     private void OnDisable()
@@ -33,6 +35,7 @@ public class HUDManager : MonoBehaviour
         if (InputManager.Instance != null)
         {
             InputManager.Instance.uiInventoryAction.action.performed -= ToggleInventory;
+            InputManager.Instance.gameCancelAction.action.performed -= CloseUI;
         }
     }
 
@@ -41,9 +44,27 @@ public class HUDManager : MonoBehaviour
         return Instance.inventoryManager;
     }
 
+    public void CloseUI(InputAction.CallbackContext context)
+    {
+        isBookOpen = false;
+        DesActivatePanel();
+        pannelInventory.SetActive(true);
+        switchBookPanel.gameObject.SetActive(false);
+        InteractionManager.Instance.InteruptInteraction(false);
+    }
+
     public void ToggleInventory(InputAction.CallbackContext context)
     {
-        ToggleInventory(!isBookOpen);
+        if (isBookOpen)
+        {
+            CloseUI(context);
+            return;
+        }
+
+        if (!IsOpen)
+        {
+            ToggleInventory(!isBookOpen);
+        }
     }
 
     public void ToggleInventory(bool state)
@@ -53,6 +74,15 @@ public class HUDManager : MonoBehaviour
         DesActivatePanel();
         pannelInventory.SetActive(state);
         switchBookPanel.gameObject.SetActive(state);
+    }
+
+    public void UI_ToggleInventory()
+    {
+        isBookOpen = !isBookOpen;
+
+        DesActivatePanel();
+        pannelInventory.SetActive(isBookOpen);
+        switchBookPanel.gameObject.SetActive(isBookOpen);
     }
 
     private void ToggleCraft(InputAction.CallbackContext context)

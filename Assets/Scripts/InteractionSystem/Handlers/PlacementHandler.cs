@@ -13,15 +13,6 @@ public class PlacementHandler : BaseHandler
 
     void Update()
     {
-#if UNITY_EDITOR
-        /*if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            if (IsInteracting)
-                ClearHandler();
-            else
-                GiveObject(tempPrefab);
-        }*/
-#endif
         RotateTarget();
     }
 
@@ -44,6 +35,7 @@ public class PlacementHandler : BaseHandler
     public override void InitializeHandler()
     {
         GiveObject(InventoryManager.HeldItem?.Prefab);
+        InventoryManager.Instance.HeldItemChanged();
     }
 
     public void GiveObject(GameObject ob)
@@ -76,6 +68,7 @@ public class PlacementHandler : BaseHandler
             objectToPlace.GetComponent<Build>().Innit();
             objectToPlace = null;
             InventoryManager.HeldItem = null;
+            InventoryManager.Instance.HeldItemChanged();
         }
     }
 

@@ -17,12 +17,17 @@ public class PlayerController : MonoBehaviour
     public Animator animatorNight;
    // public AK.Wwise.Event Footsteps_Ghost;
     public AK.Wwise.Event Footsteps_Grass;
+    private bool isDay = false;
 
     [Header("Player state")]
     /*[HideInInspector]*/
     public bool canMove = true;
     /*[HideInInspector]*/
     public bool isMoving = false;
+
+    private float elapsedTimeSinceFootstep;
+    [SerializeField] float footstepDelay = 1f;
+
 
     [Header("Inputs")]
     [SerializeField] InputActionReference moveInput;
@@ -96,13 +101,24 @@ public class PlayerController : MonoBehaviour
         Quaternion targetRotation = Quaternion.LookRotation(lastMoveDir);
         playerModels.transform.rotation = Quaternion.RotateTowards(playerModels.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-        //playerModels.transform.rotation = Quaternion.LookRotation(lastMoveDir);
-
         //PhysicsMaterial so we don't slide off of slopes or stick to walls
         if (isMoving)
             coll.material = slideMat;
         else
             coll.material = stickMat;
+
+        elapsedTimeSinceFootstep += Time.fixedDeltaTime;
+
+
+        if (isMoving && elapsedTimeSinceFootstep >= footstepDelay)
+        {
+            if (LightingManager.Instance._cycleState != LightingManager.DayCycleState.Day)
+                AudioManager.Instance.Footsteps_Grass.Post(gameObject);
+            else
+                AudioManager.Instance.Footsteps_Ghost.Post(gameObject);
+
+            elapsedTimeSinceFootstep = 0f;
+        }
     }
 
     void UpdateMoveSpeed(float x, float z)
@@ -112,7 +128,7 @@ public class PlayerController : MonoBehaviour
         else
             currentSpeed = Mathf.Lerp(currentSpeed, 0, deccelerationRate * Time.deltaTime);
     }
-
+   
     Vector3 AdjustVelocityToSlope(Vector3 velocity)
     {
         Ray ray = new Ray(transform.position, Vector3.down);
@@ -151,6 +167,12 @@ public class PlayerController : MonoBehaviour
 
         coll.enabled = true;
         rb.useGravity = true;
+    }
+
+    public void SetAction(bool state)
+    {
+        animatorDay.SetBool("Action", state);
+        animatorNight.SetBool("Talking", state);
     }
 
     public bool CheckFloor(Vector3 Direction)

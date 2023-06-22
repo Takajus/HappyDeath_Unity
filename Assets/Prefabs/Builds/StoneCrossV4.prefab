@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7050949105134161172}
   - component: {fileID: 7335303275864262354}
   - component: {fileID: 4922308498806800112}
+  - component: {fileID: 4469876952879365588}
   m_Layer: 13
   m_Name: StoneCrossV4
   m_TagString: Untagged
@@ -75,6 +76,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5675581, y: 1.180895, z: 0.44105345}
   m_Center: {x: -0.0073561966, y: 0.5906926, z: -0.009138048}
+--- !u!208 &4469876952879365588
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161230830955021985}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &2233665661207209794
 PrefabInstance:
   m_ObjectHideFlags: 0

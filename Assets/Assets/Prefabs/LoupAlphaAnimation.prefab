@@ -1985,6 +1985,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3927668573925982494}
   - component: {fileID: 4452425533260733349}
+  - component: {fileID: 7931149053716442076}
+  - component: {fileID: 8154132812041094059}
   m_Layer: 0
   m_Name: LoupAlphaAnimation
   m_TagString: Untagged
@@ -2029,6 +2031,42 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &7931149053716442076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4452425533260733348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f38c432bc5679e344949ddbd41c9378d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 40
+  animator: {fileID: 0}
+--- !u!195 &8154132812041094059
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4452425533260733348}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.1
+  m_Speed: 1
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 0
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &4599446411889133377
 GameObject:
   m_ObjectHideFlags: 0

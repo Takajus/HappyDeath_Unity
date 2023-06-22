@@ -30,6 +30,7 @@ public class CraftingManager : MonoBehaviour
 
     public Action<CraftSetup> OnRecipeSelected;
     public Action<CraftSetup> OnItemCraft;
+    public AK.Wwise.Event Craft;
 
     private void Awake()
     {
@@ -61,11 +62,11 @@ public class CraftingManager : MonoBehaviour
     {
         for (int i = 0; i < craftingSlot.Count; i++)
         {
-            if (HUDManager.GetInventoryManager().inventoryDatabase.allRecipes.Count <= i)
+            if (HUDManager.GetInventoryManager().inventoryDatabase.unlockedRecipes.Count <= i)
             {
                 break;
             }
-            craftingSlot[i].GetComponent<CraftSetup>().SetScriptableRecipe(HUDManager.GetInventoryManager().inventoryDatabase.allRecipes[i]);
+            craftingSlot[i].GetComponent<CraftSetup>().SetScriptableRecipe(HUDManager.GetInventoryManager().inventoryDatabase.unlockedRecipes[i]);
         }
     }
 
@@ -161,8 +162,10 @@ public class CraftingManager : MonoBehaviour
 
     public void UI_Craft()
     {
+       
         if (HaveEnoughtIngredients())
         {
+            FindObjectOfType<AudioManager>().PlaySound(Craft);
             OnItemCraft.Invoke(selectedRecipe);
             RefreshIngredientsOwned();
         }

@@ -51,10 +51,7 @@ public abstract class BaseHandler : MonoBehaviour
             mouseIsTargeting = false;
 
             if (mouseTarget && mouseTarget != target)
-            {
-                RemoveHoverMat(mouseTarget);
                 UnHoverTarget(mouseTarget);
-            }
             mouseTarget = null;
 
             return null;
@@ -79,10 +76,7 @@ public abstract class BaseHandler : MonoBehaviour
             isTargeting = false;
 
             if (target && mouseTarget != target)
-            {
-                RemoveHoverMat(target);
                 UnHoverTarget(target);
-            }
             target = null;
 
             return null;
@@ -102,12 +96,10 @@ public abstract class BaseHandler : MonoBehaviour
             if (InputManager.Instance.gameCancelAction.action.triggered)
             {
                 Select(null);
-                AddHoverMat(mouseTarget);
                 HoverTarget(mouseTarget);
 
                 if (mouseTarget != target)
                 {
-                    AddHoverMat(target);
                     HoverTarget(target);
                 }
             }
@@ -135,34 +127,30 @@ public abstract class BaseHandler : MonoBehaviour
 
     protected virtual void UpdateMouseTarget()
     {
-        if (mouseTarget != currentInteractedObject)
+        if (mouseTarget != currentInteractedObject && mouseTarget != target)
         {
-            RemoveHoverMat(mouseTarget);
             UnHoverTarget(mouseTarget);
         }
 
         mouseTarget = GetMouseTarget();
 
-        if (mouseTarget != currentInteractedObject)
+        if (mouseTarget != currentInteractedObject && mouseTarget != target)
         {
-            AddHoverMat(mouseTarget);
             HoverTarget(mouseTarget);
         }
     }
 
     protected virtual void UpdateSphereTarget()
     {
-        if (target != currentInteractedObject)
+        if (target != currentInteractedObject && mouseTarget != target)
         {
-            RemoveHoverMat(target);
             UnHoverTarget(target);
         }
 
         target = GetSphereTarget();
 
-        if (target != currentInteractedObject)
+        if (target != currentInteractedObject && mouseTarget != target)
         {
-            AddHoverMat(target);
             HoverTarget(target);
         }
     }
@@ -176,19 +164,16 @@ public abstract class BaseHandler : MonoBehaviour
 
             if (previousInteractedObject == target)
             {
-                //AddHoverMat(previousInteractedObject);
                 HoverTarget(previousInteractedObject);
             }
             else if (target != null)
             {
-                RemoveHoverMat(previousInteractedObject);
                 UnHoverTarget(previousInteractedObject);
 
                 SelectTarget(target);
             }
             else
             {
-                RemoveHoverMat(previousInteractedObject);
                 UnHoverTarget(previousInteractedObject);
             }
         }
@@ -214,15 +199,15 @@ public abstract class BaseHandler : MonoBehaviour
 
     protected virtual bool HasWantedType(GameObject obj) => true;
 
-    protected virtual void HoverTarget(GameObject target) { }
+    protected virtual void HoverTarget(GameObject target) { AddHoverMat(target); }
 
-    protected virtual void UnHoverTarget(GameObject target) { }
+    protected virtual void UnHoverTarget(GameObject target) { RemoveHoverMat(target); }
 
     protected virtual void SelectTarget(GameObject target) { }
 
     protected virtual void UnSelectTarget(GameObject target) { }
 
-    void AddHoverMat(GameObject target)
+    protected virtual void AddHoverMat(GameObject target)
     {
         if (target == null || target.GetComponent<Tile>())
             return;
@@ -241,7 +226,7 @@ public abstract class BaseHandler : MonoBehaviour
         }
     }
 
-    void RemoveHoverMat(GameObject target)
+    protected virtual void RemoveHoverMat(GameObject target)
     {
         if (target == null || target.GetComponent<Tile>())
             return;
