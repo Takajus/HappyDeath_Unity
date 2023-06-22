@@ -39,6 +39,7 @@ public class GridManager : MonoBehaviour
 
     void Awake()
     {
+        gridTiles.Clear();
         foreach (var item in tiles)
             if (item.tile != null)
                 gridTiles.Add(item.name, item.tile);
@@ -67,6 +68,16 @@ public class GridManager : MonoBehaviour
                 newTile.z = tileSize * j;
                 tiles.Add(new Tiles(tileSize * k + ";" + tileSize * j, newTile));
             }
+        }
+
+        gridTiles.Clear();
+        foreach (var item in tiles)
+            if (item.tile != null)
+                gridTiles.Add(item.name, item.tile);
+
+        foreach (var tile in tiles)
+        {
+            tile.tile.neighbors = GetNeighbors(tile.tile);
         }
     }
 

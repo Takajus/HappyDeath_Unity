@@ -16,7 +16,7 @@ public class Tile : MonoBehaviour, IInteractable, IDiggable
     [Header("Tile Settings")]
     public float x;
     public float z;
-    public List<Tile> neighbors { get; private set; }
+    public List<Tile> neighbors = new List<Tile>();
 
     [Header("Other")]
     [SerializeField] Material baseMaterial;
@@ -33,7 +33,7 @@ public class Tile : MonoBehaviour, IInteractable, IDiggable
         mr = GetComponent<MeshRenderer>();
         coll = GetComponent<Collider>();
 
-        neighbors = GridManager.Instance.GetNeighbors(this);
+        //neighbors = GridManager.Instance.GetNeighbors(this);
 
         if (IsDug)
             digDecal.SetActive(true);
