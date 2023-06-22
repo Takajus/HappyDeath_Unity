@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &450208881
 RectTransform:
   m_ObjectHideFlags: 0
@@ -97,7 +97,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1970053718
 RectTransform:
   m_ObjectHideFlags: 0
@@ -177,7 +177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &300819557257244556
 RectTransform:
   m_ObjectHideFlags: 0
@@ -196,7 +196,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 290, y: -165}
+  m_AnchoredPosition: {x: 118, y: -63.8}
   m_SizeDelta: {x: 500, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &300819557257244554
@@ -398,12 +398,13 @@ RectTransform:
   m_GameObject: {fileID: 300819557641359193}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8333333, y: 0.8333333, z: 0.8333333}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 300819557257244556}
   - {fileID: 1970053718}
   - {fileID: 450208881}
+  - {fileID: 910561018211880188}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -419,23 +420,179 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300819557641359193}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bd6178a173881c4383acc8459ab038c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ToDoTextUI: {fileID: 300819557581175230}
-  questTitleText: {fileID: 1970053719}
-  questDescriptionText: {fileID: 450208882}
+  questTitleText: {fileID: 910561018048991504}
+  questDescriptionText: {fileID: 910561018367451034}
   questManager: {fileID: 0}
   taskText:
   - Task 0
-  - Collect ressources for the tombstone of Albert
+  - 'Collect ressources for the tombstone of Albert
+
+    - Flower, Wood & Stone
+
+'
   - Go to the Crafting Room
   - Place the Tomb
+  - Talk to Albert !
+  - Talk to Alix !
+  - Solve the situation !
   QuestPanel: {fileID: 300819557257244559}
   isTutorial: 0
   DemoTaskStat: 0
   wood: {fileID: 0}
   stone: {fileID: 0}
   flower: {fileID: 0}
+--- !u!1001 &43988035
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 300819557641359142}
+    m_Modifications:
+    - target: {fileID: 910561018236205240, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_Name
+      value: Dialogue Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -700
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 540
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6a573266a963e2949bb19a0e37938af9, type: 3}
+--- !u!114 &910561018048991504 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 910561018025862483, guid: 6a573266a963e2949bb19a0e37938af9,
+    type: 3}
+  m_PrefabInstance: {fileID: 43988035}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!224 &910561018211880188 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 910561018236205247, guid: 6a573266a963e2949bb19a0e37938af9,
+    type: 3}
+  m_PrefabInstance: {fileID: 43988035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &910561018367451034 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 910561018340649945, guid: 6a573266a963e2949bb19a0e37938af9,
+    type: 3}
+  m_PrefabInstance: {fileID: 43988035}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
