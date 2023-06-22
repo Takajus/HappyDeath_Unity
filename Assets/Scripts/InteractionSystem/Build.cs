@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Build : MonoBehaviour, IInteractable
+public class Build : BaseChanneler, IInteractable
 {
     public Material validMat;
     public Material invalidMat;
@@ -126,6 +126,22 @@ public class Build : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        if (!isChanneling)
+            StartCoroutine(StartChanneling());
+    }
+
+    public void EndInteract()
+    {
+        CancelChanneling();
+    }
+
+    public InteractMode GetInteractMode()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    protected override void ChannelingComplete()
+    {
         GetOverlappedTiles();
         foreach (var tile in tiles)
             tile.isOccupied = false;
@@ -140,15 +156,5 @@ public class Build : MonoBehaviour, IInteractable
         GetComponentInChildren<Tomb>()?.ExtractNPC();
 
         Destroy(gameObject);
-    }
-
-    public void EndInteract()
-    {
-        
-    }
-
-    public InteractMode GetInteractMode()
-    {
-        throw new System.NotImplementedException();
     }
 }

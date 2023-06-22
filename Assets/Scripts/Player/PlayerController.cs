@@ -61,9 +61,6 @@ public class PlayerController : MonoBehaviour
         //Cursor.lockState = CursorLockMode.Confined;
     }
 
-   
-       
-
     void FixedUpdate()
     {
         if (canMove)
@@ -104,8 +101,6 @@ public class PlayerController : MonoBehaviour
         Quaternion targetRotation = Quaternion.LookRotation(lastMoveDir);
         playerModels.transform.rotation = Quaternion.RotateTowards(playerModels.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-        //playerModels.transform.rotation = Quaternion.LookRotation(lastMoveDir);
-
         //PhysicsMaterial so we don't slide off of slopes or stick to walls
         if (isMoving)
             coll.material = slideMat;
@@ -117,19 +112,13 @@ public class PlayerController : MonoBehaviour
 
         if (isMoving && elapsedTimeSinceFootstep >= footstepDelay)
         {
-
             if (LightingManager.Instance._cycleState != LightingManager.DayCycleState.Day)
                 AudioManager.Instance.Footsteps_Grass.Post(gameObject);
             else
                 AudioManager.Instance.Footsteps_Ghost.Post(gameObject);
 
             elapsedTimeSinceFootstep = 0f;
-
-
         }
-       
-
-      
     }
 
     void UpdateMoveSpeed(float x, float z)
@@ -178,6 +167,12 @@ public class PlayerController : MonoBehaviour
 
         coll.enabled = true;
         rb.useGravity = true;
+    }
+
+    public void SetAction(bool state)
+    {
+        animatorDay.SetBool("Action", state);
+        animatorNight.SetBool("Talking", state);
     }
 
     public bool CheckFloor(Vector3 Direction)

@@ -34,7 +34,7 @@ public class ShortcutWheel : MonoBehaviour
     {
         for (int i = 0; i < buildsElements.Count; i++)
         {
-            if (buildsElements[i].TryGetComponent<ToolWheel>(out ToolWheel toolwheel))
+            if (buildsElements[i].TryGetComponent(out ToolWheel toolwheel))
             {
                 if (toolwheel.item == item)
                 {
