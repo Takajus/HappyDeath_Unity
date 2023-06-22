@@ -89,6 +89,7 @@ public class ShortcutWheel : MonoBehaviour
     {
         CloseWheel(new InputAction.CallbackContext());
         InventoryManager.HeldItem = item;
+        InventoryManager.Instance.HeldItemChanged();
     }
 
     public void DisplayWheel(InputAction.CallbackContext context)

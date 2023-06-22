@@ -59,8 +59,10 @@ public class ButtonDisplayInventory : MonoBehaviour
         if (item)
         {
             InventoryManager.HeldItem = item;
+
             if (item.itemType == Item.ItemType.BUILD)
             {
+                InventoryManager.Instance.HeldItemChanged();
                 InteractionManager.Instance.placementHandler.GiveObject(item.Prefab);
                 HUDManager.Instance.ToggleInventory(false);
             }

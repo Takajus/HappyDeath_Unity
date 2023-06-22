@@ -36,13 +36,7 @@ public class HUDManager : MonoBehaviour
         {
             InputManager.Instance.uiInventoryAction.action.performed -= ToggleInventory;
             InputManager.Instance.gameCancelAction.action.performed -= CloseUI;
-
         }
-    }
-
-    private void Update()
-    {
-        Debug.Log(IsOpen);
     }
 
     public static InventoryManager GetInventoryManager()

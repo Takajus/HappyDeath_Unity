@@ -78,7 +78,10 @@ public class InteractionManager : MonoBehaviour
     public void InteruptInteraction(bool clearHeldItem = true)
     {
         if (clearHeldItem)
+        {
             InventoryManager.HeldItem = null;
+            InventoryManager.Instance.HeldItemChanged();
+        }
 
         ChangeInteractionMode(InteractionMode.Interact);
     }
