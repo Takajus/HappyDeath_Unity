@@ -9,6 +9,7 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] Image imageToFill;
     [SerializeField] GameObject loadScreen;
+    public AK.Wwise.Event Menu_Music;
     public void UI_PlayGame()
     {
         StartCoroutine(LoadYourAsyncScene());
@@ -16,7 +17,7 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
-        AudioManager.Instance.Menu_Music.Post(gameObject);
+        FindObjectOfType<AudioManager>().PlaySound(Menu_Music);
     }
     
 
