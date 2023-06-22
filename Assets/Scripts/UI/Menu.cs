@@ -14,6 +14,13 @@ public class Menu : MonoBehaviour
         StartCoroutine(LoadYourAsyncScene());
     }
 
+    private void Start()
+    {
+        AudioManager.Instance.Menu_Music.Post(gameObject);
+    }
+    
+
+    
     IEnumerator LoadYourAsyncScene()
     {
         loadScreen.SetActive(true);

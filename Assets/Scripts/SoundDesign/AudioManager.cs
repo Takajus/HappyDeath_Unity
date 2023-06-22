@@ -5,6 +5,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance;
     public AK.Wwise.Event Craft;
     public AK.Wwise.Event Dig;
+    public AK.Wwise.Event Day_Music;
     public AK.Wwise.Event Footsteps_Ghost;
     public AK.Wwise.Event Footsteps_Grass;
     public AK.Wwise.Event Menu_Music;
@@ -28,33 +29,16 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        DontDestroyOnLoad(gameObject);
-        
+        Instance = this;
     }
 
     private void Start()
     {
-        
+        FindObjectOfType<AudioManager>().PlaySound(Day_Music);
     }
 
     public void PlaySound(AK.Wwise.Event wwise_event)
     {
-        if (LightingManager.Instance._cycleState != LightingManager.DayCycleState.Day)
-        {
-            Pattern_Day.SetValue();
-            Pattern_Night.SetValue();
-        }
-
             wwise_event.Post(gameObject);
         //How to play sound in scripts:
         //FindObjectOfType<AudioManager>().PlaySound("name of the sound");
